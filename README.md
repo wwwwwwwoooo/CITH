@@ -1,5 +1,7 @@
 # CITH v7.3
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23317929.svg)](https://doi.org/10.5281/zenodo.23317929)
+
 **Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion**  
 Hyeonjun Joo · 12 October 2026
 
@@ -56,4 +58,8 @@ Regeneration can change floating-point final bits and PDF metadata. Scientific r
 
 Original Python and shell code is licensed under MIT. The manuscript, supplementary text, original figures, documentation and original synthetic data are licensed under CC BY 4.0. Third-party components retain their existing licenses; `manuscript/cithplainnat.bst` retains its LaTeX Project Public License notices. See `LICENSE` and `LICENSE-CODE`.
 
-Use the author, full manuscript title and version v7.3 when citing this work. No repository DOI has yet been issued or included in this distribution.
+When citing v7.3, use its version DOI:
+
+> Joo, H. (2026). *Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion* (Version 7.3). Zenodo. https://doi.org/10.5281/zenodo.23317930
+
+The concept DOI [10.5281/zenodo.23317929](https://doi.org/10.5281/zenodo.23317929) refers to all versions and resolves to the latest.
