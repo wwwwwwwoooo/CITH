@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you cite this work, please use the version DOI below."
+type: dataset
+title: "Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion"
+version: "7.3"
+date-released: "2026-10-12"
+doi: 10.5281/zenodo.23317930
+authors:
+  - family-names: Joo
+    given-names: Hyeonjun
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23317930
+    description: "Version DOI for CITH v7.3"
+  - type: doi
+    value: 10.5281/zenodo.23317929
+    description: "Concept DOI for all versions"
+repository-code: "https://github.com/wwwwwwwoooo/CITH"
+license:
+  - CC-BY-4.0
+  - MIT
+keywords:
+  - Fermi paradox
+  - computational inward transition hypothesis
+  - resource allocation
+  - interstellar expansion
+  - reproducible research
+preferred-citation:
+  type: article
+  title: "Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion"
+  authors:
+    - family-names: Joo
+      given-names: Hyeonjun
+  year: 2026
+  month: 10
+  doi: 10.5281/zenodo.23317930
+  publisher:
+    name: Zenodo
+  notes: "Version 7.3. Research manuscript; not peer reviewed."

@@ -62,4 +62,4 @@ When citing v7.3, use its version DOI:
 
 > Joo, H. (2026). *Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion* (Version 7.3). Zenodo. https://doi.org/10.5281/zenodo.23317930
 
-The concept DOI [10.5281/zenodo.23317929](https://doi.org/10.5281/zenodo.23317929) refers to all versions and resolves to the latest.
+The concept DOI [10.5281/zenodo.23317929](https://doi.org/10.5281/zenodo.23317929) refers to all versions and resolves to the latest. Citation metadata is also provided in `CITATION.cff`.
