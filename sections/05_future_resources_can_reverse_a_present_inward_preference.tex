@@ -1,0 +1,74 @@
+\section{Future resources can reverse a present inward preference}
+\label{sec:dynamic}
+
+A one-horizon budget comparison omits one of the strongest reasons to expand: external industry can enlarge future resources. A minimal two-period construction makes this effect explicit while also allowing local investment to be productive. Let $B_1=10$, $z_1=B_1-p_1x$, and define
+\begin{align}
+ C_1(x)&=C_{01}+a_1\ln(1+z_1)+r_1x,\nonumber\\
+ B_2(x)&=B_{20}+g_Lz_1+g_Xx,\label{eq:futurebudget}\\
+ W(x)&=\ln[1+C_1(x)]+\beta V_2[B_2(x)],\quad 0\leq x\leq B_1/p_1.
+ \label{eq:dynamic}
+\end{align}
+Here $B_1>0$, $B_{20},C_{01},C_{02}\geq0$, $a_1,a_2,p_1,p_2,r_1,r_2>0$, and $0\leq\beta\leq1$. The parameters $g_L,g_X\geq0$ convert current allocations to next-period resources. Both directions receive a future-production channel. All represented downstream benefits of first-period projects are captured through $B_2$; this is not a full persistent-capital or interstellar replication model.
+
+The continuation value is the second-period pure-computation problem,
+\begin{equation}
+ V_2(B)=\max_{\substack{z_2,x_2\geq0\\z_2+p_2x_2\leq B}}\ln[1+C_{02}+a_2\ln(1+z_2)+r_2x_2].
+ \label{eq:continuation}
+\end{equation}
+For $r_2>0$,
+\begin{equation}
+ z_2^*(B)=\min\{B,\max(a_2p_2/r_2-1,0)\},\qquad
+ x_2^*(B)=\frac{B-z_2^*(B)}{p_2}.
+ \label{eq:stage2}
+\end{equation}
+Its marginal value $V_2'(B)$ is the current best computational marginal return divided by $1+C_2^*(B)$: $a_2/(1+B)$ on the all-local branch, or $r_2/p_2$ on the mixed/external branch. The expressions agree at the switching budget. $V_2$ is increasing and concave.
+
+\begin{proposition}[A future-adjusted inward condition]
+\label{prop:dynamic}
+For \cref{eq:dynamic,eq:continuation}, the all-inward first-period allocation is optimal if and only if
+\begin{equation}
+ \frac{r_1-p_1a_1/(1+B_1)}{1+C_{01}+a_1\ln(1+B_1)}
+ +\beta V_2'(B_{20}+g_LB_1)(g_X-p_1g_L)\leq0.
+ \label{eq:dynamiccriterion}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The first term in $W$ is concave in $x$, and composition of concave $V_2$ with affine $B_2(x)$ is concave. For a differentiable concave function on an interval, the left endpoint is a global maximizer exactly when its right derivative is non-positive. Differentiating \cref{eq:dynamic} at zero gives \cref{eq:dynamiccriterion}.
+\end{proof}
+
+The first term is the original within-period comparison. The second values the \emph{difference} between external and local production of future resources. Counting $g_X$ while setting $g_L$ to zero without justification would bias the test against inward development; omitting $g_X$ would bias it in favour. This extension is a structural check, not a calibrated decision rule for actual civilizations.
+
+For $p_1=p_2=r_1=r_2=1$, $a_1=a_2=100$, $C_{01}=C_{02}=B_{20}=1$, $g_L=0.2$, and $\beta=0.9$, present-only investment is all inward. The future-adjusted corner changes at $g_X=\DynamicThreshold$. At $g_X=0.2$ both periods remain all inward. At $g_X=2$, optimal first-period outward investment is $x=\DynamicOutward$, leaving $z_1=6.2441$ locally and producing $B_2=9.7607$. All second-period investment is still local. Thus the optimal path can include \emph{external investment undertaken to finance later inward activity}. This differs from claiming that external expansion is never useful. \Cref{fig:dynamic} gives the full 201-setting construction.
+
+\begin{figure}[tbp]
+\centering\includegraphics[width=.95\textwidth]{fig4.pdf}
+\caption{Two-period resource feedback. Local investment generates future resources at $g_L=0.2$ per unit. Increasing the external yield $g_X$ eventually overturns the all-inward present-only optimum. Parameters are normalized; the transition is an exact derivative boundary checked against a separate three-variable numerical optimization.}
+\label{fig:dynamic}
+\end{figure}
+
+The converse reversal is also possible. Keep
+$B_1=10$, $p_1=p_2=r_1=r_2=1$ and $\beta=0.9$, but set
+$a_1=5$, $a_2=100$, $C_{01}=C_{02}=1$, $B_{20}=0$,
+$g_L=0.1$ and $g_X=0$. The static term in
+\cref{eq:dynamiccriterion} is $\ReverseStaticTerm$, and the
+present-only optimum is $x=\ReverseStaticX$. The continuation term is
+$\ReverseFutureTerm$, making the total $\ReverseTotalTerm$.
+Concavity therefore makes $x=\ReverseDynamicX$ the two-period optimum.
+Local investment, rather than external investment, produces the more
+valuable continuation budget in this example. Supplementary Material
+section~S3 reports scalar and joint-optimization checks of both cases.
+
+Thus static inwardness is neither sufficient nor necessary for dynamic
+inwardness: the $g_X=2$ example disproves sufficiency, and the converse
+example disproves necessity. For these two examples, all second-period
+investment is local at the dynamic optimum. The same logical failures
+can be embedded in an infinite horizon by appending a summable discounted
+continuation whose budgets and returns are independent of the first
+two periods' allocations and whose subsequent optima are all inward. Such a continuation adds a constant
+to the current comparison and leaves its optimizer unchanged. This
+establishes the absence of a universal implication, not an
+infinite-horizon policy theorem for persistent capital or resource
+accumulation. Proposition~\ref{prop:persistence} remains a
+characterization of repeated static choices; section~7.2 states the
+corresponding limitation.
+

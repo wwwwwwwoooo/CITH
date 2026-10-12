@@ -1,0 +1,35 @@
+The canonical unit points and transformed parameters are the arrays
+\texttt{sobol\_vectors} and \texttt{parameters} in
+\texttt{data/allocation/design.npz}. The generating environment records
+Python~3.13.5, NumPy~2.3.5 and SciPy~1.17.0. The exact call is
+\begin{verbatim}
+from scipy.stats import qmc
+u = qmc.Sobol(d=14, scramble=True,
+              seed=20260905).random_base2(m=10)
+\end{verbatim}
+The default \texttt{bits=None} resolves to 30 bits; optimization is
+\texttt{None}. No points are skipped or thinned. For the ordered endpoint
+vectors in \cref{tab:ranges}, the transformation is
+\begin{verbatim}
+lo = np.log(lower_endpoints)
+hi = np.log(upper_endpoints)
+parameters = np.exp(lo + u * (hi - lo))
+\end{verbatim}
+Every scenario uses the same transformed rows.
+
+Re-execution in SciPy~1.17.0 reproduces the archived unit points bit for
+bit. Floating-point exponentiation changes some transformed entries by
+at most a relative $2.22\times10^{-16}$ in the present environment;
+all classifications agree. Evaluation of the frozen arrays reproduces
+219 instantaneous-reference inward corners and 527 under perfect
+substitution with zero residual weights, as well as all other counts
+in \cref{tab:scenarios}.
+
+With \texttt{seed=20260905}, the archived unit points are reproduced
+bit for bit under SciPy~1.17.0 and 1.18.1;
+\texttt{rng=20260905} yields a different scramble, with 208
+instantaneous and 530 perfect-substitution inward corners.
+The frozen arrays, not the seed alone, define the reference experiment.
+Supplementary Material section~S2 records the generator specification
+and file checksums.
+

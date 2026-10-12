@@ -1,0 +1,101 @@
+\section{Workload accounting and local resource sufficiency}
+\label{sec:support}
+
+\subsection{Experiential substitution does not create external facts}
+
+Let $q\in[0,1]$ represent decision-relevant experiential fidelity, with an increasing substitution map $\sigma(q)\in[0,1]$. If $E(n)$ is the experiential benefit of additional residence before substitution, and $X(n)$ is residual value, write
+\begin{equation}
+ B_{\rm phys}(n,q)=[1-\sigma(q)]E(n)+X(n).
+ \label{eq:experiential}
+\end{equation}
+At perfect substitution only the first term disappears. Unknown independent histories, raw material, strategic options, or a preference for physical authenticity may remain valuable. For a discrete project with substitutable value $e_j$, residual value $x_j$, and incremental cost $c_j$ relative to an internal alternative,
+\begin{equation}
+ \Delta_j(q)=[1-\sigma(q)]e_j+x_j-c_j.
+ \label{eq:premium}
+\end{equation}
+A positive reality premium is compatible with rejecting the project when it does not cover its extra cost. This is not an assertion of metaphysical identity between a simulated and an external object.
+
+The reduced-form $q$ is domain-specific. It does not measure consciousness, establish the moral equivalence of digital minds, or imply that simulated observations reveal unknown external facts. An embodied population using virtual environments is sufficient for the weaker experiential interpretation. The recursive digital-population interpretation additionally assumes that the relevant minds can be realized computationally.
+
+\subsection{Generative depth and implemented workload}
+
+Consider a regular illustrative hierarchy with integer branching factor $b\geq2$ and maximum integer depth $d\geq0$. Its number of represented worlds is
+\begin{equation}
+ W_d=\sum_{j=0}^{d}b^j=\frac{b^{d+1}-1}{b-1}.
+ \label{eq:worlds}
+\end{equation}
+A recursive rule can lack a prescribed terminal depth even though every actual execution has finite depth, finite state, and finite elapsed computation. Approximate self-similarity is an architectural description; no physical fractal dimension or infinite computational speed-up is inferred from it. A hierarchy need not be regular in applications, and counts alone do not measure novelty or welfare.
+
+For a fully instantiated hierarchy, let $u_k>0$ be the normalized per-world requirement for physical service $k$, $\eta_k>0$ a stated efficiency factor, and $K_k$ the locally available capacity in matching units. Examples of $k$ include update work during an interval, persistent memory, heat rejection, and material replacement. The simplifying homogeneous accounting is
+\begin{equation}
+ D_k(d)=\frac{u_kW_d}{\eta_k},\qquad D_k(d)\leq K_k\quad\text{for every }k.
+ \label{eq:resource}
+\end{equation}
+These are separate constraints, not quantities to be added without a common conversion. For cumulative energy or material consumption, $D_k$ and $K_k$ must refer to integrated demand and the available stock over the same horizon. Instantaneous power cannot be compared with lifetime energy.
+
+\begin{lemma}[Finite-depth support frontier]
+\label{prop:depth}
+Under \cref{eq:resource}, define $Q=\min_k K_k\eta_k/u_k$. If $Q\geq1$, the largest feasible integer depth is
+\begin{equation}
+ d_{\max}=\left\lfloor\log_b[1+(b-1)Q]-1\right\rfloor.
+ \label{eq:depth-bound}
+\end{equation}
+If $Q<1$, even the root world at the specified workload is infeasible. Finite positive $K_k\eta_k/u_k$ for at least one service imposes a finite depth ceiling.
+\end{lemma}
+\begin{proof}
+Every service constraint is equivalent to $W_d\leq K_k\eta_k/u_k$. Their intersection is $W_d\leq Q$. Substitution of \cref{eq:worlds}, followed by taking a logarithm and restricting $d$ to integers, gives \cref{eq:depth-bound}.
+\end{proof}
+
+The lemma does not forbid continued creation of worlds. It specifies the trade-off. Deeper simultaneous hierarchies require more effective support, less per-world workload, or a different execution schedule. The $u_k$ parameters include whatever fidelity, update rate, individuality, addressing, and coordination the stipulated worlds require. Compression is not assumed to remove independent state information without loss.
+
+A scheduled hierarchy requires a different account. Processing and heat may depend on the active set $A(t)\leq W_{d(t)}$, but preserved inactive states still consume memory. Reusing a program description does not remove accumulated histories. The numerical example below therefore charges processing and heat to the active worlds and persistent memory to \emph{all} represented world states. Scheduling changes simultaneity and completion time; it is not a demonstration that arbitrary independent worlds can all be lived at full speed with constant resources.
+
+
+\paragraph{What recursion adds.}
+For the fully instantiated hierarchy at fixed per-world workload and efficiency, \cref{eq:worlds} gives
+$W_{d+1}=bW_d+1$, and hence
+\begin{equation}
+ \frac{D_k(d+1)}{D_k(d)}=b+\frac{1}{W_d}\longrightarrow b.
+ \label{eq:recursion-cost}
+\end{equation}
+If useful computation is proportional to fully instantiated workload,
+$C_d=cW_d$ with fixed $c>0$, logarithmic value adds only
+\begin{equation}
+ F(C_{d+1})-F(C_d)
+ =\ln\!\left[\frac{1+c(bW_d+1)}{1+cW_d}\right]
+ \longrightarrow\ln b.
+ \label{eq:recursion-value}
+\end{equation}
+Both limits follow by dividing numerator and denominator by $W_d$ and
+using $W_d\to\infty$. Thus deeper nesting is not a computational free
+lunch. Recursion supplies a concrete generative workload, not a distinct
+preference mechanism: replacing it by any non-recursive internal workload
+with the same service demands and computational value leaves the allocation
+results in sections~3--5 unchanged.
+
+\subsection{Support over a development path}
+
+For a specified horizon $[0,T]$, local sufficiency means
+\begin{equation}
+ \chi_T=\sup_{0\leq t\leq T}\max_k\frac{D_k(t)}{K_k(t)}\leq1.
+ \label{eq:chi}
+\end{equation}
+Reliability also requires an explicit service criterion; extra local copies need not remove common-mode failures. Technological progress can reduce $u_k$, increase usable $\eta_k$ or $K_k$, improve repair, or alter the execution schedule. These are possible pathways, not measured capabilities. In particular, reversible computation does not authorize neglecting state preparation, error management, or the entropy reservoirs actually available \citep{Bennett1973,BennettHansonRiedel2019}.
+
+A simple rate comparison clarifies the temporal issue. If a service ratio evolves as $\chi_k(t)=\chi_{k0}\exp[(g_{D,k}-g_{K,k})t]$, it crosses one at
+\begin{equation}
+ T_k=\frac{\ln(1/\chi_{k0})}{g_{D,k}-g_{K,k}}
+ \label{eq:crossing}
+\end{equation}
+when $0<\chi_{k0}<1$ and demand growth exceeds capacity growth. A finite-horizon success does not imply sufficiency at every future time. Conversely, external acquisition is not required by this accounting over an interval on which all demands are met locally.
+
+Four controlled examples use $b=2$, $d(t)=2+\lfloor t/10\rfloor$ on $0\leq t\leq40$, and local capacities $(32,256,24)$ for update work, stored-state memory, and heat rejection. All $u_k=1$. Processing and thermal efficiency either grow as $e^{0.12t}$, grow as $e^{0.01t}$, or grow as $e^{0.12t}$ up to a ceiling of four; memory efficiency remains one. A fourth example activates at most eight worlds at a time without efficiency improvement. Every example stores all $W_d$ states. These are normalized accounting constructions, not device specifications.
+
+The matched-efficiency example remains feasible while the full hierarchy grows from seven to 127 worlds. Demand outpacing efficiency first violates a constraint at $t=20$, and the efficiency-ceiling example first violates one at $t=40$. Scheduling remains feasible on the tested interval, but only eight worlds are active at once. The maximum ratios are respectively $0.4961$, $3.5471$, $1.3229$, and $0.4961$. All changes in depth occur at known times, so interval maxima can be checked at the jumps rather than inferred from a sampled time grid alone. \Cref{fig:support} illustrates the distinction between technology-supported expansion of internal activity and merely postponing a resource limit. Extending the matched-efficiency path with the same fixed memory efficiency and capacity gives $W=255$ and a memory ratio $255/256=0.99609375$ at $t=50$, but $W=511$ and $511/256=1.99609375$ at $t=60$. The latter is its first memory violation. The example therefore supports the stated finite horizon, not indefinite local sufficiency.
+
+\begin{figure}[tbp]
+\centering\includegraphics[width=.95\textwidth]{fig1.pdf}
+\caption{Finite-horizon local support constructions. The largest service-demand ratio must remain at or below one. Processing and heat are charged to active worlds; persistent memory is charged to all represented states, including inactive ones. Growth in depth is stepwise. No curve is extrapolated to unlimited time, and no physical implementation is validated.}
+\label{fig:support}
+\end{figure}
+

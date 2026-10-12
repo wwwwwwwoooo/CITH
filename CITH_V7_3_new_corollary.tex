@@ -1,0 +1,46 @@
+\begin{productioncorollary}[A production-independent lower bound on the residual floor]
+\label{cor:production-growth}
+Retain the value, external-production and residual-utility assumptions of
+Lemma~\ref{lem:production}. Let $\ell$ be increasing and concave on
+$[0,\infty)$, with $\ell(0)=0$, and differentiable at the positive
+corner budget $B$, where $\ell'(B)>0$. Differentiability at zero is
+not required. Then the residual floor satisfies
+\[
+ H_j^{\ell}(B):=S_j\frac{\ell(B)}{\ell'(B)}\geq S_jB.
+\]
+For $S_j>0$ and finite $a>0$, an all-inward optimum requires
+$p_j>H_j^{\ell}(B)\geq S_jB$. Consequently, along a path
+$B(t)\to\infty$, a bounded relative external price and a residual slope
+bounded away from zero in any direction exclude eventual all-inward
+static allocation, regardless of productivity. A fixed positive slope
+requires its relative price to grow at least linearly in $B(t)$;
+bounded prices require $S_j(t)=O(1/B(t))$. These are necessary,
+not sufficient, growth conditions. The faster $B\ln B$ floor for local
+logarithmic production is a particular case, not a general rate.
+\end{productioncorollary}
+\begin{proof}
+The supporting-line inequality for the concave function $\ell$, applied
+at $B$ and evaluated at zero, gives
+\[
+ 0=\ell(0)\leq\ell(B)+\ell'(B)(0-B).
+\]
+Since $\ell'(B)>0$, division and multiplication by $S_j\geq0$ give
+$H_j^{\ell}(B)\geq S_jB$. The proof of Lemma~\ref{lem:production} needs
+local differentiability only at $z=B$: the objective is concave on the
+whole feasible set, and its derivatives in the feasible directions from
+the inward corner exist there. Thus \cref{eq:general-production} also
+holds under the present endpoint regularity. When $S_j>0$, its term
+$(r_j+d_0S_j)/(a\ell'(B))$ is strictly positive, because $d_0>0$,
+$r_j\geq0$ and $a$ is finite and positive. This proves
+$p_j>H_j^{\ell}(B)\geq S_jB$.
+
+If eventually $p_j(t)\leq M$ and $S_j(t)\geq s>0$, then
+$S_j(t)B(t)>M$ eventually, contradicting the necessary inequality.
+For fixed $S_j>0$, the same inequality gives $p_j(t)>S_jB(t)$.
+For bounded prices it gives $S_j(t)<M/B(t)$ wherever $S_j(t)>0$,
+with the bound immediate at zero-slope times. Neither consequence
+controls the remaining productivity term in
+\cref{eq:general-production}, so it does not establish sufficiency.
+For $\ell(B)=\ln(1+B)$, direct substitution gives
+$\ell(B)/\ell'(B)=(1+B)\ln(1+B)$, recovering the logarithmic rate.
+\end{proof}

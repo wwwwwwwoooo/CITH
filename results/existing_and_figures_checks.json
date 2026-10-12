@@ -1,0 +1,88 @@
+{
+  "support": [
+    {
+      "name": "matched_efficiency",
+      "max_ratio": 0.49609375,
+      "first_violation": null
+    },
+    {
+      "name": "demand_outpaces",
+      "max_ratio": 3.5471102436052577,
+      "first_violation": 20.0
+    },
+    {
+      "name": "efficiency_ceiling",
+      "max_ratio": 1.3229166666666667,
+      "first_violation": 40.0
+    },
+    {
+      "name": "scheduled_eight_active",
+      "max_ratio": 0.49609375,
+      "first_violation": null
+    }
+  ],
+  "depth_lemma": [
+    {
+      "b": 2,
+      "Q": 256.0,
+      "formula": 7,
+      "enumeration": 7
+    },
+    {
+      "b": 3,
+      "Q": 121.0,
+      "formula": 4,
+      "enumeration": 4
+    },
+    {
+      "b": 2,
+      "Q": 0.5,
+      "formula": null,
+      "enumeration": null
+    }
+  ],
+  "budget_scalar_checks": {
+    "count": 101,
+    "max_value_error": 1.8189894035458565e-12
+  },
+  "two_period": {
+    "count": 201,
+    "critical_gX": 0.4091479213142349,
+    "examples": [
+      {
+        "gX": 0.2,
+        "x": 0.0,
+        "z1": 10.0,
+        "B2": 3.0,
+        "x2": 0.0,
+        "corner_derivative": -0.033462611809257616,
+        "value": 9.93958311207669
+      },
+      {
+        "gX": 2.0,
+        "x": 3.7559168565951433,
+        "z1": 6.244083143404857,
+        "B2": 9.760650341871258,
+        "x2": 0.0,
+        "corner_derivative": 0.2545283033199773,
+        "value": 10.248048302124042
+      }
+    ],
+    "max_joint_objective_error": 1.4903633882568101e-12,
+    "max_archived_x_error": 1.7763568394002505e-15
+  },
+  "nonconcave": {
+    "U0": 0.8697416861919439,
+    "U1": 3.0953101798043248,
+    "derivative0": -0.37715380577676466
+  },
+  "population": {
+    "fixed_origins_P0": 0.01831563888873418,
+    "poisson_origins_P0": 0.17740333081914023
+  },
+  "figure_arrays": [
+    "phase_diagram.npz",
+    "two_period_rechecked.npz",
+    "curvature_figure.npz"
+  ]
+}

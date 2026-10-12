@@ -1,0 +1,116 @@
+{
+  "measure_sensitivity": [
+    {
+      "measure": "log_uniform",
+      "seed": 20260911,
+      "n": 4096,
+      "all_inward_count": 832,
+      "fraction": 0.203125
+    },
+    {
+      "measure": "log_uniform",
+      "seed": 20260912,
+      "n": 4096,
+      "all_inward_count": 847,
+      "fraction": 0.206787109375
+    },
+    {
+      "measure": "log_uniform",
+      "seed": 20260913,
+      "n": 4096,
+      "all_inward_count": 863,
+      "fraction": 0.210693359375
+    },
+    {
+      "measure": "log_uniform",
+      "seed": 20260914,
+      "n": 4096,
+      "all_inward_count": 847,
+      "fraction": 0.206787109375
+    },
+    {
+      "measure": "log_uniform",
+      "seed": 20260915,
+      "n": 4096,
+      "all_inward_count": 849,
+      "fraction": 0.207275390625
+    },
+    {
+      "measure": "log_uniform",
+      "seed": 20260916,
+      "n": 4096,
+      "all_inward_count": 849,
+      "fraction": 0.207275390625
+    },
+    {
+      "measure": "log_uniform",
+      "seed": 20260917,
+      "n": 4096,
+      "all_inward_count": 863,
+      "fraction": 0.210693359375
+    },
+    {
+      "measure": "log_uniform",
+      "seed": 20260918,
+      "n": 4096,
+      "all_inward_count": 842,
+      "fraction": 0.20556640625
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260911,
+      "n": 4096,
+      "all_inward_count": 482,
+      "fraction": 0.11767578125
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260912,
+      "n": 4096,
+      "all_inward_count": 450,
+      "fraction": 0.10986328125
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260913,
+      "n": 4096,
+      "all_inward_count": 462,
+      "fraction": 0.11279296875
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260914,
+      "n": 4096,
+      "all_inward_count": 456,
+      "fraction": 0.111328125
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260915,
+      "n": 4096,
+      "all_inward_count": 474,
+      "fraction": 0.11572265625
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260916,
+      "n": 4096,
+      "all_inward_count": 474,
+      "fraction": 0.11572265625
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260917,
+      "n": 4096,
+      "all_inward_count": 484,
+      "fraction": 0.1181640625
+    },
+    {
+      "measure": "linear_uniform",
+      "seed": 20260918,
+      "n": 4096,
+      "all_inward_count": 472,
+      "fraction": 0.115234375
+    }
+  ]
+}

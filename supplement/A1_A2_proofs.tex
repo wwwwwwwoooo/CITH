@@ -1,0 +1,232 @@
+\subsection{Budget growth and shared technological progress}
+
+With perfect experiential substitution and no residual external value, $q=1$ and $\epsilon_R=\epsilon_I=0$. For \emph{any} strictly increasing $F$, maximizing value is equivalent to maximizing $C$. Let
+\begin{equation}
+ R_* = \max\{r_n/p_n,r_h/p_h\}.
+ \label{eq:Rstar}
+\end{equation}
+When $R_*>0$, the solution allocates
+\begin{equation}
+ z^*=\min\{B,\max(a/R_*-1,0)\},\qquad
+ B_{\rm crit}=a/R_*-1.
+ \label{eq:budgetcrit}
+\end{equation}
+Any remaining budget goes to a best-return computational external channel. The all-inward condition is $a/(1+B)\geq R_*$. If $R_*=0$, all investment is local. This exposes a limitation of a fixed-budget productivity path: with fixed $a$ and $R_*>0$, a sufficiently large budget restores external investment even without authenticity, information, or resilience premiums. The civilization does not stop preferring more value when it can generate virtual worlds.
+
+If local and remote computational coefficients all receive the same multiplicative improvement, the pure-computation condition is unchanged. Progress that disproportionately raises intensive return can support inward allocation; progress that improves everything equally need not. \Cref{fig:budget} shows this budget effect for $R_*=1$. Persistent inward allocation along a development path requires the relevant inequalities to hold along that path, not merely at one chosen value of $B$.
+
+\begin{figure}[tbp]
+\centering\includegraphics[width=.95\textwidth]{fig2.pdf}
+\caption{Exact inward budget share with perfect experiential substitution, zero residual value, and $R_*=1$. The transition occurs at $B=a-1$. Greater local productivity moves the boundary, but budget growth can eventually favor additional external capacity. Any strictly increasing computational value function gives the same allocation in this pure-computation case.}
+\label{fig:budget}
+\end{figure}
+
+\paragraph{Persistence when budgets grow.}
+
+For logarithmic computational value, let $d_0=1+C_0\geq1$ and
+$r_j\geq0$ be fixed. At time $t$, define
+\[
+ L(t)=\ln[1+B(t)],\qquad
+ H_j(t)=[1+B(t)]L(t)S_j(t),\qquad
+ A_j(t)=[1+B(t)][r_j+d_0S_j(t)].
+\]
+All quantities below are finite at each finite time. Prices are relative to
+local investment, the numeraire.
+
+\begin{proposition}[Pathwise persistence with logarithmic value]
+\label{prop:persistence}
+Suppose $B(t)>0$, $a(t)>0$, $p_j(t)>0$ and $S_j(t)\geq0$ on a
+path $t\geq t_0$, and retain the differentiability and concavity assumptions
+of Proposition~\ref{prop:corner}. The all-inward corner is optimal at every
+time on this path if and only if, for every $t$ and every direction with
+$A_j(t)>0$,
+\begin{equation}
+ p_j(t)>H_j(t),\qquad
+ a(t)\geq \max_{j:A_j(t)>0}
+ \frac{A_j(t)}{p_j(t)-H_j(t)}.
+ \label{eq:pathwise}
+\end{equation}
+The maximum over an empty set is zero. In particular, wherever $S_j(t)>0$,
+\begin{equation}
+ \frac{p_j(t)}{S_j(t)}>[1+B(t)]\ln[1+B(t)].
+ \label{eq:path-ratio}
+\end{equation}
+If $B(t)\to\infty$, a bounded price and a residual slope bounded away
+from zero in even one direction preclude eventual all-inward allocation,
+regardless of $a(t)$. With a fixed positive residual slope, persistence
+requires its relative external price to grow at least on the order of
+$B(t)\ln B(t)$. With bounded prices, it instead requires
+$S_j(t)=O(1/[B(t)\ln B(t)])$ for each direction. These order conditions
+are necessary, not sufficient: the productivity inequality in
+\eqref{eq:pathwise} must also hold. If $S_j(t)=0$ but $r_j>0$, that
+inequality reduces to $a(t)\geq[1+B(t)]r_j/p_j(t)$.
+\end{proposition}
+\begin{proof}
+At each time, the exact logarithmic corner test is
+$p_j(t)\geq H_j(t)+A_j(t)/a(t)$. If $A_j(t)>0$ and $a(t)$ is
+finite and positive, this requires $p_j(t)>H_j(t)$; rearrangement gives
+the stated lower bound on $a(t)$. Conversely these two inequalities imply
+the exact test. If $A_j(t)=0$, non-negativity and $d_0>0$ imply
+$r_j=S_j(t)=H_j(t)=0$, so that direction imposes no restriction.
+This proves the pointwise equivalence and therefore the pathwise one.
+For $S_j(t)>0$, we have $A_j(t)>0$, and division of $p_j(t)>H_j(t)$
+by $S_j(t)$ gives \eqref{eq:path-ratio}. Set
+$G(B)=(1+B)\ln(1+B)$. Then $G(B)\to\infty$ and
+$G(B)/(B\ln B)\to1$ as $B\to\infty$. If $p_j(t)\leq M$ and
+$S_j(t)\geq s>0$ eventually, $H_j(t)\geq sG(B(t))>M$ eventually,
+contradicting \eqref{eq:pathwise}. The same ratio inequality gives
+$p_j(t)>S_jG(B(t))$ when the slope is fixed, and
+$S_j(t)<M/G(B(t))$ when prices are bounded, including any zero-slope
+times. Finally, setting $S_j(t)=0$ in the exact corner test gives the
+last assertion.
+\end{proof}
+Proposition~\ref{prop:persistence} characterizes a sequence of static
+optima. In general, its conditions are neither necessary nor sufficient
+for an all-inward infinite-horizon optimal policy. The two-period examples in
+section~\ref{sec:dynamic} demonstrate the failure of both implications
+already when only one continuation period is added.
+With additional hard support constraints, necessity requires the small
+budget-transfer directions used in Proposition~\ref{prop:corner} to remain
+feasible; sufficiency is inherited whenever the corner remains feasible.
+
+\subsection{Exact thresholds and computational-value curvature}
+\label{sec:threshold}
+
+Specialize to $F(C)=\ln(1+C)$. Write the residual slopes as
+\begin{align}
+ S_n&=(1-q)E'(0)+\epsilon_RR'(0)+\epsilon_II'(0),\nonumber\\
+ S_h&=\epsilon_RR'(0)+\epsilon_II'(0),& S_m&=\epsilon_II'(0),
+ \label{eq:slopes}
+\end{align}
+and set $r_m=0$, $L=\ln(1+B)$ and $d_0=1+C_0$. Define
+\begin{equation}
+ H_j=(1+B)L S_j,\qquad A_j=(1+B)(r_j+d_0S_j).
+ \label{eq:HA}
+\end{equation}
+Direct substitution into \cref{eq:corner} gives the exact equivalent test
+\begin{equation}
+ \boxed{p_j\geq H_j+\frac{A_j}{a}\quad\text{for all }j.}
+ \label{eq:exact}
+\end{equation}
+No numerical optimizer is needed to determine whether this corner is optimal.
+
+\begin{proposition}[Productivity threshold and residual floor]
+\label{prop:threshold}
+Hold $B,C_0,p_j,r_j,S_j$ fixed. Assume at least one $A_j>0$; if none is positive every $a>0$ is inward. For every direction with $A_j>0$, a finite productivity level satisfying \cref{eq:exact} exists if and only if $p_j>H_j$. When all relevant denominators are positive,
+\begin{equation}
+ a\geq a_{\rm crit}:=\max_{j:A_j>0}\frac{A_j}{p_j-H_j}
+ \label{eq:acrit}
+\end{equation}
+is necessary and sufficient. A direction with $A_j=0$ imposes no restriction because then $r_j=S_j=H_j=0$. If any $A_j>0$ has $p_j\leq H_j$, no finite increase of $a$ alone produces an all-inward corner.
+\end{proposition}
+\begin{proof}
+All factors used to obtain \cref{eq:exact} are positive. Rearranging $A_j/a\leq p_j-H_j$ yields the result; the zero case follows from non-negativity of its constituent terms.
+\end{proof}
+
+The quantity $H_j$ is a \emph{residual-value floor relative to local marginal return}, not an irreducible energy cost or a physical impossibility theorem. It shows precisely why ``better computers'' alone can fail: external information or other residual value may remain competitive even when remote computational value becomes relatively small. Improving substitution or local support can alter these residual preferences, but their disappearance must not be silently assumed.
+
+A dimensionless robustness diagnostic is
+\begin{equation}
+ \rho=\max_j\frac{H_j+A_j/a}{p_j}.
+ \label{eq:rho}
+\end{equation}
+The corner is inward when $\rho\leq1$. If every external price is multiplied by $\kappa>0$ while other terms are held fixed, the corner survives exactly when $\kappa\geq\rho$. Thus reporting $\rho$ identifies how much a conclusion depends on proximity to a threshold. This is conditional price sensitivity, not a distribution over unknown technologies.
+
+\paragraph{Curvature generalization.}
+
+Use the normalized shifted-isoelastic family
+\begin{equation}
+ F_\eta(C)=
+ \begin{cases}
+ \big[(1+C)^{1-\eta}-1\big]/(1-\eta),&\eta\neq1,\\
+ \ln(1+C),&\eta=1,
+ \end{cases}
+ \qquad \eta\geq0.
+ \label{eq:isoelastic}
+\end{equation}
+Thus $F_\eta'(C)=(1+C)^{-\eta}$, $F_\eta(0)=0$ and
+$F_\eta'(0)=1$. The restriction $\eta\geq0$ retains concavity;
+negative $\eta$ is outside the global corner theorem. The curvature
+parameter $\eta$ is distinct from the service-efficiency factors $\eta_k$.
+
+\begin{proposition}[Curvature trichotomy for inward allocation]
+\label{prop:curvature}
+Fix $B>0$, $d_0\geq1$, $p_j>0$ and finite $r_j,S_j\geq0$, and set
+$L=\ln(1+B)$. Under the common-budget model and its concavity
+assumptions, a direction satisfies the all-inward test exactly when
+\begin{equation}
+ r_j+S_j(d_0+aL)^\eta\leq\frac{p_j a}{1+B}.
+ \label{eq:iso-corner}
+\end{equation}
+For $0\leq\eta<1$, every nontrivial direction has a unique finite
+threshold, and the all-inward corner is optimal for every $a$ above the
+largest of those thresholds. For $\eta=1$, the exact condition is
+$p_j\geq H_j+A_j/a$; a finite threshold exists if and only if
+$p_j>H_j$ in every nontrivial direction. For $\eta>1$, the inward set
+in $a>0$ for each direction with $S_j>0$ is either empty, a singleton,
+or a bounded closed interval. Consequently, if any direction has
+$S_j>0$, sufficiently high productivity precludes an all-inward corner.
+Directions with $S_j=0$ retain the threshold
+$a\geq(1+B)r_j/p_j$ for every $\eta$; a direction with $r_j=S_j=0$
+is unrestricted.
+\end{proposition}
+\begin{proof}
+At the corner, $1+C_L=d_0+aL$. The local marginal return is
+$a/[(1+B)(d_0+aL)^\eta]$, and direction $j$ has marginal return
+$r_j/(d_0+aL)^\eta+S_j$. The first-order condition from
+Proposition~\ref{prop:corner}, multiplied by the positive quantity
+$(d_0+aL)^\eta$, gives \eqref{eq:iso-corner}. Since $F_\eta$ is
+increasing and concave for $\eta\geq0$, that condition remains necessary
+and sufficient for global optimality when it holds in all directions.
+
+For a nontrivial direction define its required relative price
+\[
+ P_{j,\eta}(a)=\frac{1+B}{a}\big[r_j+S_j(d_0+aL)^\eta\big].
+\]
+For $0\leq\eta<1$, differentiation gives
+\[
+ P_{j,\eta}'(a)=\frac{1+B}{a^2}
+ \left\{-r_j+S_j(d_0+aL)^{\eta-1}
+ \big[(\eta-1)aL-d_0\big]\right\}<0.
+\]
+The strict inequality follows from nontriviality, $d_0>0$ and
+$\eta<1$. Moreover, $P_{j,\eta}(a)\to\infty$ as $a\downarrow0$,
+whereas $P_{j,\eta}(a)\to0$ as $a\to\infty$: its two terms are of
+orders $a^{-1}$ and $a^{\eta-1}$, respectively. Continuity and strict
+monotonicity imply exactly one solution of $P_{j,\eta}(a)=p_j$,
+and the direction passes precisely above it. Taking the maximum over
+finitely many directions proves the first case. At $\eta=1$, expansion
+of the bracket gives $P_{j,1}(a)=H_j+A_j/a$, proving the second case,
+including the strictly positive denominator requirement.
+
+For $\eta>1$ and $S_j>0$, put
+\[
+ D_j(a)=r_j+S_j(d_0+aL)^\eta-\frac{p_j a}{1+B}.
+\]
+Then $D_j(0)=r_j+S_jd_0^\eta>0$ and
+\[
+ D_j''(a)=S_j\eta(\eta-1)L^2(d_0+aL)^{\eta-2}>0.
+\]
+Also $D_j(a)\to\infty$ as $a\to\infty$, because its positive
+$a^\eta$ term dominates its linear term. Its non-positive sublevel set
+is convex by convexity, closed by continuity, bounded by this divergence,
+and bounded away from zero by $D_j(0)>0$. It is therefore empty, a
+singleton, or a bounded closed interval contained in $(0,\infty)$.
+The intersection over directions is bounded if any such direction exists.
+Finally, with $S_j=0$, \eqref{eq:iso-corner} reduces directly to the
+stated threshold, including the unrestricted zero-return case.
+\end{proof}
+The finite, positive high-productivity price limit is specific to
+$\eta=1$: it is zero for $\eta<1$, equals $H_j$ for $\eta=1$, and
+diverges for $\eta>1$ when $S_j>0$. Thus it would be incorrect to say
+that only logarithmic value allows residual benefits to defeat increases
+in productivity. The distinction is between a finite asymptotic floor and
+an unbounded high-productivity requirement. The $\eta>1$ branch has
+bounded total computational value; the $0\leq\eta\leq1$ branches do not.
+
+For the normalized example $B=10$, $r=0.1$, $S=0.001$, $d_0=2$,
+$p=1$ and $\eta=2$, \eqref{eq:iso-corner} is a quadratic inequality.
+The quadratic roots are $a_-\simeq1.421897$ and $a_+\simeq12.720521$, with inward
+allocation exactly on $[a_-,a_+]$. Separate scalar maximizations of a
+concave objective with residual utility $S(1-e^{-x})$ verify inward
+solutions at $a=2$ and $a=10$, and outward solutions at $a=1$ and $a=20$.

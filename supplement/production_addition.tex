@@ -1,0 +1,114 @@
+\subsection{Production asymmetry and concave external alternatives}
+\label{sec:production}
+The local term $a\ln(1+z)$ describes intensive improvement of an existing
+substrate with diminishing marginal returns. Linear external terms describe
+replication into additional territory over the investment range being
+modelled. This intensive--extensive distinction is a modelling choice,
+not a universal technological law. In particular, the unbounded logarithm
+is not a physical finite-capacity constraint; such constraints are imposed
+separately by the service frontier. External projects may also have
+diminishing returns.
+
+\begin{lemma}[Production curvature and the corner test]
+\label{lem:production}
+Replace useful computation by
+\[
+ C=C_0+a\ell(z)+G_n(x)+G_h(y),
+\]
+where $\ell$ is differentiable, increasing and concave with $\ell(0)=0$
+and $\ell'(B)>0$, and $G_n,G_h$ are differentiable, non-decreasing and
+concave with $G_j(0)=0$, $G_j'(0)=r_j$. Retain the original residual
+utilities, set $r_m=0$, and let $F(C)=\ln(1+C)$. The all-inward corner
+is globally optimal if and only if
+\begin{equation}
+ p_j\geq\frac{r_j+d_0S_j}{a\ell'(B)}
+            +S_j\frac{\ell(B)}{\ell'(B)}
+ \qquad(j=n,h,m).
+ \label{eq:general-production}
+\end{equation}
+For $\ell(z)=\ln(1+z)$ this is exactly the original logarithmic
+threshold, regardless of the curvature of $G_n,G_h$ away from zero.
+\end{lemma}
+\begin{proof}
+The modified $C$ is concave, and composition with the increasing concave
+logarithm preserves concavity of the full objective. At the corner,
+$1+C_L=d_0+a\ell(B)$, the local marginal return is
+$a\ell'(B)/(d_0+a\ell(B))$, and the external marginal return in
+direction $j$ is $r_j/(d_0+a\ell(B))+S_j$.
+The supporting-hyperplane argument of \cref{prop:corner} applies unchanged.
+Multiplying its marginal-return inequality by the positive factor
+$(d_0+a\ell(B))/(a\ell'(B))$ gives
+\[
+ p_j\geq\frac{r_j+S_j[d_0+a\ell(B)]}{a\ell'(B)},
+\]
+which is \cref{eq:general-production}. For the local logarithm,
+$\ell(B)/\ell'(B)=(1+B)\ln(1+B)$ and
+$1/\ell'(B)=1+B$, giving the stated specialization.
+\end{proof}
+
+\begin{productioncorollary}[A production-independent lower bound on the residual floor]
+\label{cor:production-growth}
+Retain the value, external-production and residual-utility assumptions of
+Lemma~\ref{lem:production}. Let $\ell$ be increasing and concave on
+$[0,\infty)$, with $\ell(0)=0$, and differentiable at the positive
+corner budget $B$, where $\ell'(B)>0$. Differentiability at zero is
+not required. Then the residual floor satisfies
+\[
+ H_j^{\ell}(B):=S_j\frac{\ell(B)}{\ell'(B)}\geq S_jB.
+\]
+For $S_j>0$ and finite $a>0$, an all-inward optimum requires
+$p_j>H_j^{\ell}(B)\geq S_jB$. Consequently, along a path
+$B(t)\to\infty$, a bounded relative external price and a residual slope
+bounded away from zero in any direction exclude eventual all-inward
+static allocation, regardless of productivity. A fixed positive slope
+requires its relative price to grow at least linearly in $B(t)$;
+bounded prices require $S_j(t)=O(1/B(t))$. These are necessary,
+not sufficient, growth conditions. The faster $B\ln B$ floor for local
+logarithmic production is a particular case, not a general rate.
+\end{productioncorollary}
+\begin{proof}
+The supporting-line inequality for the concave function $\ell$, applied
+at $B$ and evaluated at zero, gives
+\[
+ 0=\ell(0)\leq\ell(B)+\ell'(B)(0-B).
+\]
+Since $\ell'(B)>0$, division and multiplication by $S_j\geq0$ give
+$H_j^{\ell}(B)\geq S_jB$. The proof of Lemma~\ref{lem:production} needs
+local differentiability only at $z=B$: the objective is concave on the
+whole feasible set, and its derivatives in the feasible directions from
+the inward corner exist there. Thus \cref{eq:general-production} also
+holds under the present endpoint regularity. When $S_j>0$, its term
+$(r_j+d_0S_j)/(a\ell'(B))$ is strictly positive, because $d_0>0$,
+$r_j\geq0$ and $a$ is finite and positive. This proves
+$p_j>H_j^{\ell}(B)\geq S_jB$.
+
+If eventually $p_j(t)\leq M$ and $S_j(t)\geq s>0$, then
+$S_j(t)B(t)>M$ eventually, contradicting the necessary inequality.
+For fixed $S_j>0$, the same inequality gives $p_j(t)>S_jB(t)$.
+For bounded prices it gives $S_j(t)<M/B(t)$ wherever $S_j(t)>0$,
+with the bound immediate at zero-slope times. Neither consequence
+controls the remaining productivity term in
+\cref{eq:general-production}, so it does not establish sufficiency.
+For $\ell(B)=\ln(1+B)$, direct substitution gives
+$\ell(B)/\ell'(B)=(1+B)\ln(1+B)$, recovering the logarithmic rate.
+\end{proof}
+
+For example, $G_j(u)=r_j\ln(1+\kappa_j u)/\kappa_j$ with
+$\kappa_j>0$ is concave and has the same initial slope as $r_ju$.
+It preserves both the logarithmic corner test and the growth-path
+obstruction in \cref{prop:persistence}. The isoelastic corner test likewise
+uses only $G_j'(0)$, so \cref{prop:curvature} is unchanged. Linearity is
+instead needed for the specific mixed-allocation formula in
+\cref{eq:budgetcrit}, the corresponding curves in \cref{fig:budget},
+and the closed-form continuation allocation in section~5.
+
+A one-channel pure-computation example makes the distinction explicit.
+Set $a=10$, $r=p=1$. With $G(x)=x$, the optimum has
+$x^*=\max\{0,B-9\}$. With $G(x)=\ln(1+x)$, differentiating
+$10\ln(1+B-x)+\ln(1+x)$ gives
+$-10/(1+B-x)+1/(1+x)$; strict concavity therefore gives
+$x^*=\max\{0,(B-9)/11\}$. Both cases leave the inward corner at the
+same budget boundary, but their positive external allocations differ.
+The executable checks compare both formulas with scalar optimization.
+The particular $B\ln B$ rate in \cref{prop:persistence} comes from the
+local logarithmic production function, not from external linearity.

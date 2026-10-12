@@ -1,0 +1,44 @@
+\section{From an inward civilization to a quiet galaxy}
+\label{sec:population}
+
+\subsection{Initiation, survival, and arrival are not the same event}
+
+A civilization contains heterogeneous agents. A scalar objective in \cref{eq:utility} is a representation of a specified decision process, not proof that every inhabitant shares its preferences. Recursive virtual population growth is especially relevant to this distinction. More virtual agents increase the potential expansionist population only when they possess physical agency, obtain access to actuators, or can create outward-capable descendants. Reliable containment might reduce that exposure, but it is not guaranteed by virtuality.
+
+Let $a_i(t)$ be outward-capable autonomous nodes and $\lambda_i(t)$ their initiation rate per node-time. Under an independent Poisson approximation, the expected number of successful fronts from one civilization is
+\begin{equation}
+ \mu=\sum_i\int\lambda_i(t)a_i(t)[1-q_{R,i}(t)]\dd t.
+ \label{eq:mu}
+\end{equation}
+For a Galton--Watson process with offspring generating function $G_R$, the extinction probability is the smallest solution $q_R=G_R(q_R)$; for Poisson offspring with mean $\Rogue$, $q_R=\exp[\Rogue(q_R-1)]$ \citep{Harris1963}. Standard non-degenerate processes become extinct almost surely when $\Rogue\leq1$. Survival for $\Rogue>1$ is not equivalent to occupying the Galaxy or reaching Earth.
+
+For a fixed independent list of civilizations with Poisson front means $\mu_i$,
+\begin{equation}
+ P_0^{\rm fixed}=\exp\left(-\sum_i\mu_i\right).
+ \label{eq:fixed}
+\end{equation}
+If civilization origins instead form a Poisson process with intensity measure $\nu(\dd z)$, independently marked by their front distributions, then
+\begin{equation}
+ P_0^{\rm origins}=\exp\left[-\int(1-e^{-\mu(z)})\nu(\dd z)\right].
+ \label{eq:origins}
+\end{equation}
+This follows from the Poisson generating functional \citep{LastPenrose2017}. The fronts are clustered within their parent civilizations; replacing $1-e^{-\mu}$ by $\mu$ is only a small-$\mu$ approximation. For $N=\bar N=2$ and $\mu=2$, the fixed-population and random-origin probabilities are approximately $0.0183$ and $0.1774$, respectively. Separate 250,000-realization simulations check these formulas.
+
+To explain a null observation in a specified region by time $T$, replace $\mu(z)$ by the mean number $\mu_A(z,T)$ of front initiations that both survive and arrive under an explicit propagation model. Faster access can enlarge this arrival exposure even if typical investment remains inward. The allocation simulations do not calculate $\mu_A$ or a probability of galactic silence. Subcritical lineages can also produce finite local artefacts before extinction. Frequency among origins is therefore not frequency among occupied systems.
+
+\subsection{Visibility and non-identifiability}
+
+Settlement, industry, and observation indices do not determine power, spectrum, geometry, or duty cycle. A compact computational civilization may use substantial stellar power, while a wide probe network may be faint. The Dyson--Kardashev energy-processing tradition addresses observability but is not a direct scale of welfare or settlement demand \citep{Dyson1960,Kardashev1964}. Galaxy-scale infrared searches require a physical emission model and selection function \citep{Wright2014a,Wright2014b}.
+
+For mutually exclusive source classes with approximately independent Poisson detections,
+\begin{equation}
+ \Lambda_j(T)=\int_0^T R_{\rm civ}(t_e)S_j(T-t_e\mid t_e)\pi_j(T,t_e)\dd t_e,
+ \qquad P(0)=e^{-\sum_j\Lambda_j}.
+ \label{eq:observations}
+\end{equation}
+Here $S_j$ is a source-state probability and $\pi_j$ a selection probability. Overlapping settlement, industry, and probe attributes require a union-detection probability rather than a sum that counts an object twice. Even in a stationary single-class reduction, a null result constrains the product $R_{\rm civ}\tau\bar\pi$, not its factors separately. Multiplying the emergence rate by a factor and dividing detectability by the same factor leaves the likelihood unchanged when the parameters remain admissible. Non-detection alone cannot identify inward transition.
+
+Recent observations illustrate this distinction. Project Hephaistos II identified seven follow-up candidates from approximately five million sources \citep{Suazo2024}. The cited 2026 JWST study attributes the excesses of two candidates to background galaxies \citep{Zackrisson2026}. A separate preprint tests warm technological components in 129 nearby galaxies without a preferred positive component \citep{Curtis2026}. These reports constrain the searched emission models; they do not establish virtual civilizations, universal low detectability, or the feasibility of local recursive growth. Solar-System artefact searches address another relevant class \citep{Freitas1983,HaqqMisraKopparapu2012}.
+
+The weaker settlement-composition branch suggests comparing resident infrastructure with automated industrial and information artefacts after correcting their selection functions. The wholly inward branch need not produce those distant artefacts. To discriminate the mechanism, a future study would need independently constrained resource budgets, support capacity, substitution behaviour, or a population of signatures for which intensive activity and outward acquisition can be estimated separately. 
+

@@ -1,0 +1,30 @@
+{
+  "basis": "analytic formula; schematic coordinates, not archived civilization samples",
+  "boundary": "xi + zeta = 1",
+  "productivity": {
+    "factor": 3.0,
+    "start": [
+      0.17,
+      1.04
+    ],
+    "end": [
+      0.17,
+      0.3466666666666667
+    ]
+  },
+  "price_reduction": {
+    "factor": 3.0,
+    "start": [
+      0.4,
+      0.24
+    ],
+    "end": [
+      1.2000000000000002,
+      0.72
+    ]
+  },
+  "unrecoverable_region": "xi >= 1, A > 0, finite positive productivity",
+  "archived_point_overlay": false,
+  "population_frequency_estimate": false,
+  "boundary_points": 501
+}

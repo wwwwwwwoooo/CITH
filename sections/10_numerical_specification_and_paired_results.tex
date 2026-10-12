@@ -1,0 +1,75 @@
+\section{Numerical specification and paired results}
+\label{app:numerical}
+
+The canonical unit points and transformed parameters are the arrays
+\texttt{sobol\_vectors} and \texttt{parameters} in
+\texttt{data/allocation/design.npz}. The generating environment records
+Python~3.13.5, NumPy~2.3.5 and SciPy~1.17.0. The exact call is
+\begin{verbatim}
+from scipy.stats import qmc
+u = qmc.Sobol(d=14, scramble=True,
+              seed=20260905).random_base2(m=10)
+\end{verbatim}
+The default \texttt{bits=None} resolves to 30 bits; optimization is
+\texttt{None}. No points are skipped or thinned. For the ordered endpoint
+vectors in \cref{tab:ranges}, the transformation is
+\begin{verbatim}
+lo = np.log(lower_endpoints)
+hi = np.log(upper_endpoints)
+parameters = np.exp(lo + u * (hi - lo))
+\end{verbatim}
+Every scenario uses the same transformed rows.
+
+Re-execution in SciPy~1.17.0 reproduces the archived unit points bit for
+bit. Floating-point exponentiation changes some transformed entries by
+at most a relative $2.22\times10^{-16}$ in the present environment;
+all classifications agree. Evaluation of the frozen arrays reproduces
+219 instantaneous-reference inward corners and 527 under perfect
+substitution with zero residual weights, as well as all other counts
+in \cref{tab:scenarios}.
+
+With \texttt{seed=20260905}, the archived unit points are reproduced
+bit for bit under SciPy~1.17.0 and 1.18.1;
+\texttt{rng=20260905} yields a different scramble, with 208
+instantaneous and 530 perfect-substitution inward corners.
+The frozen arrays, not the seed alone, define the reference experiment.
+Supplementary Material section~S2 records the generator specification
+and file checksums.
+
+The parameter order is $(B,C_0,a,r_n,r_h,A_E,A_R,A_I,e,r,i,p_{n0},p_{h0},p_{m0})$. All base marginal ranges are log-uniform in the reference experiment. Values of $e,r,i$ in this appendix are return scales, not energy, radius, or individual identifiers.
+
+\begin{table}[htbp]
+\centering
+\caption{Normalized ranges in the 14-dimensional reference design.}
+\label{tab:ranges}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Quantity & Range & Meaning\\
+\midrule
+$B$ & $1$--$100$ & common investment budget\\
+$C_0$ & $0.1$--$10$ & existing useful computational service\\
+$a$ & $1$--$1000$ & intensive computational coefficient\\
+$r_n,r_h$ & $0.1$--$10$ & external computational returns\\
+$A_E,A_R,A_I$ & $0.1$--$10$ & benefit amplitudes\\
+$e,r$ & $1$--$30$ & experiential and resilience scales\\
+$i$ & $1$--$100$ & information scale\\
+$p_{n0}$ & $1$--$10$ & resident unit price\\
+$p_{h0}$ & $0.1$--$3$ & industry-only unit price\\
+$p_{m0}$ & $0.01$--$0.3$ & observation-only unit price\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The sublight scenario has $(s_t,s_c)=(0.01,1)$, the communication-only variant $(0.01,\infty)$, the light-speed case $(1,1)$, and combined faster-access cases $(10,10)$, $(1000,1000)$, and $(\infty,\infty)$. The no-substitution variant sets $q=0$. Large residual values set $\epsilon_R=\epsilon_I=1$, either retaining $q=0.99$ or additionally setting $q=0$. The two tenfold productivity variants set $(m_a,m_r)=(10,1)$ and $(10,10)$. The perfect-substitution variant sets $(q,\epsilon_R,\epsilon_I)=(1,0,0)$. Reduced-price variants set $f=0.01$ or $10^{-4}$ with instantaneous access; other parameters remain at reference settings. A material-speed variable is not allowed to make numerical prices exactly zero.
+
+\begin{table}[htbp]
+\centering\small
+\caption{All-inward inputs out of 1,024, with a conditional price-robustness check. The last column applies a uniform 10\% price reduction to each listed scenario while retaining its other settings. It is computed from the exact boundary, not from a new behavioral assumption or an observational sample.}
+\label{tab:scenarios}
+\input{scenario_table.tex}
+\end{table}
+
+Corner classification uses the exact inequalities, not optimizer-selected shares. The stored optimal shares are checked separately using the objective and concavity certificates described in Supplementary Material section~S1. Small platform-dependent changes in transformed parameters or nearly tied optimized shares do not change any archived corner classification in the checks reported here.
+
+For design-measure sensitivity, Sobol seeds 20260911 through 20260918 each generate $2^{12}$ points. Both log-uniform and linear-uniform transformations use the same bounds in \cref{tab:ranges}. Repeated scrambles assess numerical integration stability under a selected measure. They do not supply a prior justified by extraterrestrial observations.
+

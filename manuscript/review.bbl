@@ -1,0 +1,287 @@
+\begin{thebibliography}{39}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alcubierre(1994)]{Alcubierre1994}
+Miguel Alcubierre.
+\newblock {The warp drive: hyper-fast travel within general relativity}.
+\newblock \emph{Classical and Quantum Gravity}, 11:\penalty0 L73--L77, 1994.
+\newblock \doi{10.1088/0264-9381/11/5/001}.
+
+\bibitem[Armstrong and Sandberg(2013)]{ArmstrongSandberg2013}
+Stuart Armstrong and Anders Sandberg.
+\newblock {Eternity in six hours: Intergalactic spreading of intelligent life
+  and sharpening the Fermi paradox}.
+\newblock \emph{Acta Astronautica}, 89:\penalty0 1--13, 2013.
+\newblock \doi{10.1016/j.actaastro.2013.04.002}.
+
+\bibitem[Bennett(1973)]{Bennett1973}
+Charles~H. Bennett.
+\newblock {Logical Reversibility of Computation}.
+\newblock \emph{IBM Journal of Research and Development}, 17\penalty0
+  (6):\penalty0 525--532, 1973.
+\newblock \doi{10.1147/rd.176.0525}.
+
+\bibitem[Bennett et~al.(2019)Bennett, Hanson, and
+  Riedel]{BennettHansonRiedel2019}
+Charles~H. Bennett, Robin Hanson, and C.~Jess Riedel.
+\newblock {Comment on `The Aestivation Hypothesis for Resolving Fermi's
+  Paradox'}.
+\newblock \emph{Foundations of Physics}, 49:\penalty0 820--829, 2019.
+\newblock \doi{10.1007/s10701-019-00289-5}.
+\newblock arXiv:1902.06730.
+
+\bibitem[Bostrom(2003)]{Bostrom2003Waste}
+Nick Bostrom.
+\newblock {Astronomical Waste: The Opportunity Cost of Delayed Technological
+  Development}.
+\newblock \emph{Utilitas}, 15\penalty0 (3):\penalty0 308--314, 2003.
+\newblock \doi{10.1017/S0953820800004076}.
+
+\bibitem[Boyd and Vandenberghe(2004)]{BoydVandenberghe2004}
+Stephen Boyd and Lieven Vandenberghe.
+\newblock \emph{{Convex Optimization}}.
+\newblock Cambridge University Press, 2004.
+\newblock \doi{10.1017/CBO9780511804441}.
+\newblock URL \url{https://web.stanford.edu/~boyd/cvxbook/}.
+
+\bibitem[Brin(1983)]{Brin1983}
+G.~D. Brin.
+\newblock {The ``Great Silence'': the controversy concerning extraterrestrial
+  intelligent life}.
+\newblock \emph{Quarterly Journal of the Royal Astronomical Society},
+  24\penalty0 (3):\penalty0 283--309, 1983.
+
+\bibitem[Carroll-Nellenback et~al.(2019)Carroll-Nellenback, Frank, Wright, and
+  Scharf]{CarrollNellenback2019}
+Jonathan Carroll-Nellenback, Adam Frank, Jason~T. Wright, and Caleb Scharf.
+\newblock {The Fermi Paradox and the Aurora Effect: Exo-civilization
+  Settlement, Expansion, and Steady States}.
+\newblock \emph{The Astronomical Journal}, 158\penalty0 (3):\penalty0 117,
+  2019.
+\newblock \doi{10.3847/1538-3881/ab31a3}.
+
+\bibitem[\'Cirkovi\'c and Bradbury(2006)]{CirkovicBradbury2006}
+Milan~M. \'Cirkovi\'c and Robert~J. Bradbury.
+\newblock {Galactic Gradients, Postbiological Evolution and the Apparent
+  Failure of SETI}.
+\newblock \emph{New Astronomy}, 11\penalty0 (8):\penalty0 628--639, 2006.
+\newblock \doi{10.1016/j.newast.2006.04.003}.
+
+\bibitem[Curtis et~al.(2026)Curtis, Rowland, Wright, Gronwall, Helton, and
+  Leja]{Curtis2026}
+Olivia Curtis, Aidan~J. Rowland, Jason~T. Wright, Caryl Gronwall, Jakob~M.
+  Helton, and Joel Leja.
+\newblock {The \^{G} Infrared Search for Extraterrestrial Civilizations with
+  Large Energy Supplies. V. When Galaxies Glow with Industry}, 2026.
+\newblock Preprint; arXiv:2608.12458.
+
+\bibitem[Dick(2003)]{Dick2003}
+Steven~J. Dick.
+\newblock {Cultural Evolution, the Postbiological Universe and SETI}.
+\newblock \emph{International Journal of Astrobiology}, 2\penalty0
+  (1):\penalty0 65--74, 2003.
+\newblock \doi{10.1017/S147355040300137X}.
+
+\bibitem[Dyson(1960)]{Dyson1960}
+Freeman~J. Dyson.
+\newblock {Search for Artificial Stellar Sources of Infrared Radiation}.
+\newblock \emph{Science}, 131\penalty0 (3414):\penalty0 1667--1668, 1960.
+\newblock \doi{10.1126/science.131.3414.1667}.
+
+\bibitem[Everett(1996)]{Everett1996}
+Allen~E. Everett.
+\newblock {Warp drive and causality}.
+\newblock \emph{Physical Review D}, 53:\penalty0 7365--7368, 1996.
+\newblock \doi{10.1103/PhysRevD.53.7365}.
+
+\bibitem[Freitas(1983)]{Freitas1983}
+Robert~A. Freitas.
+\newblock {The Search for Extraterrestrial Artifacts (SETA)}.
+\newblock \emph{Journal of the British Interplanetary Society}, 36:\penalty0
+  501--506, 1983.
+
+\bibitem[Hanson et~al.(2021)Hanson, Martin, McCarter, and Paulson]{Hanson2021}
+Robin Hanson, Daniel Martin, Calvin McCarter, and Jonathan Paulson.
+\newblock {If Loud Aliens Explain Human Earliness, Quiet Aliens Are Also Rare}.
+\newblock \emph{The Astrophysical Journal}, 922\penalty0 (2):\penalty0 182,
+  2021.
+\newblock \doi{10.3847/1538-4357/ac2369}.
+
+\bibitem[Haqq-Misra and Kopparapu(2012)]{HaqqMisraKopparapu2012}
+Jacob Haqq-Misra and Ravi~Kumar Kopparapu.
+\newblock {On the Likelihood of Non-terrestrial Artifacts in the Solar System}.
+\newblock \emph{Acta Astronautica}, 72:\penalty0 15--20, 2012.
+\newblock \doi{10.1016/j.actaastro.2011.10.010}.
+
+\bibitem[Haqq-Misra and Baum(2009)]{HaqqMisraBaum2009}
+Jacob~D. Haqq-Misra and Seth~D. Baum.
+\newblock {The Sustainability Solution to the Fermi Paradox}.
+\newblock \emph{Journal of the British Interplanetary Society}, 62:\penalty0
+  47--51, 2009.
+\newblock \doi{10.48550/arXiv.0906.0568}.
+\newblock arXiv:0906.0568.
+
+\bibitem[Harris(1963)]{Harris1963}
+Theodore~E. Harris.
+\newblock \emph{{The Theory of Branching Processes}}.
+\newblock Springer, Berlin, 1963.
+
+\bibitem[Hart(1975)]{Hart1975}
+Michael~H. Hart.
+\newblock {An Explanation for the Absence of Extraterrestrials on Earth}.
+\newblock \emph{Quarterly Journal of the Royal Astronomical Society},
+  16:\penalty0 128--135, 1975.
+
+\bibitem[Ivliev(2026)]{Ivliev2026}
+Sergey Ivliev.
+\newblock {Autonomous AI-Cosmoindustry and the Quiet Expansion Filter: A
+  Threshold-Based Resolution of the Fermi Paradox}, 2026.
+\newblock Preprint; arXiv:2606.13914.
+
+\bibitem[Jackson and Criado-Perez(2024)]{JacksonCriadoPerez2024}
+Chris~J. Jackson and Christian Criado-Perez.
+\newblock {Why the Fermi paradox may not be well explained by Wong and
+  Bartlett's theory of civilization collapse. A Comment on: `Asymptotic burnout
+  and homeostatic awakening: a possible solution to the Fermi paradox?' (2022)
+  by Wong and Bartlett}.
+\newblock \emph{Journal of the Royal Society Interface}, 21\penalty0
+  (219):\penalty0 20240140, 2024.
+\newblock \doi{10.1098/rsif.2024.0140}.
+
+\bibitem[Kardashev(1964)]{Kardashev1964}
+Nikolai~S. Kardashev.
+\newblock {Transmission of Information by Extraterrestrial Civilizations}.
+\newblock \emph{Soviet Astronomy}, 8:\penalty0 217--221, 1964.
+
+\bibitem[Kipping(2026)]{Kipping2026}
+David Kipping.
+\newblock {The Cosmological Hart--Tipler Conjecture}, 2026.
+\newblock Preprint; arXiv:2606.04044.
+
+\bibitem[Landauer(1961)]{Landauer1961}
+Rolf Landauer.
+\newblock {Irreversibility and Heat Generation in the Computing Process}.
+\newblock \emph{IBM Journal of Research and Development}, 5\penalty0
+  (3):\penalty0 183--191, 1961.
+\newblock \doi{10.1147/rd.53.0183}.
+
+\bibitem[Last and Penrose(2018)]{LastPenrose2017}
+G{\"u}nter Last and Mathew Penrose.
+\newblock \emph{{Lectures on the {Poisson} Process}}.
+\newblock Cambridge University Press, 2018.
+\newblock \doi{10.1017/9781316104477}.
+
+\bibitem[Lloyd(2000)]{Lloyd2000}
+Seth Lloyd.
+\newblock {Ultimate Physical Limits to Computation}.
+\newblock \emph{Nature}, 406:\penalty0 1047--1054, 2000.
+\newblock \doi{10.1038/35023282}.
+
+\bibitem[Newman and Sagan(1981)]{NewmanSagan1981}
+William~I. Newman and Carl Sagan.
+\newblock {Galactic Civilizations: Population Dynamics and Interstellar
+  Diffusion}.
+\newblock \emph{Icarus}, 46\penalty0 (3):\penalty0 293--327, 1981.
+\newblock \doi{10.1016/0019-1035(81)90135-4}.
+
+\bibitem[Olson(2015)]{Olson2015}
+S.~Jay Olson.
+\newblock {Homogeneous Cosmology with Aggressively Expanding Civilizations}.
+\newblock \emph{Classical and Quantum Gravity}, 32\penalty0 (21):\penalty0
+  215025, 2015.
+\newblock \doi{10.1088/0264-9381/32/21/215025}.
+
+\bibitem[Pitti(2026)]{Pitti2026}
+Rodolfo Pitti.
+\newblock {The Inward Transition and the Detectability Window: Thermodynamic
+  Constraints on Extraterrestrial Signal Detection in Post-{AGI}
+  Civilizations}.
+\newblock Non-peer-reviewed working paper, January 2026.
+\newblock URL
+  \url{https://www.academia.edu/161276613/The_Inward_Transition_and_the_Detectability_Window_Thermodynamic_Constraints_on_Extraterrestrial_Signal_Detection_in_Post_AGI_Civilizations}.
+
+\bibitem[Sandberg et~al.(2017)Sandberg, Armstrong, and
+  {\'C}irkovi{\'c}]{Sandberg2017}
+Anders Sandberg, Stuart Armstrong, and Milan~M. {\'C}irkovi{\'c}.
+\newblock {That Is Not Dead Which Can Eternal Lie: The Aestivation Hypothesis
+  for Resolving Fermi's Paradox}, 2017.
+\newblock arXiv:1705.03394.
+
+\bibitem[Santiago et~al.(2022)Santiago, Schuster, and Visser]{Santiago2022}
+Jessica Santiago, Sebastian Schuster, and Matt Visser.
+\newblock {Generic warp drives violate the null energy condition}.
+\newblock \emph{Physical Review D}, 105:\penalty0 064038, 2022.
+\newblock \doi{10.1103/PhysRevD.105.064038}.
+
+\bibitem[Shkurko(2024)]{Shkurko2024}
+Alexander~Vladimirovich Shkurko.
+\newblock {The Social Science Perspective on the Fermi Paradox}.
+\newblock \emph{International Journal of Astrobiology}, 23:\penalty0 e13, 2024.
+\newblock \doi{10.1017/S1473550424000089}.
+
+\bibitem[Smart(2012)]{Smart2012}
+John~M. Smart.
+\newblock {The Transcension Hypothesis: Sufficiently Advanced Civilizations
+  Invariably Leave Our Universe, and Implications for METI and SETI}.
+\newblock \emph{Acta Astronautica}, 78:\penalty0 55--68, 2012.
+\newblock \doi{10.1016/j.actaastro.2011.11.006}.
+
+\bibitem[Suazo et~al.(2024)Suazo, Zackrisson, Mahto, Lundell, Nettelblad, Korn,
+  Wright, and Majumdar]{Suazo2024}
+Mat\'ias Suazo, Erik Zackrisson, Priyatam~K. Mahto, Fabian Lundell, Carl
+  Nettelblad, Andreas~J. Korn, Jason~T. Wright, and Suman Majumdar.
+\newblock {Project Hephaistos -- II. Dyson Sphere Candidates from Gaia DR3,
+  2MASS, and WISE}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  531\penalty0 (1):\penalty0 695--707, 2024.
+\newblock \doi{10.1093/mnras/stae1186}.
+\newblock arXiv:2405.02927.
+
+\bibitem[Tipler(1980)]{Tipler1980}
+Frank~J. Tipler.
+\newblock {Extraterrestrial Intelligent Beings Do Not Exist}.
+\newblock \emph{Quarterly Journal of the Royal Astronomical Society},
+  21:\penalty0 267--281, 1980.
+
+\bibitem[Wong and Bartlett(2022)]{WongBartlett2022}
+Michael~L. Wong and Stuart Bartlett.
+\newblock {Asymptotic Burnout and Homeostatic Awakening: A Possible Solution to
+  the Fermi Paradox?}
+\newblock \emph{Journal of the Royal Society Interface}, 19\penalty0
+  (190):\penalty0 20220029, 2022.
+\newblock \doi{10.1098/rsif.2022.0029}.
+
+\bibitem[Wright et~al.(2014{\natexlab{a}})Wright, Mullan, Sigurdsson, and
+  Povich]{Wright2014a}
+Jason~T. Wright, Brendan Mullan, Steinn Sigurdsson, and Matthew~S. Povich.
+\newblock {The \^{G} Infrared Search for Extraterrestrial Civilizations with
+  Large Energy Supplies. I. Background and Justification}.
+\newblock \emph{The Astrophysical Journal}, 792\penalty0 (1):\penalty0 26,
+  2014{\natexlab{a}}.
+\newblock \doi{10.1088/0004-637X/792/1/26}.
+
+\bibitem[Wright et~al.(2014{\natexlab{b}})Wright, Griffith, Sigurdsson, Povich,
+  and Mullan]{Wright2014b}
+Jason~T. Wright, Roger~L. Griffith, Steinn Sigurdsson, Matthew~S. Povich, and
+  Brendan Mullan.
+\newblock {The \^{G} Infrared Search for Extraterrestrial Civilizations with
+  Large Energy Supplies. II. Framework, Strategy, and First Result}.
+\newblock \emph{The Astrophysical Journal}, 792\penalty0 (1):\penalty0 27,
+  2014{\natexlab{b}}.
+\newblock \doi{10.1088/0004-637X/792/1/27}.
+
+\bibitem[Zackrisson et~al.(2026)Zackrisson, Bik, Asgar, Curtis, Wright, Ren,
+  Assef, Blain, Brandeker, Garrett, Gorti, Korn, Mahto, and
+  Nabizadeh]{Zackrisson2026}
+Erik Zackrisson, Arjan Bik, Anita~Ali Asgar, Olivia Curtis, Jason~T. Wright,
+  Tongtian Ren, Roberto~J. Assef, Andrew Blain, Alexis Brandeker, Michael~A.
+  Garrett, Uma Gorti, Andreas~J. Korn, Priyatam~K. Mahto, and Armin Nabizadeh.
+\newblock {Project Hephaistos -- IV. James Webb Space Telescope Observations of
+  Two Dyson Sphere Candidates}, 2026.
+\newblock Preprint; arXiv:2607.09460.
+
+\end{thebibliography}

@@ -1,0 +1,103 @@
+\section{Access-cost sensitivity}
+\label{sec:access}
+Reducing external prices by a factor of $100$ eliminates every all-inward
+corner in the specified 1,024-input reference design: the count falls
+from $219$ to zero. This controlled experiment holds computational
+returns, residual utilities, and local productivity fixed. The result is
+a sensitivity of this design, not a universal critical discount. It
+places the central mechanism in perspective: inward allocation is
+compatible with rapid access, but is not generally robust to sufficiently
+cheap external opportunities.
+
+\subsection{Analytical phase boundary}
+For logarithmic value, define
+\begin{equation}
+ \xi_j=\frac{H_j}{p_j},\qquad
+ \zeta_j=\frac{A_j}{p_ja}.
+ \label{eq:phase-coordinates}
+\end{equation}
+The exact phase boundary is $\xi_j+\zeta_j=1$. All-inward allocation
+requires $\xi_j+\zeta_j\leq1$ for \emph{every} direction.
+If $\xi_j\geq1$, no finite productivity restores the corner, because
+productivity lowers only $\zeta_j$. Here $\xi_j\geq1$ entails
+$S_j>0$ and hence $A_j>0$, so $\zeta_j$ remains strictly positive
+at every finite $a$. Increasing $a$ to $\lambda a$, with $\lambda>1$,
+moves $(\xi_j,\zeta_j)$ vertically to $(\xi_j,\zeta_j/\lambda)$.
+Reducing the external price to $p_j/\kappa$, with $\kappa>1$ and
+other parameters fixed, moves it radially to
+$(\kappa\xi_j,\kappa\zeta_j)$. The degenerate case $A_j=0$ has $H_j=0$ and imposes no
+restriction. Figure~\ref{fig:phase} shows this analytical geometry rather
+than an ensemble frequency.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.91\textwidth]{fig3.pdf}
+\caption{Exact logarithmic phase diagram and comparative statics for one
+external direction. The shaded triangle satisfies
+$H_j/p_j+A_j/(p_ja)\leq1$; every external direction must satisfy this
+condition for the all-inward corner to be optimal.
+(a) Higher productivity reduces only $\zeta_j$, producing a downward
+vertical move. (b) A price reduction to $p_j/\kappa$ multiplies both
+coordinates by $\kappa$, producing a radial move away from the origin.
+(c) In the hatched region $\xi_j\geq1$, no finite productivity restores
+the corner. For $A_j>0$, $(1,0)$ is only a limiting point.
+The arrows are schematic evaluations of the exact transformations;
+no archived inputs are overlaid and no population frequency is estimated.}
+\label{fig:phase}
+\end{figure}
+
+\subsection{Paired sensitivity design}
+To distinguish deployment costs from access delays, use the normalized
+family
+\begin{equation}
+ p_j=p_{j0}\left(f+\frac{1}{s_t}+\frac{0.2}{s_c}\right),\qquad
+ r_j=r_{j0}m_r\exp(-0.1/s_t),\qquad a=a_0m_a.
+ \label{eq:speed-map}
+\end{equation}
+Here $f>0$ is the residual price factor; $s_t,s_c>0$ index effective
+material and information access speeds relative to $c$.
+At instantaneous access, $p_j=p_{j0}f$ and $r_j=r_{j0}m_r$.
+The coefficients $0.2$ and $0.1$ define scenarios, not calibrated physical
+laws. Speed sweeps also remove the stipulated attenuation of remote
+returns, so they are \emph{not} pure price experiments. The fixed-access
+sweeps in $f$ isolate the price effect.
+
+Faster-than-light access is only a counterfactual limiting case of this
+map, not a physical mechanism established here. Instantaneous arrival
+still leaves the positive deployment price $p_{j0}f$. Exactly zero
+external prices are excluded: they can destroy compactness of the
+feasible set and, with positive external computational returns and
+unbounded increasing value, need not admit a finite optimizer.
+
+The reference design contains 1,024 scrambled Sobol points in 14
+dimensions, paired across every scenario. The exact library, generator
+call and frozen inputs are specified in \cref{app:numerical}. Marginals
+are log-uniform over the stated normalized ranges. The concave residual
+benefits are
+\begin{equation}
+ E(x)=A_E(1-e^{-x/e}),\quad
+ R(u)=A_R(1-e^{-u/r}),\quad
+ I(v)=A_I(1-e^{-v/i}).
+ \label{eq:benefit-family}
+\end{equation}
+The reference uses $(q,\epsilon_R,\epsilon_I,f)=(0.99,0.01,0.05,1)$
+and $m_a=m_r=1$. Table~\ref{tab:scenarios} retains the full paired counts.
+
+At instantaneous access, the reference has 219 inward corners; a
+uniform $10\%$ price cut leaves 207. Only 364 reference inputs admit
+a finite productivity threshold with the same residual slopes; the other
+660 violate a residual-floor condition. Perfect experiential substitution
+with zero residual weights yields 527 inward corners, while 497 still
+prefer external computational capacity. Raising only local productivity
+tenfold gives 314 inward corners; raising local and remote productivity
+together gives 222. At $f=0.01$ and $f=10^{-4}$, the count is zero.
+These are exact classifications of the archived inputs, not estimates of
+civilizational prevalence.
+
+Eight additional scrambles of 4,096 points each give instantaneous
+inward fractions of \DesignLogMin--\DesignLogMax\% under the same
+log-uniform marginals. Linear-uniform marginals over the same endpoints
+give \DesignLinearMin--\DesignLinearMax\%. These 65,536 classifications
+use the exact boundary. Their variation describes sensitivity to the
+parameter-space measure, not observational uncertainty about the Galaxy.
+

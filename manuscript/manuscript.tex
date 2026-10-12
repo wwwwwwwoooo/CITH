@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx,booktabs,tabularx,array}
+\usepackage[authoryear,round]{natbib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{enumitem}
+\ifdefined\reviewmode\usepackage{lineno}\fi
+\graphicspath{{figures/}{../figures/}}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.14}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}[proposition]{Corollary}
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{productioncorollary}{Corollary}[proposition]
+\crefname{productioncorollary}{corollary}{corollaries}
+\Crefname{productioncorollary}{Corollary}{Corollaries}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+\newcommand{\CITH}{\textsc{CITH}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\Rogue}{R_{\mathrm{rogue}}}
+\newcommand{\Sq}{\mathcal S_q}
+\newcommand{\Aauto}{\mathcal A}
+\input{result_macros.tex}
+\input{v73_result_macros.tex}
+\title{Why Should They Expand?\\[3pt]\large Computational Growth, Resource Sufficiency,\\and Conditional Interstellar Expansion}
+\author{Hyeonjun Joo\\[3pt]\normalsize Independent Researcher, Republic of Korea\\\normalsize\href{mailto:jonejoo0805@gmail.com}{jonejoo0805@gmail.com}}
+\date{12 October 2026}
+\hypersetup{pdftitle={Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion},pdfauthor={Hyeonjun Joo},pdfsubject={Conditional theoretical model of computational inward growth; CITH v7.3}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Technological capacity for interstellar expansion does not by itself establish a continuing incentive to expand. This paper develops the computational inward transition hypothesis (CITH) as a conditional allocation model. Recursively nested virtual worlds motivate finite-workload accounting; the allocation results apply to any internal computational use. A local service frontier separates physical feasibility from a common-budget comparison of inward investment, resident infrastructure, automated industry, and observation. Under differentiability and concavity, marginal-return inequalities characterize an all-inward optimum. Logarithmic computational value yields exact productivity thresholds and residual external-value floors. Along an unbounded-budget path, bounded relative external prices and a residual slope bounded away from zero eventually exclude the inward corner, regardless of local productivity. Persistence instead requires an appropriate price-to-residual-value path, sufficient productivity, and continued physical feasibility. A shifted-isoelastic extension shows that logarithmic value is a boundary case: slower decay of marginal computational value permits an eventual inward productivity threshold, whereas faster decay makes the inward productivity set bounded when residual slopes are positive. Concave external production preserves the corner test when initial marginal returns are unchanged, although mixed allocations change. Access-cost sensitivity and a two-period resource model expose additional routes back to outward investment. Allocation, detectability, and population-level silence remain distinct claims. The contribution is a reproducible account of conditions under which internal growth and no additional external investment can coexist, not evidence that those conditions hold for actual civilizations.
+\par\smallskip\noindent\textbf{Keywords:} Fermi paradox; astrobiology; computational inward transition; resource allocation; interstellar expansion; technosignatures.
+
+\end{abstract}
+\ifdefined\reviewmode\linenumbers\fi
+\input{body.tex}
+\bibliographystyle{cithplainnat}
+\bibliography{references}
+\end{document}

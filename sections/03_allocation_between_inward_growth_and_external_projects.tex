@@ -1,0 +1,422 @@
+\section{Allocation between inward growth and external projects}
+\label{sec:allocation}
+
+Feasibility and optimality are different questions. Even a locally supportable civilization may prefer to acquire further resources. To test that preference without removing the internal alternative, let $z,x,y,w\geq0$ denote intensive local investment, additional resident infrastructure, industry-only capacity, and observation-only capacity. With local investment as numeraire, the common budget is
+\begin{equation}
+ z+p_nx+p_hy+p_mw\leq B,\qquad p_j>0,\quad B>0.
+ \label{eq:budget}
+\end{equation}
+All quantities are normalized within one planning horizon. The cumulative indices $n=1+x$, $h=1+x+y$, and $m=1+x+y+w$ distinguish residence, industry, and observation. They are continuous service-capacity indices in this model, not literal fractional star systems. The nesting is an accounting assumption, not a necessary geometry of every civilization. Their use does not assume that star systems themselves are divisible.
+
+Consider
+\begin{align}
+ C&=C_0+a\ln(1+z)+r_nx+r_hy,\label{eq:compute}\\
+ U&=F(C)+(1-q)E(x)+\epsilon_RR(x+y)+\epsilon_II(x+y+w),\label{eq:utility}
+\end{align}
+where $a>0$, $C_0\geq0$, $r_n,r_h\geq0$, and the residual weights are non-negative. The specialization $\sigma(q)=q$ is used here. $C$ is useful computational service over the horizon, not a count of simulated hardware added to real hardware. $E$ is substitutable settlement-specific experience; $R$ and $I$ represent residual resilience and independent-information value. The common budget prevents counting external investment as beneficial without comparing what the same resources could produce internally.
+
+A small $\epsilon_R$ or $\epsilon_I$ means low residual marginal value in the objective. Hard energy, reliability, or material requirements are separate feasibility constraints, as in \cref{eq:chi}; the sensitivity scenarios therefore use the label \emph{large residual values}.
+
+\subsection{An all-inward optimum without bounded total value}
+
+Assume $F$ is differentiable, strictly increasing, and concave, and $E,R,I$ are differentiable, non-decreasing, and concave on the feasible domain. Composition with the concave $C$ makes $U$ concave. Positive $a$ and increasing $F$ exhaust the budget. At the all-inward corner $(z,x,y,w)=(B,0,0,0)$ define
+\begin{align}
+ C_L&=C_0+a\ln(1+B),&
+ \lambda_L&=F'(C_L)\frac{a}{1+B},\label{eq:local-return}\\
+ D_n&=F'(C_L)r_n+(1-q)E'(0)+\epsilon_RR'(0)+\epsilon_II'(0),\nonumber\\
+ D_h&=F'(C_L)r_h+\epsilon_RR'(0)+\epsilon_II'(0),&
+ D_m&=\epsilon_II'(0).\label{eq:external-return}
+\end{align}
+
+\begin{proposition}[All-inward allocation]
+\label{prop:corner}
+For \cref{eq:budget,eq:utility} under the stated differentiability and concavity assumptions, the all-inward corner is globally optimal if and only if
+\begin{equation}
+ \frac{D_j}{p_j}\leq\lambda_L\qquad(j=n,h,m).
+ \label{eq:corner}
+\end{equation}
+If all three inequalities are strict, every optimizer has zero external investment. Equality can admit ties; uniqueness is not asserted from a weak inequality.
+\end{proposition}
+\begin{proof}
+For any feasible displacement from the corner, the supporting-hyperplane inequality gives
+\begin{align}
+ U(z,x,y,w)-U(B,0,0,0)
+ &\leq\lambda_L(z-B)+D_nx+D_hy+D_mw\nonumber\\
+ &\leq(D_n-p_n\lambda_L)x+(D_h-p_h\lambda_L)y
+ +(D_m-p_m\lambda_L)w.
+ \label{eq:cornerproof}
+\end{align}
+The right side is non-positive under \cref{eq:corner}, and strictly negative for any positive external component if all inequalities are strict. Conversely, transferring a sufficiently small budget amount from $z$ to a violating external direction has positive directional derivative and improves the objective.
+\end{proof}
+
+This is the standard supporting-hyperplane or first-order optimality criterion for a concave maximization problem \citep[chapters 3--5]{BoydVandenberghe2004}, specialized to the civilizational allocation model. It does not require bounded total ambition: $F(C)=\ln(1+C)$ grows without bound as $C\to\infty$. It does require specified alternatives, prices, residual preferences, and an admissible local path. Its contribution is not a new general optimization theorem, but the identification of the competing terms relevant to the hypothesis.
+
+\begin{corollary}[Adding hard support constraints]
+\label{cor:feasibility}
+Suppose an additional physical feasibility restriction retains the all-inward corner. If \cref{eq:corner} holds, the corner remains optimal in the restricted problem. The inequalities need not remain necessary: at a binding physical constraint, a formerly improving external direction may no longer be feasible. Necessity is recovered when each small budget-transfer direction used in the converse proof remains admissible.
+\end{corollary}
+\begin{proof}
+A maximum over the larger feasible set is a maximum over any subset that contains it. The converse uses only the feasibility of the indicated local directions.
+\end{proof}
+
+The corollary prevents a numerical preference calculation from being mistaken for engineering validation. An all-inward optimum with $\chi_T>1$ is not an implementable explanation of the chosen workload. An outward optimum despite $\chi_T\leq1$ describes attractive expansion, not expansion forced by a local shortfall. The two tests must be reported separately.
+
+\subsection{Exact thresholds and computational-value curvature}
+\label{sec:threshold}
+
+Specialize to $F(C)=\ln(1+C)$. Write the residual slopes as
+\begin{align}
+ S_n&=(1-q)E'(0)+\epsilon_RR'(0)+\epsilon_II'(0),\nonumber\\
+ S_h&=\epsilon_RR'(0)+\epsilon_II'(0),& S_m&=\epsilon_II'(0),
+ \label{eq:slopes}
+\end{align}
+and set $r_m=0$, $L=\ln(1+B)$ and $d_0=1+C_0$. Define
+\begin{equation}
+ H_j=(1+B)L S_j,\qquad A_j=(1+B)(r_j+d_0S_j).
+ \label{eq:HA}
+\end{equation}
+Direct substitution into \cref{eq:corner} gives the exact equivalent test
+\begin{equation}
+ \boxed{p_j\geq H_j+\frac{A_j}{a}\quad\text{for all }j.}
+ \label{eq:exact}
+\end{equation}
+No numerical optimizer is needed to determine whether this corner is optimal.
+
+\begin{proposition}[Productivity threshold and residual floor]
+\label{prop:threshold}
+Hold $B,C_0,p_j,r_j,S_j$ fixed. Assume at least one $A_j>0$; if none is positive every $a>0$ is inward. For every direction with $A_j>0$, a finite productivity level satisfying \cref{eq:exact} exists if and only if $p_j>H_j$. When all relevant denominators are positive,
+\begin{equation}
+ a\geq a_{\rm crit}:=\max_{j:A_j>0}\frac{A_j}{p_j-H_j}
+ \label{eq:acrit}
+\end{equation}
+is necessary and sufficient. A direction with $A_j=0$ imposes no restriction because then $r_j=S_j=H_j=0$. If any $A_j>0$ has $p_j\leq H_j$, no finite increase of $a$ alone produces an all-inward corner.
+\end{proposition}
+\begin{proof}
+All factors used to obtain \cref{eq:exact} are positive. Rearranging $A_j/a\leq p_j-H_j$ yields the result; the zero case follows from non-negativity of its constituent terms.
+\end{proof}
+
+The quantity $H_j$ is a \emph{residual-value floor relative to local marginal return}, not an irreducible energy cost or a physical impossibility theorem. It shows precisely why ``better computers'' alone can fail: external information or other residual value may remain competitive even when remote computational value becomes relatively small. Improving substitution or local support can alter these residual preferences, but their disappearance must not be silently assumed.
+
+A dimensionless robustness diagnostic is
+\begin{equation}
+ \rho=\max_j\frac{H_j+A_j/a}{p_j}.
+ \label{eq:rho}
+\end{equation}
+The corner is inward when $\rho\leq1$. If every external price is multiplied by $\kappa>0$ while other terms are held fixed, the corner survives exactly when $\kappa\geq\rho$. Thus reporting $\rho$ identifies how much a conclusion depends on proximity to a threshold. This is conditional price sensitivity, not a distribution over unknown technologies.
+
+\paragraph{Curvature generalization.}
+
+Use the normalized shifted-isoelastic family
+\begin{equation}
+ F_\eta(C)=
+ \begin{cases}
+ \big[(1+C)^{1-\eta}-1\big]/(1-\eta),&\eta\neq1,\\
+ \ln(1+C),&\eta=1,
+ \end{cases}
+ \qquad \eta\geq0.
+ \label{eq:isoelastic}
+\end{equation}
+Thus $F_\eta'(C)=(1+C)^{-\eta}$, $F_\eta(0)=0$ and
+$F_\eta'(0)=1$. The restriction $\eta\geq0$ retains concavity;
+negative $\eta$ is outside the global corner theorem. The curvature
+parameter $\eta$ is distinct from the service-efficiency factors $\eta_k$.
+
+\begin{proposition}[Curvature trichotomy for inward allocation]
+\label{prop:curvature}
+Fix $B>0$, $d_0\geq1$, $p_j>0$ and finite $r_j,S_j\geq0$, and set
+$L=\ln(1+B)$. Under the common-budget model and its concavity
+assumptions, a direction satisfies the all-inward test exactly when
+\begin{equation}
+ r_j+S_j(d_0+aL)^\eta\leq\frac{p_j a}{1+B}.
+ \label{eq:iso-corner}
+\end{equation}
+For $0\leq\eta<1$, every nontrivial direction has a unique finite
+threshold, and the all-inward corner is optimal for every $a$ above the
+largest of those thresholds. For $\eta=1$, the exact condition is
+$p_j\geq H_j+A_j/a$; a finite threshold exists if and only if
+$p_j>H_j$ in every nontrivial direction. For $\eta>1$, the inward set
+in $a>0$ for each direction with $S_j>0$ is either empty, a singleton,
+or a bounded closed interval. Consequently, if any direction has
+$S_j>0$, sufficiently high productivity precludes an all-inward corner.
+Directions with $S_j=0$ retain the threshold
+$a\geq(1+B)r_j/p_j$ for every $\eta$; a direction with $r_j=S_j=0$
+is unrestricted.
+\end{proposition}
+\begin{proof}
+At the corner, $1+C_L=d_0+aL$. The local marginal return is
+$a/[(1+B)(d_0+aL)^\eta]$, and direction $j$ has marginal return
+$r_j/(d_0+aL)^\eta+S_j$. The first-order condition from
+Proposition~\ref{prop:corner}, multiplied by the positive quantity
+$(d_0+aL)^\eta$, gives \eqref{eq:iso-corner}. Since $F_\eta$ is
+increasing and concave for $\eta\geq0$, that condition remains necessary
+and sufficient for global optimality when it holds in all directions.
+
+For a nontrivial direction define its required relative price
+\[
+ P_{j,\eta}(a)=\frac{1+B}{a}\big[r_j+S_j(d_0+aL)^\eta\big].
+\]
+For $0\leq\eta<1$, differentiation gives
+\[
+ P_{j,\eta}'(a)=\frac{1+B}{a^2}
+ \left\{-r_j+S_j(d_0+aL)^{\eta-1}
+ \big[(\eta-1)aL-d_0\big]\right\}<0.
+\]
+The strict inequality follows from nontriviality, $d_0>0$ and
+$\eta<1$. Moreover, $P_{j,\eta}(a)\to\infty$ as $a\downarrow0$,
+whereas $P_{j,\eta}(a)\to0$ as $a\to\infty$: its two terms are of
+orders $a^{-1}$ and $a^{\eta-1}$, respectively. Continuity and strict
+monotonicity imply exactly one solution of $P_{j,\eta}(a)=p_j$,
+and the direction passes precisely above it. Taking the maximum over
+finitely many directions proves the first case. At $\eta=1$, expansion
+of the bracket gives $P_{j,1}(a)=H_j+A_j/a$, proving the second case,
+including the strictly positive denominator requirement.
+
+For $\eta>1$ and $S_j>0$, put
+\[
+ D_j(a)=r_j+S_j(d_0+aL)^\eta-\frac{p_j a}{1+B}.
+\]
+Then $D_j(0)=r_j+S_jd_0^\eta>0$ and
+\[
+ D_j''(a)=S_j\eta(\eta-1)L^2(d_0+aL)^{\eta-2}>0.
+\]
+Also $D_j(a)\to\infty$ as $a\to\infty$, because its positive
+$a^\eta$ term dominates its linear term. Its non-positive sublevel set
+is convex by convexity, closed by continuity, bounded by this divergence,
+and bounded away from zero by $D_j(0)>0$. It is therefore empty, a
+singleton, or a bounded closed interval contained in $(0,\infty)$.
+The intersection over directions is bounded if any such direction exists.
+Finally, with $S_j=0$, \eqref{eq:iso-corner} reduces directly to the
+stated threshold, including the unrestricted zero-return case.
+\end{proof}
+The finite, positive high-productivity price limit is specific to
+$\eta=1$: it is zero for $\eta<1$, equals $H_j$ for $\eta=1$, and
+diverges for $\eta>1$ when $S_j>0$. Thus it would be incorrect to say
+that only logarithmic value allows residual benefits to defeat increases
+in productivity. The distinction is between a finite asymptotic floor and
+an unbounded high-productivity requirement. The $\eta>1$ branch has
+bounded total computational value; the $0\leq\eta\leq1$ branches do not.
+
+For the normalized example $B=10$, $r=0.1$, $S=0.001$, $d_0=2$,
+$p=1$ and $\eta=2$, \eqref{eq:iso-corner} is a quadratic inequality.
+The quadratic roots are $a_-\simeq1.421897$ and $a_+\simeq12.720521$, with inward
+allocation exactly on $[a_-,a_+]$. Separate scalar maximizations of a
+concave objective with residual utility $S(1-e^{-x})$ verify inward
+solutions at $a=2$ and $a=10$, and outward solutions at $a=1$ and $a=20$.
+
+\subsection{A joint finite-interval witness}
+
+The support and allocation examples need not be merely disconnected illustrations. Couple the matched-efficiency schedule in \cref{sec:support} to $B=10$, $C_0=0$, $a(t)=W_{d(t)}/\ln(11)$, $r_n=r_h=0.1$, and all three prices equal to one. Set $q=0.99$, $\epsilon_R=\epsilon_I=0.001$, with unit initial slopes for $E,R,I$. At $z=B$, useful computation is exactly $C_L=W_{d(t)}$, the workload charged in the support example. The three outward-to-local marginal-return ratios are
+\begin{equation}
+ 11\ln(11)\left[S_j+\frac{r_j+S_j}{W_{d(t)}}\right],
+ \qquad(S_n,S_h,S_m)=(0.012,0.002,0.001).
+ \label{eq:joint-witness}
+\end{equation}
+They decrease with world count and are already below one at seven worlds. Thus this same finite family satisfies both the three-service feasibility test and strict all-inward optimality with positive residual external values. As the hierarchy grows from seven to 127 worlds, attained logarithmic value rises from $\ln8$ to $\ln128$. The budget is fixed at $B=10$ and productivity is deliberately tuned to $a(t)=W_{d(t)}/\ln 11$. This is a consistency witness, not evidence for the plausibility of that productivity path, an engineering implementation, or an infinite-horizon optimum. Persistent memory is still charged to every world; future resource effects are considered separately in \cref{sec:dynamic}.
+
+\subsection{Budget growth and shared technological progress}
+
+With perfect experiential substitution and no residual external value, $q=1$ and $\epsilon_R=\epsilon_I=0$. For \emph{any} strictly increasing $F$, maximizing value is equivalent to maximizing $C$. Let
+\begin{equation}
+ R_* = \max\{r_n/p_n,r_h/p_h\}.
+ \label{eq:Rstar}
+\end{equation}
+When $R_*>0$, the solution allocates
+\begin{equation}
+ z^*=\min\{B,\max(a/R_*-1,0)\},\qquad
+ B_{\rm crit}=a/R_*-1.
+ \label{eq:budgetcrit}
+\end{equation}
+Any remaining budget goes to a best-return computational external channel. The all-inward condition is $a/(1+B)\geq R_*$. If $R_*=0$, all investment is local. This exposes a limitation of a fixed-budget productivity path: with fixed $a$ and $R_*>0$, a sufficiently large budget restores external investment even without authenticity, information, or resilience premiums. The civilization does not stop preferring more value when it can generate virtual worlds.
+
+If local and remote computational coefficients all receive the same multiplicative improvement, the pure-computation condition is unchanged. Progress that disproportionately raises intensive return can support inward allocation; progress that improves everything equally need not. \Cref{fig:budget} shows this budget effect for $R_*=1$. Persistent inward allocation along a development path requires the relevant inequalities to hold along that path, not merely at one chosen value of $B$.
+
+\begin{figure}[tbp]
+\centering\includegraphics[width=.95\textwidth]{fig2.pdf}
+\caption{Exact inward budget share with perfect experiential substitution, zero residual value, and $R_*=1$. The transition occurs at $B=a-1$. Greater local productivity moves the boundary, but budget growth can eventually favor additional external capacity. Any strictly increasing computational value function gives the same allocation in this pure-computation case.}
+\label{fig:budget}
+\end{figure}
+
+\paragraph{Persistence when budgets grow.}
+
+For logarithmic computational value, let $d_0=1+C_0\geq1$ and
+$r_j\geq0$ be fixed. At time $t$, define
+\[
+ L(t)=\ln[1+B(t)],\qquad
+ H_j(t)=[1+B(t)]L(t)S_j(t),\qquad
+ A_j(t)=[1+B(t)][r_j+d_0S_j(t)].
+\]
+All quantities below are finite at each finite time. Prices are relative to
+local investment, the numeraire.
+
+\begin{proposition}[Pathwise persistence with logarithmic value]
+\label{prop:persistence}
+Suppose $B(t)>0$, $a(t)>0$, $p_j(t)>0$ and $S_j(t)\geq0$ on a
+path $t\geq t_0$, and retain the differentiability and concavity assumptions
+of Proposition~\ref{prop:corner}. The all-inward corner is optimal at every
+time on this path if and only if, for every $t$ and every direction with
+$A_j(t)>0$,
+\begin{equation}
+ p_j(t)>H_j(t),\qquad
+ a(t)\geq \max_{j:A_j(t)>0}
+ \frac{A_j(t)}{p_j(t)-H_j(t)}.
+ \label{eq:pathwise}
+\end{equation}
+The maximum over an empty set is zero. In particular, wherever $S_j(t)>0$,
+\begin{equation}
+ \frac{p_j(t)}{S_j(t)}>[1+B(t)]\ln[1+B(t)].
+ \label{eq:path-ratio}
+\end{equation}
+If $B(t)\to\infty$, a bounded price and a residual slope bounded away
+from zero in even one direction preclude eventual all-inward allocation,
+regardless of $a(t)$. With a fixed positive residual slope, persistence
+requires its relative external price to grow at least on the order of
+$B(t)\ln B(t)$. With bounded prices, it instead requires
+$S_j(t)=O(1/[B(t)\ln B(t)])$ for each direction. These order conditions
+are necessary, not sufficient: the productivity inequality in
+\eqref{eq:pathwise} must also hold. If $S_j(t)=0$ but $r_j>0$, that
+inequality reduces to $a(t)\geq[1+B(t)]r_j/p_j(t)$.
+\end{proposition}
+\begin{proof}
+At each time, the exact logarithmic corner test is
+$p_j(t)\geq H_j(t)+A_j(t)/a(t)$. If $A_j(t)>0$ and $a(t)$ is
+finite and positive, this requires $p_j(t)>H_j(t)$; rearrangement gives
+the stated lower bound on $a(t)$. Conversely these two inequalities imply
+the exact test. If $A_j(t)=0$, non-negativity and $d_0>0$ imply
+$r_j=S_j(t)=H_j(t)=0$, so that direction imposes no restriction.
+This proves the pointwise equivalence and therefore the pathwise one.
+For $S_j(t)>0$, we have $A_j(t)>0$, and division of $p_j(t)>H_j(t)$
+by $S_j(t)$ gives \eqref{eq:path-ratio}. Set
+$G(B)=(1+B)\ln(1+B)$. Then $G(B)\to\infty$ and
+$G(B)/(B\ln B)\to1$ as $B\to\infty$. If $p_j(t)\leq M$ and
+$S_j(t)\geq s>0$ eventually, $H_j(t)\geq sG(B(t))>M$ eventually,
+contradicting \eqref{eq:pathwise}. The same ratio inequality gives
+$p_j(t)>S_jG(B(t))$ when the slope is fixed, and
+$S_j(t)<M/G(B(t))$ when prices are bounded, including any zero-slope
+times. Finally, setting $S_j(t)=0$ in the exact corner test gives the
+last assertion.
+\end{proof}
+Proposition~\ref{prop:persistence} characterizes a sequence of static
+optima. In general, its conditions are neither necessary nor sufficient
+for an all-inward infinite-horizon optimal policy. The two-period examples in
+section~\ref{sec:dynamic} demonstrate the failure of both implications
+already when only one continuation period is added.
+With additional hard support constraints, necessity requires the small
+budget-transfer directions used in Proposition~\ref{prop:corner} to remain
+feasible; sufficiency is inherited whenever the corner remains feasible.
+
+
+\subsection{Production asymmetry and concave external alternatives}
+\label{sec:production}
+The local term $a\ln(1+z)$ describes intensive improvement of an existing
+substrate with diminishing marginal returns. Linear external terms describe
+replication into additional territory over the investment range being
+modelled. This intensive--extensive distinction is a modelling choice,
+not a universal technological law. In particular, the unbounded logarithm
+is not a physical finite-capacity constraint; such constraints are imposed
+separately by the service frontier. External projects may also have
+diminishing returns.
+
+\begin{lemma}[Production curvature and the corner test]
+\label{lem:production}
+Replace useful computation by
+\[
+ C=C_0+a\ell(z)+G_n(x)+G_h(y),
+\]
+where $\ell$ is differentiable, increasing and concave with $\ell(0)=0$
+and $\ell'(B)>0$, and $G_n,G_h$ are differentiable, non-decreasing and
+concave with $G_j(0)=0$, $G_j'(0)=r_j$. Retain the original residual
+utilities, set $r_m=0$, and let $F(C)=\ln(1+C)$. The all-inward corner
+is globally optimal if and only if
+\begin{equation}
+ p_j\geq\frac{r_j+d_0S_j}{a\ell'(B)}
+            +S_j\frac{\ell(B)}{\ell'(B)}
+ \qquad(j=n,h,m).
+ \label{eq:general-production}
+\end{equation}
+For $\ell(z)=\ln(1+z)$ this is exactly the original logarithmic
+threshold, regardless of the curvature of $G_n,G_h$ away from zero.
+\end{lemma}
+\begin{proof}
+The modified $C$ is concave, and composition with the increasing concave
+logarithm preserves concavity of the full objective. At the corner,
+$1+C_L=d_0+a\ell(B)$, the local marginal return is
+$a\ell'(B)/(d_0+a\ell(B))$, and the external marginal return in
+direction $j$ is $r_j/(d_0+a\ell(B))+S_j$.
+The supporting-hyperplane argument of \cref{prop:corner} applies unchanged.
+Multiplying its marginal-return inequality by the positive factor
+$(d_0+a\ell(B))/(a\ell'(B))$ gives
+\[
+ p_j\geq\frac{r_j+S_j[d_0+a\ell(B)]}{a\ell'(B)},
+\]
+which is \cref{eq:general-production}. For the local logarithm,
+$\ell(B)/\ell'(B)=(1+B)\ln(1+B)$ and
+$1/\ell'(B)=1+B$, giving the stated specialization.
+\end{proof}
+
+\begin{productioncorollary}[A production-independent lower bound on the residual floor]
+\label{cor:production-growth}
+Retain the value, external-production and residual-utility assumptions of
+Lemma~\ref{lem:production}. Let $\ell$ be increasing and concave on
+$[0,\infty)$, with $\ell(0)=0$, and differentiable at the positive
+corner budget $B$, where $\ell'(B)>0$. Differentiability at zero is
+not required. Then the residual floor satisfies
+\[
+ H_j^{\ell}(B):=S_j\frac{\ell(B)}{\ell'(B)}\geq S_jB.
+\]
+For $S_j>0$ and finite $a>0$, an all-inward optimum requires
+$p_j>H_j^{\ell}(B)\geq S_jB$. Consequently, along a path
+$B(t)\to\infty$, a bounded relative external price and a residual slope
+bounded away from zero in any direction exclude eventual all-inward
+static allocation, regardless of productivity. A fixed positive slope
+requires its relative price to grow at least linearly in $B(t)$;
+bounded prices require $S_j(t)=O(1/B(t))$. These are necessary,
+not sufficient, growth conditions. The faster $B\ln B$ floor for local
+logarithmic production is a particular case, not a general rate.
+\end{productioncorollary}
+\begin{proof}
+The supporting-line inequality for the concave function $\ell$, applied
+at $B$ and evaluated at zero, gives
+\[
+ 0=\ell(0)\leq\ell(B)+\ell'(B)(0-B).
+\]
+Since $\ell'(B)>0$, division and multiplication by $S_j\geq0$ give
+$H_j^{\ell}(B)\geq S_jB$. The proof of Lemma~\ref{lem:production} needs
+local differentiability only at $z=B$: the objective is concave on the
+whole feasible set, and its derivatives in the feasible directions from
+the inward corner exist there. Thus \cref{eq:general-production} also
+holds under the present endpoint regularity. When $S_j>0$, its term
+$(r_j+d_0S_j)/(a\ell'(B))$ is strictly positive, because $d_0>0$,
+$r_j\geq0$ and $a$ is finite and positive. This proves
+$p_j>H_j^{\ell}(B)\geq S_jB$.
+
+If eventually $p_j(t)\leq M$ and $S_j(t)\geq s>0$, then
+$S_j(t)B(t)>M$ eventually, contradicting the necessary inequality.
+For fixed $S_j>0$, the same inequality gives $p_j(t)>S_jB(t)$.
+For bounded prices it gives $S_j(t)<M/B(t)$ wherever $S_j(t)>0$,
+with the bound immediate at zero-slope times. Neither consequence
+controls the remaining productivity term in
+\cref{eq:general-production}, so it does not establish sufficiency.
+For $\ell(B)=\ln(1+B)$, direct substitution gives
+$\ell(B)/\ell'(B)=(1+B)\ln(1+B)$, recovering the logarithmic rate.
+\end{proof}
+
+For example, $G_j(u)=r_j\ln(1+\kappa_j u)/\kappa_j$ with
+$\kappa_j>0$ is concave and has the same initial slope as $r_ju$.
+It preserves both the logarithmic corner test and the growth-path
+obstruction in \cref{prop:persistence}. The isoelastic corner test likewise
+uses only $G_j'(0)$, so \cref{prop:curvature} is unchanged. Linearity is
+instead needed for the specific mixed-allocation formula in
+\cref{eq:budgetcrit}, the corresponding curves in \cref{fig:budget},
+and the closed-form continuation allocation in section~5.
+
+A one-channel pure-computation example makes the distinction explicit.
+Set $a=10$, $r=p=1$. With $G(x)=x$, the optimum has
+$x^*=\max\{0,B-9\}$. With $G(x)=\ln(1+x)$, differentiating
+$10\ln(1+B-x)+\ln(1+x)$ gives
+$-10/(1+B-x)+1/(1+x)$; strict concavity therefore gives
+$x^*=\max\{0,(B-9)/11\}$. Both cases leave the inward corner at the
+same budget boundary, but their positive external allocations differ.
+The executable checks compare both formulas with scalar optimization.
+The particular $B\ln B$ rate in \cref{prop:persistence} comes from the
+local logarithmic production function, not from external linearity.
+
