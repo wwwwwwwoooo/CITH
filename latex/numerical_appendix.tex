@@ -1,0 +1,37 @@
+\section{Numerical specification}
+\label{app:numerical}
+All random tests use NumPy generators with fixed seeds recorded in each
+script. The present environment is Python 3.13.5, NumPy 2.3.5, and SciPy
+1.17.0. The reference design is the archived 14-dimensional, 1,024-row
+scrambled Sobol array, generated with \texttt{seed=20260905}, not the
+newer \texttt{rng} keyword. No regenerated array replaces it. Its source
+file SHA-256 is
+\begin{center}\scriptsize\texttt{ce45ecd0435f2abf834445957db369d1d4a5bc28e9c4e7b686561df50a14194b}\end{center}
+The range transformation, scenario table, and archived measure sensitivity
+are in the supplement. Every row of the new no-replication classification
+uses those same parameter values, with the original instantaneous prices,
+$q=.99$, $\epsilon_R=.01$, and $\epsilon_I=.05$.
+
+Equation checks use explicit absolute and relative tolerances printed in
+the scripts, generally $10^{-8}$ or tighter after scale normalization.
+Nonconcave objectives are checked with dense scalar candidate searches and
+local refinement; passing these checks is not a proof of global optimality.
+The exact endpoint theorem is proved separately. Concave full-objective
+comparisons use multiple starting points where specified and reduced-gradient
+certificates; the frozen no-replication ensemble additionally uses a scalar
+root for the observation optimum. The infinite-horizon check maximizes each
+finite-horizon Bellman update independently; its largest absolute value
+error in 180 tests was $8.293\times10^{-11}$. The full mathematical
+transversality argument does not depend on that finite truncation.
+
+New verification covers service-boundary and bundle cases, exact hazard
+product derivatives, continuous and integer world counts, the latency
+integral, marked-origin mixtures, continuous and binary strategic games,
+and thermal root solutions. The new growing-budget no-replication
+construction uses a restricted-face resource root and tests the full
+replication inequalities. Results are machine-readable JSON plus literal
+stdout, accompanied by a runner which fails on any failed assertion.
+No script imports the production implementation of another new validation
+script. Shared NumPy/SciPy routines do not constitute independent peer review.
+The named scripts provided in the revision proposal were unavailable; the
+README distinguishes our replacement checks from the archived reruns.

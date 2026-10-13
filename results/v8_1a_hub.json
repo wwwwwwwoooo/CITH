@@ -1,0 +1,36 @@
+{
+  "seed": 2026101301,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "tolerances": {
+    "derivative": 2e-09,
+    "relative_value": 2e-07
+  },
+  "counts": {
+    "derivative": [
+      360,
+      0
+    ],
+    "optimizer": [
+      360,
+      0
+    ],
+    "reductions": [
+      720,
+      0
+    ],
+    "edges": [
+      25,
+      0
+    ]
+  },
+  "optimizer_inward": 216,
+  "optimizer_outward": 144,
+  "unresolved": 0,
+  "max_scaled_derivative_error": 6.637350625420456e-16,
+  "max_scaled_corner_excess": 1.17162781128565e-16,
+  "failures": []
+}

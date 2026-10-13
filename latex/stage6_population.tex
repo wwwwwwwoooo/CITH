@@ -1,0 +1,226 @@
+\section{From allocation to silence}
+\label{sec:population}
+\subsection{Arrival exposure and the uniformity requirement}
+An allocation rule is a statement about one decision process. A Fermi
+explanation requires a distribution of such processes, their launch
+histories, and propagation to the region where absence is being explained.
+Let $N_i^{\rm act}(t)$ denote outward-capable autonomous nodes and
+$\lambda_i(t)$ their initiation rates per node-time. An independent
+Poisson approximation gives a surviving-front mean
+\begin{equation}
+ \mu=\sum_i\int\lambda_i(t)N_i^{\rm act}(t)[1-q_{R,i}(t)]\dd t.
+ \label{eq:mu}
+\end{equation}
+Here $q_R$ is an extinction probability. For a Galton--Watson process it
+is the smallest fixed point of the offspring generating function; for
+Poisson offspring of mean $\Rogue$,
+$q_R=\exp[\Rogue(q_R-1)]$ \citep{Harris1963}. Except for degenerate
+immortal one-descendant processes, a mean at most one gives extinction
+almost surely. Survival is not arrival, and extinct fronts can still
+leave finite artefacts. Replace $\mu$ by $\mu_A(z,T)$ when launch,
+survival, and propagation into the target region by time $T$ have all
+been accounted for.
+
+For a fixed independent list of civilizations with Poisson arrival
+means $\mu_{A,i}$, $P_0^{\rm fixed}=\exp(-\sum_i\mu_{A,i})$.
+If origins themselves form a Poisson process with intensity measure
+$\nu(\dd z)$, independently marked by their arrival means, the void
+probability instead is
+\begin{equation}
+ P_0^{\rm origins}
+ =\exp\left[-\int(1-\exp[-\mu_A(z,T)])\nu(\dd z)\right].
+ \label{eq:origins}
+\end{equation}
+A random number of parent civilizations clusters fronts and changes the
+likelihood. For two fixed civilizations with mean two fronts each the
+probability is $0.0183$; for a Poisson number of mean two it is $0.1774$.
+These archived numbers are retained. The derivation and a new simulation
+are given in \cref{app:population-proof}.
+
+\begin{proposition}[Necessary uniformity and the exact two-type window]
+\label{prop:uniformity}
+Let $0<\bar N_A=\int\nu(\dd z)<\infty$, $0<P_*<1$, and
+$\mathcal L_*=-\ln P_*$. Suppose a fraction $\pi_{\rm out}$ of origins under the
+normalized arrival-relevant intensity has $\mu_A\geq\mu_{\rm out}>0$.
+Then $P_0\geq P_*$ requires
+\begin{equation}
+ \pi_{\rm out}\leq
+ \frac{\mathcal L_*}{\bar N_A[1-\exp(-\mu_{\rm out})]}.
+ \label{eq:uniformity-bound}
+\end{equation}
+For the complementary class labelled inward, let $c_{\rm in}=\mathbb E[1-\exp(-\mu_A)\mid\text{inward}]$.
+Set $c_{\rm in}=0$ when that class has zero probability. Then also $(1-\pi_{\rm out})c_{\rm in}\leq \mathcal L_*/\bar N_A$.
+For two types with exactly specified means
+$\mu_{\rm out}>\mu_{\rm in}\geq0$, write
+$f_k=1-\exp(-\mu_k)$. The exact necessary and sufficient condition is
+\begin{equation}
+ f_{\rm in}+\pi_{\rm out}(f_{\rm out}-f_{\rm in})
+ \leq \mathcal L_*/\bar N_A.
+ \label{eq:two-type-window}
+\end{equation}
+Without any upper bound on the means, $\bar N_A\leq \mathcal L_*$ is sufficient
+for $P_0\geq P_*$. The weaker condition
+$\bar N_Af_{\rm out}\leq \mathcal L_*$ is sufficient for arbitrary mixtures only
+in the exactly specified two-type model, not when $\mu_{\rm out}$ is
+merely a lower bound.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The negative logarithm of \cref{eq:origins} is
+$\bar N_A\mathbb E[1-\exp(-\mu_A)]$. Bound its non-negative outward
+and inward contributions separately; evaluate the expectation exactly
+for two types. A complete proof and boundary cases are in
+\cref{app:population-proof}.
+
+At $P_*=0.05$ and $\mu_{\rm out}=3$, the necessary upper outward
+fractions for $\bar N_A=10^2,10^3,10^4$ are respectively
+$3.1527\%$, $0.31527\%$, and $0.031527\%$. These are conditional
+compatibility bounds, not posterior probabilities. For example, a prior
+on the number of origins could make large exposure unlikely; then
+uniform inward behaviour need not be invoked. Conversely, with a large
+arrival-relevant population, a small expansionist tail can exhaust the
+entire permitted exposure. Any inward leakage makes the constraint on
+that tail tighter, not looser.
+
+The archived design is far from a near-uniform all-inward allocation:
+its reference count is $219/1024$, and its design-measure sensitivity is
+reported in the supplement. But $805$ failed all-inward tests cannot be
+identified with $805$ replicating civilizations. Reoptimizing observation
+on the no-replication face, with exactly the same frozen inputs and no
+new dormant-backup technology, gives $421/1024$ no-replication optima.
+Of these, $202$ use observation without replication; $603/1024$ prefer
+replication. These additive calculations strengthen the logical
+distinction rather than providing an astronomical prevalence estimate.
+Even this selected synthetic ensemble is nowhere near the high-exposure
+uniformity requirement under a literal population interpretation, which
+its sampling design does not justify.
+
+Under a uniform external price multiplier $\kappa$, the archived statistic
+$\rho$ gives $\Pr(\rho>\kappa)$ for loss of the \emph{all-inward} corner.
+It equals an outward population fraction only after specifying a
+population measure and identifying every such failure with the relevant
+outward behaviour. With observation or backups free, the face optimizer
+must be recalculated; the old $\rho$ is not the no-replication threshold.
+This is why a change in wording alone cannot carry the old sensitivity
+experiment into the new population claim.
+
+\subsection{Preemption: a game rather than an adjusted corner}
+To formalize strategic complementarity, let $N\geq2$ civilizations choose
+$x_i\in[0,\bar X]$. Suppose
+\begin{equation}
+ U_i=f(x_i)+\iota x_i\sum_{k\ne i}x_k,
+ \qquad \iota\geq0,
+ \label{eq:preemption-game}
+\end{equation}
+where $f$ is continuously differentiable and strictly concave. It can
+include the static local-versus-external objective, including the base
+residual slope $S_{j0}$. This is a specified payoff externality, not a
+claim that fear of neighbours has a universal linear form. Competition
+among expanding lineages is an established motivation for such a test
+\citep{Hanson1998}.
+
+\begin{proposition}[Preemption equilibria and a separate cascade test]
+\label{prop:preemption}
+In \cref{eq:preemption-game}, a profile is a pure Nash equilibrium exactly
+when, with $X_{-i}=\sum_{k\ne i}x_k$,
+\begin{equation}
+ \begin{cases}
+ f'(0)+\iota X_{-i}\leq0,&x_i=0,\\
+ f'(x_i)+\iota X_{-i}=0,&0<x_i<\bar X,\\
+ f'(\bar X)+\iota X_{-i}\geq0,&x_i=\bar X.
+ \end{cases}
+ \label{eq:preemption-KKT}
+\end{equation}
+A pure equilibrium exists. The all-inward profile is an equilibrium iff
+$f'(0)\leq0$; the all-cap profile is an equilibrium iff
+$f'(\bar X)+\iota(N-1)\bar X\geq0$. When both hold there are at least
+two equilibria. Symmetric interior equilibria are exactly the roots of
+$f'(x)+\iota(N-1)x=0$ in $(0,\bar X)$.
+
+For the distinct binary-action game $x_i\in\{0,\bar X\}$, put
+$d_{\rm bin}=[f(\bar X)-f(0)]/\bar X$. Its all-inward and all-outward
+profiles are equilibria iff, respectively,
+$d_{\rm bin}\leq0$ and $d_{\rm bin}+\iota(N-1)\bar X\geq0$.
+With inward tie-breaking, one externally maintained outward player
+triggers all other players under asynchronous best-response updates
+iff $d_{\rm bin}+\iota\bar X>0$.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Strict concavity gives the endpoint and interior derivative conditions.
+The potential $\sum_i f(x_i)+\iota\sum_{i<k}x_ix_k$ has a maximum on
+the compact strategy cube. Binary choices instead compare finite payoff
+differences; they cannot be tested using $f'(0)$ alone. Full proofs are
+in \cref{app:preemption-proof}.
+
+Failure of the inward derivative test at maximal rival investment does
+not establish an outward equilibrium. For $N=2$, $\bar X=1$,
+$f(x)=-x-5x^2$, and $\iota=2$, that derivative is $-1+2=1>0$,
+but the only equilibrium is $(0,0)$. Nor do two stable endpoint
+equilibria imply a one-defector cascade. In the binary game with five
+players, $d_{\rm bin}=-2.5$ and $\iota=\bar X=1$, both endpoints are
+stable, but a single defector gives the remaining players incentive
+$-1.5<0$. A sufficiently large cluster can matter when one player does
+not. Population uniformity is therefore an equilibrium-selection and
+containment problem as well as a distribution of individual preferences.
+
+Virtual population growth affects that problem only through physical
+agency. If worlds grow as $\exp(g_Wt)$, their outward-capable fraction
+falls as $\exp(-g_ct)$, and the launch-times-arrival factor stays bounded
+above and below by positive constants, integrated infinite-horizon
+exposure is finite exactly when $g_c>g_W$. This is the elementary
+integrability criterion for $\int_0^\infty\exp[(g_W-g_c)t]\dd t$.
+Without actuator access the exposure can instead be zero, regardless
+of the virtual population. Recursive population count alone is neither
+a launch rate nor a guarantee of containment.
+
+\subsection{Visibility is a separate inverse problem}
+Neither an allocation share nor an arrival probability fixes spectrum,
+power, geometry, or duty cycle. With mutually exclusive source classes,
+a schematic Poisson detection model is
+\begin{equation}
+ \Lambda_j(T)=\int_0^T R_{\rm civ}(t_e)
+ \mathcal P_j(T-t_e\mid t_e)\pi_j(T,t_e)\dd t_e,
+ \qquad P(0)=\exp[-\sum_j\Lambda_j(T)].
+ \label{eq:observations}
+\end{equation}
+Here $\mathcal P_j$ is a source-state probability, not the residual slope
+$S_j$, and $\pi_j$ is the selection probability. Overlapping source
+attributes require union probabilities rather than double counting.
+Even a stationary one-class model constrains a product of emergence
+rate, source lifetime $\tau$, and selection probability. Increasing one
+factor and decreasing another can preserve the likelihood. A null survey
+therefore does not by itself identify an inward transition.
+
+\subsection{A limited thermal bridge}
+\label{sec:thermal-bridge}
+Landauer's bound assigns at least $k_BT\ln2$ of heat to erasure of one
+unbiased bit under its thermodynamic assumptions \citep{Landauer1961}.
+It is not a universal energy charge per reversible logical operation or
+a law fixing subjective clock speed \citep{Bennett1973}. For an ideal
+one-temperature blackbody radiator, negligible background temperature,
+total effective emitting area $A=M_{\rm rad}/\Sigma_{\rm rad}$, and
+thermalized luminosity $L$, the Stefan--Boltzmann law gives
+\begin{equation}
+ T=\left(\frac{L\Sigma_{\rm rad}}{\sigma_{\rm SB}M_{\rm rad}}\right)^{1/4}.
+ \label{eq:radiator}
+\end{equation}
+This equation follows by solving $L=\sigma_{\rm SB}AT^4$ for $T$;
+$A$ already counts all radiating faces. With nominal solar luminosity,
+$\Sigma_{\rm rad}=1\,{\rm kg\,m^{-2}}$ as an assumed engineering
+parameter, and the JPL planetary masses \citep{JPLPhysical}, a Mercury
+mass gives $378.16\,{\rm K}$ and a Jupiter mass $43.43\,{\rm K}$.
+Their wavelength-form Wien peaks are $7.66$ and $66.73\,\mu{\rm m}$,
+respectively. Constants and numerical root checks are specified in the
+supplement \citep{NIST2022}.
+
+The first example lies inside the $100$--$700\,{\rm K}$ model range
+searched by Project Hephaistos II; the second lies below it
+\citep{Suazo2024}. The WISE/Spitzer framework of \citet{Wright2014b}
+likewise targets mid-infrared waste heat, not all possible cold radiator
+architectures. Thus inward allocation does not predict a unique cold
+far-infrared population. It permits temperature-dependent search targets
+once dissipated power and radiating area are supplied. Bradbury's
+Matrioshka-brain manuscript already describes nested stellar computing
+and heat disposal \citep{Bradbury1999}. The cooler galactic environments
+of \citet{CirkovicBradbury2006} can motivate migration, not necessarily
+continued residence around the original star. The present bridge supplies
+no priority claim for either idea and no construction-feasibility proof.

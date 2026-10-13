@@ -1,0 +1,77 @@
+\section{Population likelihoods and strategic interaction}
+\label{app:population-proof}
+For a fixed list, independence multiplies individual zero-arrival
+probabilities $\exp(-\mu_{A,i})$, yielding
+\begin{equation}
+ P_0^{\rm fixed}=\exp(-\sum_i\mu_{A,i}).\label{eq:fixed}
+\end{equation}
+For finite origin intensity $\bar N_A$, condition on a Poisson number
+$K$ of origins and independent marks drawn from the normalized intensity.
+With $m=\mathbb E\exp(-\mu_A)$,
+\[
+ P_0=\sum_{k=0}^\infty e^{-\bar N_A}
+ \frac{\bar N_A^k}{k!}m^k
+ =\exp[-\bar N_A(1-m)],
+\]
+proving \cref{eq:origins}. Restriction to increasing finite-intensity
+regions and continuity of probabilities proves the corresponding
+sigma-finite formulation whenever needed, allowing a zero limit. This
+is the generating-functional identity of \citet{LastPenrose2017}.
+
+For \cref{prop:uniformity}, monotonicity of $1-e^{-u}$ implies
+$\mathbb E(1-e^{-\mu_A})\geq\pi_{\rm out}(1-e^{-\mu_{\rm out}})$.
+The hypothesis $P_0\geq P_*$ bounds this expectation by
+$\mathcal L_*/\bar N_A$, proving the first inequality. Its inward contribution is
+non-negative and bounded by the same total, giving the leakage
+inequality. Two constant marks evaluate the expectation as
+$f_{\rm in}+\pi_{\rm out}(f_{\rm out}-f_{\rm in})$.
+If $\mathcal L_*/\bar N_A<f_{\rm in}$ no mixture works; if it is at least
+$f_{\rm out}$ every mixture works. Otherwise the exact upper fraction
+is $(\mathcal L_*/\bar N_A-f_{\rm in})/(f_{\rm out}-f_{\rm in})$.
+At equal means the fraction cancels and only the common mean matters.
+Since $0\leq1-e^{-\mu_A}\leq1$, $P_0\geq e^{-\bar N_A}$ proves the
+universal rarity sufficient condition. A lower mean bound alone cannot
+improve it: take $\bar N_A=100$, $P_*=.05$, and lower bound
+$\mu_{\rm out}=.01$, but actual means twenty for every origin.
+The proposed weaker rarity expression is below $\mathcal L_*$, while the actual
+null probability is near $e^{-100}$. If $\bar N_A=0$, the null probability
+is one without restrictions. If $\mu_{\rm out}=0$, division in
+\cref{eq:uniformity-bound} is invalid and no bound follows from that
+zero lower bound. Fractions zero and one and equality $P_0=P_*$ are
+included by the weak inequalities. Inward leakage averages the full
+function of the random mark, not that function at its mean.
+
+\subsection{Proof of the preemption proposition}
+\label{app:preemption-proof}
+Fix rivals in \cref{eq:preemption-game}. The own-action objective is
+strictly concave, so its unique maximizer satisfies exactly the three
+conditions in \cref{eq:preemption-KKT}. Simultaneous satisfaction is
+the definition of Nash equilibrium. The continuous function
+$\Phi(x)=\sum_i f(x_i)+\iota\sum_{i<k}x_ix_k$ attains a maximum on
+the compact cube. A unilateral change changes $\Phi$ by precisely the
+change in that player's payoff, so such a maximum is an equilibrium.
+Substituting all-zero and all-cap profiles proves their conditions;
+substituting a common interior action gives the stated scalar equation.
+This characterizes asymmetric profiles too through the coordinate
+conditions; it does not assert that every equilibrium is symmetric.
+
+For binary choices, the payoff difference between cap and zero is
+$\bar X[d_{\rm bin}+\iota X_{-i}]$. Its sign proves the two endpoint
+criteria. With one maintained seed and all others initially zero, the
+remaining players initially see difference proportional to
+$d_{\rm bin}+\iota\bar X$. If positive, each first updating player
+adopts, and the incentive never decreases as others adopt. Under a fair
+asynchronous update schedule, all adopt in finitely many individual
+updates. If non-positive, none adopts with inward tie-breaking, so the
+seed does not trigger a cascade. This proves the claimed iff under the
+specified update and tie rules.
+
+For the continuous counterexample, best response is
+$\max\{0,(2x_{-i}-1)/10\}$ on $[0,1]$. At an equilibrium both actions
+are at most $0.1$, which forces both responses to zero. Hence the sole
+equilibrium is zero despite the positive origin derivative against a
+maximal rival. The binary five-player counterexample follows by direct
+substitution. These calculations refute an unconditional one-defector
+cascade; they do not exclude cascades in games satisfying the stated
+strict condition. The thermal identity in \cref{eq:radiator} is algebra,
+not an additional behavioral theorem.

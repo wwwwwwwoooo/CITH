@@ -1,0 +1,25 @@
+{
+  "seed": 2026101323,
+  "counts": {
+    "budget": [
+      400,
+      0
+    ],
+    "interior_services": [
+      400,
+      0
+    ],
+    "strict_replication_test": [
+      400,
+      0
+    ],
+    "all_inward_fails": [
+      400,
+      0
+    ],
+    "asymptotic_share": [
+      400,
+      0
+    ]
+  }
+}

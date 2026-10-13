@@ -1,0 +1,22 @@
+{
+  "seed": 2026101302,
+  "tolerance": 2e-09,
+  "counts": {
+    "floor": [
+      3000,
+      0
+    ],
+    "witness_optimizer": [
+      120,
+      0
+    ],
+    "boundary": [
+      35,
+      0
+    ],
+    "equality": [
+      1200,
+      0
+    ]
+  }
+}

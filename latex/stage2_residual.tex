@@ -1,0 +1,237 @@
+\section{Which residual value survives}
+\label{sec:residual}
+
+The all-inward corner is a stringent diagnostic, but it is not the correct
+boundary for a claim about the absence of new replicating lineages.
+Information can be purchased without resident settlement. A dormant,
+externally stored backup can provide geographical separation without
+continuing resource acquisition. This section first prices those substitutes
+and then replaces a free resilience slope by an explicit expected-value
+calculation. The resulting distinctions identify which part of the earlier
+floor is a replication incentive rather than merely an external-service
+incentive.
+
+\subsection{No replication with observation and dormant backups}
+Add an optional dormant-backup capacity $b_{\rm bk}\geq0$ at price $p_b>0$.
+It has neither computational production nor descendants. The budget and
+objective become
+\begin{align}
+ z+p_nx+p_hy+p_mw+p_bb_{\rm bk}&\leq B,\nonumber\\
+ U&=F(C)+(1-q)E(x)+\epsilon_RR(x+y+b_{\rm bk})
+                  +\epsilon_II(x+y+w).
+ \label{eq:backup-model}
+\end{align}
+Throughout this subsection local production is concave; all other functions retain the concavity assumptions of \cref{sec:allocation}.
+The no-replication face has $x=y=0$; observation and backups are optimized,
+not fixed at zero. Write a maximizing allocation on this face as
+$(z^*,w^*,b^*)$, its computation as $C^*$, and its budget multiplier as
+$\lambda>0$. Assume derivatives are finite at this allocation. If $z^*>0$,
+then $\lambda=F'(C^*)a\ell'(z^*)$. With $z^*=0$, the multiplier, rather
+than an unjustified interior formula, is used below.
+
+\begin{proposition}[A no-replication criterion]
+\label{prop:no-replication}
+A no-replication face optimizer is also a global optimizer exactly when
+it admits a restricted-problem multiplier $\lambda$ satisfying
+\begin{align}
+ F'(C^*)r_n+(1-q)E'(0)+\epsilon_RR'(b^*)+\epsilon_II'(w^*)
+     &\leq p_n\lambda,\nonumber\\
+ F'(C^*)r_h+\epsilon_RR'(b^*)+\epsilon_II'(w^*)
+     &\leq p_h\lambda.
+ \label{eq:no-replication}
+\end{align}
+The non-replicating channels satisfy
+$\epsilon_II'(w^*)\leq p_m\lambda$ and
+$\epsilon_RR'(b^*)\leq p_b\lambda$, with equality in each positive
+channel. The backup inequality is omitted when backups are unavailable.
+Strict inequalities in \cref{eq:no-replication} exclude replication in
+every full optimizer.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The restricted first-order conditions already control the local,
+observation, and backup directions. Adding the two displayed inequalities
+completes the full concave-program optimality conditions. A supporting
+hyperplane proves global sufficiency. The converse and endpoint cases
+are proved in \cref{app:replication-proof}.
+
+When observation is interior and backups are absent, this gives exactly
+\begin{align}
+ F'(C^*)r_n+(1-q)E'(0)+\epsilon_RR'(0)&\leq(p_n-p_m)\lambda,\nonumber\\
+ F'(C^*)r_h+\epsilon_RR'(0)&\leq(p_h-p_m)\lambda.
+ \label{eq:observation-net}
+\end{align}
+Information disappears as a separate replication premium, not as an
+economic influence: it still determines $w^*$, the remaining local
+investment, and $\lambda$. For an interior backup but a possibly inactive
+observation channel, the corresponding subtraction is $p_b\lambda$, while
+$\epsilon_II'(w^*)$ stays explicit. If both are interior, the comparison
+uses the net bundle prices $p_j-p_m-p_b$.
+
+\begin{corollary}[Substitute bundles and zero-service corners]
+\label{cor:bundle}
+At a no-replication face optimum with $w^*,b^*>0$, $p_h<p_m+p_b$
+rules out no replication even if $r_h=0$. At equality with $r_h=0$,
+replacing equal small amounts of observation and backup by industry
+preserves value and expenditure, and can produce tied replicating optima.
+If $w^*=0$, the correct reduction instead uses
+$c_I=\epsilon_II'(0)/\lambda\leq p_m$; it does not subtract the full
+observation price. Analogously an inactive backup uses
+$c_R=\epsilon_RR'(0)/\lambda\leq p_b$.
+\end{corollary}
+\noindent\emph{Proof sketch.}
+Use complementary slackness in \cref{eq:no-replication}. A cheaper bundle
+has a strictly positive replication derivative. The exact exchange and
+zero-channel cases are established in \cref{app:replication-proof}.
+
+The bundle result is important for interpreting inexpensive autonomous
+industry. Replacing colonists by observation instruments does not help
+if a replicating industrial platform supplies both observation and
+resilience more cheaply than their standalone substitutes. Conversely,
+expensive industrial platforms can lose even when information and
+resilience have positive value. The model consequently does not need
+to erase those motives; it needs a technologically credible way to meet
+them without a reproducing platform. Independence from a particular
+service premium is not independence from the prices of its substitutes.
+
+The distinction between exactly zero and a small positive launch rate
+is consequential only with a propagation mechanism. A deployed viable
+seed in a deterministic growth law $N(t)=N(0)\exp(g t)$ with $g>0$ never
+becomes equivalent to $N(0)=0$. A stochastic supercritical lineage instead
+has a positive survival probability, not guaranteed survival. Finite
+launch sizes, deployment thresholds, and subcritical replication do not
+justify the stronger claim that every arbitrarily small investment expands
+without bound. The population calculation in \cref{sec:population} uses
+successful, arriving fronts rather than an investment share as its unit.
+
+
+\subsection{A constructive separation from all-inward persistence}
+The distinction above can change the asymptotic conclusion, not just a
+finite-budget classification. In the following construction, physical
+budgets are supplied exogenously to the sequence of static problems.
+The proposition does not specify how those resources are acquired.
+
+\begin{corollary}[Growing budgets without new replication]
+\label{cor:growing-no-replication}
+Let $\eta=1$, $B\to\infty$, $a=B^2$, $q=1$, $C_0\geq0$, and
+$\ell(z)=\ln(1+z)$. Let
+$\epsilon_I I(w)=J_I[1-\exp(-w/s_I)]$ and
+$\epsilon_R R(b)=J_R[1-\exp(-b/s_R)]$, with fixed strictly positive
+$J_I,J_R,s_I,s_R,p_m,p_b$. External computation is concave with fixed
+finite initial slopes. If $p_n,p_h>p_m+p_b$, then for all sufficiently
+large $B$ every full optimizer has $x=y=0$, and a no-replication optimizer
+has $w,b>0$ with
+\[
+ z/B\longrightarrow1,\qquad w+b=O(\ln B).
+\]
+Nevertheless the all-inward corner is eventually impossible because its
+information and resilience slopes stay positive.
+\end{corollary}
+\noindent\emph{Proof sketch.}
+The restricted face has positive local investment for large $B$.
+Its local multiplier tends to zero, making both service channels interior.
+Their exponential marginal utilities give service quantities logarithmic
+in the inverse multiplier, hence $B=z+O(\ln z)$. The remaining replication
+premium divided by that multiplier is $r_j(1+z)/B^2\to0$, smaller than
+either strictly positive net price. A complete proof is in
+\cref{app:growing-norep-proof}.
+
+This construction is a counterexample to transferring the all-inward
+unbounded-budget exclusion directly to no replication. Non-replicating
+services absorb a persistent preference rather than requiring its weight
+to vanish. It also explains why a local ceiling below the original
+$B_{\rm tip}$ cannot be a universal necessary condition once the decision
+problem changes. The relevant comparison uses the remaining local budget,
+the optimized shadow value of resources, and the net service-bundle price.
+A physical application must still provide a feasible resource history;
+the construction is a separation of allocation claims, not a mechanism
+for obtaining unbounded local energy.
+
+The price condition is strict for a reason. If an industrial project
+costs exactly the sum of its substitute services and has no computational
+return, the exchange in \cref{cor:bundle} can leave a continuum of tied
+choices. An analyst selecting the non-replicating member of that set has
+shown existence, not suppression of every replicating choice. Conversely,
+if industry costs less than the bundle, improving local computation cannot
+repair the negative net price while both substitutes remain interior.
+This distinction matters at the population step: a positive measure of
+ties resolved outward can create arrival exposure even where an inward
+optimizer exists. Strict preference, an explicit tie-breaking rule, or a
+separate containment constraint is needed to exclude that route.
+
+\subsection{Value at risk rather than an exogenous resilience slope}
+For a precise local calculation, specialize to one candidate backup
+project $x$, $C(x)=a\ell(B-px)+G(x)$, $G'(0)=r$, and $C(0)=\Omega>0$.
+Set $C_0=0$ in this calculation. Let $0\leq\vartheta<1$ be the
+probability, over the stated horizon, of a catastrophe that separation
+can mitigate. It is not a rate in inverse years. Let $\varphi(0)=0$,
+$0\leq\varphi\leq1$, and $\varphi'(0)>0$. A seed backup has
+$\gamma=0$; a scale-matched mirror has $\gamma=1$. Use
+\begin{equation}
+ U_R(x)=\left[1-\vartheta+\vartheta
+       \varphi\!\left(\frac{x}{C(x)^\gamma}\right)\right]F_\eta(C(x)).
+ \label{eq:risk-utility}
+\end{equation}
+This specifies both the value at risk and the probability of retaining it.
+Its product form need not be concave.
+
+\begin{proposition}[The endogenous-risk floor]
+\label{prop:endogenous-risk}
+Assume a feasible right neighbourhood of $x=0$ has $C(x)>0$ and all
+functions in \cref{eq:risk-utility} are differentiable there. A necessary
+condition for $x=0$ to maximize $U_R$ is
+\begin{equation}
+ p\geq\frac{\Gamma r}{\Omega}
+ +\frac{\vartheta}{1-\vartheta}\varphi'(0)
+       \Gamma\Omega^{-\gamma}K_\eta(\Omega),\qquad
+ K_\eta(\Omega)=\frac{F_\eta(\Omega)(1+\Omega)^\eta}{\Omega}.
+ \label{eq:risk-floor}
+\end{equation}
+For $0\leq\eta<1$, $K_\eta(\Omega)\to(1-\eta)^{-1}$ as
+$\Omega\to\infty$. For $\eta=1$ it equals
+$(1+\Omega)\ln(1+\Omega)/\Omega\sim\ln\Omega$.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+At zero the derivative of $x/C(x)^\gamma$ is $\Omega^{-\gamma}$.
+Differentiate the entire product and divide by the positive surviving
+marginal-value factor $(1-\vartheta)F_\eta'(\Omega)$.
+The exact formula and asymptotic bounds are in \cref{app:risk-proof}.
+
+The hazard odds, not the hazard probability itself, enter this exact
+expected-value comparison. Replacing the odds by $\vartheta$ is a
+small-hazard approximation. For $\eta<1$, a seed therefore retains an
+asymptotic floor proportional to $\Gamma$ even as computational output
+grows. With bounded prices and unbounded $\Gamma$, necessary persistence
+requires $\vartheta/(1-\vartheta)=O(\Gamma^{-1})$. At a fixed budget,
+the limiting necessary ceiling, after the remote-computation term vanishes,
+is
+\begin{equation}
+ \vartheta\leq
+ \frac{p(1-\eta)}{p(1-\eta)+\varphi'(0)\Gamma}.
+ \label{eq:hazard-ceiling}
+\end{equation}
+A mirror instead removes the local first-order risk obstruction at bounded
+positive budgets as $a\to\infty$, because
+$K_\eta(\Omega)/\Omega\to0$ for $\eta\leq1$. This is a statement about
+the derivative, not global optimality of the nonconcave risk objective.
+With logarithmic value, a seed is more demanding: its hazard odds must
+be controlled relative to $1/(\Gamma\ln\Omega)$. Risks unaffected by
+separation have $\varphi'(0)=0$ and generate no such marginal premium.
+
+\subsection{What remains at perfect experiential substitution}
+As $q\to1$, the settlement-specific term $(1-q)E'(0)$ vanishes when
+$E'(0)$ is fixed and finite. With interior observation and backups,
+\cref{eq:no-replication} then reduces to
+\begin{equation}
+ F'(C^*)r_j\leq(p_j-p_m-p_b)\lambda,\qquad j=n,h.
+ \label{eq:replication-reduced}
+\end{equation}
+This reduction follows by substitution and continuity of the displayed
+coefficient; it does not assume that the face optimizer is unchanged
+when other parameters vary. Strictly positive net prices and sufficiently
+small remote returns can support no replication. A negative net price
+precludes it, while a zero net price requires $r_j=0$ and may admit ties.
+The residual-free all-inward condition is recovered when the non-replicating
+channels themselves have zero value and receive zero investment. These
+are separate limits: substituting experiences, meeting independent
+information demand, and geographically protecting valued states are not
+the same technological achievement.

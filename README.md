@@ -1,65 +1,59 @@
-# CITH v7.3
+# CITH v8
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23317929.svg)](https://doi.org/10.5281/zenodo.23317929)
+**Why Should They Stop Expanding? Computational Growth, Tipping Budgets, and the Uniformity Problem**  
+Hyeonjun Joo · 13 October 2026
 
-**Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion**  
-Hyeonjun Joo · 12 October 2026
+The computational inward transition hypothesis (CITH) is a conditional model of resource allocation between internal computational growth and external investment. Version 8 derives tipping-budget and growth conditions, distinguishes all-inward allocation from no further replication, adds an infinite-horizon benchmark, and examines endogenous risk, population ethics, subjective latency and the expansionist tail compatible with a chosen null-arrival likelihood.
 
-The computational inward transition hypothesis (CITH) is a conditional model of how a civilization allocates resources between internal computational growth and external investment. The manuscript derives conditions for an all-inward optimum, constraints on its persistence as budgets grow, and examples in which future resources reverse a present allocation preference.
-
-This is a research manuscript, not a peer-reviewed journal publication. The model does not establish the prevalence of inward civilizations, indefinite physical feasibility, or population-level silence. Allocation and detectability are distinct claims.
+This is a research manuscript, not a peer-reviewed journal publication. It does not estimate extraterrestrial preferences, establish indefinite local engineering feasibility, or infer low detectability from inward allocation. The infinite-horizon result applies to its stated homogeneous benchmark.
 
 ## Manuscript and materials
 
-- [Article](CITH_V7_3_revised.pdf)
-- [Line-numbered article](CITH_V7_3_line_numbered.pdf)
-- [Supplementary material](CITH_V7_3_supplement.pdf)
-- `manuscript/`: modular LaTeX sources, bibliography and figures.
-- `CITH_V7_3_full.tex`: expanded single-file LaTeX source; compile from this directory.
-- `sections/`: section-by-section source copies.
-- `code/`: numerical checks, input audits, Figure 3 generation and PDF build tools.
-- `data/`: normalized synthetic inputs and archived allocation solutions.
-- `results/`: recorded numerical outputs and figure arrays.
+- [Article](CITH_V8_Manuscript.pdf): 40 pages, including proofs, numerical specification and references.
+- [Supplement](CITH_V8_Supplement.pdf): 7 pages of retained examples and numerical details.
+- [Combined PDF](CITH_V8_full.pdf): 47 pages with cross-document references.
+- [Assembled LaTeX](CITH_V8_full.tex): compile from this directory.
+- `latex/`: editable modular sources.
+- `code/`: 15 v8 numerical validators and reproduction runners.
+- `figures/`: the four preserved figure PDFs.
+- `results/`: machine-readable numerical outputs and mechanical source/PDF checks.
+- `archive/v7_3/`: frozen public v7.3 sources, synthetic inputs and outputs needed for reproduction.
+
+All-inward allocation and no replication are separate classifications. On the frozen 1,024-row synthetic design, v8 retains 219 all-inward cases and finds 421 no-replication cases, including 202 observation-only cases; 603 cases prefer replication. These counts describe the specified design, not civilization prevalence. Every row receives the restricted-face criterion; 64 rows also receive full constrained-optimizer comparisons.
 
 ## Reproduce the numerical checks
 
-The archived numerical environment used Python 3.13.5, NumPy 2.3.5, SciPy 1.17.0 and Matplotlib 3.10.8. Package versions are pinned in `requirements.txt`.
-
 ```sh
 python -m pip install -r requirements.txt
-sh reproduce.sh
+python code/run_all_checks.py
+python code/rerun_archive.py
 ```
 
-The script checks the growth, curvature and production results, the two-period examples, archived allocation classifications, optimality certificates and measure sensitivity. It regenerates Figure 3. Figures 1, 2 and 4 are supplied unchanged; this script does not regenerate them or rerun the population Monte Carlo experiment.
+The v8 runner executes all 15 validators and stops on a nonzero exit or failed assertion. The reference execution reports **33,017 passed assertions and zero failures**. Assertions include identities, endpoints, root checks and repeated inequalities; they are not 33,017 independent random draws. Seeds, sample sizes, tolerances and optimizer settings are explicit in each validator. Numerical checks supplement the manuscript proofs.
 
-The frozen arrays in `data/allocation/design.npz`, rather than the seed alone, define the reference experiment. The Sobol generator is specified in the article and supplement.
+The archive runner executes four v7.3 commands in a temporary working copy and writes results under `results/archive_rerun/`. It does not modify the archived inputs. The frozen arrays, rather than a seed alone, define the reference design. Its SHA-256 is `ce45ecd0435f2abf834445957db369d1d4a5bc28e9c4e7b686561df50a14194b`.
 
-## Build PDFs
+The reference environment used Python 3.13.5, NumPy 2.3.5 and SciPy 1.17.0. Dependencies are pinned in `requirements.txt`; regenerated floating-point results can vary in their final bits across platforms.
 
-A TeX installation providing `pdflatex` and the packages used by the manuscript is required. Supplied `.bbl` files provide the bibliography.
+## Build and audit PDFs
+
+Install pdfLaTeX, `texcount`, the packages in the source preamble, and the Python dependencies above. From the repository root:
 
 ```sh
-python code/build_v73.py
+python qa/assemble.py
+pdflatex -interaction=nonstopmode -halt-on-error CITH_V8_full.tex
+pdflatex -interaction=nonstopmode -halt-on-error CITH_V8_full.tex
+python qa/final_audit.py
 ```
 
-This builds the article, line-numbered article, supplement and expanded-source PDF, and synchronizes the expanded source and section copies. Build logs are written under `results/build_logs/`.
+The audit checks labels, unresolved references, compilation warnings, word counts, figure identity and PDF text bounds, then splits the combined PDF. The main prose contains 9,091 words excluding the abstract, declarations, appendices, references and supplement; the abstract contains 209 words. Figures 1, 2 and 4 appear as supplementary Figures S1–S3; the main phase diagram retains number 3.
 
-## Integrity
+## Integrity, license and citation
 
-Before regenerating files, check the distribution with:
+Before regeneration, run `sha256sum -c SHA256SUMS`. Generated logs, numerical outputs and PDF metadata may change on rerun; scientific reproduction uses the stated classifications and tolerances.
 
-```sh
-sha256sum -c SHA256SUMS
-```
+Original Python and shell code is MIT-licensed. The manuscript, supplementary text, original figures, documentation, original synthetic data and numerical outputs are CC BY 4.0. Third-party components retain their existing licenses, including the LPPL notices in `archive/v7_3/manuscript/cithplainnat.bst`. See `LICENSE` and `LICENSE-CODE`.
 
-Regeneration can change floating-point final bits and PDF metadata. Scientific reproduction depends on the stated classifications and tolerances, rather than regenerated PDF byte identity.
+For v8, cite this manuscript version and the repository commit you used. `CITATION.cff` contains v8 metadata. A v8 Zenodo DOI has not yet been assigned in this repository update.
 
-## License and citation
-
-Original Python and shell code is licensed under MIT. The manuscript, supplementary text, original figures, documentation and original synthetic data are licensed under CC BY 4.0. Third-party components retain their existing licenses; `manuscript/cithplainnat.bst` retains its LaTeX Project Public License notices. See `LICENSE` and `LICENSE-CODE`.
-
-When citing v7.3, use its version DOI:
-
-> Joo, H. (2026). *Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion* (Version 7.3). Zenodo. https://doi.org/10.5281/zenodo.23317930
-
-The concept DOI [10.5281/zenodo.23317929](https://doi.org/10.5281/zenodo.23317929) refers to all versions and resolves to the latest. Citation metadata is also provided in `CITATION.cff`.
+The previous **v7.3** release is archived at [10.5281/zenodo.23317930](https://doi.org/10.5281/zenodo.23317930). The [concept DOI](https://doi.org/10.5281/zenodo.23317929) identifies that Zenodo record across versions; it should not be treated as confirmation that v8 is already archived there.

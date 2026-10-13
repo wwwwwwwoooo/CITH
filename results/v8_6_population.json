@@ -1,0 +1,39 @@
+{
+  "seed": 2026101360,
+  "counts": {
+    "mixture_equivalence": [
+      700,
+      0
+    ],
+    "necessary_bound": [
+      700,
+      0
+    ],
+    "binary_equilibria": [
+      700,
+      0
+    ],
+    "continuous_endpoints": [
+      1400,
+      0
+    ],
+    "counterexamples": [
+      4,
+      0
+    ],
+    "poisson_simulation": [
+      1,
+      0
+    ]
+  },
+  "uniformity_bounds": {
+    "100": 0.03152695752528186,
+    "1000": 0.003152695752528186,
+    "10000": 0.00031526957525281854
+  },
+  "simulation": {
+    "estimate": 0.177588,
+    "exact": 0.17740333081914023,
+    "n": 250000
+  }
+}

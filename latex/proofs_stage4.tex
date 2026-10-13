@@ -1,0 +1,97 @@
+\section{Infinite-horizon verification and extensions}
+\label{app:infinite-proof}
+\begin{proof}[Proof of \cref{prop:infinite}]
+Let $A_-=\min(a_L,a_X/p)>0$, $A_+=\max(a_L,a_X/p)$, and define
+$G_-,G_+$ similarly. Every feasible share has $A(s)\in[A_-,A_+]$
+and $G(s)\in[G_-,G_+]$. Consequently
+$B_0G_-^t\leq B_t\leq B_0G_+^t$ and
+\[
+ |\ln C_t|\leq |\ln B_0|+
+ t\max(|\ln G_-|,|\ln G_+|)+
+ \max(|\ln A_-|,|\ln A_+|).
+\]
+Since $\sum\beta^t(1+t)<\infty$, every objective is absolutely
+convergent, uniformly controlled at a fixed $B_0$. The same bound proves
+$\beta^T V(B_T)\to0$ for the proposed $V$.
+
+Substitute $V(B)=\ln B/(1-\beta)+K$ into the Bellman right side:
+\begin{align*}
+ \max_s\{\ln[BA(s)]+\beta V(BG(s))\}
+ &=\frac{\ln B}{1-\beta}+\beta K+
+ \max_s\{\ln A(s)+\tfrac\beta{1-\beta}\ln G(s)\}.
+\end{align*}
+Thus equality requires $K=H_\beta^*/(1-\beta)^2$. A maximizing share
+exists by continuity on $[0,1]$. For any feasible policy, repeated use of
+the Bellman inequality gives
+\[
+ V(B_0)\geq\sum_{t=0}^{T-1}\beta^t\ln C_t+\beta^TV(B_T).
+\]
+Letting $T\to\infty$ proves that $V$ bounds its payoff. A stationary
+maximizing share gives equality at every step and hence attains $V$.
+This is a verification theorem, not just a proposed functional form.
+Any other Bellman solution with growth bounded by a constant times
+$1+|\ln B|$ has the same vanishing tails and the same telescoping
+comparison, so it agrees with this value.
+
+The second derivative of $H_\beta$ is
+\[
+ -(1-\beta)\frac{(a_X/p-a_L)^2}{A(s)^2}
+ -\beta\frac{(g_X/p-g_L)^2}{G(s)^2}\leq0.
+\]
+Therefore the inward endpoint maximizes it exactly when
+$H_\beta'(0)=(1-\beta)[(a_X/p)/a_L-1]+
+\beta[(g_X/p)/g_L-1]\leq0$.
+If at least one of the two coefficients differs, strict concavity gives
+a unique maximizing share. If both are equal, all shares tie and the
+inward policy is among the optimal policies. Endpoints and ties are thus
+included. At $\beta=0$ the immediate problem is recovered separately;
+at $\beta=1$ the discounted theorem is not asserted. Allowing zero
+production or growth endpoints would destroy the uniform logarithmic
+bounds and is not covered.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:dynamic-residual} and finiteness statements]
+Under $\beta G_+<1$, $0\leq Sx_t\leq SB_0G_+^t/p$, so the residual
+series converges uniformly over policies. The preceding logarithmic bound
+controls the other term, proving finite values. Under all-external
+allocation, $x_t=B_0(g_X/p)^t/p$; hence the residual series diverges
+when $\beta g_X/p\geq1$. Its logarithmic component is finite and cannot
+cancel this divergence.
+
+The all-inward policy has zero residual reward and continuation
+$V_L(B)=\ln B/(1-\beta)+K_L$, where
+$K_L=\ln a_L/(1-\beta)+\beta\ln g_L/(1-\beta)^2$.
+A deviation $x$ now followed by that policy has value
+\[
+ J_B(x)=\ln[a_L(B-px)+a_Xx]+Sx
+       +\beta V_L[g_L(B-px)+g_Xx].
+\]
+At zero its derivative is
+\[
+ J_B'(0)=S+\frac pB\left[
+ \frac{a_X/p}{a_L}-1+
+ \frac\beta{1-\beta}\left(\frac{g_X/p}{g_L}-1\right)\right].
+\]
+If the all-inward policy is globally optimal it must defeat this feasible
+one-step deviation, so $J_B'(0)\leq0$. Rearrangement gives
+\cref{eq:dynamic-residual-floor}. The right side is fixed while $SB/p$
+diverges. This proves the obstruction without claiming that the displayed
+condition suffices for a general mixed policy.
+\end{proof}
+
+\begin{proof}[One-step ceiling implication in \cref{eq:capped-transition}]
+For $x\geq0$,
+\[
+ \min(\bar B,g_L(B-px))\geq\min(\bar B,g_LB)-pg_Lx.
+\]
+Thus $g_X\geq pg_L$ makes next-period resources at least their inward
+value. An increasing continuation value cannot penalize this deviation.
+In the logarithmic current-utility model, \cref{prop:tipping} makes its
+current right derivative strictly positive at every finite productivity
+when $B\geq B_{\rm tip}$. A sufficiently small positive $x$ therefore
+raises current payoff and does not reduce future payoff. This excludes an
+optimal inward first action. The same inequality covers the kink
+$g_LB=\bar B$ without differentiating through it. A finite value and an
+increasing continuation are maintained assumptions here; no homogeneous
+formula is substituted after adding the ceiling.
+\end{proof}

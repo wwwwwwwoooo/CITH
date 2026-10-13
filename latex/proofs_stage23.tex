@@ -1,0 +1,176 @@
+\section{Proofs for world valuation and residual substitution}
+\label{app:stage23}
+\subsection{World-number optimization}
+\label{app:world-proof}
+\begin{proof}[Proof of \cref{lem:world-curvature}]
+Eliminate $W$ to obtain $C_{\rm tot}^{\theta}c^{\alpha-\theta}$ on
+$[u,C_{\rm tot}]$. If $\alpha>\theta$, its maximum is attained at
+$c=C_{\rm tot}$ and $W=1$. If $\alpha<\theta$, it is attained at
+$c=u$ and $W=C_{\rm tot}/u$. Equality of the exponents makes every
+split tie. This proves \cref{eq:world-value}, including $C_{\rm tot}=u$.
+In either branch $V(u)=u^\alpha$ and
+$V(u(1+C))/V(u)=(1+C)^v$. Since $v>0$, the stated affine
+normalization is $[(1+C)^v-1]/v=F_{1-v}(C)$.
+An affine rescaling of the computational component requires the residual
+weights to be expressed in the same utility units; it is not neutral if
+those weights are held in unrelated units.
+
+For logarithmic within-world welfare put $L=\ln(C_{\rm tot}/u)$ and
+$v_c=\ln(c/u)$. The objective is $\exp[\theta(L-v_c)]v_c$ on $[0,L]$.
+At $\theta=0$ it increases to $L$. At $\theta>0$ its derivative has the
+sign of $1-\theta v_c$, so $v_c^*=\min(L,1/\theta)$. For
+$L\geq1/\theta$ substitution gives the claimed power expression;
+below that boundary the maximum is $L$ with one world. Consequently
+$\theta=1$ gives linear value only above $\exp(1)u$ in this logarithmic
+case. No $\eta=1$ value follows from the positive-$\alpha$ power model.
+
+With integer $W$, eliminate $c$ instead: the objective is
+$C_{\rm tot}^\alpha W^{\theta-\alpha}$ for
+$1\leq W\leq\lfloor C_{\rm tot}/u\rfloor$. The same endpoint argument
+gives the stated integer formula when $\theta>\alpha$, and $W=1$
+when $\theta<\alpha$. Since $\lfloor t\rfloor/t\to1$, the asymptotic
+exponent is unchanged. For regular counts $W_d$, the largest admissible
+count is between fixed positive multiples of $C_{\rm tot}/u$ for all
+sufficiently large $C_{\rm tot}$, because $W_{d+1}=bW_d+1$.
+These bounds give the same logarithmic growth exponent; they do not
+give a smooth exact power function or a ratio converging to one.
+\end{proof}
+
+\subsection{The optimized no-replication face}
+\label{app:replication-proof}
+\begin{proof}[Proof of \cref{prop:no-replication}]
+The feasible set is a compact simplex; the objective is continuous and
+concave, so a face optimizer exists. Differentiability and the positive
+budget give the usual multiplier conditions, including a multiplier
+$\lambda$ for the budget and complementary multipliers for coordinates
+at zero. Equivalently, for each face coordinate $v$ of unit resource
+price $p_v$, its marginal utility is at most $p_v\lambda$, with equality
+at positive coordinates. This can also be obtained directly by exchanges
+between any two positive-resource uses. At least one use is positive.
+The local derivative is positive, so the resulting $\lambda$ is positive.
+
+At a point with $x=y=0$, the two missing marginal utilities are precisely
+the left sides of \cref{eq:no-replication}. If these are at most their
+prices times the same $\lambda$, then for every feasible point $v$ the
+supporting-hyperplane bound is
+\[
+ U(v)-U(v^*)\leq\nabla U(v^*)\cdot(v-v^*)\leq0.
+\]
+The second inequality follows from the exhausted budget, equality in
+positive face coordinates, and the non-positive reduced derivatives at
+zero coordinates. Strict reduced derivatives for $x,y$ make this bound
+strict whenever either is positive. Conversely, a full optimum satisfies
+the full multiplier conditions; restricting that multiplier to the face
+gives the stated existential condition. Thus the statement remains
+correct when several restricted optima or multipliers are possible.
+For $z^*>0$, complementary slackness fixes
+$\lambda=F'(C^*)a\ell'(z^*)$. If $z^*=0$, only
+$F'(C^*)a\ell'(0)\leq\lambda$ is required, assuming the derivative is
+finite. The potentially non-differentiable endpoint is outside the
+present version of the proposition and can instead be treated with
+supergradients. If backups are unavailable, omit their coordinate and
+retain $R'(0)$ throughout.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:bundle} and the displayed reductions]
+For $w^*>0$, $\epsilon_II'(w^*)=p_m\lambda$; subtracting it from
+\cref{eq:no-replication} proves \cref{eq:observation-net} when no
+backup exists. For $b^*>0$, subtract $p_b\lambda$ in the same manner.
+With both channels positive the industrial reduced derivative is
+$F'(C^*)r_h+(p_m+p_b-p_h)\lambda$, strictly positive when
+$p_h<p_m+p_b$. At equality and $r_h=0$, non-decreasing concavity and
+$G_h'(0)=0$ imply $G_h(y)=0$ for $y\geq0$. For
+$0\leq\epsilon\leq\min(w^*,b^*)$, replace
+$(y,w,b_{\rm bk})=(0,w^*,b^*)$ by
+$(\epsilon,w^*-\epsilon,b^*-\epsilon)$. The budget, $C$, $x+y+b_{\rm bk}$,
+and $x+y+w$ are unchanged, proving the tie statement. With a zero
+observation channel only $\epsilon_II'(0)\leq p_m\lambda$ is known;
+division by positive $\lambda$ defines $c_I\leq p_m$ and gives its exact
+shadow service cost. The backup argument is identical.
+Finally, at $q=1$ the experiential marginal vanishes identically.
+Substitution proves \cref{eq:replication-reduced}; its sign and tie cases
+follow from non-negative returns and positive $F'(C^*),\lambda$.
+\end{proof}
+
+\subsection{Expected value at risk}
+\label{app:risk-proof}
+\begin{proof}[Proof of \cref{prop:endogenous-risk}]
+Let $k(x)=x/C(x)^\gamma$. Since $C(0)=\Omega>0$,
+$k'(0)=\Omega^{-\gamma}$: the term differentiating the denominator is
+multiplied by $x=0$. Also $C'(0)=r-pa\ell'(B)$ and
+$\varphi(0)=0$. The complete product derivative is
+\[
+ U_R'(0)=(1-\vartheta)F_\eta'(\Omega)[r-pa\ell'(B)]
+   +\vartheta\varphi'(0)F_\eta(\Omega)\Omega^{-\gamma}.
+\]
+A positive derivative improves along a feasible sufficiently small
+positive $x$, so an inward optimum requires this expression to be
+non-positive. Divide by $(1-\vartheta)F_\eta'(\Omega)>0$, rearrange,
+and use $a\ell'(B)=\Omega/\Gamma$ to obtain \cref{eq:risk-floor}.
+For $\eta\ne1$ exact algebra yields
+\[
+ K_\eta(\Omega)=
+ \frac{(1+\Omega)-(1+\Omega)^\eta}{(1-\eta)\Omega}.
+\]
+For $0\leq\eta<1$, $(1+\Omega)/\Omega\to1$ and
+$(1+\Omega)^\eta/\Omega\to0$, giving the claimed limit.
+In particular, for every $\varepsilon>0$ there is $\Omega_\varepsilon$
+such that
+$|K_\eta(\Omega)-(1-\eta)^{-1}|<\varepsilon$ for all
+$\Omega\geq\Omega_\varepsilon$. This supplies a rigorous two-sided
+asymptotic replacement even when $\Gamma$ or the hazard varies; it is
+not an exact finite-output inequality with the limiting constant.
+The logarithmic expression follows directly from its definition, and
+its ratio to $\ln\Omega$ tends to one. For completeness, when $\eta>1$,
+$K_\eta(\Omega)\sim\Omega^{\eta-1}/(\eta-1)$.
+
+For seeds, a positive limiting $K_\eta$ and bounded $p$ force hazard
+odds times $\Gamma$ to stay bounded. At a fixed budget, with $\Omega\to
+\infty$ and fixed $r$, the remote term tends to zero; taking limits
+and solving the resulting odds inequality proves \cref{eq:hazard-ceiling}.
+For mirrors at bounded positive budgets,
+$\Gamma r/\Omega\to0$ and
+$\Gamma K_\eta(\Omega)/\Omega\to0$ for $\eta\leq1$.
+With logarithmic value and seeds, the same exact inequality instead
+bounds hazard odds times $\Gamma\ln\Omega$. These consequences are
+necessary local comparisons unless additional global structure is
+supplied. At $\vartheta=0$ the risk term vanishes. At
+$\vartheta=1$, division by surviving marginal value is invalid; with
+$\varphi'(0)>0$ and $F_\eta(\Omega)>0$ the original derivative is
+positive and the inward corner fails. If $\varphi'(0)=0$, this last
+first-order conclusion need not hold. The scaling specification itself
+requires $\Omega>0$; no $0/0$ backup is defined at zero computation.
+\end{proof}
+
+\subsection{Proof of the growing-budget separation}
+\label{app:growing-norep-proof}
+The restricted objective is strictly concave in $(z,w,b)$ because the
+local log-composition and the two positive exponential utilities are
+strictly concave. It has a unique budget-exhausting optimum. If $z=0$,
+the local marginal utility is $B^2/d_0$, whereas either positive service
+coordinate has marginal utility per resource at most a fixed constant.
+The budget multiplier conditions therefore rule out $z=0$ for large $B$.
+With $z>0$,
+\[
+ \lambda=\frac{B^2}{(1+z)[d_0+B^2\ln(1+z)]}.
+\]
+We claim $z\to\infty$. Otherwise along a subsequence $z$ is bounded,
+so this expression is bounded below by a positive constant. The service
+optimality conditions then imply
+\[
+ w=s_I\max\{0,\ln[J_I/(s_Ip_m\lambda)]\},\qquad
+ b=s_R\max\{0,\ln[J_R/(s_Rp_b\lambda)]\},
+\]
+which bound both services on that subsequence. This contradicts
+$B=z+p_mw+p_bb\to\infty$. Hence $z\to\infty$ and
+$\lambda\sim[(1+z)\ln(1+z)]^{-1}\to0$. Both services are eventually
+positive, and their formulas give $w+b=O(\ln z)$ and
+$B=z+O(\ln z)$. Consequently $z/B\to1$.
+With $q=1$, \cref{eq:no-replication} reduces to the net-price conditions.
+Since $F'(C^*)/\lambda=(1+z)/B^2$, each required computational premium
+$r_j(1+z)/B^2$ tends to zero. The fixed positive margins
+$p_j-p_m-p_b$ make both conditions strict eventually, excluding replication
+in every optimizer. Finally, at the all-inward corner the service slopes
+$J_I/s_I$ and $J_R/s_R$ are fixed and positive, and bounded project prices
+contradict the growing logarithmic residual floor. This proves the
+claimed separation without assuming any resource-acquisition dynamics.

@@ -1,0 +1,32 @@
+{
+  "seed": 2026101305,
+  "tolerance": 3e-08,
+  "counts": {
+    "tipping_roots": [
+      200,
+      0
+    ],
+    "monotonicity": [
+      200,
+      0
+    ],
+    "corner_optimizer": [
+      600,
+      0
+    ],
+    "curvature_cases": [
+      13,
+      0
+    ],
+    "edges": [
+      606,
+      0
+    ]
+  },
+  "Btip": 106.00128942808259,
+  "acrit_06": 7.279611850261769,
+  "archived_eta2_example_roots": [
+    1.421896642610986,
+    12.720520655058008
+  ]
+}

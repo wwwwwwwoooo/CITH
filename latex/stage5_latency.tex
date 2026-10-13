@@ -1,0 +1,184 @@
+\section{Latency and physical scale}
+\label{sec:latency}
+\subsection{The relevant clock}
+A remote project competes with what can be experienced before its returns
+arrive. Let $T_j^{\rm lag}>0$ denote its objective delay and let
+$\omega(u)>0$ be subjective years per objective year. With a constant
+subjective discount rate $\delta\geq0$, the correct discount exponent is
+\begin{equation}
+ \mathcal D_j(t)=\delta\int_t^{t+T_j^{\rm lag}}\omega(u)\dd u,
+ \qquad r_j(t)=r_{j0}\exp[-\mathcal D_j(t)],\quad
+ S_j(t)=S_{j0}\exp[-\mathcal D_j(t)].
+ \label{eq:subjective-delay}
+\end{equation}
+The simpler product $\delta\omega(t)T_j^{\rm lag}$ is exact for a clock
+constant over the delay, and a lower bound for a non-decreasing clock.
+A clock measured in processor cycles becomes a subjective clock only
+under an additional account of how those cycles implement valued
+experience. Neither high throughput nor parallel world creation alone
+establishes this identification.
+
+\begin{proposition}[Latency sufficient for the logarithmic corner]
+\label{prop:latency}
+Take $\eta=1$, $\ell(z)=\ln(1+z)$, fixed finite non-negative base returns
+$r_{j0},S_{j0}$, $d_0\geq1$, and finitely many directions. Suppose
+$a(t)\geq a_{\min}>0$ and $p_j(t)\geq p_{\min}>0$. With
+$\mathcal D_{\min}(t)=\min_j\mathcal D_j(t)$, a sufficient condition for eventual strict
+all-inward allocation is
+\begin{equation}
+ \mathcal D_{\min}(t)-\ln\{[1+B(t)][1+\ln(1+B(t))]\}\longrightarrow\infty.
+ \label{eq:latency-growth}
+\end{equation}
+If $B(t)\geq B_{\min}>0$ eventually, the expression inside the logarithm
+can instead be $\Gamma(B)=(1+B)\ln(1+B)$. For a non-decreasing clock
+and $T_j^{\rm lag}\geq T_{\min}^{\rm lag}>0$, either condition follows
+from its version with $\mathcal D_{\min}$ replaced by
+$\delta T_{\min}^{\rm lag}\omega(t)$.
+For $B(t)\leq\bar B$, a fixed sufficient threshold is
+\begin{equation}
+ \mathcal D_{\min}(t)>
+ \max\left\{0,\max_j\ln\frac{(1+\bar B)(r_{j0}+d_0S_{j0})/a_{\min}
+                   +\Gamma(\bar B)S_{j0}}{p_{\min}}\right\},
+ \label{eq:latency-bounded}
+\end{equation}
+where a zero numerator is omitted.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Insert the discounted coefficients into \cref{eq:exact}; the required
+price is the undiscounted expression multiplied by $\exp(-\mathcal D_j)$.
+The two terms are uniformly bounded by a constant times the bracket in
+\cref{eq:latency-growth}. Complete bounds and counterexamples to weaker
+assumptions are in \cref{app:latency-proof}.
+
+Latency can therefore remove the constant-residual premise of the growth
+obstruction. This is a price-adjusted comparison, not an assertion that
+remote projects cease to produce physical resources. Increasing local
+speed and reducing travel delay act in opposite directions. Discounting
+in objective time replaces $\mathcal D_j$ by $\delta_{\rm obj}T_j^{\rm lag}$;
+then raising $\omega$ has no effect. The choice of clock is a preference
+assumption with an observable consequence for the model's allocation,
+not a conclusion forced by relativity or thermodynamics.
+
+Replication itself can invalidate a finite-return specification. Suppose
+one descendant generation takes the same subjective delay $D>0$, has
+expected reproduction factor $\mathcal R_X>0$, and each descendant yields
+one unit of payoff at birth. The discounted sum from generations
+$k\geq1$ is finite exactly when
+\begin{equation}
+ \mathcal R_X\exp(-D)<1,
+ \qquad \sum_{k\geq1}\mathcal R_X^k\exp(-kD)
+       =\frac{\mathcal R_X\exp(-D)}{1-\mathcal R_X\exp(-D)}.
+ \label{eq:discounted-replication}
+\end{equation}
+This follows from the geometric-series criterion, with divergence also
+at equality. Physical descendants can grow while discounted value stays
+finite. Conversely, timing the first launch without accounting for its
+future descendants can substantially understate the effective return.
+The finite base $r_{j0}$ in \cref{prop:latency} must represent the whole
+specified payoff stream, or a genuinely finite planning horizon.
+
+\subsection{Depletion and resilience are different mechanisms}
+\begin{proposition}[No endogenous price drift on a stationary frontier]
+\label{prop:depletion}
+Suppose $p_j(t)=P_j(X(t))$ depends only on cumulative past external
+investment, with $X(t)=X(t_0)$ along an all-inward path starting at $t_0$.
+Then $p_j(t)=P_j(X(t_0))$ throughout that path. Frontier depletion alone
+cannot supply a growing relative price along it.
+\end{proposition}
+\begin{proof}
+Substitute the constant argument into each $P_j$. Historical expansion
+can determine the level at $t_0$, but cannot create subsequent drift
+without further investment or another state variable.
+\end{proof}
+
+\begin{corollary}[A conditional risk cost of discount-induced abstention]
+\label{cor:quiet-risk}
+Suppose the only available mitigation of a catastrophe has physical
+success probability $\varphi(b)>0$ for $b>0$, baseline catastrophe
+probability $\vartheta>0$, and no effect before its arrival. An allocation
+with no such backup retains catastrophe probability $\vartheta$ after
+that arrival date, while a completed backup $b$ reduces it to
+$\vartheta[1-\varphi(b)]$. A utility discount can change which allocation
+is preferred but does not reduce either physical probability.
+\end{corollary}
+\begin{proof}
+These probabilities follow from the stipulated event tree. Multiplying
+the valuation of a future outcome by a discount factor does not change
+the probability assigned to that outcome.
+\end{proof}
+This is the defensible content of a fragility trade-off. There is no
+general implication from quietness to fragility when dormant backups,
+local mitigation, negligible hazards, or information about future hazards
+are available. Only geographically mitigable, otherwise unaddressed risk
+belongs in this comparison.
+
+\subsection{An explicit dimensional dictionary}
+The return relevant to delay is a \emph{dimensionless marginal advantage},
+not the bare normalized coefficient $r_j/p_j$:
+\begin{equation}
+ \mathcal R_{{\rm marg},j}
+   =\frac{r_{j0}}{p_j a\ell'(B)},\qquad
+ \mathcal D_j\gtrsim\ln\mathcal R_{{\rm marg},j}
+ \label{eq:physical-return-ratio}
+\end{equation}
+for a pure-computation comparison with delayed external output. Residual
+motives require the full preceding inequalities. Resource acquisition by
+self-replicating industry can make large returns conceivable
+\citep{ArmstrongSandberg2013}; that work does not provide a calibrated
+value of this paper's normalized $r_j/p_j$. A ratio $10^{20}$ below is a
+scenario assumption, not an empirical estimate attributed to that source.
+
+For an energy-limited illustration, choose $b_{\rm ref}=10^{32}\,{\rm J}$
+and a planning horizon of one Julian year, $31\,557\,600\,{\rm s}$.
+Using the IAU nominal solar luminosity
+$L_\odot^{\rm N}=3.828\times10^{26}\,{\rm W}$ \citep{IAU2015}, a captured
+fraction $f_{\rm cap}$ gives
+\begin{equation}
+ \bar B=120.8024928\,f_{\rm cap}
+ \left(\frac{L_*}{L_\odot^{\rm N}}\right)
+ \left(\frac{\Delta}{1\,{\rm yr}}\right)
+ \left(\frac{10^{32}\,{\rm J}}{b_{\rm ref}}\right).
+ \label{eq:stellar-budget}
+\end{equation}
+This is a per-horizon flow, not the star's lifetime energy. The scalar
+budget does not replace independent material, memory, or heat constraints.
+A fixed ceiling describes a specified era and accessible substrate;
+stellar evolution need not leave it constant indefinitely.
+
+A distance of four light-years traversed at $0.1c$ has a forty-year
+travel time by definition of a light-year. This is an illustrative
+one-way journey, not a complete replication cycle; manufacture,
+deceleration, and return information add delays. For
+$\mathcal R_{\rm marg}=10^{20}$, $\omega=10^6$, and a forty-year delay,
+\cref{eq:physical-return-ratio} requires
+$\delta\gtrsim1.1513\times10^{-6}$ per subjective year.
+Neither the assumed clock speed nor the discount rate is measured for
+an extraterrestrial civilization. Their separate roles remain visible
+in \cref{tab:latency-sensitivity} rather than being buried in a normalized
+speed parameter.
+\begin{table}[tbp]
+\centering
+\caption{Assumed marginal advantages and clock speeds: threshold
+$\delta=\ln\mathcal R_{\rm marg}/(40\omega)$ per subjective year.
+The forty-year delay and every return/clock entry are scenarios.}
+\label{tab:latency-sensitivity}
+\begin{tabular}{@{}rrrr@{}}\toprule
+$\mathcal R_{\rm marg}$ & $\omega=1$ & $\omega=10^3$ & $\omega=10^6$\\\midrule
+$10^3$ & $0.17269$ & $1.7269\times10^{-4}$ & $1.7269\times10^{-7}$\\
+$10^{10}$ & $0.57565$ & $5.7565\times10^{-4}$ & $5.7565\times10^{-7}$\\
+$10^{20}$ & $1.15129$ & $1.1513\times10^{-3}$ & $1.1513\times10^{-6}$\\
+$10^{40}$ & $2.30259$ & $2.3026\times10^{-3}$ & $2.3026\times10^{-6}$\\\bottomrule
+\end{tabular}
+\end{table}
+
+To interpret \cref{tab:ranges} physically, specify $b_{\rm ref}$,
+$c_{\rm ref}$, a project-capacity unit for each direction, and the welfare
+normalization. Then $B_{\rm res}=Bb_{\rm ref}$,
+$C_{\rm useful}=Cc_{\rm ref}$, a unit project costs $p_jb_{\rm ref}$,
+and $r_jc_{\rm ref}$ is its horizon computation. The local marginal
+product is $a\ell'(B)c_{\rm ref}/b_{\rm ref}$. Benefit amplitudes and
+scales require an independent valuation model; astronomical dimensions
+do not identify them. Thus the original normalized interval $B\in[1,100]$
+can represent $10^{32}$--$10^{34}\,{\rm J}$ under this dictionary, but
+it is not intrinsically that energy range. Changing the dictionary
+changes the interpretation, not the frozen experiment.

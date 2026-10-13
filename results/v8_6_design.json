@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "archived_all_inward": [
+      1025,
+      0
+    ],
+    "face_optimizer": [
+      1024,
+      0
+    ],
+    "full_optimizer": [
+      64,
+      0
+    ]
+  },
+  "n": 1024,
+  "all_inward": 219,
+  "no_replication": 421,
+  "observation_only_no_replication": 202,
+  "replication_preferred": 603
+}

@@ -1,0 +1,83 @@
+{
+  "scripts": {
+    "validate_v8_1a_hub.py": {
+      "exit_code": 0,
+      "pass": 1465,
+      "fail": 0
+    },
+    "validate_v8_1b_floor.py": {
+      "exit_code": 0,
+      "pass": 4355,
+      "fail": 0
+    },
+    "validate_v8_1c_persistence.py": {
+      "exit_code": 0,
+      "pass": 1081,
+      "fail": 0
+    },
+    "validate_v8_1d_exponential.py": {
+      "exit_code": 0,
+      "pass": 4813,
+      "fail": 0
+    },
+    "validate_v8_1e_basin.py": {
+      "exit_code": 0,
+      "pass": 888,
+      "fail": 0
+    },
+    "validate_v8_1e_tipping.py": {
+      "exit_code": 0,
+      "pass": 1619,
+      "fail": 0
+    },
+    "validate_v8_2a_replication.py": {
+      "exit_code": 0,
+      "pass": 980,
+      "fail": 0
+    },
+    "validate_v8_2b_resilience.py": {
+      "exit_code": 0,
+      "pass": 2095,
+      "fail": 0
+    },
+    "validate_v8_2c_growing.py": {
+      "exit_code": 0,
+      "pass": 2000,
+      "fail": 0
+    },
+    "validate_v8_3_worlds.py": {
+      "exit_code": 0,
+      "pass": 2808,
+      "fail": 0
+    },
+    "validate_v8_4_infinite.py": {
+      "exit_code": 0,
+      "pass": 1086,
+      "fail": 0
+    },
+    "validate_v8_5_latency.py": {
+      "exit_code": 0,
+      "pass": 2707,
+      "fail": 0
+    },
+    "validate_v8_6_design.py": {
+      "exit_code": 0,
+      "pass": 2113,
+      "fail": 0
+    },
+    "validate_v8_6_population.py": {
+      "exit_code": 0,
+      "pass": 3505,
+      "fail": 0
+    },
+    "validate_v8_7_physical.py": {
+      "exit_code": 0,
+      "pass": 1502,
+      "fail": 0
+    }
+  },
+  "script_count": 15,
+  "total_assertions_pass": 33017,
+  "total_assertions_fail": 0,
+  "interpretation": "Counts are assertions, not independent random draws."
+}

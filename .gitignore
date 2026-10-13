@@ -7,8 +7,9 @@ __pycache__/
 *.fls
 *.fdb_latexmk
 results/build_logs/
-results/full_build/
 provenance/
 *.diff
+REVIEW_KO.md
+PLACEMENT_KO.md
 CHANGELOG_KO.md
 REVIEW_DELIVERABLES_KO.md

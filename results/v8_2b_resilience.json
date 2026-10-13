@@ -1,0 +1,25 @@
+{
+  "seed": 2026101322,
+  "counts": {
+    "derivative": [
+      600,
+      0
+    ],
+    "necessary_condition": [
+      879,
+      0
+    ],
+    "K_identity": [
+      600,
+      0
+    ],
+    "asymptotics": [
+      7,
+      0
+    ],
+    "edges": [
+      9,
+      0
+    ]
+  }
+}

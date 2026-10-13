@@ -1,0 +1,140 @@
+\subsection{An infinite-horizon benchmark}
+\label{sec:dynamic}
+Myopic resource acquisition and optimal intertemporal allocation answer
+different questions. To obtain a transparent infinite-horizon benchmark,
+replace logarithmic production by linear production, omit the additive
+computational baseline, and use logarithmic value of strictly positive
+computation. Let
+\begin{equation}
+ z_t+px_t=B_t,\quad C_t=a_Lz_t+a_Xx_t,\quad
+ B_{t+1}=g_Lz_t+g_Xx_t,\quad
+ \max\sum_{t=0}^{\infty}\beta^t\ln C_t.
+ \label{eq:infinite-model}
+\end{equation}
+Here $B_0,p,a_L,a_X,g_L,g_X>0$ and $0<\beta<1$.
+All these parameters are constant. This benchmark is homothetic; it is
+not the previous logarithmic production model under different notation.
+For $s=px/B$, define
+$A(s)=a_L(1-s)+(a_X/p)s$ and
+$G(s)=g_L(1-s)+(g_X/p)s$.
+
+\begin{proposition}[Infinite-horizon verification and the inward policy]
+\label{prop:infinite}
+Every feasible policy has absolutely convergent discounted log returns.
+Writing
+\begin{equation}
+ H_\beta(s)=(1-\beta)\ln A(s)+\beta\ln G(s),\qquad
+ H_\beta^*=\max_{0\leq s\leq1}H_\beta(s),
+ \label{eq:homothetic-index}
+\end{equation}
+the value function is
+\begin{equation}
+ V(B)=\frac{\ln B}{1-\beta}
+       +\frac{H_\beta^*}{(1-\beta)^2}.
+ \label{eq:infinite-value}
+\end{equation}
+A constant maximizing share is optimal forever. The all-inward policy
+is optimal if and only if
+\begin{equation}
+ (1-\beta)\frac{a_X/p}{a_L}
+       +\beta\frac{g_X/p}{g_L}\leq1.
+ \label{eq:infinite-inward}
+\end{equation}
+For every feasible path, $\beta^T V(B_T)\to0$; this transversality
+condition validates the Bellman telescoping argument despite unbounded
+logarithmic returns.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Positive production and growth endpoints bound $|\ln B_t|$ by a linear
+function of $t$. Discounting therefore controls both tails. Substitution
+of \cref{eq:infinite-value} into the Bellman equation leaves the one-share
+maximization in \cref{eq:homothetic-index}; its derivative at zero gives
+\cref{eq:infinite-inward}. The complete verification is in
+\cref{app:infinite-proof}. The argument supplies its own growth bounds,
+rather than invoking a bounded-reward contraction. It is consistent with
+the homogeneous-function approach of \citet{AlvarezStokey1998}.
+
+\begin{corollary}[Static reversals and the patient limit]
+\label{cor:infinite-reversals}
+Static inwardness is neither necessary nor sufficient for infinite-horizon
+inwardness. If $(g_X/p)/g_L<1$, sufficiently patient planners are inward;
+if this ratio is greater than one, they are not. At equality, the current
+computational-return ratio still decides for every $\beta<1$.
+\end{corollary}
+\begin{proof}
+With $\beta=0.9$, return ratios $(0.5,2)$ give a weighted ratio $1.85$:
+static inwardness fails dynamically. Ratios $(2,0.5)$ give $0.65$:
+static outwardness reverses. Taking $\beta\uparrow1$ proves the two
+strict growth cases. With equal growth ratios, subtracting one leaves
+$(1-\beta)[(a_X/p)/a_L-1]$, proving the equality case.
+\end{proof}
+
+The same derivative decomposition contains the earlier two-period
+examples, although their nonlinear production is not a literal special
+case of \cref{eq:infinite-model}. For a concave differentiable first-period
+objective $U_1(x)$ and increasing concave continuation $V_2$, the following
+short transfer result supplies that exact nesting.
+\begin{corollary}[A future-adjusted inward condition]
+\label{prop:dynamic}
+If $W(x)=U_1(x)+\beta V_2(B_{20}+g_LB_1+(g_X-p_1g_L)x)$
+is defined on $[0,B_1/p_1]$, it is concave and its inward endpoint is
+optimal exactly when
+$U_1'(0)+\beta V_2'(B_{20}+g_LB_1)(g_X-p_1g_L)\leq0$.
+\end{corollary}
+\begin{proof}
+Composition with the affine continuation budget preserves concavity.
+The right derivative at the endpoint has the displayed value, and a
+concave differentiable function has its maximum there exactly when this
+derivative is non-positive. Substituting the archived $U_1,V_2$ yields
+\cref{eq:dynamiccriterion} in the supplement.
+\end{proof}
+The archived threshold $g_X=\DynamicThreshold$ and allocation
+$x=\DynamicOutward$ remain unchanged. Their full construction and
+\cref{fig:dynamic} are supplementary evidence for these reversals.
+
+\subsection{Residual value and a local ceiling break homotheticity}
+Adding $Sx_t$ with $S>0$ makes the reward scale with $B_t$, whereas the
+logarithmic reward changes only additively under resource scaling. The
+closed form \cref{eq:infinite-value} then ceases to apply. A sufficient
+condition for finite values is
+$\beta\max(g_L,g_X/p)<1$. If $\beta g_X/p\geq1$, perpetual
+all-external investment already has infinite positive residual value;
+it cannot be used as a finite-value optimization counterexample.
+
+\begin{corollary}[An unbounded-budget obstruction survives foresight]
+\label{cor:dynamic-residual}
+In the finite-value residual model, an all-inward infinite-horizon policy
+can be optimal from a state $B$ only if
+\begin{equation}
+ \frac{SB}{p}\leq
+ \frac{1-(1-\beta)(a_X/p)/a_L-\beta(g_X/p)/g_L}{1-\beta}.
+ \label{eq:dynamic-residual-floor}
+\end{equation}
+Thus such a policy cannot persist along $B_t\to\infty$ with constant
+positive $S$ and fixed finite coefficients.
+\end{corollary}
+\noindent\emph{Proof sketch.}
+Deviate once and then follow the all-inward policy. The continuation log
+value has derivative $1/[(1-\beta)B]$. Its contribution plus the current
+residual derivative gives \cref{eq:dynamic-residual-floor}; see
+\cref{app:infinite-proof}. This is a necessary policy test, not a complete
+solution to the nonhomothetic Bellman equation. At $\beta=0$ it is the
+linear-production logarithmic floor without a shifted baseline.
+
+An explicit local ceiling can instead enter through
+\begin{equation}
+ B_{t+1}=\min\{\bar B,g_L(B_t-px_t)\}+g_Xx_t.
+ \label{eq:capped-transition}
+\end{equation}
+Along an all-inward path this keeps future budgets below $\bar B$.
+The transition is no longer homogeneous. For the shifted-log production
+and linear-residual model of \cref{prop:tipping}, suppose a finite
+increasing continuation value exists and $g_X\geq pg_L$. Then a small
+external deviation never reduces next-period resources. Consequently,
+at $B\geq B_{\rm tip}$ the strictly positive current external derivative
+cannot be reversed by continuation value. Below the tipping budget,
+future resource acquisition can still overturn the static inward optimum.
+A direct one-step proof is given in \cref{app:infinite-proof}.
+This is the valid connection between the local ceiling and the tipping
+budget; it does not impose the static basin separator on a forward-looking
+planner.

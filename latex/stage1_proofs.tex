@@ -1,0 +1,494 @@
+% APPENDIX. Insert after \appendix, before app:numerical.
+\section{Proofs for the corner and persistence results}
+\label{app:stage1-proofs}
+
+\subsection{Tightness of the production floor}
+\label{app:floor-proof}
+\begin{proof}[Proof of \cref{cor:production-growth}]
+The supporting-line inequality for a concave function, based at $B$,
+reads $\ell(v)\leq\ell(B)+\ell'(B)(v-B)$ for $0\leq v\leq B$.
+At $v=0$ it gives $B\ell'(B)\leq\ell(B)$, proving $\Gamma(B)\geq B$.
+If equality holds, concavity also gives
+$\ell(v)\geq(v/B)\ell(B)=v\ell'(B)$. The supporting line is
+$v\ell'(B)$, so both inequalities are equalities throughout $[0,B]$.
+Conversely a linear function on that interval plainly gives equality.
+No assertion about production beyond $B$ is needed.
+
+At $\eta=1$, \cref{eq:hub} becomes
+\[
+ p_j\geq S_j\Gamma(B)+\frac{r_j+d_0S_j}{a\ell'(B)}.
+\]
+The second term is strictly positive whenever $S_j>0$, since $d_0>0$
+and $a\ell'(B)>0$. Thus $p_j>S_jB$ is necessary in every such
+direction for any admissible concave production function.
+If those inequalities hold, choose $\ell(v)=v$.
+All denominators $p_j-S_jB$ are positive, including $p_j$ in a
+zero-slope direction. The finite choice
+\[
+ a>\max_j\frac{r_j+d_0S_j}{p_j-S_jB}
+\]
+satisfies every corner inequality strictly. A direction with
+$r_j=S_j=0$ contributes zero to this maximum. If all directions are
+trivial, any positive $a$ works. This proves necessity and sufficiency
+of the claimed existence condition, including zero residual slopes.
+Along an unbounded-budget path, a fixed positive slope thus requires
+$p_j(t)>S_jB(t)$. If $p_j(t)\leq M$, then
+$S_j(t)<M/B(t)$ at positive-slope times, and hence
+$S_j(t)=O(B(t)^{-1})$ including zero-slope times. These are necessary
+rate restrictions; the remaining productivity term is still required.
+\end{proof}
+
+\subsection{Growing budgets and the original special cases}
+\label{app:growth-proof}
+\begin{proof}[Proof of \cref{prop:growth-trichotomy}]
+Multiplying \cref{eq:hub} by $\Gamma$ gives the required price
+\[
+ P_{j,\eta}(\Omega,B)=\Gamma(B)
+ \left[\frac{r_j}{\Omega}
+       +S_j\frac{(d_0+\Omega)^\eta}{\Omega}\right].
+\]
+For $\eta=1$, the second quotient is $1+d_0/\Omega>1$.
+Hence a passing direction with $p_j\leq M$ and $S_j\geq s$ requires
+$M>s\Gamma(B)\geq sB$, which eventually fails.
+For $\eta>1$, differentiation gives
+\[
+ \frac{\dd}{\dd\Omega}\frac{(d_0+\Omega)^\eta}{\Omega}
+ =\frac{(d_0+\Omega)^{\eta-1}}{\Omega^2}
+       [(\eta-1)\Omega-d_0].
+\]
+The quotient diverges at both endpoints of $(0,\infty)$, decreases
+until $\Omega=d_0/(\eta-1)$, and increases thereafter. Substitution
+gives \cref{eq:residual-minimum}. Consequently the required price is
+at least $sB$ times a fixed positive number and again eventually exceeds
+$M$. The argument applies separately at each time and imposes no
+regularity or growth restriction on $a(t)$.
+
+For $0\leq\eta<1$, $(d_0+\Omega)^\eta\geq\Omega^\eta$.
+A passing direction therefore requires
+$M\geq s\Gamma\Omega^{\eta-1}$, which is exactly
+\cref{eq:necessary-output-growth}. For sufficiency, fix the parameters
+as in the proposition, let $0<\eta<1$, and suppose
+$\Omega\geq c_\Omega\Gamma^{1/(1-\eta)}$. Since
+$\Gamma\geq B\to\infty$, also $\Omega\to\infty$, and
+\begin{align*}
+ P_{j,\eta}
+ &=\frac{r_j\Gamma}{\Omega}
+   +S_j\Gamma\Omega^{\eta-1}(1+d_0/\Omega)^\eta\\
+ &\leq\frac{r_j}{c_\Omega}\Gamma^{-\eta/(1-\eta)}
+   +S_jc_\Omega^{\eta-1}(1+d_0/\Omega)^\eta.
+\end{align*}
+The first term tends to zero. The limsup of the second is strictly
+less than $p_j$ by the stated strict bound on $c_\Omega$; when $S_j=0$
+both terms tend to zero. Finitely many directions admit a common time
+beyond which all inequalities are strict. For $\eta=0$ the same exact
+price is $(r_j+S_j)\Gamma/\Omega$, proving
+\cref{eq:linear-value-growth}. Finally, $\Gamma=B$ and $\Omega=aB$
+for linear production give the asserted rate for $a$.
+\end{proof}
+
+The sufficiency assumptions cannot be replaced by an upper price bound
+and a lower residual bound alone. For example, take $\eta=1/2$,
+$\ell(z)=z$, $d_0=1$, $r=0$, $S=1$, $B(t)=t$, $a(t)=10t$,
+and $p(t)=\exp(-t)$. This productivity has the proposed power-law rate,
+but its required price tends to $1/\sqrt{10}$ while its actual price
+tends to zero. Likewise equality in the asymptotic coefficient is not
+generally enough: with $\ell(z)=z$, $S=p=d_0=1$, $r=0$, and
+$a=B^{\eta/(1-\eta)}$, the required price is
+$(1+1/\Omega)^\eta>1$ for every finite $B$ and $0<\eta<1$.
+
+For clarity, the older reductions are algebraic, not additional
+assumptions. Substituting $\eta=1$ gives
+\cref{eq:general-production}; additionally setting
+$\ell(B)=\ln(1+B)$ gives $H_j,A_j$ and \cref{eq:exact}.
+Keeping arbitrary $\eta$ with this production function gives
+\cref{eq:iso-corner}. Applying the logarithmic formula at each time
+gives \cref{eq:pathwise}; its zero-$A_j$ case is exactly
+$r_j=S_j=0$. The general production floor grows at least linearly,
+whereas the logarithmic special case is $(1+B)\ln(1+B)\sim B\ln B$.
+
+The original pure-computation solution also follows. If all residual
+weights vanish and external computation is affine, any strictly
+increasing $F$ has the same optimizer as $C$. At a fixed local
+allocation $z$, remaining resources are assigned to a channel with
+$R_*=\max(r_n/p_n,r_h/p_h)$. For $R_*>0$, the reduced derivative is
+$a/(1+z)-R_*$ and is strictly decreasing. Clipping its root to $[0,B]$
+gives $z^*=\min\{B,\max(a/R_*-1,0)\}$, which is
+\cref{eq:budgetcrit}. If $R_*=0$, positive local marginal production
+uses the whole budget. Ties between best external channels affect the
+composition of the remainder, not the local allocation.
+
+\subsection{Increasing returns and an exceptional global test}
+\label{app:returns-proof}
+\begin{proof}[Proof of \cref{prop:exponential-necessity}]
+The necessary logarithmic test, which does not require concavity of
+$\ell$, implies $p_j>S_j\ell(B)/\ell'(B)$ wherever $S_j>0$.
+Therefore $\ell'(B(t))/\ell(B(t))>S_j(t)/p_j(t)\geq s/M$
+at every sufficiently late time. Choose such a time $t_0$.
+Continuity and $B(t)\to\infty$ imply that every $B>B(t_0)$ is attained
+at some $t\geq t_0$, by the intermediate value theorem. Thus the
+strict differential inequality holds throughout that budget interval.
+Integrating it on any $[B_0,B]$ contained there gives
+$\ln\ell(B)-\ln\ell(B_0)>(s/M)(B-B_0)$.
+For convex $\ell$ with $\ell(0)=0$, the tangent inequality at $B$
+is $0\geq\ell(B)-B\ell'(B)$, so $\Gamma\leq B$.
+Direct differentiation gives $\Gamma=B/k$ for $\ell(z)=z^k$ and
+$\Gamma=[1-\exp(-\psi B)]/\psi$ for the exponential specification.
+Every fixed finite $k$ still yields $\Gamma\to\infty$, contradicting
+the strict price floor when prices are bounded and residual slopes stay
+positive.
+\end{proof}
+
+\begin{lemma}[Exponential production: an exact endpoint test]
+\label{lem:exponential-endpoints}
+Let $B,a,p,\psi>0$, $d_0\geq1$, and $r,S\geq0$. On $[0,B/p]$,
+define
+\begin{equation}
+ U(x)=\ln\!\left[d_0+\frac a\psi
+   \{\exp[\psi(B-px)]-1\}+rx\right]+Sx.
+ \label{eq:exponential-objective}
+\end{equation}
+Then $x=0$ is a global maximizer if and only if
+$U'(0)\leq0$ and $U(0)\geq U(B/p)$.
+The result allows ties and does not extend to arbitrary concave
+residual utility or arbitrary concave external computation.
+\end{lemma}
+\begin{proof}
+Necessity follows from a feasible right derivative and endpoint
+comparison. For sufficiency, put $k=\psi p$,
+$A=(a/\psi)\exp(\psi B)$, and $c=d_0-a/\psi$. The positive
+argument of the logarithm is $D(x)=A\exp(-kx)+rx+c$.
+The derivative has the sign of
+\[
+ f(x)=D(x)U'(x)=(S-k)A\exp(-kx)+Sr x+r+Sc.
+\]
+If $S\leq k$, then
+$f'(x)=k(k-S)A\exp(-kx)+Sr\geq0$. Hence $f(0)\leq0$ makes
+the non-positive set an initial interval. If $S>k$, then
+$f''(x)=k^2(S-k)A\exp(-kx)>0$. Its non-positive sublevel set
+is convex and contains zero, so is again an initial interval, possibly
+a singleton or the entire domain. In both cases $U$ is non-increasing
+and then non-decreasing. Its maximum is consequently attained at an
+endpoint. The assumed endpoint comparison proves the result.
+For $r=0$, $a=\psi d_0$, and $S=\psi p$, the function is constant;
+thus a strict uniqueness conclusion would be false.
+\end{proof}
+
+\subsection{Smooth counterexamples to the endpoint shortcut}
+\label{app:exponential-counterexamples}
+These constructions use positive logarithm arguments throughout and
+infinitely differentiable, non-decreasing, concave alternatives.
+They refute extensions of \cref{lem:exponential-endpoints}, not its
+stated affine and linear assumptions. An interior comparison suffices;
+locating the precise global optimizer is unnecessary.
+
+First set $B=10$, $p=\psi=d_0=1$, $a=0.01$, and $r=0$, and replace
+$Sx$ by
+\[
+ V_{\rm ext}(x)=\frac{0.76}{20}
+ \left\{\ln(1+\exp(140))-
+             \ln(1+\exp[20(7-x)])\right\}.
+\]
+Here $V_{\rm ext}(0)=0$,
+$V_{\rm ext}'(x)=0.76/[1+\exp(20(x-7))]>0$, and
+$V_{\rm ext}''(x)<0$. Let
+$U(x)=\ln[1+0.01\{\exp(10-x)-1\}]+V_{\rm ext}(x)$.
+The following strict intervals are sufficient:
+\begin{align*}
+ -0.236&<U'(0)<-0.235, &5.399&<U(0)<5.400,\\
+ 5.468&<U(7)<5.469, &5.319&<U(10)<5.321.
+\end{align*}
+Thus the first-order condition and comparison with the all-external
+endpoint both pass, but the interior value at $x=7$ is larger.
+These bounds can be checked directly from the displayed expressions,
+using $\ln(1+\exp v)=v+\ln(1+\exp(-v))$ for $v\geq0$
+and $0<\ln(1+u)<u$ for $u>0$; the gaps exceed $0.06$.
+A looser analytic certificate already suffices: $U(0)<5.4$,
+$U(7)>0.17+0.038(140-0.694)>5.463$, and $U(10)<5.32<U(0)$.
+These follow from $\exp(3)>20$, $\ln(1.19)>0.17$,
+$\ln2<0.694$, $\exp(10)<22027$, $\exp(5.4)>221.4$, and
+$\ln100<4.606$. Furthermore, the negative computational derivative
+has magnitude greater than $0.99$ while the residual derivative is
+less than $0.76$, so $U'(0)<0$. The numerical optimizer is an
+additional check, not the argument for the counterexample.
+
+Second set $B=3$, $p=\psi=a=d_0=1$, and $S=0$, and replace affine
+external production by
+\[
+ G(x)=\frac9{50}\left\{\ln(1+\exp(100))-
+                  \ln(1+\exp[50(2-x)])\right\}.
+\]
+Then $G(0)=0$, $G'(x)=9/[1+\exp(50(x-2))]>0$, and $G''(x)<0$.
+For $U(x)=\ln[\exp(3-x)+G(x)]$, one has
+\[
+ U'(0)=-1+\frac{9}{\exp(3)[1+\exp(-100)]}<0,
+ \qquad U(0)=3.
+\]
+Also $G(3)<18$, so $U(3)<\ln19<3$, whereas
+$G(2)>18-(9/50)\ln2$ gives
+\[
+ \exp(1)+G(2)>\exp(1)+18-(9/50)\ln2>\exp(3),
+\]
+so $U(2)>3$. For example, the elementary bounds
+$\exp(1)>2.718$, $\exp(3)<20.086$, and $\ln2<0.694$
+already prove the last strict comparison. The two-test shortcut fails
+even with zero residual utility when the external production function
+is allowed to be concave rather than affine.
+
+\subsection{Existence and uniqueness of the tipping budget}
+\label{app:tipping-proof}
+\begin{proof}[Proof of \cref{prop:tipping}]
+The assumed positive derivative makes $\Gamma$ well defined and
+continuously differentiable on $[0,\infty)$. The quotient rule gives
+\cref{eq:gamma-monotone}. Hence $\Gamma$ starts at zero, is strictly
+increasing, and is unbounded because $\Gamma(B)\geq B$.
+If a positive slope exists, the finite number
+$\min_{S_j>0}p_j/S_j$ is strictly positive. The intermediate value
+theorem and strict monotonicity give exactly one positive crossing.
+
+Write $d_j(B)=p_j\ell'(B)-S_j\ell(B)
+=\ell'(B)[p_j-S_j\Gamma(B)]$.
+Below the crossing each $d_j$ is positive; above or at it, a direction
+attaining the minimum has $d_j\leq0$ and $r_j+d_0S_j>0$.
+The exact logarithmic threshold then proves attainability below and
+non-attainability at or above the crossing. On the lower interval,
+$d_j'(B)=p_j\ell''(B)-S_j\ell'(B)\leq0$. Thus every nontrivial
+ratio $(r_j+d_0S_j)/d_j(B)$, and their finite maximum, is
+non-decreasing. At least one positive numerator has a denominator
+tending to zero as $B\uparrow B_{\rm tip}$, proving divergence.
+
+If $B(t)\leq B'<B_{\rm tip}$ eventually, the threshold is bounded
+above by $a_{\rm crit}^{\ell}(B')<\infty$. For all sufficiently late
+times $a(t)$ strictly exceeds it. Every nontrivial corner inequality
+is then strict; in a trivial direction it is also strict because
+$p_j>0$ and the local marginal value is positive. The hub proposition
+therefore makes every optimizer all-inward. If all $S_j=0$, all
+thresholds are $r_j/[p_j\ell'(B)]$, finite at every finite budget.
+There is then no residual tipping budget; the definition
+$B_{\rm tip}=\infty$ records this case.
+\end{proof}
+
+\subsection{Value curvature at fixed and bounded budgets}
+\label{app:curvature-proof}
+\begin{proof}[Proof of \cref{prop:curvature}]
+Fix $B>0$ and abbreviate $L_\ell=\ell(B)>0$ and
+$d_\ell=\ell'(B)>0$. A direction passes exactly when
+\[
+ P_{j,\eta}(a):=\frac{r_j+S_j(d_0+aL_\ell)^\eta}{a d_\ell}
+ \leq p_j.
+\]
+For a nontrivial direction and $0\leq\eta<1$,
+\[
+ P_{j,\eta}'(a)=\frac{-r_j+S_j(d_0+aL_\ell)^{\eta-1}
+                    [(\eta-1)aL_\ell-d_0]}{a^2d_\ell}<0.
+\]
+The expression tends to infinity as $a\downarrow0$ and to zero as
+$a\to\infty$. Continuity and strict monotonicity prove the unique
+finite threshold. At $\eta=1$ expansion gives
+\cref{eq:general-production} and hence \cref{eq:acrit-general}.
+At $\eta>1$ and $S_j>0$, the sign condition is the non-positive
+sublevel set of
+\[
+ r_j+S_j(d_0+aL_\ell)^\eta-p_ja d_\ell.
+\]
+This function is strictly convex, positive at zero, and tends to
+infinity as $a\to\infty$. Its non-positive set is therefore empty,
+a singleton, or a bounded closed interval separated from zero.
+For $S_j=0$ the exact inequality is simply
+$a\geq r_j/(p_jd_\ell)$, with a trivial direction unrestricted.
+Putting $L_\ell=\ln(1+B)$ and $d_\ell=(1+B)^{-1}$ recovers
+\cref{eq:iso-corner} and every fixed-budget statement of the original
+curvature proposition.
+
+For the bounded-budget conclusions, take a compact positive-budget
+interval containing all sufficiently late $B(t)$ and the limit
+$\bar B>0$. On this interval $L_\ell$ is bounded above and below by
+positive constants and $d_\ell$ is likewise bounded away from zero
+and above. These statements follow from the maintained differentiability
+and concavity assumptions locally, or directly from the $C^2$ assumptions
+of the tipping result. For $\eta<1$, the preceding required prices
+are uniformly $O(a^{-1}+a^{\eta-1})$ and hence tend to zero.
+For $\eta>1$ and $S_j>0$, they are uniformly bounded below by a
+positive constant times $a^{\eta-1}$ and hence diverge. At $\eta=1$
+a limiting budget below the tipping point admits a uniform finite
+threshold, while a limit above it eventually lies above it.
+At equality, the exact pointwise comparison with the diverging
+threshold is indispensable.
+\end{proof}
+
+Two boundaries clarify the quantifiers. Mere upper boundedness of
+$B(t)$ is insufficient for the high-curvature exclusion: with
+$\ell(z)=z$, $\eta=2$, $r=0$, $S=p=d_0=1$, $B=a^{-2}$, the
+corner condition is $(1+1/a)^2\leq a$, true for $a\geq4$.
+At logarithmic value, take $\ell(z)=z$, $r=0$, $S=p=d_0=1$,
+so $B_{\rm tip}=1$. Along $B(t)=1-\exp(-t)$, the threshold is
+$a_{\rm crit}=\exp(t)$. The paths $a(t)=\exp(2t)$ and
+$a(t)=\exp(t/2)$ give respectively inward and outward allocations
+for $t>0$ despite having the same limiting budget.
+
+\subsection{A complete inward-basin characterization}
+\label{app:basin-proof}
+\begin{proof}[Proof of \cref{prop:basin}]
+For $z=B-px$, put $D=d_0+a\ln(1+z)+rx$. This is positive,
+$D''(x)=-ap^2/(1+z)^2<0$, and therefore
+$(\ln D+Sx)''=D''/D-(D'/D)^2<0$.
+The static optimizer is unique. It depends continuously on $(B,a)$:
+rescale $x=(B/p)v$ to the compact fixed interval $v\in[0,1]$;
+continuity of the objective and uniqueness imply that every convergent
+subsequence of optimizing $v$ converges to the unique limiting
+optimizer.
+
+The derivative has the sign of
+\begin{equation}
+ T(x;B,a)=r+Sd_0+Sr x+
+       a\left[S\ln(1+z)-\frac{p}{1+z}\right].
+ \label{eq:basin-derivative}
+\end{equation}
+At fixed feasible $x$, its partial derivative in $B$ is
+$a[S/(1+z)+p/(1+z)^2]>0$. Increasing $B$ also enlarges the
+feasible interval, so strict concavity implies that $x^*(B,a)$ is
+non-decreasing in $B$. At an interior optimum,
+\[
+ S\ln(1+z)-p/(1+z)=-(r+Sd_0+Sr x)/a<0.
+\]
+Thus increasing $a$ makes the derivative at that old optimum strictly
+negative, and the new optimizer is strictly smaller. At $x=0$, a
+non-positive derivative implies the same negative bracket, so a larger
+$a$ preserves the zero optimum. At the other endpoint a new optimizer
+cannot exceed the feasible upper bound. These observations prove that
+$x^*$ is non-increasing in $a$, and strictly decreasing whenever the
+old optimizer is interior and the new optimizer remains positive.
+
+For $B<B_{\rm tip}$, the zero derivative test is
+$a\geq a_{\rm crit}^{\ell}(B)$. If this is met at some date, the
+budget stays constant, productivity rises strictly, and all subsequent
+choices remain zero. At or above the tipping budget, let
+$x_\dagger=(B-B_{\rm tip})/p$. It is feasible and leaves local
+investment $z=B_{\rm tip}$. The bracket in \cref{eq:basin-derivative}
+vanishes there, while $r+Sd_0+Sr x_\dagger>0$.
+Consequently $x^*>x_\dagger$, proving \cref{eq:runaway-bound}.
+Reaching equality with the tipping budget is followed by a strict
+crossing at the next date, after which the positive excess grows at
+least geometrically with multiplier $1+g_X/p>1$.
+
+Call a path captured if it chooses zero in finite time, and crossed if
+it reaches or exceeds $B_{\rm tip}$ in finite time. A path that does
+neither has $x_t>0$ and a non-decreasing budget bounded by
+$B_{\rm tip}$. Hence $B_t\to B_\infty\leq B_{\rm tip}$.
+If $B_\infty<B_{\rm tip}$, the static productivity threshold is
+bounded along this path, whereas $a_t\to\infty$, forcing capture.
+Thus every unclassified path must converge to $B_{\rm tip}$ from below.
+
+The captured set of initial productivities is nonempty: it contains
+$a_0\geq a_{\rm crit}^{\ell}(\bar B)$. The crossed set is also
+nonempty. Choose a finite integer $N$ such that
+$\bar B(1+g_X/p)^N>B_{\rm tip}$. Choose $a_0>0$ small enough that
+$a_0\exp(g_at)\leq Sd_0/p$ for $0\leq t<N$. At the all-external
+endpoint the derivative numerator is
+$r+Sd_0+SrB/p-ap\geq0$, so the optimizer is all-external throughout
+those periods. The resulting budget crosses by period $N$.
+
+Both sets are open as subsets of $(0,\infty)$. A captured path has
+$B<B_{\rm tip}$, and one period after capture its corner inequality
+is strict because productivity has risen at unchanged budget. A
+crossed path is strictly above the tipping budget no later than one
+period after first reaching it. Continuity of every finite sequence of
+states and decisions preserves these strict finite-time certificates
+under sufficiently small changes of $a_0$.
+
+The two sets are ordered. A larger $a_0$ gives smaller investment at a
+common budget; induction gives weakly smaller budgets at every date.
+If a smaller-$a_0$ path is captured, the larger one is captured no later
+than that date, since $a_{\rm crit}^{\ell}$ is non-decreasing.
+Similarly, crossing of a larger-$a_0$ path implies crossing of a smaller
+one. Thus the captured set is an upper interval and the crossed set a
+lower interval.
+
+There is at most one initial productivity in neither set. Suppose
+$a_0^-<a_0^+$ generated two such paths. Then $B_t^-\geq B_t^+$,
+and the gap is non-decreasing, because
+$x^*(B_t^-,a_t^-)\geq x^*(B_t^+,a_t^+)$. Both budgets would have to
+converge to $B_{\rm tip}$, so their gap would have to remain identically
+zero. Yet for all sufficiently late dates, neither optimum is the
+all-external endpoint: at that endpoint its derivative numerator is
+$r+Sd_0+SrB/p-ap$, which becomes negative for bounded $B$ and
+$a\to\infty$. Neither optimum is zero by assumption. They are then
+interior, and the strict productivity comparison at a common budget
+forces a positive investment gap, a contradiction.
+
+Finally, two disjoint nonempty open intervals cannot exhaust the
+connected set $(0,\infty)$. Their boundary contains a point in neither
+set, and the preceding argument makes that point unique. Denote it
+$a_{\rm sep}$. The low-productivity construction makes it positive;
+openness of the captured set around $a_{\rm crit}^{\ell}(\bar B)$
+makes it strictly smaller than that threshold. The boundary path has
+$B_t\uparrow B_{\rm tip}$, and telescoping
+$B_{t+1}-B_t=g_Xx_t$ gives its stated total investment.
+
+For comparative statics, an increase of $g_a$ increases every future
+productivity and weakly decreases investment and budgets by induction.
+An increase of $g_X$ weakly increases the transition
+$B\mapsto B+g_Xx^*(B,a)$, and an increase of $\bar B$ increases its
+initial state. Both therefore weakly increase all budgets. The ordered
+capture and crossing sets imply the asserted monotonicities of their
+unique separator. The comparison in $\bar B/B_{\rm tip}$ holds with
+$p,S,r,d_0$ fixed, so that $B_{\rm tip}$ itself is fixed.
+\end{proof}
+
+\begin{lemma}[No-further-investment certificate on a mobilization path]
+\label{lem:stay-certificate}
+In the same one-channel logarithmic model, let a specified
+$B_{\rm loc}(t)>0$ be non-decreasing, bounded by $\bar B$, and let
+$a_{T+k}=a_T\exp(g_ak)$ with $g_a>0$. From state $(T,X_T)$,
+zero investment at every date $T+k$ is optimal if and only if
+\begin{equation}
+ a_T\geq a_{\rm stay}(T,X_T):=
+ \sup_{k\geq0}\exp(-g_ak)
+ a_{\rm crit}^{\ell}\bigl(B_{\rm loc}(T+k)+g_XX_T\bigr),
+ \label{eq:stay-certificate}
+\end{equation}
+where the threshold is extended to infinity at and above
+$B_{\rm tip}$. In particular,
+$\bar B+g_XX_T<B_{\rm tip}$ and
+$a_T\geq a_{\rm crit}^{\ell}(\bar B+g_XX_T)$ are sufficient.
+For the constant-$\bar B$ model starting at $X_0=0$, another sufficient
+capture certificate is the existence of an integer $T\geq0$ such that
+\begin{equation}
+ \bar B(1+g_X/p)^T<B_{\rm tip},\qquad
+ a_0\exp(g_aT)\geq
+ a_{\rm crit}^{\ell}\bigl(\bar B(1+g_X/p)^T\bigr).
+ \label{eq:finite-capture-certificate}
+\end{equation}
+\end{lemma}
+\begin{proof}
+If all future investments are zero, the stock is fixed at $X_T$ and
+the static corner test must hold at every date. These tests are exactly
+the inequalities whose supremum appears in \cref{eq:stay-certificate}.
+Conversely, when they hold, induction gives the unique zero optimizer
+and unchanged stock at every date. The upper-budget certificate uses
+monotonicity of $a_{\rm crit}^{\ell}$ and rising productivity.
+In the constant-ceiling model, $x_t\leq B_t/p$ implies
+$B_t\leq\bar B(1+g_X/p)^t$. Under
+\cref{eq:finite-capture-certificate}, the actual budget at date $T$
+is below the tipping budget and its threshold does not exceed the
+stated bound. Hence $x_T=0$, after which capture is permanent.
+\end{proof}
+
+The cases excluded from the strict basin theorem have direct answers.
+If $g_X=0$ and $\bar B<B_{\rm tip}$, the fixed budget and $g_a>0$
+ensure eventual capture for every $a_0>0$, but not necessarily immediate
+inwardness. If $g_a=0$, $g_X>0$, and the initial budget is below the
+tipping point, $a_0\geq a_{\rm crit}^{\ell}(\bar B)$ is captured
+immediately. Below that threshold, investment is initially positive and
+is non-decreasing as the budget grows; thus the tipping budget is crossed
+in finite time. If $\bar B\geq B_{\rm tip}$, every finite productivity
+is outward immediately. If $S=0$, the finite residual tipping budget and
+the separator construction do not apply. At $B=0$, the feasible set is
+a singleton and the divided corner formulas are unnecessary.
+
+For the uniform bounded-budget extension at $\eta<1$, concavity gives
+$\ell'(B)\geq\ell'(B_{\max})>0$ and $\ell(B)\leq\ell(B_{\max})$.
+The required price is therefore at most
+$[r_j+S_j(d_0+a\ell(B_{\max}))^\eta]/[a\ell'(B_{\max})]$,
+which tends to zero. This proves the assertion even when budgets approach
+zero. It does not prove the analogous $\eta>1$ statement without a positive
+lower budget bound.

@@ -1,0 +1,47 @@
+{
+  "seed": 2026101303,
+  "tolerance": 3e-08,
+  "counts": {
+    "minimum": [
+      240,
+      0
+    ],
+    "unbounded_obstruction": [
+      576,
+      0
+    ],
+    "sublog_scaling": [
+      56,
+      0
+    ],
+    "necessary_rate": [
+      174,
+      0
+    ],
+    "eta_zero": [
+      24,
+      0
+    ],
+    "counterexamples": [
+      11,
+      0
+    ]
+  },
+  "eta_half_examples": [
+    {
+      "B": 100.0,
+      "a": 100.0,
+      "max_price_ratio": 0.0025000999975001255
+    },
+    {
+      "B": 10000.0,
+      "a": 10000.0,
+      "max_price_ratio": 0.0020050000099999994
+    },
+    {
+      "B": 100000000.0,
+      "a": 100000000.0,
+      "max_price_ratio": 0.0020000005000000032
+    }
+  ]
+}

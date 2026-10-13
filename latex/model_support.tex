@@ -1,0 +1,96 @@
+\section{Model: workload, resources, and value}
+\label{sec:support}
+\label{sec:allocation}
+\subsection{Experiential substitution and implemented states}
+Let $q\in[0,1]$ denote decision-relevant experiential fidelity and let
+$\sigma(q)\in[0,1]$ be an increasing substitution map. For a residence
+project with experiential benefit $E(n)$ and residual value $X(n)$,
+\begin{equation}
+ B_{\rm phys}(n,q)=[1-\sigma(q)]E(n)+X(n).
+ \label{eq:experiential}
+\end{equation}
+Perfect substitution removes the first term, not external facts, materials,
+geographical protection, or strategic options. For a discrete project with
+substitutable value $e_j$, residual value $x_j$, and incremental resource
+cost valued at $c_j$, the net comparison is
+\begin{equation}
+ \Delta_j(q)=[1-\sigma(q)]e_j+x_j-c_j.\label{eq:premium}
+\end{equation}
+A positive reality premium need not cover its opportunity cost. The
+continuous model below specializes to $\sigma(q)=q$. This is a statement
+about a decision-maker's substitution, not about the metaphysical identity
+of a physical event and its simulation.
+
+A regular hierarchy with branching factor $b\geq2$ and finite integer
+depth $d\geq0$ contains
+\begin{equation}
+ W_d=\sum_{j=0}^{d}b^j=\frac{b^{d+1}-1}{b-1}.\label{eq:worlds}
+\end{equation}
+For per-world service requirement $u_k>0$, efficiency $\eta_k>0$, and
+capacity $K_k$, homogeneous support requires
+\begin{equation}
+ D_k(d)=u_kW_d/\eta_k\leq K_k\quad\hbox{for every service }k.
+ \label{eq:resource}
+\end{equation}
+Processing, state storage, heat rejection, and material replacement are
+separate constraints. Their units cannot be added without an explicit
+conversion. Cumulative consumption and available stocks must refer to the
+same horizon; instantaneous power is not a lifetime energy supply.
+
+\begin{lemma}[Finite-depth support frontier]
+\label{prop:depth}
+Let $Q=\min_kK_k\eta_k/u_k$. If $Q\geq1$, the largest feasible depth is
+\begin{equation}
+ d_{\max}=\left\lfloor\log_b[1+(b-1)Q]-1\right\rfloor.
+ \label{eq:depth-bound}
+\end{equation}
+If $Q<1$, even the root world is infeasible at the specified workload.
+\end{lemma}
+\begin{proof}
+The intersection of the service constraints is $W_d\leq Q$. Substituting
+the geometric sum, taking the increasing base-$b$ logarithm, and restricting
+to non-negative integers gives the result.
+\end{proof}
+
+For fixed per-world workloads,
+$D_k(d+1)/D_k(d)=b+1/W_d\to b$. With $C_d=cW_d$ and logarithmic
+value, the increment is
+$\ln\{[1+c(bW_d+1)]/[1+cW_d]\}\to\ln b$.
+These limits divide numerator and denominator by $W_d$. Recursion
+therefore multiplies implemented demand while producing only a bounded
+increment in logarithmic value per additional level. A rule that generates
+unbounded depth is not an implementation of infinitely many simultaneous
+independent states. Reusing code also does not erase distinct stored
+histories. Scheduling fewer active worlds can save update work while
+leaving a growing persistent-memory bill.
+
+On a specified horizon $[0,T]$, define
+\begin{equation}
+ \chi_T=\sup_{0\leq t\leq T}\max_k\frac{D_k(t)}{K_k(t)}.
+ \label{eq:chi}
+\end{equation}
+Local physical sufficiency means $\chi_T\leq1$. For a ratio
+$\chi_{k0}\exp[(g_{D,k}-g_{K,k})t]$ initially below one and a positive
+growth-rate difference, its crossing time is
+\begin{equation}
+ T_k=\frac{\ln(1/\chi_{k0})}{g_{D,k}-g_{K,k}}.\label{eq:crossing}
+\end{equation}
+This follows by solving for a ratio of one. It separates a successful
+finite interval from a permanently feasible implementation. The archived
+examples and their first memory failure are retained in the supplement.
+The new results do not assume those examples establish indefinite support.
+
+\subsection{A common resource budget}
+Let $z,x,y,w\geq0$ be local investment, resident infrastructure,
+industry-only capacity, and observation-only capacity. With local
+investment as numeraire,
+\begin{equation}
+ z+p_nx+p_hy+p_mw\leq B,\qquad p_j>0,
+ \label{eq:budget}
+\end{equation}
+where $B>0$ unless the degenerate zero-budget case is expressly mentioned.
+A support constraint and an allocation constraint answer different
+questions. A physically sufficient local path can still lose to a more
+valuable external use, while an attractive local allocation can fail a
+memory or heat requirement. Their conjunction, rather than either
+calculation alone, describes an implementable inward path.

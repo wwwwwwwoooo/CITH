@@ -1,14 +1,14 @@
 {
-  "title": "Why Should They Expand? Computational Growth, Resource Sufficiency, and Conditional Interstellar Expansion",
+  "title": "Why Should They Stop Expanding? Computational Growth, Tipping Budgets, and the Uniformity Problem",
   "creators": [
     {
       "name": "Joo, Hyeonjun"
     }
   ],
-  "description": "CITH v7.3 research manuscript and reproducibility package. A conditional allocation model of internal computational growth and external investment, including LaTeX and PDF manuscripts, mathematical proofs, frozen synthetic inputs, numerical outputs, and executable reproduction code. This manuscript has not been published as a peer-reviewed journal article. It does not establish the prevalence of inward civilizations or indefinite physical feasibility. Original Python and shell code is MIT-licensed; the manuscript, original figures, documentation, synthetic data and numerical outputs are CC BY 4.0. Third-party components retain their existing licenses; see LICENSE and LICENSE-CODE.",
+  "description": "CITH v8 research manuscript and reproducibility package. A conditional resource-allocation model of computational growth, tipping budgets, no-replication conditions, infinite-horizon benchmark, risk, latency and population uniformity. Includes PDF and LaTeX manuscripts, mathematical proofs, frozen synthetic inputs, numerical outputs and executable reproduction code. This manuscript is not a peer-reviewed journal publication; it does not establish civilization prevalence, indefinite engineering feasibility or low detectability. Original code is MIT-licensed; original text, figures, documentation and synthetic data are CC BY 4.0. Third-party components retain their existing licenses.",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "version": "7.3",
+  "version": "8",
   "access_right": "open",
   "license": "cc-by-4.0",
   "language": "eng",
@@ -20,4 +20,3 @@
     "reproducible research"
   ]
 }
-

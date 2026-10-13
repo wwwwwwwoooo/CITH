@@ -1,0 +1,1797 @@
+\section{Introduction}
+\label{sec:introduction}
+The capacity to cross interstellar distances does not settle whether a
+civilization will keep paying to do so. Yet an inward explanation of the
+Fermi paradox faces a stronger objection than this elementary distinction:
+resource growth itself can renew the incentive to expand. A civilization
+that values additional computation need not exhaust its ambitions before
+acquiring another star. If extensive industry produces resources and
+independent options that intensive local investment cannot supply cheaply,
+better computers may strengthen neither local sufficiency nor the decision
+to remain local. The computational inward transition hypothesis (\CITH)
+therefore needs a boundary that expansion can cross, not a verbal claim
+that virtual experience is attractive.
+
+Expansion arguments associated with \citet{Hart1975} and \citet{Tipler1980}
+connect technological capability to persistent settlement or self-replicating
+activity. The wider assumptions behind the Great Silence were surveyed by
+\citet{Brin1983}. Settlement dynamics, finite site lifetimes, and spatial
+heterogeneity complicate complete occupation \citep{NewmanSagan1981,CarrollNellenback2019}.
+They do not make launch behaviour irrelevant: an expansionist lineage can
+have consequences far beyond its original population. Our question is
+whether an internal computational alternative removes the incentive to
+create that lineage, and whether removing it in many civilizations is enough
+to explain no arrival in a specified region.
+
+The answer developed here begins against the strong hypothesis. With
+logarithmic computational value, concave local production, bounded external
+prices, and a positive residual external motive, unbounded physical budgets
+eventually exclude all-inward allocation, whatever local computational
+productivity does. This result treats efficiency and physical resources as
+different quantities. A processor improvement changes the useful service
+obtained from a fixed energy or material allocation; access to another
+resource base changes the allocation that can be made. Conflating these
+changes would remove precisely the outward pressure that the model tests.
+
+\subsection{Contribution and organizing argument}
+The contribution has four connected parts. First, a common corner criterion
+yields a tight production-independent floor and a unique tipping budget
+under logarithmic value. An explicit resource-acquisition process has a
+unique initial-productivity boundary separating eventual inward investment
+from outward lock-in, with a critical path approaching the tipping budget.
+Second, optimizing non-replicating observation and dormant backups changes
+the relevant corner and replaces gross project prices by opportunity costs
+net of substitute services. A growing-budget construction shows that the two corners can even have opposite persistence conclusions. A catastrophe model then derives the resilience
+premium from value at risk rather than assigning it freely. Third, a
+free-world-number margin connects a specified population ethic to value
+curvature, while an infinite-horizon benchmark and subjective-delay
+inequalities make continuation returns explicit. Finally, a marked-origin
+arrival model quantifies how small the expansionist tail must be when
+potential arrival exposure is large.
+
+These results organize a particular inward scenario around three tests:
+a viable resource path that stays on the appropriate side of an incentive
+boundary, credible non-replicating ways of satisfying external information
+and resilience motives, and sufficiently weak time-adjusted returns on
+replication. The tests must hold together in a scenario relying on all
+three mechanisms. They are not universal necessary conditions for every
+possible inward civilization. Slower marginal-value decay, vanishing
+external preferences, strongly increasing local returns, or rising external
+prices supply different routes. The model proves conditional exclusions
+and existence results, not a universal evolutionary destiny. Its strongest
+negative conclusion is correspondingly precise: within the logarithmic,
+concave-production benchmark, productivity alone cannot defeat a persistent
+residual motive when the physical budget grows without bound.
+
+The corner calculation uses standard concave optimization. Its contribution
+is not a new first-order optimality theorem. The additional theory lies in
+sharp feasibility across production functions, the pathwise obstruction,
+the unique basin boundary, the exact scope and failure of an exponential
+endpoint test, and the links between service substitution, intertemporal
+returns, and population exposure. Each link has its own assumptions. In
+particular, a sufficient condition for one civilization to stop new
+investment is not a theorem that all existing autonomous descendants stop
+replicating. A population argument must keep their exposure in the record.
+
+\subsection{What is inherited from prior work}
+Computational and postbiological civilizations are established subjects,
+not ideas introduced by this paper \citep{Dick2003,CirkovicBradbury2006}.
+\citet{Smart2012} describes movement toward dense internal scales. Our
+increasing-returns result supplies a resource-response condition against
+which that kind of mechanism can be tested. It does not import the stronger
+claim that advanced civilizations invariably leave the observable universe.
+Bradbury's Matrioshka-brain manuscript describes stellar computation and
+nested heat-use architectures \citep{Bradbury1999}; the thermal calculation
+below is a deliberately smaller bridge between allocation and search,
+not a proposal of that architecture.
+
+Aestivation instead concerns when to compute \citep{Sandberg2017}. The
+thermodynamic objection of \citet{BennettHansonRiedel2019} emphasizes that
+available entropy reservoirs must be specified before efficiency advantages
+are inferred. Our latency comparison concerns delayed external returns
+relative to ongoing internal activity, and does not assume that waiting
+for a colder universe is optimal. Sustainability and homeostatic proposals
+address other reasons expansion might end \citep{HaqqMisraBaum2009,WongBartlett2022}.
+They can coexist with the allocation mechanism but do not prove its
+thresholds. Conversely, self-replicating resource acquisition
+\citep{ArmstrongSandberg2013} and population-total welfare
+\citep{Bostrom2003Waste} are direct counterpressures. They are included as
+cases in which outward investment can remain attractive.
+
+\subsection{Three meanings of inwardness}
+We reserve \emph{all-inward allocation} for zero new expenditure on resident,
+industrial, and observation projects. \emph{No replication} instead permits
+observation and dormant backups, while setting new reproducing capacity
+to zero. \emph{Low detectability} is an observational property and can hold
+or fail under either allocation. These definitions also distinguish a
+civilization's current investment from the continued activity of earlier
+launches. A society may stop launching because its distant industry is
+already reproducing effectively; that is not an explanation of silence.
+
+The paper proceeds through these distinctions rather than treating every
+external project as colonization. The model first separates physical
+support from economic preference, then identifies the corner and its
+persistence conditions. Residual motives and latency determine whether
+those conditions survive a more explicit account of services and time.
+The population calculation finally asks how much outward or leaked activity
+a chosen null likelihood tolerates. Detailed workload examples, the paired
+sensitivity ensemble, and the original two-period construction are in the
+supplement. Their numerical values are preserved as implementation checks,
+not used as a prior over unknown civilizations.
+
+\section{Model: workload, resources, and value}
+\label{sec:support}
+\label{sec:allocation}
+\subsection{Experiential substitution and implemented states}
+Let $q\in[0,1]$ denote decision-relevant experiential fidelity and let
+$\sigma(q)\in[0,1]$ be an increasing substitution map. For a residence
+project with experiential benefit $E(n)$ and residual value $X(n)$,
+\begin{equation}
+ B_{\rm phys}(n,q)=[1-\sigma(q)]E(n)+X(n).
+ \label{eq:experiential}
+\end{equation}
+Perfect substitution removes the first term, not external facts, materials,
+geographical protection, or strategic options. For a discrete project with
+substitutable value $e_j$, residual value $x_j$, and incremental resource
+cost valued at $c_j$, the net comparison is
+\begin{equation}
+ \Delta_j(q)=[1-\sigma(q)]e_j+x_j-c_j.\label{eq:premium}
+\end{equation}
+A positive reality premium need not cover its opportunity cost. The
+continuous model below specializes to $\sigma(q)=q$. This is a statement
+about a decision-maker's substitution, not about the metaphysical identity
+of a physical event and its simulation.
+
+A regular hierarchy with branching factor $b\geq2$ and finite integer
+depth $d\geq0$ contains
+\begin{equation}
+ W_d=\sum_{j=0}^{d}b^j=\frac{b^{d+1}-1}{b-1}.\label{eq:worlds}
+\end{equation}
+For per-world service requirement $u_k>0$, efficiency $\eta_k>0$, and
+capacity $K_k$, homogeneous support requires
+\begin{equation}
+ D_k(d)=u_kW_d/\eta_k\leq K_k\quad\hbox{for every service }k.
+ \label{eq:resource}
+\end{equation}
+Processing, state storage, heat rejection, and material replacement are
+separate constraints. Their units cannot be added without an explicit
+conversion. Cumulative consumption and available stocks must refer to the
+same horizon; instantaneous power is not a lifetime energy supply.
+
+\begin{lemma}[Finite-depth support frontier]
+\label{prop:depth}
+Let $Q=\min_kK_k\eta_k/u_k$. If $Q\geq1$, the largest feasible depth is
+\begin{equation}
+ d_{\max}=\left\lfloor\log_b[1+(b-1)Q]-1\right\rfloor.
+ \label{eq:depth-bound}
+\end{equation}
+If $Q<1$, even the root world is infeasible at the specified workload.
+\end{lemma}
+\begin{proof}
+The intersection of the service constraints is $W_d\leq Q$. Substituting
+the geometric sum, taking the increasing base-$b$ logarithm, and restricting
+to non-negative integers gives the result.
+\end{proof}
+
+For fixed per-world workloads,
+$D_k(d+1)/D_k(d)=b+1/W_d\to b$. With $C_d=cW_d$ and logarithmic
+value, the increment is
+$\ln\{[1+c(bW_d+1)]/[1+cW_d]\}\to\ln b$.
+These limits divide numerator and denominator by $W_d$. Recursion
+therefore multiplies implemented demand while producing only a bounded
+increment in logarithmic value per additional level. A rule that generates
+unbounded depth is not an implementation of infinitely many simultaneous
+independent states. Reusing code also does not erase distinct stored
+histories. Scheduling fewer active worlds can save update work while
+leaving a growing persistent-memory bill.
+
+On a specified horizon $[0,T]$, define
+\begin{equation}
+ \chi_T=\sup_{0\leq t\leq T}\max_k\frac{D_k(t)}{K_k(t)}.
+ \label{eq:chi}
+\end{equation}
+Local physical sufficiency means $\chi_T\leq1$. For a ratio
+$\chi_{k0}\exp[(g_{D,k}-g_{K,k})t]$ initially below one and a positive
+growth-rate difference, its crossing time is
+\begin{equation}
+ T_k=\frac{\ln(1/\chi_{k0})}{g_{D,k}-g_{K,k}}.\label{eq:crossing}
+\end{equation}
+This follows by solving for a ratio of one. It separates a successful
+finite interval from a permanently feasible implementation. The archived
+examples and their first memory failure are retained in the supplement.
+The new results do not assume those examples establish indefinite support.
+
+\subsection{A common resource budget}
+Let $z,x,y,w\geq0$ be local investment, resident infrastructure,
+industry-only capacity, and observation-only capacity. With local
+investment as numeraire,
+\begin{equation}
+ z+p_nx+p_hy+p_mw\leq B,\qquad p_j>0,
+ \label{eq:budget}
+\end{equation}
+where $B>0$ unless the degenerate zero-budget case is expressly mentioned.
+A support constraint and an allocation constraint answer different
+questions. A physically sufficient local path can still lose to a more
+valuable external use, while an attractive local allocation can fail a
+memory or heat requirement. Their conjunction, rather than either
+calculation alone, describes an implementable inward path.
+
+\label{sec:production}
+
+The planning horizon and the resource numeraire are fixed. Let
+$B_{\rm res}$ be physical resources available during that horizon and let
+$b_{\rm ref}>0$ be a fixed reference amount. The budget coordinate is
+$B=B_{\rm res}/b_{\rm ref}$; local investment and project prices use the
+same resource unit. Thus $p_jx_j$ and $z$ are resource expenditures, whereas
+$x,y,w$ are dimensionless increments of project capacity. Similarly,
+$C=C_{\rm useful}/c_{\rm ref}$ uses a fixed computational-service unit
+$c_{\rm ref}>0$. In particular, logarithms take dimensionless arguments.
+An efficiency improvement changes the production coefficient $a$, not
+$B$, unless it also changes the physical resources actually available.
+Other physical services retain the separate constraints in \cref{eq:chi}.
+
+The cumulative indices $n=1+x$, $h=1+x+y$, and $m=1+x+y+w$ retain the
+residence, industry, and observation accounting of the model. Useful
+computation and utility are
+\begin{align}
+ C&=C_0+a\ell(z)+G_n(x)+G_h(y),\label{eq:compute}\\
+ U&=F(C)+(1-q)E(x)+\epsilon_RR(x+y)
+       +\epsilon_II(x+y+w).\label{eq:utility}
+\end{align}
+Here $a>0$, $C_0\geq0$, $q\in[0,1]$, and the residual weights are
+non-negative. The functions $E,R,I$ are differentiable, non-decreasing,
+and concave on the feasible domain. The functions $G_n,G_h$ are
+continuous, non-decreasing, and concave, with $G_j(0)=0$ and finite right
+derivatives $G_j'(0)=r_j\geq0$. Set $r_m=0$. Local production is continuous
+and non-negative on $[0,B]$, with $\ell(0)=0$, and has a positive finite
+left derivative at $B$ and $\ell(B)>0$. Whenever global concavity is
+invoked, $\ell$ is also concave on this interval. These assumptions do
+not require a derivative at zero. The baseline is
+$\ell(z)=\ln(1+z)$ and $G_j(v)=r_jv$.
+
+We use the shifted-isoelastic computational value
+\begin{equation}
+ F_\eta(C)=
+ \begin{cases}
+ [(1+C)^{1-\eta}-1]/(1-\eta),&\eta\ne1,\\
+ \ln(1+C),&\eta=1,
+ \end{cases}
+ \qquad \eta\geq0,
+ \label{eq:isoelastic}
+\end{equation}
+so that $F_\eta'(C)=(1+C)^{-\eta}$, $F_\eta(0)=0$, and
+$F_\eta'(0)=1$. The common marginal-value normalization makes the
+residual weights comparable across this family. The value-curvature
+parameter $\eta$ is distinct from the service-efficiency factors $\eta_k$.
+Recursive description alone does not determine a welfare functional.
+
+The residual slopes at the all-inward corner are
+\begin{align}
+ S_n&=(1-q)E'(0)+\epsilon_RR'(0)+\epsilon_II'(0),\nonumber\\
+ S_h&=\epsilon_RR'(0)+\epsilon_II'(0),&
+ S_m&=\epsilon_II'(0).
+ \label{eq:slopes}
+\end{align}
+Write $d_0=1+C_0\geq1$ and define
+\begin{equation}
+ \Omega=a\ell(B),\qquad
+ \Gamma(B)=\frac{\ell(B)}{\ell'(B)}.
+ \label{eq:omega-gamma}
+\end{equation}
+The first quantity is new local computational output at the corner;
+the second is a resource-scale measure of production curvature.
+Changing the multiplicative normalization of $\ell$ and compensating in
+$a$ changes neither quantity. Throughout, all-inward allocation means
+zero new expenditure in every external direction. It is stronger than
+zero new replication, since observation can be external without
+replicating.
+
+\subsection{World creation and computational-value curvature}
+\label{sec:world-value}
+A generative architecture does not select a welfare functional, but a free
+margin in the number of worlds changes the value of additional computation.
+To expose that margin, let $C_{\rm tot}\geq u>0$ be service available to
+worlds, let each world receive $c\geq u$, and initially relax world count
+to a real variable $W\geq1$. The constraint is $Wc=C_{\rm tot}$. The
+exponent $\theta\in[0,1]$ values world population; the elasticity
+$\alpha\in(0,1]$ values resources within a world. This distinction is
+between two margins of valuation, not between simulated and physical
+persons.
+
+\begin{lemma}[A free world-number margin]
+\label{lem:world-curvature}
+For the continuous relaxation,
+\begin{equation}
+ \max_{Wc=C_{\rm tot},\,W\geq1,\,c\geq u}W^\theta c^\alpha
+ =\begin{cases}
+ u^{\alpha-\theta}C_{\rm tot}^{\theta},&\theta>\alpha,\\
+ C_{\rm tot}^{\alpha},&\theta\leq\alpha.
+ \end{cases}
+ \label{eq:world-value}
+\end{equation}
+Thus the value exponent is $v=\max(\theta,\alpha)>0$. Writing
+$C_{\rm tot}=u(1+C)$ and normalizing the value at the mandatory root
+as $[V(u(1+C))/V(u)-1]/v$ gives exactly $F_{1-v}(C)$.
+For the separate specification $W^\theta\ln(c/u)$, $\theta=0$ gives
+$\ln(C_{\rm tot}/u)$, while $\theta>0$ gives
+$(C_{\rm tot}/u)^\theta/(\exp(1)\theta)$ only once
+$C_{\rm tot}\geq u\exp(1/\theta)$.
+\end{lemma}
+\noindent\emph{Proof sketch.}
+Substitution of $W=C_{\rm tot}/c$ reduces the power case to the sign
+of $\alpha-\theta$. In the logarithmic case, optimize
+$\exp[\theta\ln(C_{\rm tot}/u)-\theta v_c]v_c$ over
+$0\leq v_c\leq\ln(C_{\rm tot}/u)$. The full proof, ties, and the
+integer-world correction are in \cref{app:world-proof}.
+
+At $\theta=\alpha$ every feasible continuous split ties. With integer
+world counts and $\theta>\alpha$, the exact value becomes
+$C_{\rm tot}^\alpha\lfloor C_{\rm tot}/u\rfloor^{\theta-\alpha}$;
+it has the same asymptotic exponent, not the same differentiable function.
+A regular recursive hierarchy restricts the available counts further but
+preserves this exponent. The shifted smooth family is therefore exact for
+the stated relaxation, not for discrete launches or indivisible worlds.
+
+Average-log valuation is one interpretation of the baseline $\eta=1$.
+It is not forced by computational sophistication. Total-log valuation
+with freely increasing world count instead has linear asymptotic value,
+and the power model with $\theta=1$ has linear value exactly. At
+$\eta=0$ the corner condition becomes
+\begin{equation}
+ p_ja\ell'(B)\geq r_j+S_j.
+ \label{eq:totalist-corner}
+\end{equation}
+For logarithmic local production, densification must satisfy
+$a/(1+B)\geq\max_j(r_j+S_j)/p_j$. More valued lives can thus strengthen
+the attraction of unused external resources rather than eliminate it.
+This connects the opportunity-cost comparison to
+\citet{Bostrom2003Waste}, without attributing the present production
+function or equation to that paper.
+
+Recursion supplies one implementation of an open-ended world-number
+margin. Its analytical role is now explicit: admitting that margin and
+specifying its population weight changes the induced value curvature.
+A non-recursive implementation with the same feasible world counts has
+the same implication. Recursion neither manufactures additional substrate
+nor chooses $\theta$ on behalf of a civilization. The extensive world
+margin, rather than nesting by itself, is the operative assumption.
+
+\section{The inward corner}
+\label{sec:inward}
+\label{sec:threshold}
+
+A corner criterion is useful only if it exposes the quantities that can
+and cannot be changed by productivity. Temporarily allow any
+differentiable, strictly increasing, concave $F$. At the corner define
+\begin{align}
+ C_L&=C_0+a\ell(B),&
+ \lambda_L&=F'(C_L)a\ell'(B),\label{eq:local-return}\\
+ D_j&=F'(C_L)r_j+S_j\qquad(j=n,h,m).
+ \label{eq:external-return}
+\end{align}
+
+\begin{proposition}[The common corner criterion]
+\label{prop:hub}
+Under the model assumptions, a necessary condition for the all-inward
+corner to be globally optimal is
+$D_j\leq p_j\lambda_L$ for every direction. This condition is also
+sufficient when $\ell$ is concave. For $F=F_\eta$, it is equivalent to
+\begin{equation}
+ \boxed{\frac{p_j}{\Gamma(B)}\geq
+ \frac{r_j}{\Omega}
+ +S_j\frac{(d_0+\Omega)^\eta}{\Omega}}
+ \qquad(j=n,h,m).
+ \label{eq:hub}
+\end{equation}
+Productivity enters this expression only through $\Omega$; $\Gamma$
+depends on the production function and the budget, not on $a$.
+Under concavity, strict inequalities in every direction make every
+optimizer all-inward. Weak inequalities establish an inward optimum
+but do not by themselves exclude tied external allocations.
+\end{proposition}
+\begin{proof}
+Let $(v_n,v_h,v_m)=(x,y,w)$. Moving a small amount $v_j>0$ into direction
+$j$ and reducing $z$ by $p_jv_j$ gives directional derivative
+$D_j-p_j\lambda_L$. A positive derivative contradicts optimality.
+If $\ell$ is concave, then $C$ is concave and composition with increasing
+concave $F$ preserves concavity. Consequently,
+\begin{align}
+ U(z,x,y,w)-U(B,0,0,0)
+ &\leq\lambda_L(z-B)+\sum_jD_jv_j\nonumber\\
+ &\leq\sum_j(D_j-p_j\lambda_L)v_j.
+ \label{eq:cornerproof}
+\end{align}
+This proves sufficiency and the strict statement. For $F_\eta$,
+multiplication by $(d_0+\Omega)^\eta>0$ gives
+$p_ja\ell'(B)\geq r_j+S_j(d_0+\Omega)^\eta$; division by
+$\Omega>0$ gives \cref{eq:hub}.
+\end{proof}
+
+\begin{corollary}[The original all-inward criterion]
+\label{prop:corner}
+For $\ell(z)=\ln(1+z)$ and any differentiable, strictly increasing,
+concave $F$, the all-inward corner is optimal exactly when
+\begin{equation}
+ D_j/p_j\leq\lambda_L\qquad(j=n,h,m).
+ \label{eq:corner}
+\end{equation}
+\end{corollary}
+\begin{proof}
+The local logarithm is concave, so both directions of
+\cref{prop:hub} apply. Its derivatives give precisely
+\cref{eq:local-return,eq:external-return} with
+$\ell'(B)=1/(1+B)$.
+\end{proof}
+
+\begin{corollary}[Adding hard support constraints]
+\label{cor:feasibility}
+If an additional physical feasibility restriction retains the corner,
+the criterion $D_j\leq p_j\lambda_L$ remains sufficient under
+concavity, as does \cref{eq:hub} for $F_\eta$. Necessity is guaranteed
+when each small budget-transfer direction used in the proof remains
+admissible. Without that condition, necessity need not hold.
+\end{corollary}
+\begin{proof}
+An optimum over a set is an optimum over any subset containing it.
+The necessity argument requires exactly the indicated feasible
+perturbations; without them it need not apply.
+\end{proof}
+
+\begin{productioncorollary}[The tight logarithmic floor]
+\label{cor:production-growth}
+Let $\eta=1$ and let $\ell$ be concave. Then
+\begin{equation}
+ \Gamma(B)\geq B,
+ \label{eq:tight-floor}
+\end{equation}
+with equality if and only if $\ell$ is linear on $[0,B]$.
+Every direction with $S_j>0$ requires
+$p_j>S_j\Gamma(B)\geq S_jB$ at any finite $a$.
+Conversely, for fixed finite $B,d_0,p_j,r_j,S_j$, some concave local
+production function and finite $a>0$ make the corner optimal if and
+only if $p_j>S_jB$ in every direction with $S_j>0$.
+Linear local production provides a witness. Directions with $S_j=0$
+retain their computational-return condition but introduce no residual
+floor.
+\end{productioncorollary}
+\noindent\emph{Proof sketch.}
+The tangent to a concave production function at $B$ lies above its
+value at zero. Equality forces coincidence with the chord on the whole
+interval. For the converse use $\ell(z)=z$ and take
+$a>\max_j(r_j+d_0S_j)/(p_j-S_jB)$.
+The complete proof, including zero slopes, is in \cref{app:floor-proof}.
+
+\begin{corollary}[Logarithmic productivity thresholds]
+\label{lem:production}
+\label{prop:threshold}
+For $\eta=1$ and concave $\ell$, the exact test is
+\begin{equation}
+ p_j\geq S_j\frac{\ell(B)}{\ell'(B)}
+       +\frac{r_j+d_0S_j}{a\ell'(B)}.
+ \label{eq:general-production}
+\end{equation}
+When $p_j>S_j\Gamma(B)$ in every nontrivial direction,
+\begin{equation}
+ a\geq a_{\rm crit}^{\ell}(B):=
+ \max_{j:r_j+S_j>0}
+ \frac{r_j+d_0S_j}{p_j\ell'(B)-S_j\ell(B)}
+ \label{eq:acrit-general}
+\end{equation}
+is necessary and sufficient. The maximum over an empty set is zero.
+If a nontrivial denominator is non-positive, no finite $a$ suffices.
+For $\ell(z)=\ln(1+z)$, set $L=\ln(1+B)$ and recover
+\begin{align}
+ H_j&=(1+B)LS_j,& A_j&=(1+B)(r_j+d_0S_j),\label{eq:HA}\\
+ p_j&\geq H_j+A_j/a,\label{eq:exact}\\
+ a_{\rm crit}&=\max_{j:A_j>0}\frac{A_j}{p_j-H_j}.
+ \label{eq:acrit}
+\end{align}
+Thus the general criterion contains both the original production test
+and its logarithmic threshold.
+\end{corollary}
+\begin{proof}
+Expand the $\eta=1$ term in \cref{eq:hub} and use
+$\Omega=a\ell(B)$. The numerator in \cref{eq:acrit-general} is
+positive exactly in nontrivial directions, so rearrangement is valid
+exactly for positive denominators. If it is zero, then $r_j=S_j=0$.
+Substitution of $\ell'(B)=1/(1+B)$ gives the last three equations.
+\end{proof}
+
+The supporting-hyperplane argument is standard
+\citep[chapters 3--5]{BoydVandenberghe2004}. The substantive restriction
+is the sharp residual floor: no concave redesign of local production
+can reduce it below $S_jB$. Improvements in the level of computation
+cannot remove this obstruction at logarithmic value.
+
+
+\subsection{What the floor compares}
+The floor is a relative-value statement. An additional unit of a project
+can continue to provide independent information or geographical insurance
+while the value of more local computation declines. Raising productivity
+increases the level of local computation and its physical marginal product
+at once. Under logarithmic value these effects partly cancel: the limiting
+local marginal utility is $\ell'(B)/\ell(B)=1/\Gamma(B)$, not infinity.
+Consequently a fixed external residual slope can remain competitive even
+when remote computational production becomes negligible in the comparison.
+This limit follows directly by dividing the logarithmic local marginal
+utility by $a$ in numerator and denominator.
+
+The distinction also explains the role of existing computation. Increasing
+$C_0$ at fixed new-investment technology does not change the asymptotic
+floor, but increases the finite-productivity term $d_0S_j$ in
+\cref{eq:general-production}. A civilization with more existing useful
+service need not place more marginal value on further service. When all
+residual slopes are zero, by contrast, $C_0$ and the choice of increasing
+$F$ do not affect the computational allocation: maximizing utility is
+then equivalent to maximizing $C$. The pure-computation formula in
+\cref{eq:budgetcrit} isolates that case. This is why an argument based
+only on the attractiveness of virtual experience omits an independent
+resource-allocation comparison.
+
+Neither the floor nor the tipping budget measures a physical maximum
+number of worlds. They specify when an additional external option beats
+a marginal local use under the chosen objective. A system can be physically
+capable of supporting its present workload while economically preferring
+more territory. It can also prefer inward investment that fails an
+independent support requirement. In an application the service ratios and
+the allocation inequalities must therefore be evaluated on the same
+resource history, rather than selecting a favourable budget for one and a
+favourable efficiency for the other. The joint archived example demonstrates
+compatibility on a finite interval; the persistence results determine what
+additional conditions are needed beyond it.
+
+A dimensionless robustness diagnostic is
+\begin{equation}
+ \rho=\max_j\frac{H_j+A_j/a}{p_j}.
+ \label{eq:rho}
+\end{equation}
+The corner is inward when $\rho\leq1$. If every external price is multiplied by $\kappa>0$ while other terms are held fixed, the corner survives exactly when $\kappa\geq\rho$. Thus reporting $\rho$ identifies how much a conclusion depends on proximity to a threshold. This is conditional price sensitivity, not a distribution over unknown technologies.
+
+\subsection{Analytical phase boundary}
+For logarithmic value, define
+\begin{equation}
+ \xi_j=\frac{H_j}{p_j},\qquad
+ \zeta_j=\frac{A_j}{p_ja}.
+ \label{eq:phase-coordinates}
+\end{equation}
+The exact phase boundary is $\xi_j+\zeta_j=1$. All-inward allocation
+requires $\xi_j+\zeta_j\leq1$ for \emph{every} direction.
+If $\xi_j\geq1$, no finite productivity restores the corner, because
+productivity lowers only $\zeta_j$. Here $\xi_j\geq1$ entails
+$S_j>0$ and hence $A_j>0$, so $\zeta_j$ remains strictly positive
+at every finite $a$. Increasing $a$ to $\lambda a$, with $\lambda>1$,
+moves $(\xi_j,\zeta_j)$ vertically to $(\xi_j,\zeta_j/\lambda)$.
+Reducing the external price to $p_j/\kappa$, with $\kappa>1$ and
+other parameters fixed, moves it radially to
+$(\kappa\xi_j,\kappa\zeta_j)$. The degenerate case $A_j=0$ has $H_j=0$ and imposes no
+restriction. Figure~\ref{fig:phase} shows this analytical geometry rather
+than an ensemble frequency.
+
+\setcounter{figure}{2}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.91\textwidth]{fig3.pdf}
+\caption{Exact logarithmic phase diagram and comparative statics for one
+external direction. The shaded triangle satisfies
+$H_j/p_j+A_j/(p_ja)\leq1$; every external direction must satisfy this
+condition for the all-inward corner to be optimal.
+(a) Higher productivity reduces only $\zeta_j$, producing a downward
+vertical move. (b) A price reduction to $p_j/\kappa$ multiplies both
+coordinates by $\kappa$, producing a radial move away from the origin.
+(c) In the hatched region $\xi_j\geq1$, no finite productivity restores
+the corner. For $A_j>0$, $(1,0)$ is only a limiting point.
+The arrows are schematic evaluations of the exact transformations;
+no archived inputs are overlaid and no population frequency is estimated.}
+\label{fig:phase}
+\end{figure}
+
+
+\section{Persistence: growing versus bounded budgets}
+\label{sec:persistence}
+
+\subsection{Unbounded physical budgets}
+
+\begin{proposition}[Growth obstruction and sharp productivity scaling]
+\label{prop:growth-trichotomy}
+Let $B(t)\to\infty$, let $\ell$ be concave, and retain the assumptions
+of \cref{prop:hub}. Suppose that eventually some direction has
+$p_j(t)\leq M<\infty$ and $S_j(t)\geq s>0$.
+For $\eta\geq1$, the all-inward corner is excluded at every sufficiently
+late time, for every path of finite positive productivities $a(t)$.
+For $0\leq\eta<1$, eventual inwardness instead requires
+\begin{equation}
+ \Omega(t)\geq
+ \left[\frac{s\Gamma(B(t))}{M}\right]^{1/(1-\eta)}
+ \geq\left[\frac{sB(t)}{M}\right]^{1/(1-\eta)}.
+ \label{eq:necessary-output-growth}
+\end{equation}
+For the sufficiency statement, additionally fix all $p_j>0$, finite
+$r_j,S_j\geq0$, and $d_0$. If $0<\eta<1$, it is sufficient that,
+eventually,
+\begin{equation}
+ \Omega(t)\geq c_\Omega\Gamma(B(t))^{1/(1-\eta)},\qquad
+ c_\Omega>
+ \left(\max_j\frac{S_j}{p_j}\right)^{1/(1-\eta)}.
+ \label{eq:sufficient-output-growth}
+\end{equation}
+The inequalities then become strict. For $\eta=0$, the exact condition is
+\begin{equation}
+ \frac{\Omega(t)}{\Gamma(B(t))}=a(t)\ell'(B(t))
+ \geq\max_j\frac{r_j+S_j}{p_j}.
+ \label{eq:linear-value-growth}
+\end{equation}
+In particular, for $\ell(z)=z$ and $0<\eta<1$,
+$a(t)\geq c_\Omega B(t)^{\eta/(1-\eta)}$ with the strict coefficient
+condition above is eventually sufficient.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+For $\eta=1$ the residual term has positive infimum one after division
+by $S_j\Gamma$. For $\eta>1$ that infimum is
+\begin{equation}
+ \min_{\Omega>0}\frac{(d_0+\Omega)^\eta}{\Omega}
+ =d_0^{\eta-1}\frac{\eta^\eta}{(\eta-1)^{\eta-1}}.
+ \label{eq:residual-minimum}
+\end{equation}
+Both conflict with $\Gamma(B)\geq B\to\infty$. Below unit curvature,
+comparison with $\Omega^{\eta-1}$ gives the necessary rate; the strict
+coefficient in \cref{eq:sufficient-output-growth} leaves an asymptotic
+margin for remote computational returns. See \cref{app:growth-proof}.
+
+This result concerns the growth of physical resources, not the growth
+of computational efficiency. With persistent residual value and bounded
+prices, productivity can compensate for an unbounded resource budget
+only on the $\eta<1$ branch of the concave-production model. The endpoint
+$\eta=0$ must retain $r_j$ as well as $S_j$; remote computation is not a
+vanishing correction in that case.
+
+\begin{corollary}[Logarithmic pathwise specialization]
+\label{prop:persistence}
+Let $\ell(z)=\ln(1+z)$ and $\eta=1$, with fixed $r_j,d_0$ and finite
+positive $B(t),a(t),p_j(t)$. Define $H_j(t),A_j(t)$ by
+\cref{eq:HA}. On any specified path, the corner is optimal at every
+time exactly when, in every direction with $A_j(t)>0$,
+\begin{equation}
+ p_j(t)>H_j(t),\qquad
+ a(t)\geq\max_{j:A_j(t)>0}
+       \frac{A_j(t)}{p_j(t)-H_j(t)}.
+ \label{eq:pathwise}
+\end{equation}
+In particular, where $S_j(t)>0$,
+\begin{equation}
+ \frac{p_j(t)}{S_j(t)}>[1+B(t)]\ln[1+B(t)].
+ \label{eq:path-ratio}
+\end{equation}
+For $B(t)\to\infty$, fixed positive residual slopes therefore require
+prices at least of order $B\ln B$; bounded prices require
+$S_j(t)=O((B\ln B)^{-1})$. These rate restrictions do not replace the
+productivity inequality. A zero-slope direction with $r_j>0$ requires
+$a(t)\geq[1+B(t)]r_j/p_j(t)$.
+\end{corollary}
+\begin{proof}
+Apply \cref{eq:exact,eq:acrit} at each time. Non-negativity and $d_0>0$
+imply $A_j=0$ exactly when $r_j=S_j=0$. Division by a positive slope
+and $(1+B)\ln(1+B)\sim B\ln B$ give the rate statements.
+\end{proof}
+
+
+\subsection{What increasing returns would have to accomplish}
+
+\begin{proposition}[At least exponential local returns]
+\label{prop:exponential-necessity}
+Let $\eta=1$ and retain the model assumptions apart from local
+concavity. Let a fixed local production function satisfy $\ell(0)=0$
+and be continuously differentiable and positive with positive derivative
+for positive budgets. Let $B(t)$ be continuous with $B(t)\to\infty$.
+If eventually $p_j(t)\leq M$, $S_j(t)\geq s>0$, and the corner is
+optimal at every time, then for all sufficiently large $B$,
+\begin{equation}
+ \frac{\dd\ln\ell(B)}{\dd B}>\frac{s}{M},\qquad
+ \ell(B)>\ell(B_0)\exp\!\left[\frac{s}{M}(B-B_0)\right]
+ \quad(B>B_0).
+ \label{eq:exponential-necessity}
+\end{equation}
+Convex local production gives $\Gamma(B)\leq B$, but polynomial
+superlinearity is insufficient: $\ell(z)=z^k$ gives $\Gamma=B/k$.
+By contrast, $\ell(z)=[\exp(\psi z)-1]/\psi$, $\psi>0$, gives
+$\Gamma=[1-\exp(-\psi B)]/\psi<1/\psi$.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The necessary strict floor gives $\ell'/\ell>S_j/p_j\geq s/M$.
+Continuity of the budget path covers every sufficiently large budget,
+so integration proves the exponential bound. The remaining identities
+follow by differentiation; see \cref{app:returns-proof}.
+
+The required increase is with local resource investment, not merely
+with calendar time. This supplies a quantitative test for
+compression-based inward development proposals such as
+\citet{Smart2012}. Increasing returns remove the concavity guarantee.
+For exponential local production with one affine external channel and
+linear residual value, an exact global test is available: the corner
+must satisfy its first-order condition and outperform the all-external
+endpoint (\cref{lem:exponential-endpoints}). Smooth concave residual
+utilities, or smooth concave external production, can invalidate this
+two-test shortcut. Explicit counterexamples are given in
+\cref{app:exponential-counterexamples}.
+
+\subsection{The tipping budget}
+
+\begin{proposition}[A unique productivity-independent tipping budget]
+\label{prop:tipping}
+Let $\eta=1$ and $\ell\in C^2([0,\infty))$, with $\ell(0)=0$,
+$\ell'>0$, and $\ell''\leq0$. Fix $d_0\geq1$, all $p_j>0$, and finite
+$r_j,S_j\geq0$. If at least one $S_j>0$, define $B_{\rm tip}$ by
+\begin{equation}
+ \Gamma(B_{\rm tip})=\min_{j:S_j>0}\frac{p_j}{S_j}.
+ \label{eq:tipping-budget}
+\end{equation}
+This budget exists and is unique, since
+\begin{equation}
+ \Gamma(0)=0,\qquad
+ \Gamma'(B)=1-\frac{\ell(B)\ell''(B)}{\ell'(B)^2}\geq1.
+ \label{eq:gamma-monotone}
+\end{equation}
+The corner is attainable at finite productivity exactly for
+$0<B<B_{\rm tip}$, where its threshold is
+$a_{\rm crit}^{\ell}(B)$ from \cref{eq:acrit-general}.
+This threshold is non-decreasing and diverges as
+$B\uparrow B_{\rm tip}$. At $B=B_{\rm tip}$ as well as above it,
+no finite productivity makes the corner optimal.
+If eventually $B(t)\leq B'<B_{\rm tip}$ and $a(t)\to\infty$, every
+static optimizer is eventually all-inward. If every $S_j=0$, set
+$B_{\rm tip}=\infty$; no finite productivity-independent residual
+barrier exists.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Differentiate $\Gamma$. Below its unique crossing, every denominator
+in \cref{eq:acrit-general} is positive. Each nontrivial threshold is
+non-decreasing because its denominator has derivative
+$p_j\ell''-S_j\ell'\leq0$. A binding positive-slope denominator
+vanishes at the crossing. See \cref{app:tipping-proof}.
+
+\begin{corollary}[Fixed- and bounded-budget curvature]
+\label{prop:curvature}
+At a fixed positive budget and under concave production, each nontrivial
+direction has a unique finite high-productivity threshold for
+$0\leq\eta<1$. At $\eta=1$, \cref{eq:acrit-general} applies.
+At $\eta>1$, a direction with $S_j>0$ has an inward set in $a>0$
+that is empty, a singleton, or a bounded closed interval. A direction
+with $S_j=0$ requires only $a\geq r_j/[p_j\ell'(B)]$ for every $\eta$.
+For the local logarithm the test is precisely
+\begin{equation}
+ r_j+S_j(d_0+aL)^\eta\leq\frac{p_ja}{1+B},
+ \qquad L=\ln(1+B).
+ \label{eq:iso-corner}
+\end{equation}
+For the path statements assume additionally that $\ell$ is $C^1$ with
+positive derivative near the positive limiting budget. Consequently, if
+$B(t)\to\bar B\in(0,\infty)$ and $a(t)\to\infty$,
+fixed parameters give eventual inwardness for $\eta<1$. More generally, this conclusion holds for any $0<B(t)\leq B_{\max}<\infty$ if $\ell$ is concave and $\ell'(B_{\max})>0$. For $\eta>1$,
+a positive residual slope excludes eventual inwardness. At $\eta=1$,
+$\bar B<B_{\rm tip}$ gives eventual inwardness and
+$\bar B>B_{\rm tip}$ excludes it. At equality, the rate of approach
+from below must be compared with $a_{\rm crit}^{\ell}(B(t))$.
+\end{corollary}
+\noindent\emph{Proof.}
+See \cref{app:curvature-proof}. This is the fixed-budget curvature
+classification, with a uniform bound near the positive limiting budget;
+it is not a new assumption about preferences. ``No tipping budget''
+for $\eta<1$ means no productivity-independent finite obstruction,
+not absence of a budget threshold at a fixed productivity.
+
+\subsection{Resource acquisition and the inward basin}
+
+Separate resources available locally from those supplied by prior
+replicating acquisition. In discrete planning periods, write
+\begin{equation}
+ B_t=B_{\rm loc}(t)+g_XX_t,\qquad
+ X_{t+1}=X_t+x_t,\qquad g_X\geq0,
+ \label{eq:acquisition-stock}
+\end{equation}
+where $B_{\rm loc}(t)$ is non-decreasing with limit $\bar B>0$.
+Only the replicating channel enters $X$; observation alone does not.
+With no previous acquisition, an all-inward history has $X=0$ and
+$B_t\leq\bar B$. Stopping new investment later does not erase an
+inherited external stock. Since both stock and local mobilization are
+non-decreasing, a crossing of $B_{\rm tip}$ cannot be reversed in this
+model. In a multi-channel model this excludes all-inward expenditure,
+not necessarily zero replication.
+
+A basin cannot be specified by four scalar parameters without also
+specifying the resource-mobilization path and the full residual utility.
+The following benchmark fixes both. It uses one replicating channel,
+linear residual value, and an already mobilized local ceiling.
+
+\begin{proposition}[A unique inward-basin boundary]
+\label{prop:basin}
+Fix $p>0$, $S>0$, $r\geq0$, $d_0\geq1$, $g_a>0$, and $g_X>0$.
+Let $X_0=0$, $B_{\rm loc}(t)=\bar B$, $a_t=a_0\exp(g_at)$, and
+$0<\bar B<B_{\rm tip}$, where
+$(1+B_{\rm tip})\ln(1+B_{\rm tip})=p/S$.
+At each period choose the unique maximizer
+\begin{equation}
+ x^*(B,a)=\underset{0\leq x\leq B/p}{\arg\max}
+ \left\{\ln[d_0+a\ln(1+B-px)+rx]+Sx\right\}.
+ \label{eq:basin-policy}
+\end{equation}
+There is a unique
+$a_{\rm sep}(g_a,g_X,\bar B)\in(0,a_{\rm crit}^{\ell}(\bar B))$
+with the following classification:
+\begin{itemize}[leftmargin=*,nosep]
+\item If $a_0>a_{\rm sep}$, new external investment stops in finite time
+and stays zero, at a budget strictly below $B_{\rm tip}$.
+\item If $a_0<a_{\rm sep}$, the budget reaches or exceeds $B_{\rm tip}$
+in finite time and new external investment remains positive thereafter.
+\item If $a_0=a_{\rm sep}$, every finite-time investment is positive,
+but $B_t\uparrow B_{\rm tip}$ and
+$g_X\sum_{t\geq0}x_t=B_{\rm tip}-\bar B$.
+\end{itemize}
+Whenever $B_t\geq B_{\rm tip}$,
+\begin{equation}
+ x_t>\frac{B_t-B_{\rm tip}}p,\qquad
+ B_{t+1}-B_{\rm tip}>
+ (1+g_X/p)(B_t-B_{\rm tip}).
+ \label{eq:runaway-bound}
+\end{equation}
+The boundary $a_{\rm sep}$ is non-increasing in $g_a$ and
+non-decreasing in $g_X$ and in $\bar B/B_{\rm tip}$, with the other
+parameters fixed.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The unique static investment is continuous, increases with the budget,
+and decreases with productivity. A path that neither stops nor crosses
+must converge to the tipping budget. Two such paths cannot coexist:
+a positive gap between their budgets cannot shrink. Continuity separates
+the open sets of stopping and crossing paths, giving exactly one boundary.
+The complete proof and finite-time basin certificates are in
+\cref{app:basin-proof}.
+
+For example, let $(p,S,r,d_0)=(1,0.002,0.05,1)$,
+$g_a=0.05$, $g_X=0.5$, and $\bar B=0.6B_{\rm tip}$. New calculations
+give $B_{\rm tip}=106.001289$,
+$a_{\rm crit}^{\ell}(\bar B)=7.279612$, and
+$a_{\rm sep}\simeq6.63216$. Starting at $a_0=0.5$ crosses the tipping
+budget at $t=2$; starting at $a_0=50$ is inward from the start. With
+$a_0=0.5$ but $g_X=0$, investment stops at $t=54$, not at $t=0$.
+Thus removing resource feedback removes this lock-in mechanism, not
+the initial incentive to expand.
+
+Lock-in here names an absorbing allocation regime, not a welfare
+mistake. Additional resources do not reduce the feasible set. In this
+costless, non-depreciating stock benchmark, any finite-horizon
+continuation value is non-decreasing in $X$: this follows by backward
+induction because a larger stock permits the same current project and
+more local investment. A strictly improving myopic external deviation
+therefore remains improving after adding such a continuation. A
+forward-looking planner need not avoid the tipping budget. Productive
+local alternatives require the separate dynamic comparison developed
+in the infinite-horizon subsection.
+
+\paragraph{Speculative physical mapping (conjecture).}
+If a fixed-horizon energy budget increases with usable host luminosity,
+and if denser stellar neighbourhoods reduce external resource prices
+while leaving residual values fixed, both changes raise
+$\bar B/B_{\rm tip}$. The basin comparison then suggests a greater
+propensity to expand. The conjecture concerns these physical parameter
+mappings, not the proved comparative static.
+
+\subsection{An infinite-horizon benchmark}
+\label{sec:dynamic}
+Myopic resource acquisition and optimal intertemporal allocation answer
+different questions. To obtain a transparent infinite-horizon benchmark,
+replace logarithmic production by linear production, omit the additive
+computational baseline, and use logarithmic value of strictly positive
+computation. Let
+\begin{equation}
+ z_t+px_t=B_t,\quad C_t=a_Lz_t+a_Xx_t,\quad
+ B_{t+1}=g_Lz_t+g_Xx_t,\quad
+ \max\sum_{t=0}^{\infty}\beta^t\ln C_t.
+ \label{eq:infinite-model}
+\end{equation}
+Here $B_0,p,a_L,a_X,g_L,g_X>0$ and $0<\beta<1$.
+All these parameters are constant. This benchmark is homothetic; it is
+not the previous logarithmic production model under different notation.
+For $s=px/B$, define
+$A(s)=a_L(1-s)+(a_X/p)s$ and
+$G(s)=g_L(1-s)+(g_X/p)s$.
+
+\begin{proposition}[Infinite-horizon verification and the inward policy]
+\label{prop:infinite}
+Every feasible policy has absolutely convergent discounted log returns.
+Writing
+\begin{equation}
+ H_\beta(s)=(1-\beta)\ln A(s)+\beta\ln G(s),\qquad
+ H_\beta^*=\max_{0\leq s\leq1}H_\beta(s),
+ \label{eq:homothetic-index}
+\end{equation}
+the value function is
+\begin{equation}
+ V(B)=\frac{\ln B}{1-\beta}
+       +\frac{H_\beta^*}{(1-\beta)^2}.
+ \label{eq:infinite-value}
+\end{equation}
+A constant maximizing share is optimal forever. The all-inward policy
+is optimal if and only if
+\begin{equation}
+ (1-\beta)\frac{a_X/p}{a_L}
+       +\beta\frac{g_X/p}{g_L}\leq1.
+ \label{eq:infinite-inward}
+\end{equation}
+For every feasible path, $\beta^T V(B_T)\to0$; this transversality
+condition validates the Bellman telescoping argument despite unbounded
+logarithmic returns.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Positive production and growth endpoints bound $|\ln B_t|$ by a linear
+function of $t$. Discounting therefore controls both tails. Substitution
+of \cref{eq:infinite-value} into the Bellman equation leaves the one-share
+maximization in \cref{eq:homothetic-index}; its derivative at zero gives
+\cref{eq:infinite-inward}. The complete verification is in
+\cref{app:infinite-proof}. The argument supplies its own growth bounds,
+rather than invoking a bounded-reward contraction. It is consistent with
+the homogeneous-function approach of \citet{AlvarezStokey1998}.
+
+\begin{corollary}[Static reversals and the patient limit]
+\label{cor:infinite-reversals}
+Static inwardness is neither necessary nor sufficient for infinite-horizon
+inwardness. If $(g_X/p)/g_L<1$, sufficiently patient planners are inward;
+if this ratio is greater than one, they are not. At equality, the current
+computational-return ratio still decides for every $\beta<1$.
+\end{corollary}
+\begin{proof}
+With $\beta=0.9$, return ratios $(0.5,2)$ give a weighted ratio $1.85$:
+static inwardness fails dynamically. Ratios $(2,0.5)$ give $0.65$:
+static outwardness reverses. Taking $\beta\uparrow1$ proves the two
+strict growth cases. With equal growth ratios, subtracting one leaves
+$(1-\beta)[(a_X/p)/a_L-1]$, proving the equality case.
+\end{proof}
+
+The same derivative decomposition contains the earlier two-period
+examples, although their nonlinear production is not a literal special
+case of \cref{eq:infinite-model}. For a concave differentiable first-period
+objective $U_1(x)$ and increasing concave continuation $V_2$, the following
+short transfer result supplies that exact nesting.
+\begin{corollary}[A future-adjusted inward condition]
+\label{prop:dynamic}
+If $W(x)=U_1(x)+\beta V_2(B_{20}+g_LB_1+(g_X-p_1g_L)x)$
+is defined on $[0,B_1/p_1]$, it is concave and its inward endpoint is
+optimal exactly when
+$U_1'(0)+\beta V_2'(B_{20}+g_LB_1)(g_X-p_1g_L)\leq0$.
+\end{corollary}
+\begin{proof}
+Composition with the affine continuation budget preserves concavity.
+The right derivative at the endpoint has the displayed value, and a
+concave differentiable function has its maximum there exactly when this
+derivative is non-positive. Substituting the archived $U_1,V_2$ yields
+\cref{eq:dynamiccriterion} in the supplement.
+\end{proof}
+The archived threshold $g_X=\DynamicThreshold$ and allocation
+$x=\DynamicOutward$ remain unchanged. Their full construction and
+\cref{fig:dynamic} are supplementary evidence for these reversals.
+
+\subsection{Residual value and a local ceiling break homotheticity}
+Adding $Sx_t$ with $S>0$ makes the reward scale with $B_t$, whereas the
+logarithmic reward changes only additively under resource scaling. The
+closed form \cref{eq:infinite-value} then ceases to apply. A sufficient
+condition for finite values is
+$\beta\max(g_L,g_X/p)<1$. If $\beta g_X/p\geq1$, perpetual
+all-external investment already has infinite positive residual value;
+it cannot be used as a finite-value optimization counterexample.
+
+\begin{corollary}[An unbounded-budget obstruction survives foresight]
+\label{cor:dynamic-residual}
+In the finite-value residual model, an all-inward infinite-horizon policy
+can be optimal from a state $B$ only if
+\begin{equation}
+ \frac{SB}{p}\leq
+ \frac{1-(1-\beta)(a_X/p)/a_L-\beta(g_X/p)/g_L}{1-\beta}.
+ \label{eq:dynamic-residual-floor}
+\end{equation}
+Thus such a policy cannot persist along $B_t\to\infty$ with constant
+positive $S$ and fixed finite coefficients.
+\end{corollary}
+\noindent\emph{Proof sketch.}
+Deviate once and then follow the all-inward policy. The continuation log
+value has derivative $1/[(1-\beta)B]$. Its contribution plus the current
+residual derivative gives \cref{eq:dynamic-residual-floor}; see
+\cref{app:infinite-proof}. This is a necessary policy test, not a complete
+solution to the nonhomothetic Bellman equation. At $\beta=0$ it is the
+linear-production logarithmic floor without a shifted baseline.
+
+An explicit local ceiling can instead enter through
+\begin{equation}
+ B_{t+1}=\min\{\bar B,g_L(B_t-px_t)\}+g_Xx_t.
+ \label{eq:capped-transition}
+\end{equation}
+Along an all-inward path this keeps future budgets below $\bar B$.
+The transition is no longer homogeneous. For the shifted-log production
+and linear-residual model of \cref{prop:tipping}, suppose a finite
+increasing continuation value exists and $g_X\geq pg_L$. Then a small
+external deviation never reduces next-period resources. Consequently,
+at $B\geq B_{\rm tip}$ the strictly positive current external derivative
+cannot be reversed by continuation value. Below the tipping budget,
+future resource acquisition can still overturn the static inward optimum.
+A direct one-step proof is given in \cref{app:infinite-proof}.
+This is the valid connection between the local ceiling and the tipping
+budget; it does not impose the static basin separator on a forward-looking
+planner.
+
+\section{Which residual value survives}
+\label{sec:residual}
+
+The all-inward corner is a stringent diagnostic, but it is not the correct
+boundary for a claim about the absence of new replicating lineages.
+Information can be purchased without resident settlement. A dormant,
+externally stored backup can provide geographical separation without
+continuing resource acquisition. This section first prices those substitutes
+and then replaces a free resilience slope by an explicit expected-value
+calculation. The resulting distinctions identify which part of the earlier
+floor is a replication incentive rather than merely an external-service
+incentive.
+
+\subsection{No replication with observation and dormant backups}
+Add an optional dormant-backup capacity $b_{\rm bk}\geq0$ at price $p_b>0$.
+It has neither computational production nor descendants. The budget and
+objective become
+\begin{align}
+ z+p_nx+p_hy+p_mw+p_bb_{\rm bk}&\leq B,\nonumber\\
+ U&=F(C)+(1-q)E(x)+\epsilon_RR(x+y+b_{\rm bk})
+                  +\epsilon_II(x+y+w).
+ \label{eq:backup-model}
+\end{align}
+Throughout this subsection local production is concave; all other functions retain the concavity assumptions of \cref{sec:allocation}.
+The no-replication face has $x=y=0$; observation and backups are optimized,
+not fixed at zero. Write a maximizing allocation on this face as
+$(z^*,w^*,b^*)$, its computation as $C^*$, and its budget multiplier as
+$\lambda>0$. Assume derivatives are finite at this allocation. If $z^*>0$,
+then $\lambda=F'(C^*)a\ell'(z^*)$. With $z^*=0$, the multiplier, rather
+than an unjustified interior formula, is used below.
+
+\begin{proposition}[A no-replication criterion]
+\label{prop:no-replication}
+A no-replication face optimizer is also a global optimizer exactly when
+it admits a restricted-problem multiplier $\lambda$ satisfying
+\begin{align}
+ F'(C^*)r_n+(1-q)E'(0)+\epsilon_RR'(b^*)+\epsilon_II'(w^*)
+     &\leq p_n\lambda,\nonumber\\
+ F'(C^*)r_h+\epsilon_RR'(b^*)+\epsilon_II'(w^*)
+     &\leq p_h\lambda.
+ \label{eq:no-replication}
+\end{align}
+The non-replicating channels satisfy
+$\epsilon_II'(w^*)\leq p_m\lambda$ and
+$\epsilon_RR'(b^*)\leq p_b\lambda$, with equality in each positive
+channel. The backup inequality is omitted when backups are unavailable.
+Strict inequalities in \cref{eq:no-replication} exclude replication in
+every full optimizer.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The restricted first-order conditions already control the local,
+observation, and backup directions. Adding the two displayed inequalities
+completes the full concave-program optimality conditions. A supporting
+hyperplane proves global sufficiency. The converse and endpoint cases
+are proved in \cref{app:replication-proof}.
+
+When observation is interior and backups are absent, this gives exactly
+\begin{align}
+ F'(C^*)r_n+(1-q)E'(0)+\epsilon_RR'(0)&\leq(p_n-p_m)\lambda,\nonumber\\
+ F'(C^*)r_h+\epsilon_RR'(0)&\leq(p_h-p_m)\lambda.
+ \label{eq:observation-net}
+\end{align}
+Information disappears as a separate replication premium, not as an
+economic influence: it still determines $w^*$, the remaining local
+investment, and $\lambda$. For an interior backup but a possibly inactive
+observation channel, the corresponding subtraction is $p_b\lambda$, while
+$\epsilon_II'(w^*)$ stays explicit. If both are interior, the comparison
+uses the net bundle prices $p_j-p_m-p_b$.
+
+\begin{corollary}[Substitute bundles and zero-service corners]
+\label{cor:bundle}
+At a no-replication face optimum with $w^*,b^*>0$, $p_h<p_m+p_b$
+rules out no replication even if $r_h=0$. At equality with $r_h=0$,
+replacing equal small amounts of observation and backup by industry
+preserves value and expenditure, and can produce tied replicating optima.
+If $w^*=0$, the correct reduction instead uses
+$c_I=\epsilon_II'(0)/\lambda\leq p_m$; it does not subtract the full
+observation price. Analogously an inactive backup uses
+$c_R=\epsilon_RR'(0)/\lambda\leq p_b$.
+\end{corollary}
+\noindent\emph{Proof sketch.}
+Use complementary slackness in \cref{eq:no-replication}. A cheaper bundle
+has a strictly positive replication derivative. The exact exchange and
+zero-channel cases are established in \cref{app:replication-proof}.
+
+The bundle result is important for interpreting inexpensive autonomous
+industry. Replacing colonists by observation instruments does not help
+if a replicating industrial platform supplies both observation and
+resilience more cheaply than their standalone substitutes. Conversely,
+expensive industrial platforms can lose even when information and
+resilience have positive value. The model consequently does not need
+to erase those motives; it needs a technologically credible way to meet
+them without a reproducing platform. Independence from a particular
+service premium is not independence from the prices of its substitutes.
+
+The distinction between exactly zero and a small positive launch rate
+is consequential only with a propagation mechanism. A deployed viable
+seed in a deterministic growth law $N(t)=N(0)\exp(g t)$ with $g>0$ never
+becomes equivalent to $N(0)=0$. A stochastic supercritical lineage instead
+has a positive survival probability, not guaranteed survival. Finite
+launch sizes, deployment thresholds, and subcritical replication do not
+justify the stronger claim that every arbitrarily small investment expands
+without bound. The population calculation in \cref{sec:population} uses
+successful, arriving fronts rather than an investment share as its unit.
+
+
+\subsection{A constructive separation from all-inward persistence}
+The distinction above can change the asymptotic conclusion, not just a
+finite-budget classification. In the following construction, physical
+budgets are supplied exogenously to the sequence of static problems.
+The proposition does not specify how those resources are acquired.
+
+\begin{corollary}[Growing budgets without new replication]
+\label{cor:growing-no-replication}
+Let $\eta=1$, $B\to\infty$, $a=B^2$, $q=1$, $C_0\geq0$, and
+$\ell(z)=\ln(1+z)$. Let
+$\epsilon_I I(w)=J_I[1-\exp(-w/s_I)]$ and
+$\epsilon_R R(b)=J_R[1-\exp(-b/s_R)]$, with fixed strictly positive
+$J_I,J_R,s_I,s_R,p_m,p_b$. External computation is concave with fixed
+finite initial slopes. If $p_n,p_h>p_m+p_b$, then for all sufficiently
+large $B$ every full optimizer has $x=y=0$, and a no-replication optimizer
+has $w,b>0$ with
+\[
+ z/B\longrightarrow1,\qquad w+b=O(\ln B).
+\]
+Nevertheless the all-inward corner is eventually impossible because its
+information and resilience slopes stay positive.
+\end{corollary}
+\noindent\emph{Proof sketch.}
+The restricted face has positive local investment for large $B$.
+Its local multiplier tends to zero, making both service channels interior.
+Their exponential marginal utilities give service quantities logarithmic
+in the inverse multiplier, hence $B=z+O(\ln z)$. The remaining replication
+premium divided by that multiplier is $r_j(1+z)/B^2\to0$, smaller than
+either strictly positive net price. A complete proof is in
+\cref{app:growing-norep-proof}.
+
+This construction is a counterexample to transferring the all-inward
+unbounded-budget exclusion directly to no replication. Non-replicating
+services absorb a persistent preference rather than requiring its weight
+to vanish. It also explains why a local ceiling below the original
+$B_{\rm tip}$ cannot be a universal necessary condition once the decision
+problem changes. The relevant comparison uses the remaining local budget,
+the optimized shadow value of resources, and the net service-bundle price.
+A physical application must still provide a feasible resource history;
+the construction is a separation of allocation claims, not a mechanism
+for obtaining unbounded local energy.
+
+The price condition is strict for a reason. If an industrial project
+costs exactly the sum of its substitute services and has no computational
+return, the exchange in \cref{cor:bundle} can leave a continuum of tied
+choices. An analyst selecting the non-replicating member of that set has
+shown existence, not suppression of every replicating choice. Conversely,
+if industry costs less than the bundle, improving local computation cannot
+repair the negative net price while both substitutes remain interior.
+This distinction matters at the population step: a positive measure of
+ties resolved outward can create arrival exposure even where an inward
+optimizer exists. Strict preference, an explicit tie-breaking rule, or a
+separate containment constraint is needed to exclude that route.
+
+\subsection{Value at risk rather than an exogenous resilience slope}
+For a precise local calculation, specialize to one candidate backup
+project $x$, $C(x)=a\ell(B-px)+G(x)$, $G'(0)=r$, and $C(0)=\Omega>0$.
+Set $C_0=0$ in this calculation. Let $0\leq\vartheta<1$ be the
+probability, over the stated horizon, of a catastrophe that separation
+can mitigate. It is not a rate in inverse years. Let $\varphi(0)=0$,
+$0\leq\varphi\leq1$, and $\varphi'(0)>0$. A seed backup has
+$\gamma=0$; a scale-matched mirror has $\gamma=1$. Use
+\begin{equation}
+ U_R(x)=\left[1-\vartheta+\vartheta
+       \varphi\!\left(\frac{x}{C(x)^\gamma}\right)\right]F_\eta(C(x)).
+ \label{eq:risk-utility}
+\end{equation}
+This specifies both the value at risk and the probability of retaining it.
+Its product form need not be concave.
+
+\begin{proposition}[The endogenous-risk floor]
+\label{prop:endogenous-risk}
+Assume a feasible right neighbourhood of $x=0$ has $C(x)>0$ and all
+functions in \cref{eq:risk-utility} are differentiable there. A necessary
+condition for $x=0$ to maximize $U_R$ is
+\begin{equation}
+ p\geq\frac{\Gamma r}{\Omega}
+ +\frac{\vartheta}{1-\vartheta}\varphi'(0)
+       \Gamma\Omega^{-\gamma}K_\eta(\Omega),\qquad
+ K_\eta(\Omega)=\frac{F_\eta(\Omega)(1+\Omega)^\eta}{\Omega}.
+ \label{eq:risk-floor}
+\end{equation}
+For $0\leq\eta<1$, $K_\eta(\Omega)\to(1-\eta)^{-1}$ as
+$\Omega\to\infty$. For $\eta=1$ it equals
+$(1+\Omega)\ln(1+\Omega)/\Omega\sim\ln\Omega$.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+At zero the derivative of $x/C(x)^\gamma$ is $\Omega^{-\gamma}$.
+Differentiate the entire product and divide by the positive surviving
+marginal-value factor $(1-\vartheta)F_\eta'(\Omega)$.
+The exact formula and asymptotic bounds are in \cref{app:risk-proof}.
+
+The hazard odds, not the hazard probability itself, enter this exact
+expected-value comparison. Replacing the odds by $\vartheta$ is a
+small-hazard approximation. For $\eta<1$, a seed therefore retains an
+asymptotic floor proportional to $\Gamma$ even as computational output
+grows. With bounded prices and unbounded $\Gamma$, necessary persistence
+requires $\vartheta/(1-\vartheta)=O(\Gamma^{-1})$. At a fixed budget,
+the limiting necessary ceiling, after the remote-computation term vanishes,
+is
+\begin{equation}
+ \vartheta\leq
+ \frac{p(1-\eta)}{p(1-\eta)+\varphi'(0)\Gamma}.
+ \label{eq:hazard-ceiling}
+\end{equation}
+A mirror instead removes the local first-order risk obstruction at bounded
+positive budgets as $a\to\infty$, because
+$K_\eta(\Omega)/\Omega\to0$ for $\eta\leq1$. This is a statement about
+the derivative, not global optimality of the nonconcave risk objective.
+With logarithmic value, a seed is more demanding: its hazard odds must
+be controlled relative to $1/(\Gamma\ln\Omega)$. Risks unaffected by
+separation have $\varphi'(0)=0$ and generate no such marginal premium.
+
+\subsection{What remains at perfect experiential substitution}
+As $q\to1$, the settlement-specific term $(1-q)E'(0)$ vanishes when
+$E'(0)$ is fixed and finite. With interior observation and backups,
+\cref{eq:no-replication} then reduces to
+\begin{equation}
+ F'(C^*)r_j\leq(p_j-p_m-p_b)\lambda,\qquad j=n,h.
+ \label{eq:replication-reduced}
+\end{equation}
+This reduction follows by substitution and continuity of the displayed
+coefficient; it does not assume that the face optimizer is unchanged
+when other parameters vary. Strictly positive net prices and sufficiently
+small remote returns can support no replication. A negative net price
+precludes it, while a zero net price requires $r_j=0$ and may admit ties.
+The residual-free all-inward condition is recovered when the non-replicating
+channels themselves have zero value and receive zero investment. These
+are separate limits: substituting experiences, meeting independent
+information demand, and geographically protecting valued states are not
+the same technological achievement.
+
+\section{Latency and physical scale}
+\label{sec:latency}
+\subsection{The relevant clock}
+A remote project competes with what can be experienced before its returns
+arrive. Let $T_j^{\rm lag}>0$ denote its objective delay and let
+$\omega(u)>0$ be subjective years per objective year. With a constant
+subjective discount rate $\delta\geq0$, the correct discount exponent is
+\begin{equation}
+ \mathcal D_j(t)=\delta\int_t^{t+T_j^{\rm lag}}\omega(u)\dd u,
+ \qquad r_j(t)=r_{j0}\exp[-\mathcal D_j(t)],\quad
+ S_j(t)=S_{j0}\exp[-\mathcal D_j(t)].
+ \label{eq:subjective-delay}
+\end{equation}
+The simpler product $\delta\omega(t)T_j^{\rm lag}$ is exact for a clock
+constant over the delay, and a lower bound for a non-decreasing clock.
+A clock measured in processor cycles becomes a subjective clock only
+under an additional account of how those cycles implement valued
+experience. Neither high throughput nor parallel world creation alone
+establishes this identification.
+
+\begin{proposition}[Latency sufficient for the logarithmic corner]
+\label{prop:latency}
+Take $\eta=1$, $\ell(z)=\ln(1+z)$, fixed finite non-negative base returns
+$r_{j0},S_{j0}$, $d_0\geq1$, and finitely many directions. Suppose
+$a(t)\geq a_{\min}>0$ and $p_j(t)\geq p_{\min}>0$. With
+$\mathcal D_{\min}(t)=\min_j\mathcal D_j(t)$, a sufficient condition for eventual strict
+all-inward allocation is
+\begin{equation}
+ \mathcal D_{\min}(t)-\ln\{[1+B(t)][1+\ln(1+B(t))]\}\longrightarrow\infty.
+ \label{eq:latency-growth}
+\end{equation}
+If $B(t)\geq B_{\min}>0$ eventually, the expression inside the logarithm
+can instead be $\Gamma(B)=(1+B)\ln(1+B)$. For a non-decreasing clock
+and $T_j^{\rm lag}\geq T_{\min}^{\rm lag}>0$, either condition follows
+from its version with $\mathcal D_{\min}$ replaced by
+$\delta T_{\min}^{\rm lag}\omega(t)$.
+For $B(t)\leq\bar B$, a fixed sufficient threshold is
+\begin{equation}
+ \mathcal D_{\min}(t)>
+ \max\left\{0,\max_j\ln\frac{(1+\bar B)(r_{j0}+d_0S_{j0})/a_{\min}
+                   +\Gamma(\bar B)S_{j0}}{p_{\min}}\right\},
+ \label{eq:latency-bounded}
+\end{equation}
+where a zero numerator is omitted.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Insert the discounted coefficients into \cref{eq:exact}; the required
+price is the undiscounted expression multiplied by $\exp(-\mathcal D_j)$.
+The two terms are uniformly bounded by a constant times the bracket in
+\cref{eq:latency-growth}. Complete bounds and counterexamples to weaker
+assumptions are in \cref{app:latency-proof}.
+
+Latency can therefore remove the constant-residual premise of the growth
+obstruction. This is a price-adjusted comparison, not an assertion that
+remote projects cease to produce physical resources. Increasing local
+speed and reducing travel delay act in opposite directions. Discounting
+in objective time replaces $\mathcal D_j$ by $\delta_{\rm obj}T_j^{\rm lag}$;
+then raising $\omega$ has no effect. The choice of clock is a preference
+assumption with an observable consequence for the model's allocation,
+not a conclusion forced by relativity or thermodynamics.
+
+Replication itself can invalidate a finite-return specification. Suppose
+one descendant generation takes the same subjective delay $D>0$, has
+expected reproduction factor $\mathcal R_X>0$, and each descendant yields
+one unit of payoff at birth. The discounted sum from generations
+$k\geq1$ is finite exactly when
+\begin{equation}
+ \mathcal R_X\exp(-D)<1,
+ \qquad \sum_{k\geq1}\mathcal R_X^k\exp(-kD)
+       =\frac{\mathcal R_X\exp(-D)}{1-\mathcal R_X\exp(-D)}.
+ \label{eq:discounted-replication}
+\end{equation}
+This follows from the geometric-series criterion, with divergence also
+at equality. Physical descendants can grow while discounted value stays
+finite. Conversely, timing the first launch without accounting for its
+future descendants can substantially understate the effective return.
+The finite base $r_{j0}$ in \cref{prop:latency} must represent the whole
+specified payoff stream, or a genuinely finite planning horizon.
+
+\subsection{Depletion and resilience are different mechanisms}
+\begin{proposition}[No endogenous price drift on a stationary frontier]
+\label{prop:depletion}
+Suppose $p_j(t)=P_j(X(t))$ depends only on cumulative past external
+investment, with $X(t)=X(t_0)$ along an all-inward path starting at $t_0$.
+Then $p_j(t)=P_j(X(t_0))$ throughout that path. Frontier depletion alone
+cannot supply a growing relative price along it.
+\end{proposition}
+\begin{proof}
+Substitute the constant argument into each $P_j$. Historical expansion
+can determine the level at $t_0$, but cannot create subsequent drift
+without further investment or another state variable.
+\end{proof}
+
+\begin{corollary}[A conditional risk cost of discount-induced abstention]
+\label{cor:quiet-risk}
+Suppose the only available mitigation of a catastrophe has physical
+success probability $\varphi(b)>0$ for $b>0$, baseline catastrophe
+probability $\vartheta>0$, and no effect before its arrival. An allocation
+with no such backup retains catastrophe probability $\vartheta$ after
+that arrival date, while a completed backup $b$ reduces it to
+$\vartheta[1-\varphi(b)]$. A utility discount can change which allocation
+is preferred but does not reduce either physical probability.
+\end{corollary}
+\begin{proof}
+These probabilities follow from the stipulated event tree. Multiplying
+the valuation of a future outcome by a discount factor does not change
+the probability assigned to that outcome.
+\end{proof}
+This is the defensible content of a fragility trade-off. There is no
+general implication from quietness to fragility when dormant backups,
+local mitigation, negligible hazards, or information about future hazards
+are available. Only geographically mitigable, otherwise unaddressed risk
+belongs in this comparison.
+
+\subsection{An explicit dimensional dictionary}
+The return relevant to delay is a \emph{dimensionless marginal advantage},
+not the bare normalized coefficient $r_j/p_j$:
+\begin{equation}
+ \mathcal R_{{\rm marg},j}
+   =\frac{r_{j0}}{p_j a\ell'(B)},\qquad
+ \mathcal D_j\gtrsim\ln\mathcal R_{{\rm marg},j}
+ \label{eq:physical-return-ratio}
+\end{equation}
+for a pure-computation comparison with delayed external output. Residual
+motives require the full preceding inequalities. Resource acquisition by
+self-replicating industry can make large returns conceivable
+\citep{ArmstrongSandberg2013}; that work does not provide a calibrated
+value of this paper's normalized $r_j/p_j$. A ratio $10^{20}$ below is a
+scenario assumption, not an empirical estimate attributed to that source.
+
+For an energy-limited illustration, choose $b_{\rm ref}=10^{32}\,{\rm J}$
+and a planning horizon of one Julian year, $31\,557\,600\,{\rm s}$.
+Using the IAU nominal solar luminosity
+$L_\odot^{\rm N}=3.828\times10^{26}\,{\rm W}$ \citep{IAU2015}, a captured
+fraction $f_{\rm cap}$ gives
+\begin{equation}
+ \bar B=120.8024928\,f_{\rm cap}
+ \left(\frac{L_*}{L_\odot^{\rm N}}\right)
+ \left(\frac{\Delta}{1\,{\rm yr}}\right)
+ \left(\frac{10^{32}\,{\rm J}}{b_{\rm ref}}\right).
+ \label{eq:stellar-budget}
+\end{equation}
+This is a per-horizon flow, not the star's lifetime energy. The scalar
+budget does not replace independent material, memory, or heat constraints.
+A fixed ceiling describes a specified era and accessible substrate;
+stellar evolution need not leave it constant indefinitely.
+
+A distance of four light-years traversed at $0.1c$ has a forty-year
+travel time by definition of a light-year. This is an illustrative
+one-way journey, not a complete replication cycle; manufacture,
+deceleration, and return information add delays. For
+$\mathcal R_{\rm marg}=10^{20}$, $\omega=10^6$, and a forty-year delay,
+\cref{eq:physical-return-ratio} requires
+$\delta\gtrsim1.1513\times10^{-6}$ per subjective year.
+Neither the assumed clock speed nor the discount rate is measured for
+an extraterrestrial civilization. Their separate roles remain visible
+in \cref{tab:latency-sensitivity} rather than being buried in a normalized
+speed parameter.
+\begin{table}[tbp]
+\centering
+\caption{Assumed marginal advantages and clock speeds: threshold
+$\delta=\ln\mathcal R_{\rm marg}/(40\omega)$ per subjective year.
+The forty-year delay and every return/clock entry are scenarios.}
+\label{tab:latency-sensitivity}
+\begin{tabular}{@{}rrrr@{}}\toprule
+$\mathcal R_{\rm marg}$ & $\omega=1$ & $\omega=10^3$ & $\omega=10^6$\\\midrule
+$10^3$ & $0.17269$ & $1.7269\times10^{-4}$ & $1.7269\times10^{-7}$\\
+$10^{10}$ & $0.57565$ & $5.7565\times10^{-4}$ & $5.7565\times10^{-7}$\\
+$10^{20}$ & $1.15129$ & $1.1513\times10^{-3}$ & $1.1513\times10^{-6}$\\
+$10^{40}$ & $2.30259$ & $2.3026\times10^{-3}$ & $2.3026\times10^{-6}$\\\bottomrule
+\end{tabular}
+\end{table}
+
+To interpret \cref{tab:ranges} physically, specify $b_{\rm ref}$,
+$c_{\rm ref}$, a project-capacity unit for each direction, and the welfare
+normalization. Then $B_{\rm res}=Bb_{\rm ref}$,
+$C_{\rm useful}=Cc_{\rm ref}$, a unit project costs $p_jb_{\rm ref}$,
+and $r_jc_{\rm ref}$ is its horizon computation. The local marginal
+product is $a\ell'(B)c_{\rm ref}/b_{\rm ref}$. Benefit amplitudes and
+scales require an independent valuation model; astronomical dimensions
+do not identify them. Thus the original normalized interval $B\in[1,100]$
+can represent $10^{32}$--$10^{34}\,{\rm J}$ under this dictionary, but
+it is not intrinsically that energy range. Changing the dictionary
+changes the interpretation, not the frozen experiment.
+
+\section{From allocation to silence}
+\label{sec:population}
+\subsection{Arrival exposure and the uniformity requirement}
+An allocation rule is a statement about one decision process. A Fermi
+explanation requires a distribution of such processes, their launch
+histories, and propagation to the region where absence is being explained.
+Let $N_i^{\rm act}(t)$ denote outward-capable autonomous nodes and
+$\lambda_i(t)$ their initiation rates per node-time. An independent
+Poisson approximation gives a surviving-front mean
+\begin{equation}
+ \mu=\sum_i\int\lambda_i(t)N_i^{\rm act}(t)[1-q_{R,i}(t)]\dd t.
+ \label{eq:mu}
+\end{equation}
+Here $q_R$ is an extinction probability. For a Galton--Watson process it
+is the smallest fixed point of the offspring generating function; for
+Poisson offspring of mean $\Rogue$,
+$q_R=\exp[\Rogue(q_R-1)]$ \citep{Harris1963}. Except for degenerate
+immortal one-descendant processes, a mean at most one gives extinction
+almost surely. Survival is not arrival, and extinct fronts can still
+leave finite artefacts. Replace $\mu$ by $\mu_A(z,T)$ when launch,
+survival, and propagation into the target region by time $T$ have all
+been accounted for.
+
+For a fixed independent list of civilizations with Poisson arrival
+means $\mu_{A,i}$, $P_0^{\rm fixed}=\exp(-\sum_i\mu_{A,i})$.
+If origins themselves form a Poisson process with intensity measure
+$\nu(\dd z)$, independently marked by their arrival means, the void
+probability instead is
+\begin{equation}
+ P_0^{\rm origins}
+ =\exp\left[-\int(1-\exp[-\mu_A(z,T)])\nu(\dd z)\right].
+ \label{eq:origins}
+\end{equation}
+A random number of parent civilizations clusters fronts and changes the
+likelihood. For two fixed civilizations with mean two fronts each the
+probability is $0.0183$; for a Poisson number of mean two it is $0.1774$.
+These archived numbers are retained. The derivation and a new simulation
+are given in \cref{app:population-proof}.
+
+\begin{proposition}[Necessary uniformity and the exact two-type window]
+\label{prop:uniformity}
+Let $0<\bar N_A=\int\nu(\dd z)<\infty$, $0<P_*<1$, and
+$\mathcal L_*=-\ln P_*$. Suppose a fraction $\pi_{\rm out}$ of origins under the
+normalized arrival-relevant intensity has $\mu_A\geq\mu_{\rm out}>0$.
+Then $P_0\geq P_*$ requires
+\begin{equation}
+ \pi_{\rm out}\leq
+ \frac{\mathcal L_*}{\bar N_A[1-\exp(-\mu_{\rm out})]}.
+ \label{eq:uniformity-bound}
+\end{equation}
+For the complementary class labelled inward, let $c_{\rm in}=\mathbb E[1-\exp(-\mu_A)\mid\text{inward}]$.
+Set $c_{\rm in}=0$ when that class has zero probability. Then also $(1-\pi_{\rm out})c_{\rm in}\leq \mathcal L_*/\bar N_A$.
+For two types with exactly specified means
+$\mu_{\rm out}>\mu_{\rm in}\geq0$, write
+$f_k=1-\exp(-\mu_k)$. The exact necessary and sufficient condition is
+\begin{equation}
+ f_{\rm in}+\pi_{\rm out}(f_{\rm out}-f_{\rm in})
+ \leq \mathcal L_*/\bar N_A.
+ \label{eq:two-type-window}
+\end{equation}
+Without any upper bound on the means, $\bar N_A\leq \mathcal L_*$ is sufficient
+for $P_0\geq P_*$. The weaker condition
+$\bar N_Af_{\rm out}\leq \mathcal L_*$ is sufficient for arbitrary mixtures only
+in the exactly specified two-type model, not when $\mu_{\rm out}$ is
+merely a lower bound.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The negative logarithm of \cref{eq:origins} is
+$\bar N_A\mathbb E[1-\exp(-\mu_A)]$. Bound its non-negative outward
+and inward contributions separately; evaluate the expectation exactly
+for two types. A complete proof and boundary cases are in
+\cref{app:population-proof}.
+
+At $P_*=0.05$ and $\mu_{\rm out}=3$, the necessary upper outward
+fractions for $\bar N_A=10^2,10^3,10^4$ are respectively
+$3.1527\%$, $0.31527\%$, and $0.031527\%$. These are conditional
+compatibility bounds, not posterior probabilities. For example, a prior
+on the number of origins could make large exposure unlikely; then
+uniform inward behaviour need not be invoked. Conversely, with a large
+arrival-relevant population, a small expansionist tail can exhaust the
+entire permitted exposure. Any inward leakage makes the constraint on
+that tail tighter, not looser.
+
+The archived design is far from a near-uniform all-inward allocation:
+its reference count is $219/1024$, and its design-measure sensitivity is
+reported in the supplement. But $805$ failed all-inward tests cannot be
+identified with $805$ replicating civilizations. Reoptimizing observation
+on the no-replication face, with exactly the same frozen inputs and no
+new dormant-backup technology, gives $421/1024$ no-replication optima.
+Of these, $202$ use observation without replication; $603/1024$ prefer
+replication. These additive calculations strengthen the logical
+distinction rather than providing an astronomical prevalence estimate.
+Even this selected synthetic ensemble is nowhere near the high-exposure
+uniformity requirement under a literal population interpretation, which
+its sampling design does not justify.
+
+Under a uniform external price multiplier $\kappa$, the archived statistic
+$\rho$ gives $\Pr(\rho>\kappa)$ for loss of the \emph{all-inward} corner.
+It equals an outward population fraction only after specifying a
+population measure and identifying every such failure with the relevant
+outward behaviour. With observation or backups free, the face optimizer
+must be recalculated; the old $\rho$ is not the no-replication threshold.
+This is why a change in wording alone cannot carry the old sensitivity
+experiment into the new population claim.
+
+\subsection{Preemption: a game rather than an adjusted corner}
+To formalize strategic complementarity, let $N\geq2$ civilizations choose
+$x_i\in[0,\bar X]$. Suppose
+\begin{equation}
+ U_i=f(x_i)+\iota x_i\sum_{k\ne i}x_k,
+ \qquad \iota\geq0,
+ \label{eq:preemption-game}
+\end{equation}
+where $f$ is continuously differentiable and strictly concave. It can
+include the static local-versus-external objective, including the base
+residual slope $S_{j0}$. This is a specified payoff externality, not a
+claim that fear of neighbours has a universal linear form. Competition
+among expanding lineages is an established motivation for such a test
+\citep{Hanson1998}.
+
+\begin{proposition}[Preemption equilibria and a separate cascade test]
+\label{prop:preemption}
+In \cref{eq:preemption-game}, a profile is a pure Nash equilibrium exactly
+when, with $X_{-i}=\sum_{k\ne i}x_k$,
+\begin{equation}
+ \begin{cases}
+ f'(0)+\iota X_{-i}\leq0,&x_i=0,\\
+ f'(x_i)+\iota X_{-i}=0,&0<x_i<\bar X,\\
+ f'(\bar X)+\iota X_{-i}\geq0,&x_i=\bar X.
+ \end{cases}
+ \label{eq:preemption-KKT}
+\end{equation}
+A pure equilibrium exists. The all-inward profile is an equilibrium iff
+$f'(0)\leq0$; the all-cap profile is an equilibrium iff
+$f'(\bar X)+\iota(N-1)\bar X\geq0$. When both hold there are at least
+two equilibria. Symmetric interior equilibria are exactly the roots of
+$f'(x)+\iota(N-1)x=0$ in $(0,\bar X)$.
+
+For the distinct binary-action game $x_i\in\{0,\bar X\}$, put
+$d_{\rm bin}=[f(\bar X)-f(0)]/\bar X$. Its all-inward and all-outward
+profiles are equilibria iff, respectively,
+$d_{\rm bin}\leq0$ and $d_{\rm bin}+\iota(N-1)\bar X\geq0$.
+With inward tie-breaking, one externally maintained outward player
+triggers all other players under asynchronous best-response updates
+iff $d_{\rm bin}+\iota\bar X>0$.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Strict concavity gives the endpoint and interior derivative conditions.
+The potential $\sum_i f(x_i)+\iota\sum_{i<k}x_ix_k$ has a maximum on
+the compact strategy cube. Binary choices instead compare finite payoff
+differences; they cannot be tested using $f'(0)$ alone. Full proofs are
+in \cref{app:preemption-proof}.
+
+Failure of the inward derivative test at maximal rival investment does
+not establish an outward equilibrium. For $N=2$, $\bar X=1$,
+$f(x)=-x-5x^2$, and $\iota=2$, that derivative is $-1+2=1>0$,
+but the only equilibrium is $(0,0)$. Nor do two stable endpoint
+equilibria imply a one-defector cascade. In the binary game with five
+players, $d_{\rm bin}=-2.5$ and $\iota=\bar X=1$, both endpoints are
+stable, but a single defector gives the remaining players incentive
+$-1.5<0$. A sufficiently large cluster can matter when one player does
+not. Population uniformity is therefore an equilibrium-selection and
+containment problem as well as a distribution of individual preferences.
+
+Virtual population growth affects that problem only through physical
+agency. If worlds grow as $\exp(g_Wt)$, their outward-capable fraction
+falls as $\exp(-g_ct)$, and the launch-times-arrival factor stays bounded
+above and below by positive constants, integrated infinite-horizon
+exposure is finite exactly when $g_c>g_W$. This is the elementary
+integrability criterion for $\int_0^\infty\exp[(g_W-g_c)t]\dd t$.
+Without actuator access the exposure can instead be zero, regardless
+of the virtual population. Recursive population count alone is neither
+a launch rate nor a guarantee of containment.
+
+\subsection{Visibility is a separate inverse problem}
+Neither an allocation share nor an arrival probability fixes spectrum,
+power, geometry, or duty cycle. With mutually exclusive source classes,
+a schematic Poisson detection model is
+\begin{equation}
+ \Lambda_j(T)=\int_0^T R_{\rm civ}(t_e)
+ \mathcal P_j(T-t_e\mid t_e)\pi_j(T,t_e)\dd t_e,
+ \qquad P(0)=\exp[-\sum_j\Lambda_j(T)].
+ \label{eq:observations}
+\end{equation}
+Here $\mathcal P_j$ is a source-state probability, not the residual slope
+$S_j$, and $\pi_j$ is the selection probability. Overlapping source
+attributes require union probabilities rather than double counting.
+Even a stationary one-class model constrains a product of emergence
+rate, source lifetime $\tau$, and selection probability. Increasing one
+factor and decreasing another can preserve the likelihood. A null survey
+therefore does not by itself identify an inward transition.
+
+\subsection{A limited thermal bridge}
+\label{sec:thermal-bridge}
+Landauer's bound assigns at least $k_BT\ln2$ of heat to erasure of one
+unbiased bit under its thermodynamic assumptions \citep{Landauer1961}.
+It is not a universal energy charge per reversible logical operation or
+a law fixing subjective clock speed \citep{Bennett1973}. For an ideal
+one-temperature blackbody radiator, negligible background temperature,
+total effective emitting area $A=M_{\rm rad}/\Sigma_{\rm rad}$, and
+thermalized luminosity $L$, the Stefan--Boltzmann law gives
+\begin{equation}
+ T=\left(\frac{L\Sigma_{\rm rad}}{\sigma_{\rm SB}M_{\rm rad}}\right)^{1/4}.
+ \label{eq:radiator}
+\end{equation}
+This equation follows by solving $L=\sigma_{\rm SB}AT^4$ for $T$;
+$A$ already counts all radiating faces. With nominal solar luminosity,
+$\Sigma_{\rm rad}=1\,{\rm kg\,m^{-2}}$ as an assumed engineering
+parameter, and the JPL planetary masses \citep{JPLPhysical}, a Mercury
+mass gives $378.16\,{\rm K}$ and a Jupiter mass $43.43\,{\rm K}$.
+Their wavelength-form Wien peaks are $7.66$ and $66.73\,\mu{\rm m}$,
+respectively. Constants and numerical root checks are specified in the
+supplement \citep{NIST2022}.
+
+The first example lies inside the $100$--$700\,{\rm K}$ model range
+searched by Project Hephaistos II; the second lies below it
+\citep{Suazo2024}. The WISE/Spitzer framework of \citet{Wright2014b}
+likewise targets mid-infrared waste heat, not all possible cold radiator
+architectures. Thus inward allocation does not predict a unique cold
+far-infrared population. It permits temperature-dependent search targets
+once dissipated power and radiating area are supplied. Bradbury's
+Matrioshka-brain manuscript already describes nested stellar computing
+and heat disposal \citep{Bradbury1999}. The cooler galactic environments
+of \citet{CirkovicBradbury2006} can motivate migration, not necessarily
+continued residence around the original star. The present bridge supplies
+no priority claim for either idea and no construction-feasibility proof.
+
+\section{Verification and limitations}
+\label{sec:verification}
+\subsection{What the calculations verify}
+The mathematical results are proved under the assumptions printed with
+their statements. Numerical checks then test equations, implementations,
+examples, and reductions; they do not supply evidence that extraterrestrial
+parameters satisfy those assumptions. The archive is retained unchanged.
+Re-execution of its scripts reproduces the original classifications,
+threshold tests, workload examples, and two-period checks. New scripts
+independently evaluate full objectives or explicit dynamics rather than
+merely calling the formulas being tested. Scalar global searches are used
+for the nonconcave exponential examples; concave allocation checks use
+analytic derivatives and constrained optimization. A finite-horizon
+Bellman recursion is compared with the infinite-horizon value formula,
+and direct quadrature checks the changing-clock integral.
+
+The new no-replication design result is additive. It does not replace the
+original all-inward counts or silently change their meaning. Separate
+outputs record the restricted face optimum, the completed replication
+inequalities, and sampled full-objective comparisons. The selected
+thermal constants have a dimensional provenance, whereas the assumed
+clock speeds, marginal advantages, and radiator areal density are labelled
+as scenarios. Code fixes during verification are followed by complete
+reruns of the affected script. Recorded pass counts refer to assertions,
+not necessarily independent samples or experimentally observed systems.
+
+\subsection{Consolidated limitations}
+\label{sec:limitations}
+\paragraph{Physical realizability and the workload margin.}
+No theorem proves that arbitrarily large subjective populations fit inside
+a real stellar system. Efficiency, cooling, fidelity, error correction,
+material replacement, and stored-state capacity can plateau. Reversible
+logic does not remove the costs of preparation, control, or access to
+entropy reservoirs. The world-count lemma derives curvature only after
+choosing an aggregation ethic, feasible per-world resources, and a margin
+for varying the number of worlds. Recursion is one implementation of that
+margin, not its exclusive cause. An embodied civilization using virtual
+experiences requires less than a civilization implementing conscious
+digital agents; the model does not establish either engineering capability
+or a theory of consciousness.
+
+\paragraph{The boundary is model-specific.}
+Concavity, divisibility, finite derivatives at tested corners, and positive
+prices make local derivatives globally informative. Fixed project sizes,
+start-up costs, and some increasing returns do not. The exponential
+endpoint lemma states an exception and its counterexamples. Likewise,
+endogenizing resilience produces a product objective for which the derived
+floor is only necessary. The fixed-residual tipping budget is not invariant
+when observation and backups are reoptimized, a hazard changes with scale,
+or prices change with geography. Its role is to expose an obstruction in
+the stated benchmark, not to assign every civilization a universal budget
+number. Equality can admit multiple optima; no-replication as a selected
+optimum is weaker than exclusion of all replicating optima.
+
+\paragraph{Dynamics and inherited infrastructure.}
+The basin theorem uses a non-depreciating stock, a specified productivity
+path, linear residual utility, and myopic choices. Its exact separatrix is
+not an optimal infinite-horizon stopping rule. The homothetic benchmark
+has different technology and proves its own infinite-horizon policy;
+the ceiling comparison gives only a one-sided connection to the static
+tipping budget. A linear residual payoff can make discounted value
+infinite unless growth and discounting are controlled. More general
+persistent capital, uncertainty, strategic resource exclusion, and
+option values need additional state variables. Stopping new investment
+leaves previous autonomous projects in place. Their future descendants
+must be included in arrival exposure rather than erased by relabelling
+the parent civilization inward.
+
+\paragraph{Timing, geography, and welfare.}
+Subjective-time discounting is optional, not a physical requirement.
+Parallel worlds need not run faster, and even a fast internal clock need
+not imply impatience about external opportunities. Delays can devalue
+resilience as well as replication. Only hazards reduced by separation
+contribute to the geographical backup premium; a seed and a mirror also
+have different restoration capabilities beyond the model's scale exponent.
+The luminosity and neighbourhood-density interpretation of the basin is
+explicitly conjectural. The normalized access map in the supplement is
+not a propulsion law, and its superluminal limits are sensitivity
+counterfactuals, not physically established travel mechanisms.
+
+\paragraph{Population inference and observation.}
+The synthetic ensemble is not a prior justified by astronomical data.
+An origin fraction is not a fraction of occupied systems. The Poisson
+model assumes independent marking and a specified arrival exposure;
+correlated origins, interacting fronts, and selection effects can change
+its likelihood. The strategic game establishes possibilities of
+coordination and cascades under particular actions and update rules,
+not a measured prevalence of preemption. Survey non-detections constrain
+emergence, lifetime, and selection jointly. A radiator temperature does
+not fix a detection probability without distance, spectrum, dust,
+covering fraction, duty cycle, and survey completeness. Neither a warm
+candidate nor a cold non-detection selectively confirms \CITH.
+
+\section{Conclusion}
+\label{sec:conclusion}
+The default result of the logarithmic benchmark is outward pressure from
+growing resources, not automatic retreat into virtual worlds. Concave
+local production has a residual-value floor at least proportional to
+the physical budget. With persistent external motives and bounded prices,
+no increase in computational productivity alone defeats that obstruction.
+A bounded local resource base changes the question: below a unique tipping
+budget, sufficient productivity can support inward allocation; at or above
+it, no finite productivity can. In the specified acquisition dynamics,
+premature expansion can cross that boundary before local efficiency
+catches up, and a unique critical initial productivity separates the paths.
+
+A Fermi-relevant explanation must then replace the all-inward corner by
+the absence of new replication. Observation and dormant backups can absorb
+external-service demand, but a cheaper reproducing bundle can defeat them.
+When resilience protects the value accumulated internally, a seed backup
+retains a strong marginal motive rather than becoming irrelevant merely
+because computers improve. Value curvature and the treatment of world
+number determine whether productivity is capable of overcoming these
+pressures. Future resource production and the timing of remote returns
+supply further tests; neither is represented by a static capability to
+simulate appealing experiences.
+
+Thus a bounded-resource, substitute-service, latency-based inward scenario
+must clear three distinct comparisons. Other preference and technology
+regimes can take different routes. Even a successful individual scenario
+becomes a silence explanation only after meeting the population constraint:
+when the arrival-relevant origin population is large, the permitted
+expansionist tail and leaked physical agency must be extremely small.
+When that population is small, rarity may suffice without an inward
+transition. The theory identifies the parameters and inequalities on
+which these alternatives disagree. It supplies neither an estimated
+civilizational prevalence nor a general expectation of cold, invisible
+computers. Its explanatory value is the ability to state where an inward
+mechanism survives, where it fails, and what additional evidence would be
+needed to distinguish it from expansion or simple rarity.

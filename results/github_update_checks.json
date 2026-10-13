@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "v8_validators": 15,
+  "assertions_passed": 33017,
+  "assertions_failed": 0,
+  "v73_commands_passed": 4,
+  "assembled_source_identical_to_supplied_v8": true,
+  "compiled_pdf_pages": 47,
+  "compiled_text_within_page_bounds": true,
+  "latex_warnings": [],
+  "distributed_pdfs": "Supplied v8 PDFs preserved byte-for-byte.",
+  "word_count": "texcount not installed in this update environment; word counts retained from the supplied final_audit.json."
+}

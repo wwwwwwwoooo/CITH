@@ -1,0 +1,37 @@
+\section{Notation and scope dictionary}
+\label{app:notation}
+\small
+\begin{longtable}{@{}p{.25\textwidth}p{.69\textwidth}@{}}
+\toprule Symbol & Meaning\\\midrule\endhead
+$B,z,p_j$ & Budget and local spending in fixed resource-reference units; external price per unit project capacity.\\
+$b_{\rm ref},c_{\rm ref}$ & Physical resource and computational-service reference units.\\
+$x,y,w,b_{\rm bk}$ & New resident, industrial, observation, and dormant-backup capacities.\\
+$n,h,m$ & Nested cumulative residence, industry, and observation indices.\\
+$C,C_0,a,\ell,G_j,r_j$ & Useful computation, baseline, local productivity, local production shape, external production and its initial slope.\\
+$F_\eta,\eta,\eta_k$ & Shifted isoelastic value and curvature; service-specific efficiency has a subscript.\\
+$q,\sigma(q),E,R,I$ & Experiential substitution and residual experience, resilience, information functions.\\
+$S_j,H_j,A_j$ & Residual corner slope and its logarithmic floor/productivity coefficients.\\
+$\Omega,\Gamma,d_0$ & Local corner output $a\ell(B)$, production ratio $\ell/\ell'$, and $1+C_0$.\\
+$\lambda_L,D_j,\lambda$ & Original local and external marginal values; restricted-face budget multiplier.\\
+$\bar B,B_{\rm tip},a_{\rm sep},g_a,g_X,X_t$ & Local ceiling, fixed-residual tipping budget, basin separator, productivity growth, acquisition yield, and inherited external stock.\\
+$\rho,\kappa,\xi_j,\zeta_j$ & All-inward robustness ratio, uniform price multiplier, and logarithmic phase coordinates.\\
+$\kappa_j$ & External production curvature; not the common price multiplier.\\
+$b,d,W_d,Q,\chi_T$ & Branching, depth, world count, support capacity ratio, and maximum demand-to-capacity ratio.\\
+$u,c,C_{\rm tot},\theta,\alpha$ & Minimum and actual per-world resources, total world resources, population weight, and per-world welfare elasticity.\\
+$\vartheta,\varphi,\gamma$ & Horizon catastrophe probability, mitigation probability, and backup scale exponent.\\
+$\beta,a_L,a_X,g_L,g_X$ & Objective-period discount, linear computation coefficients, and resource multipliers in the dynamic benchmark.\\
+$T_j^{\rm lag},\omega,\delta,\mathcal D_j(t)$ & Objective delay, subjective clock, subjective discount rate, and integrated delay exponent.\\
+$\mu,\mu_A,q_R,\Rogue$ & Successful-front mean, arrival mean, extinction probability, and offspring mean.\\
+$\nu,\bar N_A,\pi_{\rm out},\pi_j$ & Origin intensity, expected relevant origin count, outward fraction, and survey selection probability.\\
+$N_i^{\rm act},\lambda_i,\iota$ & Physically outward-capable nodes, per-node initiation rate, and preemption sensitivity.\\
+$\Lambda_j,\mathcal P_j,\tau$ & Detection mean, source-state probability, and source lifetime.\\
+$s_E,s_R,s_I$ & Benefit saturation scales; stored archive column names remain e, r, i.\\
+$L_*,\mathcal L_*$ & Host luminosity and null-likelihood exposure allowance $-\ln P_*$.\\
+$L_\odot^{\rm N},\sigma_{\rm SB},M_{\rm rad},\Sigma_{\rm rad}$ & Nominal solar luminosity, Stefan--Boltzmann constant, radiator mass, and areal mass.\\\bottomrule
+\end{longtable}
+\normalsize
+Physical scale is not fixed by normalized parameter endpoints alone.
+The model's resource horizon and the project-capacity units must accompany
+any numerical interpretation. Original archive variable names are retained
+in data files for byte-level reproducibility, but their displayed notation
+has been disambiguated.

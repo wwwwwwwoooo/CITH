@@ -1,0 +1,188 @@
+% MAIN TEXT, v8 Section 3. Place after the merged Model section.
+% Move the existing rho paragraph and analytical phase diagram to the end.
+\section{The inward corner}
+\label{sec:inward}
+\label{sec:threshold}
+
+A corner criterion is useful only if it exposes the quantities that can
+and cannot be changed by productivity. Temporarily allow any
+differentiable, strictly increasing, concave $F$. At the corner define
+\begin{align}
+ C_L&=C_0+a\ell(B),&
+ \lambda_L&=F'(C_L)a\ell'(B),\label{eq:local-return}\\
+ D_j&=F'(C_L)r_j+S_j\qquad(j=n,h,m).
+ \label{eq:external-return}
+\end{align}
+
+\begin{proposition}[The common corner criterion]
+\label{prop:hub}
+Under the model assumptions, a necessary condition for the all-inward
+corner to be globally optimal is
+$D_j\leq p_j\lambda_L$ for every direction. This condition is also
+sufficient when $\ell$ is concave. For $F=F_\eta$, it is equivalent to
+\begin{equation}
+ \boxed{\frac{p_j}{\Gamma(B)}\geq
+ \frac{r_j}{\Omega}
+ +S_j\frac{(d_0+\Omega)^\eta}{\Omega}}
+ \qquad(j=n,h,m).
+ \label{eq:hub}
+\end{equation}
+Productivity enters this expression only through $\Omega$; $\Gamma$
+depends on the production function and the budget, not on $a$.
+Under concavity, strict inequalities in every direction make every
+optimizer all-inward. Weak inequalities establish an inward optimum
+but do not by themselves exclude tied external allocations.
+\end{proposition}
+\begin{proof}
+Let $(v_n,v_h,v_m)=(x,y,w)$. Moving a small amount $v_j>0$ into direction
+$j$ and reducing $z$ by $p_jv_j$ gives directional derivative
+$D_j-p_j\lambda_L$. A positive derivative contradicts optimality.
+If $\ell$ is concave, then $C$ is concave and composition with increasing
+concave $F$ preserves concavity. Consequently,
+\begin{align}
+ U(z,x,y,w)-U(B,0,0,0)
+ &\leq\lambda_L(z-B)+\sum_jD_jv_j\nonumber\\
+ &\leq\sum_j(D_j-p_j\lambda_L)v_j.
+ \label{eq:cornerproof}
+\end{align}
+This proves sufficiency and the strict statement. For $F_\eta$,
+multiplication by $(d_0+\Omega)^\eta>0$ gives
+$p_ja\ell'(B)\geq r_j+S_j(d_0+\Omega)^\eta$; division by
+$\Omega>0$ gives \cref{eq:hub}.
+\end{proof}
+
+\begin{corollary}[The original all-inward criterion]
+\label{prop:corner}
+For $\ell(z)=\ln(1+z)$ and any differentiable, strictly increasing,
+concave $F$, the all-inward corner is optimal exactly when
+\begin{equation}
+ D_j/p_j\leq\lambda_L\qquad(j=n,h,m).
+ \label{eq:corner}
+\end{equation}
+\end{corollary}
+\begin{proof}
+The local logarithm is concave, so both directions of
+\cref{prop:hub} apply. Its derivatives give precisely
+\cref{eq:local-return,eq:external-return} with
+$\ell'(B)=1/(1+B)$.
+\end{proof}
+
+\begin{corollary}[Adding hard support constraints]
+\label{cor:feasibility}
+If an additional physical feasibility restriction retains the corner,
+the criterion $D_j\leq p_j\lambda_L$ remains sufficient under
+concavity, as does \cref{eq:hub} for $F_\eta$. Necessity is guaranteed
+when each small budget-transfer direction used in the proof remains
+admissible. Without that condition, necessity need not hold.
+\end{corollary}
+\begin{proof}
+An optimum over a set is an optimum over any subset containing it.
+The necessity argument requires exactly the indicated feasible
+perturbations; without them it need not apply.
+\end{proof}
+
+\begin{productioncorollary}[The tight logarithmic floor]
+\label{cor:production-growth}
+Let $\eta=1$ and let $\ell$ be concave. Then
+\begin{equation}
+ \Gamma(B)\geq B,
+ \label{eq:tight-floor}
+\end{equation}
+with equality if and only if $\ell$ is linear on $[0,B]$.
+Every direction with $S_j>0$ requires
+$p_j>S_j\Gamma(B)\geq S_jB$ at any finite $a$.
+Conversely, for fixed finite $B,d_0,p_j,r_j,S_j$, some concave local
+production function and finite $a>0$ make the corner optimal if and
+only if $p_j>S_jB$ in every direction with $S_j>0$.
+Linear local production provides a witness. Directions with $S_j=0$
+retain their computational-return condition but introduce no residual
+floor.
+\end{productioncorollary}
+\noindent\emph{Proof sketch.}
+The tangent to a concave production function at $B$ lies above its
+value at zero. Equality forces coincidence with the chord on the whole
+interval. For the converse use $\ell(z)=z$ and take
+$a>\max_j(r_j+d_0S_j)/(p_j-S_jB)$.
+The complete proof, including zero slopes, is in \cref{app:floor-proof}.
+
+\begin{corollary}[Logarithmic productivity thresholds]
+\label{lem:production}
+\label{prop:threshold}
+For $\eta=1$ and concave $\ell$, the exact test is
+\begin{equation}
+ p_j\geq S_j\frac{\ell(B)}{\ell'(B)}
+       +\frac{r_j+d_0S_j}{a\ell'(B)}.
+ \label{eq:general-production}
+\end{equation}
+When $p_j>S_j\Gamma(B)$ in every nontrivial direction,
+\begin{equation}
+ a\geq a_{\rm crit}^{\ell}(B):=
+ \max_{j:r_j+S_j>0}
+ \frac{r_j+d_0S_j}{p_j\ell'(B)-S_j\ell(B)}
+ \label{eq:acrit-general}
+\end{equation}
+is necessary and sufficient. The maximum over an empty set is zero.
+If a nontrivial denominator is non-positive, no finite $a$ suffices.
+For $\ell(z)=\ln(1+z)$, set $L=\ln(1+B)$ and recover
+\begin{align}
+ H_j&=(1+B)LS_j,& A_j&=(1+B)(r_j+d_0S_j),\label{eq:HA}\\
+ p_j&\geq H_j+A_j/a,\label{eq:exact}\\
+ a_{\rm crit}&=\max_{j:A_j>0}\frac{A_j}{p_j-H_j}.
+ \label{eq:acrit}
+\end{align}
+Thus the general criterion contains both the original production test
+and its logarithmic threshold.
+\end{corollary}
+\begin{proof}
+Expand the $\eta=1$ term in \cref{eq:hub} and use
+$\Omega=a\ell(B)$. The numerator in \cref{eq:acrit-general} is
+positive exactly in nontrivial directions, so rearrangement is valid
+exactly for positive denominators. If it is zero, then $r_j=S_j=0$.
+Substitution of $\ell'(B)=1/(1+B)$ gives the last three equations.
+\end{proof}
+
+The supporting-hyperplane argument is standard
+\citep[chapters 3--5]{BoydVandenberghe2004}. The substantive restriction
+is the sharp residual floor: no concave redesign of local production
+can reduce it below $S_jB$. Improvements in the level of computation
+cannot remove this obstruction at logarithmic value.
+
+% MOVE HERE, unchanged: the paragraph beginning
+% "A dimensionless robustness diagnostic is" (eq:rho), followed by
+% "Analytical phase boundary" (eq:phase-coordinates) and fig:phase.
+
+\subsection{What the floor compares}
+The floor is a relative-value statement. An additional unit of a project
+can continue to provide independent information or geographical insurance
+while the value of more local computation declines. Raising productivity
+increases the level of local computation and its physical marginal product
+at once. Under logarithmic value these effects partly cancel: the limiting
+local marginal utility is $\ell'(B)/\ell(B)=1/\Gamma(B)$, not infinity.
+Consequently a fixed external residual slope can remain competitive even
+when remote computational production becomes negligible in the comparison.
+This limit follows directly by dividing the logarithmic local marginal
+utility by $a$ in numerator and denominator.
+
+The distinction also explains the role of existing computation. Increasing
+$C_0$ at fixed new-investment technology does not change the asymptotic
+floor, but increases the finite-productivity term $d_0S_j$ in
+\cref{eq:general-production}. A civilization with more existing useful
+service need not place more marginal value on further service. When all
+residual slopes are zero, by contrast, $C_0$ and the choice of increasing
+$F$ do not affect the computational allocation: maximizing utility is
+then equivalent to maximizing $C$. The pure-computation formula in
+\cref{eq:budgetcrit} isolates that case. This is why an argument based
+only on the attractiveness of virtual experience omits an independent
+resource-allocation comparison.
+
+Neither the floor nor the tipping budget measures a physical maximum
+number of worlds. They specify when an additional external option beats
+a marginal local use under the chosen objective. A system can be physically
+capable of supporting its present workload while economically preferring
+more territory. It can also prefer inward investment that fails an
+independent support requirement. In an application the service ratios and
+the allocation inequalities must therefore be evaluated on the same
+resource history, rather than selecting a favourable budget for one and a
+favourable efficiency for the other. The joint archived example demonstrates
+compatibility on a finite interval; the persistence results determine what
+additional conditions are needed beyond it.

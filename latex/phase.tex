@@ -1,0 +1,45 @@
+A dimensionless robustness diagnostic is
+\begin{equation}
+ \rho=\max_j\frac{H_j+A_j/a}{p_j}.
+ \label{eq:rho}
+\end{equation}
+The corner is inward when $\rho\leq1$. If every external price is multiplied by $\kappa>0$ while other terms are held fixed, the corner survives exactly when $\kappa\geq\rho$. Thus reporting $\rho$ identifies how much a conclusion depends on proximity to a threshold. This is conditional price sensitivity, not a distribution over unknown technologies.
+
+\subsection{Analytical phase boundary}
+For logarithmic value, define
+\begin{equation}
+ \xi_j=\frac{H_j}{p_j},\qquad
+ \zeta_j=\frac{A_j}{p_ja}.
+ \label{eq:phase-coordinates}
+\end{equation}
+The exact phase boundary is $\xi_j+\zeta_j=1$. All-inward allocation
+requires $\xi_j+\zeta_j\leq1$ for \emph{every} direction.
+If $\xi_j\geq1$, no finite productivity restores the corner, because
+productivity lowers only $\zeta_j$. Here $\xi_j\geq1$ entails
+$S_j>0$ and hence $A_j>0$, so $\zeta_j$ remains strictly positive
+at every finite $a$. Increasing $a$ to $\lambda a$, with $\lambda>1$,
+moves $(\xi_j,\zeta_j)$ vertically to $(\xi_j,\zeta_j/\lambda)$.
+Reducing the external price to $p_j/\kappa$, with $\kappa>1$ and
+other parameters fixed, moves it radially to
+$(\kappa\xi_j,\kappa\zeta_j)$. The degenerate case $A_j=0$ has $H_j=0$ and imposes no
+restriction. Figure~\ref{fig:phase} shows this analytical geometry rather
+than an ensemble frequency.
+
+\setcounter{figure}{2}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.91\textwidth]{fig3.pdf}
+\caption{Exact logarithmic phase diagram and comparative statics for one
+external direction. The shaded triangle satisfies
+$H_j/p_j+A_j/(p_ja)\leq1$; every external direction must satisfy this
+condition for the all-inward corner to be optimal.
+(a) Higher productivity reduces only $\zeta_j$, producing a downward
+vertical move. (b) A price reduction to $p_j/\kappa$ multiplies both
+coordinates by $\kappa$, producing a radial move away from the origin.
+(c) In the hatched region $\xi_j\geq1$, no finite productivity restores
+the corner. For $A_j>0$, $(1,0)$ is only a limiting point.
+The arrows are schematic evaluations of the exact transformations;
+no archived inputs are overlaid and no population frequency is estimated.}
+\label{fig:phase}
+\end{figure}
+

@@ -1,0 +1,25 @@
+{
+  "seed": 2026101330,
+  "counts": {
+    "power_optimizer": [
+      700,
+      0
+    ],
+    "shifted_normalization": [
+      700,
+      0
+    ],
+    "log_optimizer": [
+      700,
+      0
+    ],
+    "integer_worlds": [
+      700,
+      0
+    ],
+    "edges": [
+      8,
+      0
+    ]
+  }
+}

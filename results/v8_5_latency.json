@@ -1,0 +1,33 @@
+{
+  "seed": 2026101350,
+  "counts": {
+    "clock_integral": [
+      450,
+      0
+    ],
+    "corner_optimizer": [
+      450,
+      0
+    ],
+    "sufficient_bound": [
+      450,
+      0
+    ],
+    "bounded_threshold": [
+      450,
+      0
+    ],
+    "chain": [
+      450,
+      0
+    ],
+    "depletion": [
+      450,
+      0
+    ],
+    "counterexamples": [
+      7,
+      0
+    ]
+  }
+}

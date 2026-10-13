@@ -1,0 +1,73 @@
+\label{sec:production}
+% MAIN TEXT, v8 Section 2 (Model).
+% In the merged Model section, replace the material after eq:budget as
+% specified in PLACEMENT_KO.md. Keep the earlier workload accounting.
+
+The planning horizon and the resource numeraire are fixed. Let
+$B_{\rm res}$ be physical resources available during that horizon and let
+$b_{\rm ref}>0$ be a fixed reference amount. The budget coordinate is
+$B=B_{\rm res}/b_{\rm ref}$; local investment and project prices use the
+same resource unit. Thus $p_jx_j$ and $z$ are resource expenditures, whereas
+$x,y,w$ are dimensionless increments of project capacity. Similarly,
+$C=C_{\rm useful}/c_{\rm ref}$ uses a fixed computational-service unit
+$c_{\rm ref}>0$. In particular, logarithms take dimensionless arguments.
+An efficiency improvement changes the production coefficient $a$, not
+$B$, unless it also changes the physical resources actually available.
+Other physical services retain the separate constraints in \cref{eq:chi}.
+
+The cumulative indices $n=1+x$, $h=1+x+y$, and $m=1+x+y+w$ retain the
+residence, industry, and observation accounting of the model. Useful
+computation and utility are
+\begin{align}
+ C&=C_0+a\ell(z)+G_n(x)+G_h(y),\label{eq:compute}\\
+ U&=F(C)+(1-q)E(x)+\epsilon_RR(x+y)
+       +\epsilon_II(x+y+w).\label{eq:utility}
+\end{align}
+Here $a>0$, $C_0\geq0$, $q\in[0,1]$, and the residual weights are
+non-negative. The functions $E,R,I$ are differentiable, non-decreasing,
+and concave on the feasible domain. The functions $G_n,G_h$ are
+continuous, non-decreasing, and concave, with $G_j(0)=0$ and finite right
+derivatives $G_j'(0)=r_j\geq0$. Set $r_m=0$. Local production is continuous
+and non-negative on $[0,B]$, with $\ell(0)=0$, and has a positive finite
+left derivative at $B$ and $\ell(B)>0$. Whenever global concavity is
+invoked, $\ell$ is also concave on this interval. These assumptions do
+not require a derivative at zero. The baseline is
+$\ell(z)=\ln(1+z)$ and $G_j(v)=r_jv$.
+
+We use the shifted-isoelastic computational value
+\begin{equation}
+ F_\eta(C)=
+ \begin{cases}
+ [(1+C)^{1-\eta}-1]/(1-\eta),&\eta\ne1,\\
+ \ln(1+C),&\eta=1,
+ \end{cases}
+ \qquad \eta\geq0,
+ \label{eq:isoelastic}
+\end{equation}
+so that $F_\eta'(C)=(1+C)^{-\eta}$, $F_\eta(0)=0$, and
+$F_\eta'(0)=1$. The common marginal-value normalization makes the
+residual weights comparable across this family. The value-curvature
+parameter $\eta$ is distinct from the service-efficiency factors $\eta_k$.
+Recursive description alone does not determine a welfare functional.
+% Insert the Stage 3 free-world-number lemma here after it is established.
+
+The residual slopes at the all-inward corner are
+\begin{align}
+ S_n&=(1-q)E'(0)+\epsilon_RR'(0)+\epsilon_II'(0),\nonumber\\
+ S_h&=\epsilon_RR'(0)+\epsilon_II'(0),&
+ S_m&=\epsilon_II'(0).
+ \label{eq:slopes}
+\end{align}
+Write $d_0=1+C_0\geq1$ and define
+\begin{equation}
+ \Omega=a\ell(B),\qquad
+ \Gamma(B)=\frac{\ell(B)}{\ell'(B)}.
+ \label{eq:omega-gamma}
+\end{equation}
+The first quantity is new local computational output at the corner;
+the second is a resource-scale measure of production curvature.
+Changing the multiplicative normalization of $\ell$ and compensating in
+$a$ changes neither quantity. Throughout, all-inward allocation means
+zero new expenditure in every external direction. It is stronger than
+zero new replication, since observation can be external without
+replicating.

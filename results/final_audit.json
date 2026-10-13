@@ -1,0 +1,502 @@
+{
+  "main_word_count": {
+    "text": 9091,
+    "headers": 192,
+    "captions": 113,
+    "literal_output": "9091+192+113 (42/2/590/65) File: /mnt/data/cith_v8/latex/main_text.tex"
+  },
+  "abstract_word_count": {
+    "text": 209,
+    "headers": 0,
+    "captions": 0,
+    "literal_output": "209+0+0 (0/0/0/0) File: /mnt/data/cith_v8/qa/abstract_for_count.tex"
+  },
+  "labels": 164,
+  "reference_uses": 128,
+  "duplicate_labels": [],
+  "unresolved_references": [],
+  "old_labels_not_retained": [],
+  "latex_warnings": [],
+  "pdf_pages": 47,
+  "manuscript_pages": 40,
+  "supplement_pages": 7,
+  "source_figure_hash_matches": {
+    "fig1.pdf": true,
+    "fig2.pdf": true,
+    "fig3.pdf": true,
+    "fig4.pdf": true
+  },
+  "statement_count": 28,
+  "statements": [
+    {
+      "environment": "lemma",
+      "title": "Finite-depth support frontier",
+      "labels": [
+        "prop:depth",
+        "eq:depth-bound"
+      ]
+    },
+    {
+      "environment": "lemma",
+      "title": "A free world-number margin",
+      "labels": [
+        "lem:world-curvature",
+        "eq:world-value"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "The common corner criterion",
+      "labels": [
+        "prop:hub",
+        "eq:hub"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "The original all-inward criterion",
+      "labels": [
+        "prop:corner",
+        "eq:corner"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Adding hard support constraints",
+      "labels": [
+        "cor:feasibility"
+      ]
+    },
+    {
+      "environment": "productioncorollary",
+      "title": "The tight logarithmic floor",
+      "labels": [
+        "cor:production-growth",
+        "eq:tight-floor"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Logarithmic productivity thresholds",
+      "labels": [
+        "lem:production",
+        "prop:threshold",
+        "eq:general-production",
+        "eq:acrit-general",
+        "eq:HA",
+        "eq:exact",
+        "eq:acrit"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "Growth obstruction and sharp productivity scaling",
+      "labels": [
+        "prop:growth-trichotomy",
+        "eq:necessary-output-growth",
+        "eq:sufficient-output-growth",
+        "eq:linear-value-growth"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Logarithmic pathwise specialization",
+      "labels": [
+        "prop:persistence",
+        "eq:pathwise",
+        "eq:path-ratio"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "At least exponential local returns",
+      "labels": [
+        "prop:exponential-necessity",
+        "eq:exponential-necessity"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "A unique productivity-independent tipping budget",
+      "labels": [
+        "prop:tipping",
+        "eq:tipping-budget",
+        "eq:gamma-monotone"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Fixed- and bounded-budget curvature",
+      "labels": [
+        "prop:curvature",
+        "eq:iso-corner"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "A unique inward-basin boundary",
+      "labels": [
+        "prop:basin",
+        "eq:basin-policy",
+        "eq:runaway-bound"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "Infinite-horizon verification and the inward policy",
+      "labels": [
+        "prop:infinite",
+        "eq:homothetic-index",
+        "eq:infinite-value",
+        "eq:infinite-inward"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Static reversals and the patient limit",
+      "labels": [
+        "cor:infinite-reversals"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "A future-adjusted inward condition",
+      "labels": [
+        "prop:dynamic"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "An unbounded-budget obstruction survives foresight",
+      "labels": [
+        "cor:dynamic-residual",
+        "eq:dynamic-residual-floor"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "A no-replication criterion",
+      "labels": [
+        "prop:no-replication",
+        "eq:no-replication"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Substitute bundles and zero-service corners",
+      "labels": [
+        "cor:bundle"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Growing budgets without new replication",
+      "labels": [
+        "cor:growing-no-replication"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "The endogenous-risk floor",
+      "labels": [
+        "prop:endogenous-risk",
+        "eq:risk-floor"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "Latency sufficient for the logarithmic corner",
+      "labels": [
+        "prop:latency",
+        "eq:latency-growth",
+        "eq:latency-bounded"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "No endogenous price drift on a stationary frontier",
+      "labels": [
+        "prop:depletion"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "A conditional risk cost of discount-induced abstention",
+      "labels": [
+        "cor:quiet-risk"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "Necessary uniformity and the exact two-type window",
+      "labels": [
+        "prop:uniformity",
+        "eq:uniformity-bound",
+        "eq:two-type-window"
+      ]
+    },
+    {
+      "environment": "proposition",
+      "title": "Preemption equilibria and a separate cascade test",
+      "labels": [
+        "prop:preemption",
+        "eq:preemption-KKT"
+      ]
+    },
+    {
+      "environment": "lemma",
+      "title": "Exponential production: an exact endpoint test",
+      "labels": [
+        "lem:exponential-endpoints",
+        "eq:exponential-objective"
+      ]
+    },
+    {
+      "environment": "lemma",
+      "title": "No-further-investment certificate on a mobilization path",
+      "labels": [
+        "lem:stay-certificate",
+        "eq:stay-certificate",
+        "eq:finite-capture-certificate"
+      ]
+    }
+  ],
+  "page_checks": [
+    {
+      "page": 1,
+      "characters": 3227,
+      "text_outside_page": []
+    },
+    {
+      "page": 2,
+      "characters": 4258,
+      "text_outside_page": []
+    },
+    {
+      "page": 3,
+      "characters": 3274,
+      "text_outside_page": []
+    },
+    {
+      "page": 4,
+      "characters": 2823,
+      "text_outside_page": []
+    },
+    {
+      "page": 5,
+      "characters": 3062,
+      "text_outside_page": []
+    },
+    {
+      "page": 6,
+      "characters": 3187,
+      "text_outside_page": []
+    },
+    {
+      "page": 7,
+      "characters": 2534,
+      "text_outside_page": []
+    },
+    {
+      "page": 8,
+      "characters": 3450,
+      "text_outside_page": []
+    },
+    {
+      "page": 9,
+      "characters": 1840,
+      "text_outside_page": []
+    },
+    {
+      "page": 10,
+      "characters": 2653,
+      "text_outside_page": []
+    },
+    {
+      "page": 11,
+      "characters": 3244,
+      "text_outside_page": []
+    },
+    {
+      "page": 12,
+      "characters": 3203,
+      "text_outside_page": []
+    },
+    {
+      "page": 13,
+      "characters": 3271,
+      "text_outside_page": []
+    },
+    {
+      "page": 14,
+      "characters": 3231,
+      "text_outside_page": []
+    },
+    {
+      "page": 15,
+      "characters": 3268,
+      "text_outside_page": []
+    },
+    {
+      "page": 16,
+      "characters": 3888,
+      "text_outside_page": []
+    },
+    {
+      "page": 17,
+      "characters": 3012,
+      "text_outside_page": []
+    },
+    {
+      "page": 18,
+      "characters": 2969,
+      "text_outside_page": []
+    },
+    {
+      "page": 19,
+      "characters": 3185,
+      "text_outside_page": []
+    },
+    {
+      "page": 20,
+      "characters": 3147,
+      "text_outside_page": []
+    },
+    {
+      "page": 21,
+      "characters": 3708,
+      "text_outside_page": []
+    },
+    {
+      "page": 22,
+      "characters": 3290,
+      "text_outside_page": []
+    },
+    {
+      "page": 23,
+      "characters": 3780,
+      "text_outside_page": []
+    },
+    {
+      "page": 24,
+      "characters": 4036,
+      "text_outside_page": []
+    },
+    {
+      "page": 25,
+      "characters": 3627,
+      "text_outside_page": []
+    },
+    {
+      "page": 26,
+      "characters": 2716,
+      "text_outside_page": []
+    },
+    {
+      "page": 27,
+      "characters": 3578,
+      "text_outside_page": []
+    },
+    {
+      "page": 28,
+      "characters": 3051,
+      "text_outside_page": []
+    },
+    {
+      "page": 29,
+      "characters": 3373,
+      "text_outside_page": []
+    },
+    {
+      "page": 30,
+      "characters": 3687,
+      "text_outside_page": []
+    },
+    {
+      "page": 31,
+      "characters": 3973,
+      "text_outside_page": []
+    },
+    {
+      "page": 32,
+      "characters": 3703,
+      "text_outside_page": []
+    },
+    {
+      "page": 33,
+      "characters": 3559,
+      "text_outside_page": []
+    },
+    {
+      "page": 34,
+      "characters": 3116,
+      "text_outside_page": []
+    },
+    {
+      "page": 35,
+      "characters": 3209,
+      "text_outside_page": []
+    },
+    {
+      "page": 36,
+      "characters": 3693,
+      "text_outside_page": []
+    },
+    {
+      "page": 37,
+      "characters": 3271,
+      "text_outside_page": []
+    },
+    {
+      "page": 38,
+      "characters": 1992,
+      "text_outside_page": []
+    },
+    {
+      "page": 39,
+      "characters": 2934,
+      "text_outside_page": []
+    },
+    {
+      "page": 40,
+      "characters": 2445,
+      "text_outside_page": []
+    },
+    {
+      "page": 41,
+      "characters": 3360,
+      "text_outside_page": []
+    },
+    {
+      "page": 42,
+      "characters": 2387,
+      "text_outside_page": []
+    },
+    {
+      "page": 43,
+      "characters": 2556,
+      "text_outside_page": []
+    },
+    {
+      "page": 44,
+      "characters": 3000,
+      "text_outside_page": []
+    },
+    {
+      "page": 45,
+      "characters": 2346,
+      "text_outside_page": []
+    },
+    {
+      "page": 46,
+      "characters": 2476,
+      "text_outside_page": []
+    },
+    {
+      "page": 47,
+      "characters": 2148,
+      "text_outside_page": []
+    }
+  ],
+  "scope": "Mechanical checks and word counts; mathematical review recorded separately."
+}

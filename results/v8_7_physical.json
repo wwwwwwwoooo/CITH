@@ -1,0 +1,109 @@
+{
+  "seed": 2026101370,
+  "counts": {
+    "radiator_root": [
+      500,
+      0
+    ],
+    "dimensional_scaling": [
+      500,
+      0
+    ],
+    "discount_threshold": [
+      500,
+      0
+    ],
+    "edges": [
+      2,
+      0
+    ]
+  },
+  "radiators": {
+    "Mercury": {
+      "mass_kg": 3.30103e+23,
+      "temperature_K": 378.16182074187225,
+      "Wien_peak_micron": 7.662782957571885
+    },
+    "Jupiter": {
+      "mass_kg": 1.898125e+27,
+      "temperature_K": 43.4269017150317,
+      "Wien_peak_micron": 66.72757762458895
+    }
+  },
+  "solar_budget_Eref1e32": 120.80249279999998,
+  "discount_table": [
+    {
+      "ratio": 1000.0,
+      "omega": 1.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 0.17269388197455343
+    },
+    {
+      "ratio": 1000.0,
+      "omega": 1000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 0.00017269388197455342
+    },
+    {
+      "ratio": 1000.0,
+      "omega": 1000000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 1.7269388197455343e-07
+    },
+    {
+      "ratio": 10000000000.0,
+      "omega": 1.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 0.5756462732485115
+    },
+    {
+      "ratio": 10000000000.0,
+      "omega": 1000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 0.0005756462732485115
+    },
+    {
+      "ratio": 10000000000.0,
+      "omega": 1000000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 5.756462732485114e-07
+    },
+    {
+      "ratio": 1e+20,
+      "omega": 1.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 1.151292546497023
+    },
+    {
+      "ratio": 1e+20,
+      "omega": 1000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 0.001151292546497023
+    },
+    {
+      "ratio": 1e+20,
+      "omega": 1000000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 1.1512925464970228e-06
+    },
+    {
+      "ratio": 1e+40,
+      "omega": 1.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 2.302585092994046
+    },
+    {
+      "ratio": 1e+40,
+      "omega": 1000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 0.002302585092994046
+    },
+    {
+      "ratio": 1e+40,
+      "omega": 1000000.0,
+      "lag_year": 40,
+      "delta_per_subjective_year": 2.3025850929940456e-06
+    }
+  ],
+  "sigma_SB": 5.6703744191844314e-08
+}

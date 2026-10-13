@@ -1,0 +1,69 @@
+\subsection{World creation and computational-value curvature}
+\label{sec:world-value}
+A generative architecture does not select a welfare functional, but a free
+margin in the number of worlds changes the value of additional computation.
+To expose that margin, let $C_{\rm tot}\geq u>0$ be service available to
+worlds, let each world receive $c\geq u$, and initially relax world count
+to a real variable $W\geq1$. The constraint is $Wc=C_{\rm tot}$. The
+exponent $\theta\in[0,1]$ values world population; the elasticity
+$\alpha\in(0,1]$ values resources within a world. This distinction is
+between two margins of valuation, not between simulated and physical
+persons.
+
+\begin{lemma}[A free world-number margin]
+\label{lem:world-curvature}
+For the continuous relaxation,
+\begin{equation}
+ \max_{Wc=C_{\rm tot},\,W\geq1,\,c\geq u}W^\theta c^\alpha
+ =\begin{cases}
+ u^{\alpha-\theta}C_{\rm tot}^{\theta},&\theta>\alpha,\\
+ C_{\rm tot}^{\alpha},&\theta\leq\alpha.
+ \end{cases}
+ \label{eq:world-value}
+\end{equation}
+Thus the value exponent is $v=\max(\theta,\alpha)>0$. Writing
+$C_{\rm tot}=u(1+C)$ and normalizing the value at the mandatory root
+as $[V(u(1+C))/V(u)-1]/v$ gives exactly $F_{1-v}(C)$.
+For the separate specification $W^\theta\ln(c/u)$, $\theta=0$ gives
+$\ln(C_{\rm tot}/u)$, while $\theta>0$ gives
+$(C_{\rm tot}/u)^\theta/(\exp(1)\theta)$ only once
+$C_{\rm tot}\geq u\exp(1/\theta)$.
+\end{lemma}
+\noindent\emph{Proof sketch.}
+Substitution of $W=C_{\rm tot}/c$ reduces the power case to the sign
+of $\alpha-\theta$. In the logarithmic case, optimize
+$\exp[\theta\ln(C_{\rm tot}/u)-\theta v_c]v_c$ over
+$0\leq v_c\leq\ln(C_{\rm tot}/u)$. The full proof, ties, and the
+integer-world correction are in \cref{app:world-proof}.
+
+At $\theta=\alpha$ every feasible continuous split ties. With integer
+world counts and $\theta>\alpha$, the exact value becomes
+$C_{\rm tot}^\alpha\lfloor C_{\rm tot}/u\rfloor^{\theta-\alpha}$;
+it has the same asymptotic exponent, not the same differentiable function.
+A regular recursive hierarchy restricts the available counts further but
+preserves this exponent. The shifted smooth family is therefore exact for
+the stated relaxation, not for discrete launches or indivisible worlds.
+
+Average-log valuation is one interpretation of the baseline $\eta=1$.
+It is not forced by computational sophistication. Total-log valuation
+with freely increasing world count instead has linear asymptotic value,
+and the power model with $\theta=1$ has linear value exactly. At
+$\eta=0$ the corner condition becomes
+\begin{equation}
+ p_ja\ell'(B)\geq r_j+S_j.
+ \label{eq:totalist-corner}
+\end{equation}
+For logarithmic local production, densification must satisfy
+$a/(1+B)\geq\max_j(r_j+S_j)/p_j$. More valued lives can thus strengthen
+the attraction of unused external resources rather than eliminate it.
+This connects the opportunity-cost comparison to
+\citet{Bostrom2003Waste}, without attributing the present production
+function or equation to that paper.
+
+Recursion supplies one implementation of an open-ended world-number
+margin. Its analytical role is now explicit: admitting that margin and
+specifying its population weight changes the induced value curvature.
+A non-recursive implementation with the same feasible world counts has
+the same implication. Recursion neither manufactures additional substrate
+nor chooses $\theta$ on behalf of a civilization. The extensive world
+margin, rather than nesting by itself, is the operative assumption.

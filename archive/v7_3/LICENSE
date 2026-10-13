@@ -1,0 +1,13 @@
+# Licensing
+
+Copyright (c) 2026 Hyeonjun Joo
+
+Original Python and shell code in this repository is licensed under the MIT License in LICENSE-CODE.
+
+The manuscript and supplementary text (LaTeX and PDF), original figures, documentation, and original synthetic data and numerical outputs are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+The governing legal terms are at https://creativecommons.org/licenses/by/4.0/legalcode.en
+
+Attribute Hyeonjun Joo, the manuscript title, and version, link to the license, and indicate changes as required by CC BY 4.0.
+
+Third-party works are excluded from these grants. In particular, manuscript/cithplainnat.bst retains the LaTeX Project Public License terms and copyright notices in that file. Bibliographic citations do not confer a license to the cited works.

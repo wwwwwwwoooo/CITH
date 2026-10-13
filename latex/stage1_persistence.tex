@@ -1,0 +1,292 @@
+% MAIN TEXT, v8 Section 4. Stage 4's infinite-horizon benchmark will follow.
+\section{Persistence: growing versus bounded budgets}
+\label{sec:persistence}
+
+\subsection{Unbounded physical budgets}
+
+\begin{proposition}[Growth obstruction and sharp productivity scaling]
+\label{prop:growth-trichotomy}
+Let $B(t)\to\infty$, let $\ell$ be concave, and retain the assumptions
+of \cref{prop:hub}. Suppose that eventually some direction has
+$p_j(t)\leq M<\infty$ and $S_j(t)\geq s>0$.
+For $\eta\geq1$, the all-inward corner is excluded at every sufficiently
+late time, for every path of finite positive productivities $a(t)$.
+For $0\leq\eta<1$, eventual inwardness instead requires
+\begin{equation}
+ \Omega(t)\geq
+ \left[\frac{s\Gamma(B(t))}{M}\right]^{1/(1-\eta)}
+ \geq\left[\frac{sB(t)}{M}\right]^{1/(1-\eta)}.
+ \label{eq:necessary-output-growth}
+\end{equation}
+For the sufficiency statement, additionally fix all $p_j>0$, finite
+$r_j,S_j\geq0$, and $d_0$. If $0<\eta<1$, it is sufficient that,
+eventually,
+\begin{equation}
+ \Omega(t)\geq c_\Omega\Gamma(B(t))^{1/(1-\eta)},\qquad
+ c_\Omega>
+ \left(\max_j\frac{S_j}{p_j}\right)^{1/(1-\eta)}.
+ \label{eq:sufficient-output-growth}
+\end{equation}
+The inequalities then become strict. For $\eta=0$, the exact condition is
+\begin{equation}
+ \frac{\Omega(t)}{\Gamma(B(t))}=a(t)\ell'(B(t))
+ \geq\max_j\frac{r_j+S_j}{p_j}.
+ \label{eq:linear-value-growth}
+\end{equation}
+In particular, for $\ell(z)=z$ and $0<\eta<1$,
+$a(t)\geq c_\Omega B(t)^{\eta/(1-\eta)}$ with the strict coefficient
+condition above is eventually sufficient.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+For $\eta=1$ the residual term has positive infimum one after division
+by $S_j\Gamma$. For $\eta>1$ that infimum is
+\begin{equation}
+ \min_{\Omega>0}\frac{(d_0+\Omega)^\eta}{\Omega}
+ =d_0^{\eta-1}\frac{\eta^\eta}{(\eta-1)^{\eta-1}}.
+ \label{eq:residual-minimum}
+\end{equation}
+Both conflict with $\Gamma(B)\geq B\to\infty$. Below unit curvature,
+comparison with $\Omega^{\eta-1}$ gives the necessary rate; the strict
+coefficient in \cref{eq:sufficient-output-growth} leaves an asymptotic
+margin for remote computational returns. See \cref{app:growth-proof}.
+
+This result concerns the growth of physical resources, not the growth
+of computational efficiency. With persistent residual value and bounded
+prices, productivity can compensate for an unbounded resource budget
+only on the $\eta<1$ branch of the concave-production model. The endpoint
+$\eta=0$ must retain $r_j$ as well as $S_j$; remote computation is not a
+vanishing correction in that case.
+
+\begin{corollary}[Logarithmic pathwise specialization]
+\label{prop:persistence}
+Let $\ell(z)=\ln(1+z)$ and $\eta=1$, with fixed $r_j,d_0$ and finite
+positive $B(t),a(t),p_j(t)$. Define $H_j(t),A_j(t)$ by
+\cref{eq:HA}. On any specified path, the corner is optimal at every
+time exactly when, in every direction with $A_j(t)>0$,
+\begin{equation}
+ p_j(t)>H_j(t),\qquad
+ a(t)\geq\max_{j:A_j(t)>0}
+       \frac{A_j(t)}{p_j(t)-H_j(t)}.
+ \label{eq:pathwise}
+\end{equation}
+In particular, where $S_j(t)>0$,
+\begin{equation}
+ \frac{p_j(t)}{S_j(t)}>[1+B(t)]\ln[1+B(t)].
+ \label{eq:path-ratio}
+\end{equation}
+For $B(t)\to\infty$, fixed positive residual slopes therefore require
+prices at least of order $B\ln B$; bounded prices require
+$S_j(t)=O((B\ln B)^{-1})$. These rate restrictions do not replace the
+productivity inequality. A zero-slope direction with $r_j>0$ requires
+$a(t)\geq[1+B(t)]r_j/p_j(t)$.
+\end{corollary}
+\begin{proof}
+Apply \cref{eq:exact,eq:acrit} at each time. Non-negativity and $d_0>0$
+imply $A_j=0$ exactly when $r_j=S_j=0$. Division by a positive slope
+and $(1+B)\ln(1+B)\sim B\ln B$ give the rate statements.
+\end{proof}
+
+% MOVE HERE or immediately after this subsection, unchanged:
+% the pure-computation paragraph containing eq:Rstar and eq:budgetcrit,
+% and Figure 2 (fig:budget). Its algebraic reduction is also recorded
+% in the appendix proof of prop:growth-trichotomy.
+
+\subsection{What increasing returns would have to accomplish}
+
+\begin{proposition}[At least exponential local returns]
+\label{prop:exponential-necessity}
+Let $\eta=1$ and retain the model assumptions apart from local
+concavity. Let a fixed local production function satisfy $\ell(0)=0$
+and be continuously differentiable and positive with positive derivative
+for positive budgets. Let $B(t)$ be continuous with $B(t)\to\infty$.
+If eventually $p_j(t)\leq M$, $S_j(t)\geq s>0$, and the corner is
+optimal at every time, then for all sufficiently large $B$,
+\begin{equation}
+ \frac{\dd\ln\ell(B)}{\dd B}>\frac{s}{M},\qquad
+ \ell(B)>\ell(B_0)\exp\!\left[\frac{s}{M}(B-B_0)\right]
+ \quad(B>B_0).
+ \label{eq:exponential-necessity}
+\end{equation}
+Convex local production gives $\Gamma(B)\leq B$, but polynomial
+superlinearity is insufficient: $\ell(z)=z^k$ gives $\Gamma=B/k$.
+By contrast, $\ell(z)=[\exp(\psi z)-1]/\psi$, $\psi>0$, gives
+$\Gamma=[1-\exp(-\psi B)]/\psi<1/\psi$.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The necessary strict floor gives $\ell'/\ell>S_j/p_j\geq s/M$.
+Continuity of the budget path covers every sufficiently large budget,
+so integration proves the exponential bound. The remaining identities
+follow by differentiation; see \cref{app:returns-proof}.
+
+The required increase is with local resource investment, not merely
+with calendar time. This supplies a quantitative test for
+compression-based inward development proposals such as
+\citet{Smart2012}. Increasing returns remove the concavity guarantee.
+For exponential local production with one affine external channel and
+linear residual value, an exact global test is available: the corner
+must satisfy its first-order condition and outperform the all-external
+endpoint (\cref{lem:exponential-endpoints}). Smooth concave residual
+utilities, or smooth concave external production, can invalidate this
+two-test shortcut. Explicit counterexamples are given in
+\cref{app:exponential-counterexamples}.
+
+\subsection{The tipping budget}
+
+\begin{proposition}[A unique productivity-independent tipping budget]
+\label{prop:tipping}
+Let $\eta=1$ and $\ell\in C^2([0,\infty))$, with $\ell(0)=0$,
+$\ell'>0$, and $\ell''\leq0$. Fix $d_0\geq1$, all $p_j>0$, and finite
+$r_j,S_j\geq0$. If at least one $S_j>0$, define $B_{\rm tip}$ by
+\begin{equation}
+ \Gamma(B_{\rm tip})=\min_{j:S_j>0}\frac{p_j}{S_j}.
+ \label{eq:tipping-budget}
+\end{equation}
+This budget exists and is unique, since
+\begin{equation}
+ \Gamma(0)=0,\qquad
+ \Gamma'(B)=1-\frac{\ell(B)\ell''(B)}{\ell'(B)^2}\geq1.
+ \label{eq:gamma-monotone}
+\end{equation}
+The corner is attainable at finite productivity exactly for
+$0<B<B_{\rm tip}$, where its threshold is
+$a_{\rm crit}^{\ell}(B)$ from \cref{eq:acrit-general}.
+This threshold is non-decreasing and diverges as
+$B\uparrow B_{\rm tip}$. At $B=B_{\rm tip}$ as well as above it,
+no finite productivity makes the corner optimal.
+If eventually $B(t)\leq B'<B_{\rm tip}$ and $a(t)\to\infty$, every
+static optimizer is eventually all-inward. If every $S_j=0$, set
+$B_{\rm tip}=\infty$; no finite productivity-independent residual
+barrier exists.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+Differentiate $\Gamma$. Below its unique crossing, every denominator
+in \cref{eq:acrit-general} is positive. Each nontrivial threshold is
+non-decreasing because its denominator has derivative
+$p_j\ell''-S_j\ell'\leq0$. A binding positive-slope denominator
+vanishes at the crossing. See \cref{app:tipping-proof}.
+
+\begin{corollary}[Fixed- and bounded-budget curvature]
+\label{prop:curvature}
+At a fixed positive budget and under concave production, each nontrivial
+direction has a unique finite high-productivity threshold for
+$0\leq\eta<1$. At $\eta=1$, \cref{eq:acrit-general} applies.
+At $\eta>1$, a direction with $S_j>0$ has an inward set in $a>0$
+that is empty, a singleton, or a bounded closed interval. A direction
+with $S_j=0$ requires only $a\geq r_j/[p_j\ell'(B)]$ for every $\eta$.
+For the local logarithm the test is precisely
+\begin{equation}
+ r_j+S_j(d_0+aL)^\eta\leq\frac{p_ja}{1+B},
+ \qquad L=\ln(1+B).
+ \label{eq:iso-corner}
+\end{equation}
+For the path statements assume additionally that $\ell$ is $C^1$ with
+positive derivative near the positive limiting budget. Consequently, if
+$B(t)\to\bar B\in(0,\infty)$ and $a(t)\to\infty$,
+fixed parameters give eventual inwardness for $\eta<1$. More generally, this conclusion holds for any $0<B(t)\leq B_{\max}<\infty$ if $\ell$ is concave and $\ell'(B_{\max})>0$. For $\eta>1$,
+a positive residual slope excludes eventual inwardness. At $\eta=1$,
+$\bar B<B_{\rm tip}$ gives eventual inwardness and
+$\bar B>B_{\rm tip}$ excludes it. At equality, the rate of approach
+from below must be compared with $a_{\rm crit}^{\ell}(B(t))$.
+\end{corollary}
+\noindent\emph{Proof.}
+See \cref{app:curvature-proof}. This is the fixed-budget curvature
+classification, with a uniform bound near the positive limiting budget;
+it is not a new assumption about preferences. ``No tipping budget''
+for $\eta<1$ means no productivity-independent finite obstruction,
+not absence of a budget threshold at a fixed productivity.
+
+\subsection{Resource acquisition and the inward basin}
+
+Separate resources available locally from those supplied by prior
+replicating acquisition. In discrete planning periods, write
+\begin{equation}
+ B_t=B_{\rm loc}(t)+g_XX_t,\qquad
+ X_{t+1}=X_t+x_t,\qquad g_X\geq0,
+ \label{eq:acquisition-stock}
+\end{equation}
+where $B_{\rm loc}(t)$ is non-decreasing with limit $\bar B>0$.
+Only the replicating channel enters $X$; observation alone does not.
+With no previous acquisition, an all-inward history has $X=0$ and
+$B_t\leq\bar B$. Stopping new investment later does not erase an
+inherited external stock. Since both stock and local mobilization are
+non-decreasing, a crossing of $B_{\rm tip}$ cannot be reversed in this
+model. In a multi-channel model this excludes all-inward expenditure,
+not necessarily zero replication.
+
+A basin cannot be specified by four scalar parameters without also
+specifying the resource-mobilization path and the full residual utility.
+The following benchmark fixes both. It uses one replicating channel,
+linear residual value, and an already mobilized local ceiling.
+
+\begin{proposition}[A unique inward-basin boundary]
+\label{prop:basin}
+Fix $p>0$, $S>0$, $r\geq0$, $d_0\geq1$, $g_a>0$, and $g_X>0$.
+Let $X_0=0$, $B_{\rm loc}(t)=\bar B$, $a_t=a_0\exp(g_at)$, and
+$0<\bar B<B_{\rm tip}$, where
+$(1+B_{\rm tip})\ln(1+B_{\rm tip})=p/S$.
+At each period choose the unique maximizer
+\begin{equation}
+ x^*(B,a)=\underset{0\leq x\leq B/p}{\arg\max}
+ \left\{\ln[d_0+a\ln(1+B-px)+rx]+Sx\right\}.
+ \label{eq:basin-policy}
+\end{equation}
+There is a unique
+$a_{\rm sep}(g_a,g_X,\bar B)\in(0,a_{\rm crit}^{\ell}(\bar B))$
+with the following classification:
+\begin{itemize}[leftmargin=*,nosep]
+\item If $a_0>a_{\rm sep}$, new external investment stops in finite time
+and stays zero, at a budget strictly below $B_{\rm tip}$.
+\item If $a_0<a_{\rm sep}$, the budget reaches or exceeds $B_{\rm tip}$
+in finite time and new external investment remains positive thereafter.
+\item If $a_0=a_{\rm sep}$, every finite-time investment is positive,
+but $B_t\uparrow B_{\rm tip}$ and
+$g_X\sum_{t\geq0}x_t=B_{\rm tip}-\bar B$.
+\end{itemize}
+Whenever $B_t\geq B_{\rm tip}$,
+\begin{equation}
+ x_t>\frac{B_t-B_{\rm tip}}p,\qquad
+ B_{t+1}-B_{\rm tip}>
+ (1+g_X/p)(B_t-B_{\rm tip}).
+ \label{eq:runaway-bound}
+\end{equation}
+The boundary $a_{\rm sep}$ is non-increasing in $g_a$ and
+non-decreasing in $g_X$ and in $\bar B/B_{\rm tip}$, with the other
+parameters fixed.
+\end{proposition}
+\noindent\emph{Proof sketch.}
+The unique static investment is continuous, increases with the budget,
+and decreases with productivity. A path that neither stops nor crosses
+must converge to the tipping budget. Two such paths cannot coexist:
+a positive gap between their budgets cannot shrink. Continuity separates
+the open sets of stopping and crossing paths, giving exactly one boundary.
+The complete proof and finite-time basin certificates are in
+\cref{app:basin-proof}.
+
+For example, let $(p,S,r,d_0)=(1,0.002,0.05,1)$,
+$g_a=0.05$, $g_X=0.5$, and $\bar B=0.6B_{\rm tip}$. New calculations
+give $B_{\rm tip}=106.001289$,
+$a_{\rm crit}^{\ell}(\bar B)=7.279612$, and
+$a_{\rm sep}\simeq6.63216$. Starting at $a_0=0.5$ crosses the tipping
+budget at $t=2$; starting at $a_0=50$ is inward from the start. With
+$a_0=0.5$ but $g_X=0$, investment stops at $t=54$, not at $t=0$.
+Thus removing resource feedback removes this lock-in mechanism, not
+the initial incentive to expand.
+
+Lock-in here names an absorbing allocation regime, not a welfare
+mistake. Additional resources do not reduce the feasible set. In this
+costless, non-depreciating stock benchmark, any finite-horizon
+continuation value is non-decreasing in $X$: this follows by backward
+induction because a larger stock permits the same current project and
+more local investment. A strictly improving myopic external deviation
+therefore remains improving after adding such a continuation. A
+forward-looking planner need not avoid the tipping budget. Productive
+local alternatives require the separate dynamic comparison developed
+in the infinite-horizon subsection.
+
+\paragraph{Speculative physical mapping (conjecture).}
+If a fixed-horizon energy budget increases with usable host luminosity,
+and if denser stellar neighbourhoods reduce external resource prices
+while leaving residual values fixed, both changes raise
+$\bar B/B_{\rm tip}$. The basin comparison then suggests a greater
+propensity to expand. The conjecture concerns these physical parameter
+mappings, not the proved comparative static.

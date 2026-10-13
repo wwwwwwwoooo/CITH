@@ -1,0 +1,46 @@
+{
+  "seed": 2026101304,
+  "tolerance": 2e-08,
+  "counts": {
+    "endpoint_equivalence": [
+      2400,
+      0
+    ],
+    "Gamma_identities": [
+      2409,
+      0
+    ],
+    "edges": [
+      2,
+      0
+    ],
+    "smooth_counterexamples": [
+      2,
+      0
+    ]
+  },
+  "FOC_pass": 1073,
+  "FOC_pass_but_not_global": 57,
+  "unresolved": 0,
+  "linear_example": {
+    "derivative": -0.0023662532943216075,
+    "U0": 5.68977251929096,
+    "Uend": 5.916290731874155
+  },
+  "residual_counterexample": {
+    "derivative": -0.2355255179295147,
+    "U0": 5.39931433653905,
+    "U7": 5.468332253724685,
+    "Uend": 5.32,
+    "xstar": 7.06625519483694,
+    "Ustar": 5.474844176899045
+  },
+  "production_counterexample": {
+    "derivative": -0.5519163846892245,
+    "U0": 3.0,
+    "U2": 3.024976236722326,
+    "Uend": 2.9444389791664403,
+    "xstar": 2.0172452008035107,
+    "Ustar": 3.025699179329503
+  }
+}
