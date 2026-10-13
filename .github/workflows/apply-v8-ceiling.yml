@@ -1,0 +1,30 @@
+name: Apply CITH v8 efficiency-ceiling revision
+on:
+  push:
+    branches:
+      - cith-v8-efficiency-ceiling
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message == 'Stage verified CITH v8 efficiency-ceiling patch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Apply verified binary patch, audit, and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .github/v8-ceiling-parts/part{01..06} > /tmp/cith-v8-ceiling.patch
+          git apply --check --binary /tmp/cith-v8-ceiling.patch
+          git apply --binary /tmp/cith-v8-ceiling.patch
+          sha256sum --quiet --check SHA256SUMS
+          rm -rf .github/v8-ceiling-parts
+          rm .github/workflows/apply-v8-ceiling.yml
+          git add -A
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Revise CITH v8 for bounded computational efficiency'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
