@@ -1,0 +1,17 @@
+1e BASIN: seed=2026101306; bracket width <= 1e-06
+static_optimizer: PASS=200 FAIL=0
+comparative_statics: PASS=203 FAIL=0
+runaway_bound: PASS=200 FAIL=0
+basin_brackets: PASS=5 FAIL=0
+sufficient_certificates: PASS=36 FAIL=0
+stay_certificate: PASS=240 FAIL=0
+edge_dynamics: PASS=4 FAIL=0
+g_a=0.01: a_sep in [7.143175778, 7.143176655]
+g_a=0.03: a_sep in [6.880805518, 6.880806394]
+g_a=0.05: a_sep in [6.632159108, 6.632159985]
+g_a=0.10: a_sep in [6.067303188, 6.067304064]
+g_a=0.20: a_sep in [5.146423866, 5.146424742]
+a0=0.5, g_X=0.5, bar/Btip=0.6: OUT at t=2, B=133.881585754
+a0=50, g_X=0.5, bar/Btip=0.6: IN at t=0, B=63.600773657
+a0=0.5, g_X=0, bar/Btip=0.6: IN at t=54, B=63.600773657
+a0=50, g_X=0.5, bar/Btip=1.5: OUT at t=0, B=159.001934142

@@ -257,8 +257,9 @@ non-decreasing. At least one positive numerator has a denominator
 tending to zero as $B\uparrow B_{\rm tip}$, proving divergence.
 
 If $B(t)\leq B'<B_{\rm tip}$ eventually, the threshold is bounded
-above by $a_{\rm crit}^{\ell}(B')<\infty$. For all sufficiently late
-times $a(t)$ strictly exceeds it. Every nontrivial corner inequality
+above by $a_{\rm crit}^{\ell}(B')<\infty$. The revised hypothesis
+states that $a(t)$ strictly exceeds this finite bound eventually;
+divergence of productivity is unnecessary. Every nontrivial corner inequality
 is then strict; in a trivial direction it is also strict because
 $p_j>0$ and the local marginal value is positive. The hub proposition
 therefore makes every optimizer all-inward. If all $S_j=0$, all
@@ -306,11 +307,16 @@ positive constants and $d_\ell$ is likewise bounded away from zero
 and above. These statements follow from the maintained differentiability
 and concavity assumptions locally, or directly from the $C^2$ assumptions
 of the tipping result. For $\eta<1$, the preceding required prices
-are uniformly $O(a^{-1}+a^{\eta-1})$ and hence tend to zero.
-For $\eta>1$ and $S_j>0$, they are uniformly bounded below by a
-positive constant times $a^{\eta-1}$ and hence diverge. At $\eta=1$
-a limiting budget below the tipping point admits a uniform finite
-threshold, while a limit above it eventually lies above it.
+are uniformly $O(a^{-1}+a^{\eta-1})$ and hence tend to zero as a
+function of $a$. Choose a finite threshold above which these bounds are
+strictly below every positive $p_j$; it suffices for the actual path to
+eventually exceed that threshold. For $\eta>1$ and $S_j>0$, they are
+uniformly bounded below by a positive constant times $a^{\eta-1}$.
+A finite threshold above which this lower bound exceeds $p_j$ likewise
+suffices for exclusion. At $\eta=1$, a limiting budget below the tipping
+point is eventually bounded by some $B'<B_{\rm tip}$, and eventual
+$a(t)>a_{\rm crit}^{\ell}(B')$ suffices. A limit above the tipping point
+eventually lies above it.
 At equality, the exact pointwise comparison with the diverging
 threshold is indispensable.
 \end{proof}
@@ -492,3 +498,161 @@ $[r_j+S_j(d_0+a\ell(B_{\max}))^\eta]/[a\ell'(B_{\max})]$,
 which tends to zero. This proves the assertion even when budgets approach
 zero. It does not prove the analogous $\eta>1$ statement without a positive
 lower budget bound.
+
+
+\subsection{Effective budgets with a finite productivity ceiling}
+\label{app:ceiling-budget-proof}
+\begin{proof}[Proof of \cref{cor:ceiling-budget}]
+Let $f(B)=a_{\rm crit}^{\ell}(B)$ for $0<B<B_{\rm tip}$.
+Every denominator in \cref{eq:acrit-general} is positive there.
+The finite maximum of the resulting continuous ratios is continuous.
+The proof of \cref{prop:tipping} establishes that $f$ is non-decreasing
+and $f(B)\to\infty$ at $B_{\rm tip}$. Thus its sublevel set
+$E=\{B\in(0,B_{\rm tip}):f(B)\leq a_{\max}\}$ is downward closed.
+Divergence gives a neighbourhood below $B_{\rm tip}$ disjoint from $E$.
+If $E$ is empty, the stated convention gives $B^*=0$, and no positive
+budget is attainable under the ceiling. Otherwise its positive supremum
+lies strictly below $B_{\rm tip}$. A sequence in $E$ tending to that
+supremum, continuity, and downward closure prove $E=(0,B^*]$.
+If $f(B^*)<a_{\max}$, continuity would put a larger budget in $E$;
+hence $f(B^*)=a_{\max}$. The exact corner criterion now proves all
+attainability and endpoint claims. A larger ceiling enlarges $E$.
+For every fixed $b<B_{\rm tip}$, all ceilings at least $f(b)$ have
+$B^*\geq b$. Together with $B^*<B_{\rm tip}$ this proves convergence.
+The upper bound on $B_{\rm tip}$ follows from $\Gamma(B)\geq B$.
+
+No strict monotonicity of $f$ was used. For example, take $\ell(B)=B$,
+$d_0=1$, two unit prices, and $(r_1,S_1)=(0,1)$,
+$(r_2,S_2)=(2,0)$. Then $B_{\rm tip}=1$ and
+$f(B)=\max\{(1-B)^{-1},2\}$. A ceiling below two admits no positive
+budget; at two, $B^*=1/2$ even though $f(0)=2$. This plateau also
+warns against replacing existence by uniqueness of an inward optimizer.
+At $a=2$, the second channel can exchange local and remote computation
+without changing total computation or residual value. Strict inequalities,
+not weak ceiling feasibility, justify the assertion about every optimizer
+in the revised path statement of \cref{prop:tipping}.
+\end{proof}
+
+\subsection{Bounded productivity below unit value curvature}
+\label{app:ceiling-growth-proof}
+For any fixed $b_0>0$, concavity gives
+$\ell(B)\leq\ell(b_0)+\ell'(b_0)(B-b_0)$ for $B\geq b_0$.
+The finite derivative therefore supplies a finite $K>0$ with
+$\ell(B)\leq KB$ eventually; differentiability at zero is unnecessary.
+A ceiling gives $\Omega\leq a_{\max}KB$. For $0<\eta<1$, dividing
+\cref{eq:necessary-output-growth} by $B$ requires a quantity bounded
+above by $a_{\max}K$ to dominate a positive multiple of
+$B^{\eta/(1-\eta)}$, a contradiction. More generally the same calculation
+bounds any eventually inward productivity below by
+$K^{-1}(s/M)^{1/(1-\eta)}B^{\eta/(1-\eta)}$, proving $a(t)\to\infty$.
+At $\eta=0$, \cref{eq:linear-value-growth} is exact. Replacing actual
+$a(t)$ by its upper bound yields only a necessary test. If its right-hand
+side is bounded below by a positive constant and $\ell'(B(t))\to0$,
+that test fails. Linear production, whose derivative does not vanish,
+can instead satisfy it with a fixed finite productivity.
+
+\subsection{The capped basin and its necessary qualification}
+\label{app:capped-basin-proof}
+\begin{proof}[Proof of \cref{cor:capped-basin}]
+The continuity and monotonicities of $x^*(B,a)$ proved in
+\cref{app:basin-proof} do not depend on the productivity path.
+In case (i), put $\delta_x=x^*(\bar B,a_{\max})>0$.
+Since $B_t\geq\bar B$ and $a_t\leq a_{\max}$, those monotonicities give
+$x_t\geq\delta_x$ until crossing and
+$B_t\geq\bar B+t g_X\delta_x$. Crossing therefore occurs no later than
+$\lceil(B_{\rm tip}-\bar B)/(g_X\delta_x)\rceil$.
+The runaway bound is a static inequality for every finite $a>0$, so it
+continues to apply under either ceiling path.
+
+For case (ii), the one-channel logarithmic threshold
+\[
+ f(B)=\frac{r+Sd_0}{p/(1+B)-S\ln(1+B)}
+\]
+is strictly increasing below $B_{\rm tip}$. Write $b_*=B^*(a_{\max})$.
+Then $\bar B<b_*<B_{\rm tip}$ and $f(b_*)=a_{\max}$.
+As before, call a path captured when some $x_t=0$, and crossed when it
+reaches $B_{\rm tip}$. Capture is permanent because productivity is
+non-decreasing and the budget then stops changing. Every captured path
+ends below $b_*$: a path with $a_0<a_{\max}$ has $a_t<a_{\max}$ at
+all finite dates, while $a_0=a_{\max}$ captures at $\bar B<b_*$.
+
+An uncaptured, uncrossed path has positive investments and bounded
+increasing budgets, so $B_t\to B_\infty\leq B_{\rm tip}$ and $x_t\to0$.
+Continuity and $a_t\to a_{\max}$ imply
+$x^*(B_\infty,a_{\max})=0$. The positive derivative at $B_{\rm tip}$
+rules out that endpoint, and the corner test gives $B_\infty\leq b_*$.
+At every finite date noncapture gives $a_t<f(B_t)$. Continuity below
+the tipping budget then gives $a_{\max}\leq f(B_\infty)$, so
+$B_\infty\geq b_*$. Hence $B_\infty=b_*$, and telescoping yields
+$g_X\sum_{t\geq0}x_t=b_*-\bar B$.
+
+The captured initial values form an upper interval and crossed values a
+lower interval, by the policy monotonicities and pathwise ordering.
+The captured interval is nonempty since it contains $a_0\geq f(\bar B)$;
+the crossed interval is nonempty by the additional hypothesis. Both are
+relatively open in $(0,a_{\max})$: one period after capture the corner
+inequality is strict because $a_0<a_{\max}$, while a crossing is strict
+at most one period after reaching $B_{\rm tip}$. Finite-horizon
+continuity preserves these certificates. Connectedness supplies an initial
+value in neither interval.
+
+There cannot be two such values. If $a_0^-<a_0^+$, their productivities
+remain strictly ordered at every finite date under
+\cref{eq:saturating-productivity}. The corresponding budget gap is
+non-negative and non-decreasing. If both limits were $b_*$, this gap
+would be identically zero. Since $x_t\to0$ and $B_t\geq\bar B>0$,
+their positive optima are eventually interior; strict productivity
+monotonicity at the common budget then makes their investments different,
+a contradiction. The unique remaining value is $a_{\rm sep}$.
+Openness of capture at $f(\bar B)<a_{\max}$ and the existence of a
+positive crossed value give $0<a_{\rm sep}<f(\bar B)$.
+This proves the classification with no claim that every strictly ordered
+family supplies a nonempty crossed basin.
+\end{proof}
+
+\paragraph{Counterexample without a crossed path.}
+Let $p=S=d_0=g_X=1$, $r=0$, $\bar B=1/10$, $a_{\max}=10$,
+and $g_a=\ln2$. For every $0<a_0\leq10$, the first budget satisfies
+$B_1\leq1/5$, while $a_1=5+a_0/2>5$.
+Using $\ln(6/5)<1/5$ gives
+\[
+ f(1/5)=\frac1{5/6-\ln(6/5)}<\frac{30}{19}<5.
+\]
+Consequently all paths are captured by date one, although
+$a_{\max}>f(\bar B)$ and the family preserves strict order at every
+finite date. Thus strict order alone does not establish a positive
+separator with both basins nonempty.
+
+\paragraph{A hard cap changes the boundary classification.}
+Keep $p=S=d_0=g_X=1$, $r=0$, and $\bar B=1/10$, but set
+$a_{\max}=f(1/5)$ and $a_t=\min(10^ta_0,a_{\max})$.
+For every $a_0\in[a_{\max}/10,1]$, the date-zero all-external endpoint
+is optimal because its derivative numerator is $1-a_0\geq0$.
+Thus $B_1=1/5$; at date one productivity reaches the cap and the corner
+condition is an equality. Strict concavity makes $x_1=0$, and the path
+stays at $B_t=B^*(a_{\max})=1/5$ thereafter.
+For $0<a_0<a_{\max}/10$, the first budget is again $1/5$, but
+$x_1>0$ and $B_2>B^*$. Once above $B^*$, the uniform lower bound
+$x^*(B_2,a_{\max})>0$ forces finite crossing of $B_{\rm tip}$.
+The dividing initial value is still unique in this example, but its
+path is captured in finite time, and a whole interval of initial values
+shares the same terminal boundary budget. The unique \emph{uncaptured}
+critical-path conclusion cannot be transferred to this coalescing family.
+
+\subsection{Shared technological change}
+\label{app:shared-technology-proof}
+\begin{proof}[Proof of \cref{cor:shared-technology}]
+The fixed $B,d_0,S_j$ leave $H_j=(1+B)\ln(1+B)S_j$ unchanged.
+The transformed $A_j$ is $(1+B)(\lambda_r r_j+d_0S_j)$.
+Divide these by $p_j/\kappa$ and by
+$(p_j/\kappa)\lambda_a a$, respectively, and subtract the original
+remote-return term to obtain \cref{eq:shared-technology}.
+No division by $r_j$, $S_j$, or $A_j$ is involved, so zero slopes cause
+no exception. If $\lambda_r=\lambda_a$, the remote-computation component
+of $\zeta_j$ changes only by $\kappa$, whereas its residual component
+changes by $\kappa/\lambda_a$. In either case $\xi_j$ changes by
+$\kappa$, independently of productivity. In particular,
+$\kappa\xi_j\geq1$ in a nontrivial residual direction rules out inwardness
+at every finite transformed productivity. This does not assert that a
+particular physical technology realizes these multipliers.
+\end{proof}

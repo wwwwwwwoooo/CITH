@@ -674,6 +674,30 @@ no archived inputs are overlaid and no population frequency is estimated.}
 \end{figure}
 
 
+\begin{samepage}
+\subsection{Shared technological change}
+\begin{corollary}[Shared gains and the phase coordinates]
+\label{cor:shared-technology}
+Fix $B,d_0,S_j$ and logarithmic local production and value. Under
+$(a,r_j,p_j)\mapsto(\lambda_a a,\lambda_r r_j,p_j/\kappa)$, with
+$\lambda_a,\lambda_r,\kappa>0$, \cref{eq:HA,eq:phase-coordinates} give
+\begin{equation}
+ \xi'_j=\kappa\xi_j,\qquad
+ \zeta'_j=\frac{\kappa}{\lambda_a}
+ \left[\zeta_j+\frac{(1+B)(\lambda_r-1)r_j}{p_ja}\right].
+ \label{eq:shared-technology}
+\end{equation}
+\end{corollary}
+\end{samepage}
+The identity also covers zero slopes; see \cref{app:shared-technology-proof}.
+Cheaper external projects enlarge the productivity-independent floor.
+Productivity cannot offset this increase in $\xi_j$.
+Manufacturing improvements affecting both local substrates and replicating
+platforms therefore do not guarantee inwardness; no particular implementation
+is assumed. The archived Table~\ref{tab:scenarios} illustrates the distinction:
+local productivity multiplied by ten changes 219 inward cases to 314;
+shared productivity gives 222; the external price-floor factor $0.01$ gives zero.
+
 \section{Persistence: growing versus bounded budgets}
 \label{sec:persistence}
 
@@ -724,6 +748,16 @@ Both conflict with $\Gamma(B)\geq B\to\infty$. Below unit curvature,
 comparison with $\Omega^{\eta-1}$ gives the necessary rate; the strict
 coefficient in \cref{eq:sufficient-output-growth} leaves an asymptotic
 margin for remote computational returns. See \cref{app:growth-proof}.
+
+\paragraph{Remark (Bounded productivity on growing budgets).}
+Under \cref{prop:growth-trichotomy}, $a\leq a_{\max}<\infty$ gives
+$\Omega=O(B)$ by concavity. For $0<\eta<1$, this contradicts
+\cref{eq:necessary-output-growth}; an eventually inward path requires
+$a(t)\to\infty$. At $\eta=0$, \cref{eq:linear-value-growth} still uses
+actual productivity; its necessary ceiling test is
+$a_{\max}\ell'(B(t))\geq\max_j(r_j+S_j)/p_j$.
+A positive right-hand side and vanishing local marginal production
+therefore exclude persistence. See \cref{app:ceiling-growth-proof}.
 
 This result concerns the growth of physical resources, not the growth
 of computational efficiency. With persistent residual value and bounded
@@ -824,8 +858,9 @@ $a_{\rm crit}^{\ell}(B)$ from \cref{eq:acrit-general}.
 This threshold is non-decreasing and diverges as
 $B\uparrow B_{\rm tip}$. At $B=B_{\rm tip}$ as well as above it,
 no finite productivity makes the corner optimal.
-If eventually $B(t)\leq B'<B_{\rm tip}$ and $a(t)\to\infty$, every
-static optimizer is eventually all-inward. If every $S_j=0$, set
+If eventually $B(t)\leq B'<B_{\rm tip}$ and
+$a(t)>a_{\rm crit}^{\ell}(B')$, every static optimizer is eventually
+all-inward. If every $S_j=0$, set
 $B_{\rm tip}=\infty$; no finite productivity-independent residual
 barrier exists.
 \end{proposition}
@@ -835,6 +870,27 @@ in \cref{eq:acrit-general} is positive. Each nontrivial threshold is
 non-decreasing because its denominator has derivative
 $p_j\ell''-S_j\ell'\leq0$. A binding positive-slope denominator
 vanishes at the crossing. See \cref{app:tipping-proof}.
+
+\begin{corollary}[The effective budget under a productivity ceiling]
+\label{cor:ceiling-budget}
+Retain \cref{prop:tipping} with some $S_j>0$ and fix
+$0<a_{\max}<\infty$. Define
+\begin{equation}
+ B^*(a_{\max})=\sup\{B\in(0,B_{\rm tip}):
+                     a_{\rm crit}^{\ell}(B)\leq a_{\max}\},
+ \qquad \sup\varnothing:=0.
+ \label{eq:ceiling-budget}
+\end{equation}
+An inward optimum at some $0<a\leq a_{\max}$ exists exactly for
+$0<B\leq B^*(a_{\max})$. If $B^*>0$, its endpoint is included and
+$a_{\rm crit}^{\ell}(B^*)=a_{\max}$; an actual productivity must still
+meet \cref{eq:acrit-general}. Moreover, $B^*<B_{\rm tip}$,
+$B^*$ is non-decreasing in $a_{\max}$, and $B^*\to B_{\rm tip}$ as
+$a_{\max}\to\infty$.
+\end{corollary}
+An efficiency redesign can raise this effective budget, but never beyond
+$B_{\rm tip}\leq\min_{j:S_j>0}p_j/S_j$, since $\Gamma(B)\geq B$.
+The empty-set and equality cases are proved in \cref{app:ceiling-budget-proof}.
 
 \begin{corollary}[Fixed- and bounded-budget curvature]
 \label{prop:curvature}
@@ -850,14 +906,17 @@ For the local logarithm the test is precisely
  \qquad L=\ln(1+B).
  \label{eq:iso-corner}
 \end{equation}
-For the path statements assume additionally that $\ell$ is $C^1$ with
-positive derivative near the positive limiting budget. Consequently, if
-$B(t)\to\bar B\in(0,\infty)$ and $a(t)\to\infty$,
-fixed parameters give eventual inwardness for $\eta<1$. More generally, this conclusion holds for any $0<B(t)\leq B_{\max}<\infty$ if $\ell$ is concave and $\ell'(B_{\max})>0$. For $\eta>1$,
-a positive residual slope excludes eventual inwardness. At $\eta=1$,
-$\bar B<B_{\rm tip}$ gives eventual inwardness and
-$\bar B>B_{\rm tip}$ excludes it. At equality, the rate of approach
-from below must be compared with $a_{\rm crit}^{\ell}(B(t))$.
+For the path statements fix the parameters and assume $\ell$ is $C^1$
+with positive derivative near $B(t)\to\bar B\in(0,\infty)$.
+For $\eta<1$, eventually exceeding a sufficiently large finite productivity
+threshold gives eventual strict inwardness. This also holds for any
+$0<B(t)\leq B_{\max}<\infty$ under concavity and
+$\ell'(B_{\max})>0$. For $\eta>1$ and some $S_j>0$, eventually
+exceeding a sufficiently large finite threshold instead excludes inwardness
+near the positive limit. At $\eta=1$, $\bar B<B'<B_{\rm tip}$ and
+eventual $a(t)>a_{\rm crit}^{\ell}(B')$ suffice; $\bar B>B_{\rm tip}$
+excludes inwardness. At equality the pointwise comparison with
+$a_{\rm crit}^{\ell}(B(t))$ remains indispensable.
 \end{corollary}
 \noindent\emph{Proof.}
 See \cref{app:curvature-proof}. This is the fixed-budget curvature
@@ -865,6 +924,10 @@ classification, with a uniform bound near the positive limiting budget;
 it is not a new assumption about preferences. ``No tipping budget''
 for $\eta<1$ means no productivity-independent finite obstruction,
 not absence of a budget threshold at a fixed productivity.
+
+For $\eta>1$, computational value saturates while residual motives persist:
+sufficiently large efficiency gains reduce the marginal value of local
+investment and eventually favour an external deviation, not permanent inwardness.
 
 \subsection{Resource acquisition and the inward basin}
 
@@ -933,6 +996,30 @@ the open sets of stopping and crossing paths, giving exactly one boundary.
 The complete proof and finite-time basin certificates are in
 \cref{app:basin-proof}.
 
+\begin{corollary}[Saturating productivity and the inward basin]
+\label{cor:capped-basin}
+Retain the one-channel model and parameter assumptions of \cref{prop:basin},
+but replace its productivity path.
+(i) If $a_t$ is positive, non-decreasing, and bounded by
+$a_{\max}<a_{\rm crit}^{\ell}(\bar B)$, every path reaches
+$B_{\rm tip}$ in finite time.
+(ii) Let
+\begin{equation}
+ a_t=a_{\max}-(a_{\max}-a_0)\exp(-g_at),\quad
+ 0<a_0\leq a_{\max},\quad a_{\max}>a_{\rm crit}^{\ell}(\bar B).
+ \label{eq:saturating-productivity}
+\end{equation}
+If some initial productivity crosses $B_{\rm tip}$, a unique
+$a_{\rm sep}\in(0,a_{\rm crit}^{\ell}(\bar B))$ separates finite-time
+capture at higher initial productivity from crossing at lower productivity.
+Its boundary path has $x_t>0$ and
+$B_t\uparrow B^*(a_{\max})$, not $B_{\rm tip}$.
+After reaching $B_{\rm tip}$, \cref{eq:runaway-bound} applies in both cases.
+\end{corollary}
+The crossing hypothesis is essential: all paths can instead be captured.
+The proof and a hard-cap counterexample to the uncaptured-boundary
+classification are in \cref{app:capped-basin-proof}.
+
 For example, let $(p,S,r,d_0)=(1,0.002,0.05,1)$,
 $g_a=0.05$, $g_X=0.5$, and $\bar B=0.6B_{\rm tip}$. New calculations
 give $B_{\rm tip}=106.001289$,
@@ -960,7 +1047,8 @@ and if denser stellar neighbourhoods reduce external resource prices
 while leaving residual values fixed, both changes raise
 $\bar B/B_{\rm tip}$. The basin comparison then suggests a greater
 propensity to expand. The conjecture concerns these physical parameter
-mappings, not the proved comparative static.
+mappings, not the proved comparative static. With bounded efficiency,
+\cref{cor:capped-basin} adds the effective ceiling and crossing qualification.
 
 \subsection{An infinite-horizon benchmark}
 \label{sec:dynamic}
@@ -1240,6 +1328,18 @@ premium divided by that multiplier is $r_j(1+z)/B^2\to0$, smaller than
 either strictly positive net price. A complete proof is in
 \cref{app:growing-norep-proof}.
 
+\paragraph{Remark (The growth construction uses $a=B^2$).}
+Keep the other assumptions of \cref{cor:growing-no-replication}, but
+impose $0<a\leq a_{\max}<\infty$. Then $F'(C^*)/\lambda\to\infty$,
+so every channel with $r_j>0$ eventually violates
+\cref{eq:replication-reduced}. At $z^*>0$ this ratio is $(1+z^*)/a$.
+With both services interior and $\Delta_j=p_j-p_m-p_b>0$, the exact test is
+$a\ell'(z^*)\geq r_j/\Delta_j$; its ceiling counterpart
+$a_{\max}\ell'(z^*)\geq r_j/\Delta_j$ is necessary, not sufficient.
+For $r_j=0$ the channel passes automatically. The proof, including $z^*=0$,
+is in \cref{app:norep-ceiling-proof}. This is the same declining-marginal-production
+budget effect isolated by \cref{eq:budgetcrit}.
+
 This construction is a counterexample to transferring the all-inward
 unbounded-budget exclusion directly to no replication. Non-replicating
 services absorb a persistent preference rather than requiring its weight
@@ -1454,6 +1554,15 @@ general implication from quietness to fragility when dormant backups,
 local mitigation, negligible hazards, or information about future hazards
 are available. Only geographically mitigable, otherwise unaddressed risk
 belongs in this comparison.
+
+\paragraph{Remark (A finite-lived host).}
+If the planning horizon includes certain terminal loss of the usable host,
+and only geographical separation mitigates it, the stay-put risk model has
+$\vartheta=1$. For positive computation and a feasible backup with
+$\varphi'(0)>0$, \cref{app:risk-proof} excludes the inward corner.
+Efficiency can postpone resource insufficiency, not remove this stipulated
+terminal loss; discounting does not lower its probability
+(\cref{cor:quiet-risk}).
 
 \subsection{An explicit dimensional dictionary}
 The return relevant to delay is a \emph{dimensionless marginal advantage},
@@ -1828,6 +1937,11 @@ not imply impatience about external opportunities. Delays can devalue
 resilience as well as replication. Only hazards reduced by separation
 contribute to the geographical backup premium; a seed and a mirror also
 have different restoration capabilities beyond the model's scale exponent.
+If energy efficiency is obtained through slower adiabatic or reversible
+computation, $a$ and $\omega$ are coupled: raising $a$ can lower $\omega$
+and weaken the delay mechanism in \cref{prop:latency}. Quantifying this
+trade-off is left to future work.
+
 The luminosity and neighbourhood-density interpretation of the basin is
 explicitly conjectural. The normalized access map in the supplement is
 not a propulsion law, and its superluminal limits are sensitivity
@@ -1854,10 +1968,12 @@ local production has a residual-value floor at least proportional to
 the physical budget. With persistent external motives and bounded prices,
 no increase in computational productivity alone defeats that obstruction.
 A bounded local resource base changes the question: below a unique tipping
-budget, sufficient productivity can support inward allocation; at or above
-it, no finite productivity can. In the specified acquisition dynamics,
+budget, sufficient productivity can support inward allocation, subject to
+the lower $B^*(a_{\max})$ when efficiency is capped; at or above
+$B_{\rm tip}$, no finite productivity can. In the exponential-productivity acquisition benchmark,
 premature expansion can cross that boundary before local efficiency
 catches up, and a unique critical initial productivity separates the paths.
+A saturating path requires the crossing qualification in \cref{cor:capped-basin}.
 
 A Fermi-relevant explanation must then replace the all-inward corner by
 the absence of new replication. Observation and dormant backups can absorb
@@ -1895,22 +2011,21 @@ commands. No newly assigned repository DOI is asserted in this version.
 Hyeonjun Joo is an independent researcher in the Republic of Korea.
 Correspondence: \href{mailto:jonejoo0805@gmail.com}{jonejoo0805@gmail.com}.
 \paragraph{Financial support and competing interests.}
-The author's previously supplied declaration reports no specific funding
-and no competing interests; the author should reconfirm it for submission.
+This research received no specific funding.
+\textup{[Author confirmation required.]} % [저자 확인]
+The author declares no competing interests.
+\textup{[Author confirmation required.]} % [저자 확인]
 \paragraph{Author contributions and approval.}
 Hyeonjun Joo developed the motivating hypothesis and directed the revision.
 The human author is responsible for approving every mathematical claim,
 scientific interpretation, reference, and final wording before submission.
-This generated review version does not attest that a final human approval
-has already occurred.
+The author approves the final manuscript for submission.
+\textup{[Author confirmation required.]} % [저자 확인]
 \paragraph{Use of artificial-intelligence tools.}
-According to the author's supplied revision brief, the critique, proposed
-extensions, and initial numerical spot checks were produced using Anthropic's
-Claude. OpenAI ChatGPT drafted and integrated the v8 material, developed
+The critique, proposed extensions, and initial numerical spot checks were
+produced using Anthropic's Claude. OpenAI ChatGPT drafted and integrated the v8 material, developed
 proofs and counterexamples, wrote and executed additional numerical checks,
-and assisted bibliographic and LaTeX verification. The originally named
-Claude check scripts were not available in the retrieved package and were
-not claimed as re-executed. Both the generating and checking implementations
+and assisted bibliographic and LaTeX verification. Both the generating and checking implementations
 are AI-assisted; separate implementations are not independent human peer
 review. No AI system is an author. The human author retains responsibility
 for approval of all claims and the submission decision.
@@ -2177,8 +2292,9 @@ non-decreasing. At least one positive numerator has a denominator
 tending to zero as $B\uparrow B_{\rm tip}$, proving divergence.
 
 If $B(t)\leq B'<B_{\rm tip}$ eventually, the threshold is bounded
-above by $a_{\rm crit}^{\ell}(B')<\infty$. For all sufficiently late
-times $a(t)$ strictly exceeds it. Every nontrivial corner inequality
+above by $a_{\rm crit}^{\ell}(B')<\infty$. The revised hypothesis
+states that $a(t)$ strictly exceeds this finite bound eventually;
+divergence of productivity is unnecessary. Every nontrivial corner inequality
 is then strict; in a trivial direction it is also strict because
 $p_j>0$ and the local marginal value is positive. The hub proposition
 therefore makes every optimizer all-inward. If all $S_j=0$, all
@@ -2226,11 +2342,16 @@ positive constants and $d_\ell$ is likewise bounded away from zero
 and above. These statements follow from the maintained differentiability
 and concavity assumptions locally, or directly from the $C^2$ assumptions
 of the tipping result. For $\eta<1$, the preceding required prices
-are uniformly $O(a^{-1}+a^{\eta-1})$ and hence tend to zero.
-For $\eta>1$ and $S_j>0$, they are uniformly bounded below by a
-positive constant times $a^{\eta-1}$ and hence diverge. At $\eta=1$
-a limiting budget below the tipping point admits a uniform finite
-threshold, while a limit above it eventually lies above it.
+are uniformly $O(a^{-1}+a^{\eta-1})$ and hence tend to zero as a
+function of $a$. Choose a finite threshold above which these bounds are
+strictly below every positive $p_j$; it suffices for the actual path to
+eventually exceed that threshold. For $\eta>1$ and $S_j>0$, they are
+uniformly bounded below by a positive constant times $a^{\eta-1}$.
+A finite threshold above which this lower bound exceeds $p_j$ likewise
+suffices for exclusion. At $\eta=1$, a limiting budget below the tipping
+point is eventually bounded by some $B'<B_{\rm tip}$, and eventual
+$a(t)>a_{\rm crit}^{\ell}(B')$ suffices. A limit above the tipping point
+eventually lies above it.
 At equality, the exact pointwise comparison with the diverging
 threshold is indispensable.
 \end{proof}
@@ -2413,6 +2534,164 @@ which tends to zero. This proves the assertion even when budgets approach
 zero. It does not prove the analogous $\eta>1$ statement without a positive
 lower budget bound.
 
+
+\subsection{Effective budgets with a finite productivity ceiling}
+\label{app:ceiling-budget-proof}
+\begin{proof}[Proof of \cref{cor:ceiling-budget}]
+Let $f(B)=a_{\rm crit}^{\ell}(B)$ for $0<B<B_{\rm tip}$.
+Every denominator in \cref{eq:acrit-general} is positive there.
+The finite maximum of the resulting continuous ratios is continuous.
+The proof of \cref{prop:tipping} establishes that $f$ is non-decreasing
+and $f(B)\to\infty$ at $B_{\rm tip}$. Thus its sublevel set
+$E=\{B\in(0,B_{\rm tip}):f(B)\leq a_{\max}\}$ is downward closed.
+Divergence gives a neighbourhood below $B_{\rm tip}$ disjoint from $E$.
+If $E$ is empty, the stated convention gives $B^*=0$, and no positive
+budget is attainable under the ceiling. Otherwise its positive supremum
+lies strictly below $B_{\rm tip}$. A sequence in $E$ tending to that
+supremum, continuity, and downward closure prove $E=(0,B^*]$.
+If $f(B^*)<a_{\max}$, continuity would put a larger budget in $E$;
+hence $f(B^*)=a_{\max}$. The exact corner criterion now proves all
+attainability and endpoint claims. A larger ceiling enlarges $E$.
+For every fixed $b<B_{\rm tip}$, all ceilings at least $f(b)$ have
+$B^*\geq b$. Together with $B^*<B_{\rm tip}$ this proves convergence.
+The upper bound on $B_{\rm tip}$ follows from $\Gamma(B)\geq B$.
+
+No strict monotonicity of $f$ was used. For example, take $\ell(B)=B$,
+$d_0=1$, two unit prices, and $(r_1,S_1)=(0,1)$,
+$(r_2,S_2)=(2,0)$. Then $B_{\rm tip}=1$ and
+$f(B)=\max\{(1-B)^{-1},2\}$. A ceiling below two admits no positive
+budget; at two, $B^*=1/2$ even though $f(0)=2$. This plateau also
+warns against replacing existence by uniqueness of an inward optimizer.
+At $a=2$, the second channel can exchange local and remote computation
+without changing total computation or residual value. Strict inequalities,
+not weak ceiling feasibility, justify the assertion about every optimizer
+in the revised path statement of \cref{prop:tipping}.
+\end{proof}
+
+\subsection{Bounded productivity below unit value curvature}
+\label{app:ceiling-growth-proof}
+For any fixed $b_0>0$, concavity gives
+$\ell(B)\leq\ell(b_0)+\ell'(b_0)(B-b_0)$ for $B\geq b_0$.
+The finite derivative therefore supplies a finite $K>0$ with
+$\ell(B)\leq KB$ eventually; differentiability at zero is unnecessary.
+A ceiling gives $\Omega\leq a_{\max}KB$. For $0<\eta<1$, dividing
+\cref{eq:necessary-output-growth} by $B$ requires a quantity bounded
+above by $a_{\max}K$ to dominate a positive multiple of
+$B^{\eta/(1-\eta)}$, a contradiction. More generally the same calculation
+bounds any eventually inward productivity below by
+$K^{-1}(s/M)^{1/(1-\eta)}B^{\eta/(1-\eta)}$, proving $a(t)\to\infty$.
+At $\eta=0$, \cref{eq:linear-value-growth} is exact. Replacing actual
+$a(t)$ by its upper bound yields only a necessary test. If its right-hand
+side is bounded below by a positive constant and $\ell'(B(t))\to0$,
+that test fails. Linear production, whose derivative does not vanish,
+can instead satisfy it with a fixed finite productivity.
+
+\subsection{The capped basin and its necessary qualification}
+\label{app:capped-basin-proof}
+\begin{proof}[Proof of \cref{cor:capped-basin}]
+The continuity and monotonicities of $x^*(B,a)$ proved in
+\cref{app:basin-proof} do not depend on the productivity path.
+In case (i), put $\delta_x=x^*(\bar B,a_{\max})>0$.
+Since $B_t\geq\bar B$ and $a_t\leq a_{\max}$, those monotonicities give
+$x_t\geq\delta_x$ until crossing and
+$B_t\geq\bar B+t g_X\delta_x$. Crossing therefore occurs no later than
+$\lceil(B_{\rm tip}-\bar B)/(g_X\delta_x)\rceil$.
+The runaway bound is a static inequality for every finite $a>0$, so it
+continues to apply under either ceiling path.
+
+For case (ii), the one-channel logarithmic threshold
+\[
+ f(B)=\frac{r+Sd_0}{p/(1+B)-S\ln(1+B)}
+\]
+is strictly increasing below $B_{\rm tip}$. Write $b_*=B^*(a_{\max})$.
+Then $\bar B<b_*<B_{\rm tip}$ and $f(b_*)=a_{\max}$.
+As before, call a path captured when some $x_t=0$, and crossed when it
+reaches $B_{\rm tip}$. Capture is permanent because productivity is
+non-decreasing and the budget then stops changing. Every captured path
+ends below $b_*$: a path with $a_0<a_{\max}$ has $a_t<a_{\max}$ at
+all finite dates, while $a_0=a_{\max}$ captures at $\bar B<b_*$.
+
+An uncaptured, uncrossed path has positive investments and bounded
+increasing budgets, so $B_t\to B_\infty\leq B_{\rm tip}$ and $x_t\to0$.
+Continuity and $a_t\to a_{\max}$ imply
+$x^*(B_\infty,a_{\max})=0$. The positive derivative at $B_{\rm tip}$
+rules out that endpoint, and the corner test gives $B_\infty\leq b_*$.
+At every finite date noncapture gives $a_t<f(B_t)$. Continuity below
+the tipping budget then gives $a_{\max}\leq f(B_\infty)$, so
+$B_\infty\geq b_*$. Hence $B_\infty=b_*$, and telescoping yields
+$g_X\sum_{t\geq0}x_t=b_*-\bar B$.
+
+The captured initial values form an upper interval and crossed values a
+lower interval, by the policy monotonicities and pathwise ordering.
+The captured interval is nonempty since it contains $a_0\geq f(\bar B)$;
+the crossed interval is nonempty by the additional hypothesis. Both are
+relatively open in $(0,a_{\max})$: one period after capture the corner
+inequality is strict because $a_0<a_{\max}$, while a crossing is strict
+at most one period after reaching $B_{\rm tip}$. Finite-horizon
+continuity preserves these certificates. Connectedness supplies an initial
+value in neither interval.
+
+There cannot be two such values. If $a_0^-<a_0^+$, their productivities
+remain strictly ordered at every finite date under
+\cref{eq:saturating-productivity}. The corresponding budget gap is
+non-negative and non-decreasing. If both limits were $b_*$, this gap
+would be identically zero. Since $x_t\to0$ and $B_t\geq\bar B>0$,
+their positive optima are eventually interior; strict productivity
+monotonicity at the common budget then makes their investments different,
+a contradiction. The unique remaining value is $a_{\rm sep}$.
+Openness of capture at $f(\bar B)<a_{\max}$ and the existence of a
+positive crossed value give $0<a_{\rm sep}<f(\bar B)$.
+This proves the classification with no claim that every strictly ordered
+family supplies a nonempty crossed basin.
+\end{proof}
+
+\paragraph{Counterexample without a crossed path.}
+Let $p=S=d_0=g_X=1$, $r=0$, $\bar B=1/10$, $a_{\max}=10$,
+and $g_a=\ln2$. For every $0<a_0\leq10$, the first budget satisfies
+$B_1\leq1/5$, while $a_1=5+a_0/2>5$.
+Using $\ln(6/5)<1/5$ gives
+\[
+ f(1/5)=\frac1{5/6-\ln(6/5)}<\frac{30}{19}<5.
+\]
+Consequently all paths are captured by date one, although
+$a_{\max}>f(\bar B)$ and the family preserves strict order at every
+finite date. Thus strict order alone does not establish a positive
+separator with both basins nonempty.
+
+\paragraph{A hard cap changes the boundary classification.}
+Keep $p=S=d_0=g_X=1$, $r=0$, and $\bar B=1/10$, but set
+$a_{\max}=f(1/5)$ and $a_t=\min(10^ta_0,a_{\max})$.
+For every $a_0\in[a_{\max}/10,1]$, the date-zero all-external endpoint
+is optimal because its derivative numerator is $1-a_0\geq0$.
+Thus $B_1=1/5$; at date one productivity reaches the cap and the corner
+condition is an equality. Strict concavity makes $x_1=0$, and the path
+stays at $B_t=B^*(a_{\max})=1/5$ thereafter.
+For $0<a_0<a_{\max}/10$, the first budget is again $1/5$, but
+$x_1>0$ and $B_2>B^*$. Once above $B^*$, the uniform lower bound
+$x^*(B_2,a_{\max})>0$ forces finite crossing of $B_{\rm tip}$.
+The dividing initial value is still unique in this example, but its
+path is captured in finite time, and a whole interval of initial values
+shares the same terminal boundary budget. The unique \emph{uncaptured}
+critical-path conclusion cannot be transferred to this coalescing family.
+
+\subsection{Shared technological change}
+\label{app:shared-technology-proof}
+\begin{proof}[Proof of \cref{cor:shared-technology}]
+The fixed $B,d_0,S_j$ leave $H_j=(1+B)\ln(1+B)S_j$ unchanged.
+The transformed $A_j$ is $(1+B)(\lambda_r r_j+d_0S_j)$.
+Divide these by $p_j/\kappa$ and by
+$(p_j/\kappa)\lambda_a a$, respectively, and subtract the original
+remote-return term to obtain \cref{eq:shared-technology}.
+No division by $r_j$, $S_j$, or $A_j$ is involved, so zero slopes cause
+no exception. If $\lambda_r=\lambda_a$, the remote-computation component
+of $\zeta_j$ changes only by $\kappa$, whereas its residual component
+changes by $\kappa/\lambda_a$. In either case $\xi_j$ changes by
+$\kappa$, independently of productivity. In particular,
+$\kappa\xi_j\geq1$ in a nontrivial residual direction rules out inwardness
+at every finite transformed productivity. This does not assert that a
+particular physical technology realizes these multipliers.
+\end{proof}
+
 \section{Proofs for world valuation and residual substitution}
 \label{app:stage23}
 \subsection{World-number optimization}
@@ -2589,6 +2868,52 @@ in every optimizer. Finally, at the all-inward corner the service slopes
 $J_I/s_I$ and $J_R/s_R$ are fixed and positive, and bounded project prices
 contradict the growing logarithmic residual floor. This proves the
 claimed separation without assuming any resource-acquisition dynamics.
+
+
+\subsection{The no-replication construction under a finite ceiling}
+\label{app:norep-ceiling-proof}
+Keep the fixed parameters, logarithmic production and value, exponential
+service utilities, $q=1$, and positive net prices of
+\cref{cor:growing-no-replication}, but allow any positive productivity
+path with $a\leq a_{\max}<\infty$. The restricted face remains strictly
+concave and budget-exhausting. At least one of the expenditures
+$z,p_mw,p_bb$ is at least $B/3$. If it is $z$, its positive-coordinate
+multiplier condition yields
+\[
+ \lambda=\frac{a}{(1+z)[d_0+a\ln(1+z)]}
+ \leq\frac{3a_{\max}}{d_0B}.
+\]
+If it is $p_mw$, put $u=w/s_I$ and use $u e^{-u}\leq e^{-1}$:
+$\lambda p_mw=J_Iu e^{-u}\leq J_I/e$, whence
+$\lambda\leq3J_I/(eB)$. The backup case gives $3J_R/(eB)$.
+Consequently, with the fixed finite constant
+$K=3\max\{a_{\max}/d_0,J_I/e,J_R/e\}$,
+\begin{equation}
+ 0<\lambda\leq K/B,\qquad
+ \frac{F'(C^*)}{\lambda}
+ \geq\frac{B}{K[d_0+a_{\max}\ln(1+B)]}\longrightarrow\infty.
+ \label{eq:norep-ceiling-bound}
+\end{equation}
+This uniform proof includes $z=0$ and needs no positive lower bound on
+$a$. Since $\lambda\to0$, each service's strictly positive marginal
+value at zero forces $w,b>0$ eventually. The reduced test is then
+$r_jF'(C^*)/\lambda\leq\Delta_j$, where
+$\Delta_j=p_j-p_m-p_b>0$ is fixed. Every $r_j>0$ eventually fails it.
+No no-replication face optimum is then a full optimum.
+
+If $z>0$, $\lambda=F'(C^*)a\ell'(z)$ gives the exact identity
+$F'(C^*)/\lambda=1/[a\ell'(z)]=(1+z)/a$ and the exact condition
+$a\ell'(z)\geq r_j/\Delta_j$ at the optimized face point.
+The ceiling provides the necessary inequality with $a_{\max}$, not a
+sufficient condition for an arbitrary actual productivity or an
+unoptimized choice of $z$. If $r_j=0$, that channel's reduced inequality
+is strict for $\Delta_j>0$; if both replication slopes vanish, both
+channels pass. Non-positive net prices retain the separate sign and tie
+cases in \cref{cor:bundle}. At $z=0$, use the multiplier test rather than
+the interior identity. For the pure-computation comparison in
+\cref{eq:budgetcrit}, the same logarithmic marginal production
+$a/(1+z)$ declines with growing local investment; the present calculation
+prices the optimized substitute services as well.
 
 \section{Infinite-horizon verification and extensions}
 \label{app:infinite-proof}
@@ -2833,8 +3158,8 @@ replication inequalities. Results are machine-readable JSON plus literal
 stdout, accompanied by a runner which fails on any failed assertion.
 No script imports the production implementation of another new validation
 script. Shared NumPy/SciPy routines do not constitute independent peer review.
-The named scripts provided in the revision proposal were unavailable; the
-README distinguishes our replacement checks from the archived reruns.
+The README maps the validation scripts to their mathematical targets and
+distinguishes the v8 checks from the archived reruns.
 
 \section{Notation and scope dictionary}
 \label{app:notation}
@@ -3380,8 +3705,8 @@ $U(1)\simeq3.0953$. It violates the concavity assumption, not the corner theorem
 
 Each new script in \texttt{code/validate\_v8\_*.py} is self-contained and
 prints explicit pass and fail counts. The accompanying README maps files
-to propositions, records tolerances, and distinguishes assertions from
-independent randomized cases. The new no-replication classification reads
+to propositions and distinguishes assertions from independent randomized
+cases; each script records its seed and tolerances. The new no-replication classification reads
 \texttt{archive/v7\_3/data/allocation/design.npz} without changing it.
 It solves observation on the restricted face, then evaluates the two
 replication reduced derivatives; 64 of the 1,024 cases are additionally
@@ -3392,12 +3717,12 @@ face criterion.
 
 The original archive scripts have been rerun in a working copy, not in the
 immutable archive. Their outputs are included under
-\texttt{results/archive\_rerun/}. The originally proposed files
-\texttt{check\_abcde.py}, \texttt{check\_more.py}, and \texttt{check\_trap.py}
-were not available in the retrieved package; the new implementations are
-replacements, not claimed reruns of those files. No figures or archived
-classification counts have been revised. Bibliographic audit decisions,
-proof coverage, assembly checks, and physical-parameter sources are in the
-review report and source ledger.
+\texttt{results/archive\_rerun/}. No figures or archived classification
+counts have been revised. Mechanical source and PDF checks are recorded in
+\texttt{results/assembly\_audit.json} and
+\texttt{results/final\_audit.json}; physical-parameter sources are documented
+in the comments of \texttt{code/validate\_v8\_7\_physical.py}.
+The finite-efficiency tests are in \texttt{code/validate\_v8\_8\_ceiling.py}
+and \texttt{results/v8\_8\_ceiling.json}.
 
 \end{document}

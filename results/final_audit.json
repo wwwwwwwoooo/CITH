@@ -1,24 +1,24 @@
 {
   "main_word_count": {
-    "text": 9091,
-    "headers": 192,
+    "text": 9592,
+    "headers": 210,
     "captions": 113,
-    "literal_output": "9091+192+113 (42/2/590/65) File: /mnt/data/cith_v8/latex/main_text.tex"
+    "literal_output": "9592+210+113 (46/2/643/68) File: /mnt/data/CITH_ceiling/latex/main_text.tex"
   },
   "abstract_word_count": {
     "text": 209,
     "headers": 0,
     "captions": 0,
-    "literal_output": "209+0+0 (0/0/0/0) File: /mnt/data/cith_v8/qa/abstract_for_count.tex"
+    "literal_output": "209+0+0 (0/0/0/0) File: /mnt/data/CITH_ceiling/qa/abstract_for_count.tex"
   },
-  "labels": 164,
-  "reference_uses": 128,
+  "labels": 176,
+  "reference_uses": 165,
   "duplicate_labels": [],
   "unresolved_references": [],
   "old_labels_not_retained": [],
   "latex_warnings": [],
-  "pdf_pages": 47,
-  "manuscript_pages": 40,
+  "pdf_pages": 51,
+  "manuscript_pages": 44,
   "supplement_pages": 7,
   "source_figure_hash_matches": {
     "fig1.pdf": true,
@@ -26,7 +26,7 @@
     "fig3.pdf": true,
     "fig4.pdf": true
   },
-  "statement_count": 28,
+  "statement_count": 31,
   "statements": [
     {
       "environment": "lemma",
@@ -89,6 +89,14 @@
       ]
     },
     {
+      "environment": "corollary",
+      "title": "Shared gains and the phase coordinates",
+      "labels": [
+        "cor:shared-technology",
+        "eq:shared-technology"
+      ]
+    },
+    {
       "environment": "proposition",
       "title": "Growth obstruction and sharp productivity scaling",
       "labels": [
@@ -126,6 +134,14 @@
     },
     {
       "environment": "corollary",
+      "title": "The effective budget under a productivity ceiling",
+      "labels": [
+        "cor:ceiling-budget",
+        "eq:ceiling-budget"
+      ]
+    },
+    {
+      "environment": "corollary",
       "title": "Fixed- and bounded-budget curvature",
       "labels": [
         "prop:curvature",
@@ -139,6 +155,14 @@
         "prop:basin",
         "eq:basin-policy",
         "eq:runaway-bound"
+      ]
+    },
+    {
+      "environment": "corollary",
+      "title": "Saturating productivity and the inward basin",
+      "labels": [
+        "cor:capped-basin",
+        "eq:saturating-productivity"
       ]
     },
     {
@@ -309,192 +333,212 @@
     },
     {
       "page": 10,
-      "characters": 2653,
+      "characters": 2200,
       "text_outside_page": []
     },
     {
       "page": 11,
-      "characters": 3244,
+      "characters": 3355,
       "text_outside_page": []
     },
     {
       "page": 12,
-      "characters": 3203,
+      "characters": 3417,
       "text_outside_page": []
     },
     {
       "page": 13,
-      "characters": 3271,
+      "characters": 3004,
       "text_outside_page": []
     },
     {
       "page": 14,
-      "characters": 3231,
+      "characters": 3025,
       "text_outside_page": []
     },
     {
       "page": 15,
-      "characters": 3268,
+      "characters": 3387,
       "text_outside_page": []
     },
     {
       "page": 16,
-      "characters": 3888,
+      "characters": 3110,
       "text_outside_page": []
     },
     {
       "page": 17,
-      "characters": 3012,
+      "characters": 3842,
       "text_outside_page": []
     },
     {
       "page": 18,
-      "characters": 2969,
+      "characters": 3535,
       "text_outside_page": []
     },
     {
       "page": 19,
-      "characters": 3185,
+      "characters": 3063,
       "text_outside_page": []
     },
     {
       "page": 20,
-      "characters": 3147,
+      "characters": 3239,
       "text_outside_page": []
     },
     {
       "page": 21,
-      "characters": 3708,
+      "characters": 3163,
       "text_outside_page": []
     },
     {
       "page": 22,
-      "characters": 3290,
+      "characters": 3286,
       "text_outside_page": []
     },
     {
       "page": 23,
-      "characters": 3780,
+      "characters": 3612,
       "text_outside_page": []
     },
     {
       "page": 24,
-      "characters": 4036,
+      "characters": 3469,
       "text_outside_page": []
     },
     {
       "page": 25,
-      "characters": 3627,
+      "characters": 4184,
       "text_outside_page": []
     },
     {
       "page": 26,
-      "characters": 2716,
+      "characters": 3873,
       "text_outside_page": []
     },
     {
       "page": 27,
-      "characters": 3578,
+      "characters": 2690,
       "text_outside_page": []
     },
     {
       "page": 28,
-      "characters": 3051,
+      "characters": 3643,
       "text_outside_page": []
     },
     {
       "page": 29,
-      "characters": 3373,
+      "characters": 3100,
       "text_outside_page": []
     },
     {
       "page": 30,
-      "characters": 3687,
+      "characters": 3097,
       "text_outside_page": []
     },
     {
       "page": 31,
-      "characters": 3973,
+      "characters": 3321,
       "text_outside_page": []
     },
     {
       "page": 32,
-      "characters": 3703,
+      "characters": 4314,
       "text_outside_page": []
     },
     {
       "page": 33,
-      "characters": 3559,
+      "characters": 4097,
       "text_outside_page": []
     },
     {
       "page": 34,
-      "characters": 3116,
+      "characters": 3737,
       "text_outside_page": []
     },
     {
       "page": 35,
-      "characters": 3209,
+      "characters": 3461,
       "text_outside_page": []
     },
     {
       "page": 36,
-      "characters": 3693,
+      "characters": 3491,
       "text_outside_page": []
     },
     {
       "page": 37,
-      "characters": 3271,
+      "characters": 3352,
       "text_outside_page": []
     },
     {
       "page": 38,
-      "characters": 1992,
+      "characters": 3220,
       "text_outside_page": []
     },
     {
       "page": 39,
-      "characters": 2934,
+      "characters": 3209,
       "text_outside_page": []
     },
     {
       "page": 40,
-      "characters": 2445,
+      "characters": 3693,
       "text_outside_page": []
     },
     {
       "page": 41,
-      "characters": 3360,
+      "characters": 3254,
       "text_outside_page": []
     },
     {
       "page": 42,
-      "characters": 2387,
+      "characters": 1992,
       "text_outside_page": []
     },
     {
       "page": 43,
-      "characters": 2556,
+      "characters": 2934,
       "text_outside_page": []
     },
     {
       "page": 44,
-      "characters": 3000,
+      "characters": 2445,
       "text_outside_page": []
     },
     {
       "page": 45,
-      "characters": 2346,
+      "characters": 3360,
       "text_outside_page": []
     },
     {
       "page": 46,
-      "characters": 2476,
+      "characters": 2387,
       "text_outside_page": []
     },
     {
       "page": 47,
-      "characters": 2148,
+      "characters": 2556,
+      "text_outside_page": []
+    },
+    {
+      "page": 48,
+      "characters": 3000,
+      "text_outside_page": []
+    },
+    {
+      "page": 49,
+      "characters": 2346,
+      "text_outside_page": []
+    },
+    {
+      "page": 50,
+      "characters": 2476,
+      "text_outside_page": []
+    },
+    {
+      "page": 51,
+      "characters": 2129,
       "text_outside_page": []
     }
   ],

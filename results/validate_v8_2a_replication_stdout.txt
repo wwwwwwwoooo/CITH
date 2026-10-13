@@ -1,0 +1,7 @@
+2a REPLICATION seed=2026101321
+restricted_KKT: PASS=320 FAIL=0
+full_optimizer: PASS=320 FAIL=0
+slack_identity: PASS=320 FAIL=0
+bundle: PASS=17 FAIL=0
+edges: PASS=3 FAIL=0
+regimes: {'backup_rep': 97, 'observation_rep': 98, 'backup_no_rep': 63, 'observation_no_rep': 62}

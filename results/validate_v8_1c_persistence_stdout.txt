@@ -1,0 +1,9 @@
+1c PERSISTENCE: seed=2026101303
+minimum: PASS=240 FAIL=0
+unbounded_obstruction: PASS=576 FAIL=0
+sublog_scaling: PASS=56 FAIL=0
+necessary_rate: PASS=174 FAIL=0
+eta_zero: PASS=24 FAIL=0
+counterexamples: PASS=11 FAIL=0
+eta=0.5, ell(z)=z, a=0.01 B: checked through B=1e8
+counterexamples: vanishing prices; B=a^-2 at eta=2; zero residual slopes

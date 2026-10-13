@@ -1,0 +1,7 @@
+3 WORLD NUMBER seed=2026101330
+power_optimizer: PASS=700 FAIL=0
+shifted_normalization: PASS=700 FAIL=0
+log_optimizer: PASS=700 FAIL=0
+integer_worlds: PASS=700 FAIL=0
+edges: PASS=8 FAIL=0
+theta=1, log welfare: exactly linear only for C>=e*u.

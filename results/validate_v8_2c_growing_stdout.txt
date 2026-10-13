@@ -1,0 +1,6 @@
+2c GROWING NO-REPLICATION seed=2026101323
+budget: PASS=400 FAIL=0
+interior_services: PASS=400 FAIL=0
+strict_replication_test: PASS=400 FAIL=0
+all_inward_fails: PASS=400 FAIL=0
+asymptotic_share: PASS=400 FAIL=0

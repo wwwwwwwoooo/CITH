@@ -74,10 +74,15 @@
       "exit_code": 0,
       "pass": 1502,
       "fail": 0
+    },
+    "validate_v8_8_ceiling.py": {
+      "exit_code": 0,
+      "pass": 3189,
+      "fail": 0
     }
   },
-  "script_count": 15,
-  "total_assertions_pass": 33017,
+  "script_count": 16,
+  "total_assertions_pass": 36206,
   "total_assertions_fail": 0,
   "interpretation": "Counts are assertions, not independent random draws."
 }

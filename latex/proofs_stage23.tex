@@ -174,3 +174,49 @@ in every optimizer. Finally, at the all-inward corner the service slopes
 $J_I/s_I$ and $J_R/s_R$ are fixed and positive, and bounded project prices
 contradict the growing logarithmic residual floor. This proves the
 claimed separation without assuming any resource-acquisition dynamics.
+
+
+\subsection{The no-replication construction under a finite ceiling}
+\label{app:norep-ceiling-proof}
+Keep the fixed parameters, logarithmic production and value, exponential
+service utilities, $q=1$, and positive net prices of
+\cref{cor:growing-no-replication}, but allow any positive productivity
+path with $a\leq a_{\max}<\infty$. The restricted face remains strictly
+concave and budget-exhausting. At least one of the expenditures
+$z,p_mw,p_bb$ is at least $B/3$. If it is $z$, its positive-coordinate
+multiplier condition yields
+\[
+ \lambda=\frac{a}{(1+z)[d_0+a\ln(1+z)]}
+ \leq\frac{3a_{\max}}{d_0B}.
+\]
+If it is $p_mw$, put $u=w/s_I$ and use $u e^{-u}\leq e^{-1}$:
+$\lambda p_mw=J_Iu e^{-u}\leq J_I/e$, whence
+$\lambda\leq3J_I/(eB)$. The backup case gives $3J_R/(eB)$.
+Consequently, with the fixed finite constant
+$K=3\max\{a_{\max}/d_0,J_I/e,J_R/e\}$,
+\begin{equation}
+ 0<\lambda\leq K/B,\qquad
+ \frac{F'(C^*)}{\lambda}
+ \geq\frac{B}{K[d_0+a_{\max}\ln(1+B)]}\longrightarrow\infty.
+ \label{eq:norep-ceiling-bound}
+\end{equation}
+This uniform proof includes $z=0$ and needs no positive lower bound on
+$a$. Since $\lambda\to0$, each service's strictly positive marginal
+value at zero forces $w,b>0$ eventually. The reduced test is then
+$r_jF'(C^*)/\lambda\leq\Delta_j$, where
+$\Delta_j=p_j-p_m-p_b>0$ is fixed. Every $r_j>0$ eventually fails it.
+No no-replication face optimum is then a full optimum.
+
+If $z>0$, $\lambda=F'(C^*)a\ell'(z)$ gives the exact identity
+$F'(C^*)/\lambda=1/[a\ell'(z)]=(1+z)/a$ and the exact condition
+$a\ell'(z)\geq r_j/\Delta_j$ at the optimized face point.
+The ceiling provides the necessary inequality with $a_{\max}$, not a
+sufficient condition for an arbitrary actual productivity or an
+unoptimized choice of $z$. If $r_j=0$, that channel's reduced inequality
+is strict for $\Delta_j>0$; if both replication slopes vanish, both
+channels pass. Non-positive net prices retain the separate sign and tie
+cases in \cref{cor:bundle}. At $z=0$, use the multiplier test rather than
+the interior identity. For the pure-computation comparison in
+\cref{eq:budgetcrit}, the same logarithmic marginal production
+$a/(1+z)$ declines with growing local investment; the present calculation
+prices the optimized substitute services as well.

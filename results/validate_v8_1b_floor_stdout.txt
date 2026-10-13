@@ -1,0 +1,5 @@
+1b TIGHT FLOOR: seed=2026101302
+floor: PASS=3000 FAIL=0
+witness_optimizer: PASS=120 FAIL=0
+boundary: PASS=35 FAIL=0
+equality: PASS=1200 FAIL=0

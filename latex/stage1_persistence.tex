@@ -50,6 +50,16 @@ comparison with $\Omega^{\eta-1}$ gives the necessary rate; the strict
 coefficient in \cref{eq:sufficient-output-growth} leaves an asymptotic
 margin for remote computational returns. See \cref{app:growth-proof}.
 
+\paragraph{Remark (Bounded productivity on growing budgets).}
+Under \cref{prop:growth-trichotomy}, $a\leq a_{\max}<\infty$ gives
+$\Omega=O(B)$ by concavity. For $0<\eta<1$, this contradicts
+\cref{eq:necessary-output-growth}; an eventually inward path requires
+$a(t)\to\infty$. At $\eta=0$, \cref{eq:linear-value-growth} still uses
+actual productivity; its necessary ceiling test is
+$a_{\max}\ell'(B(t))\geq\max_j(r_j+S_j)/p_j$.
+A positive right-hand side and vanishing local marginal production
+therefore exclude persistence. See \cref{app:ceiling-growth-proof}.
+
 This result concerns the growth of physical resources, not the growth
 of computational efficiency. With persistent residual value and bounded
 prices, productivity can compensate for an unbounded resource budget
@@ -153,8 +163,9 @@ $a_{\rm crit}^{\ell}(B)$ from \cref{eq:acrit-general}.
 This threshold is non-decreasing and diverges as
 $B\uparrow B_{\rm tip}$. At $B=B_{\rm tip}$ as well as above it,
 no finite productivity makes the corner optimal.
-If eventually $B(t)\leq B'<B_{\rm tip}$ and $a(t)\to\infty$, every
-static optimizer is eventually all-inward. If every $S_j=0$, set
+If eventually $B(t)\leq B'<B_{\rm tip}$ and
+$a(t)>a_{\rm crit}^{\ell}(B')$, every static optimizer is eventually
+all-inward. If every $S_j=0$, set
 $B_{\rm tip}=\infty$; no finite productivity-independent residual
 barrier exists.
 \end{proposition}
@@ -164,6 +175,27 @@ in \cref{eq:acrit-general} is positive. Each nontrivial threshold is
 non-decreasing because its denominator has derivative
 $p_j\ell''-S_j\ell'\leq0$. A binding positive-slope denominator
 vanishes at the crossing. See \cref{app:tipping-proof}.
+
+\begin{corollary}[The effective budget under a productivity ceiling]
+\label{cor:ceiling-budget}
+Retain \cref{prop:tipping} with some $S_j>0$ and fix
+$0<a_{\max}<\infty$. Define
+\begin{equation}
+ B^*(a_{\max})=\sup\{B\in(0,B_{\rm tip}):
+                     a_{\rm crit}^{\ell}(B)\leq a_{\max}\},
+ \qquad \sup\varnothing:=0.
+ \label{eq:ceiling-budget}
+\end{equation}
+An inward optimum at some $0<a\leq a_{\max}$ exists exactly for
+$0<B\leq B^*(a_{\max})$. If $B^*>0$, its endpoint is included and
+$a_{\rm crit}^{\ell}(B^*)=a_{\max}$; an actual productivity must still
+meet \cref{eq:acrit-general}. Moreover, $B^*<B_{\rm tip}$,
+$B^*$ is non-decreasing in $a_{\max}$, and $B^*\to B_{\rm tip}$ as
+$a_{\max}\to\infty$.
+\end{corollary}
+An efficiency redesign can raise this effective budget, but never beyond
+$B_{\rm tip}\leq\min_{j:S_j>0}p_j/S_j$, since $\Gamma(B)\geq B$.
+The empty-set and equality cases are proved in \cref{app:ceiling-budget-proof}.
 
 \begin{corollary}[Fixed- and bounded-budget curvature]
 \label{prop:curvature}
@@ -179,14 +211,17 @@ For the local logarithm the test is precisely
  \qquad L=\ln(1+B).
  \label{eq:iso-corner}
 \end{equation}
-For the path statements assume additionally that $\ell$ is $C^1$ with
-positive derivative near the positive limiting budget. Consequently, if
-$B(t)\to\bar B\in(0,\infty)$ and $a(t)\to\infty$,
-fixed parameters give eventual inwardness for $\eta<1$. More generally, this conclusion holds for any $0<B(t)\leq B_{\max}<\infty$ if $\ell$ is concave and $\ell'(B_{\max})>0$. For $\eta>1$,
-a positive residual slope excludes eventual inwardness. At $\eta=1$,
-$\bar B<B_{\rm tip}$ gives eventual inwardness and
-$\bar B>B_{\rm tip}$ excludes it. At equality, the rate of approach
-from below must be compared with $a_{\rm crit}^{\ell}(B(t))$.
+For the path statements fix the parameters and assume $\ell$ is $C^1$
+with positive derivative near $B(t)\to\bar B\in(0,\infty)$.
+For $\eta<1$, eventually exceeding a sufficiently large finite productivity
+threshold gives eventual strict inwardness. This also holds for any
+$0<B(t)\leq B_{\max}<\infty$ under concavity and
+$\ell'(B_{\max})>0$. For $\eta>1$ and some $S_j>0$, eventually
+exceeding a sufficiently large finite threshold instead excludes inwardness
+near the positive limit. At $\eta=1$, $\bar B<B'<B_{\rm tip}$ and
+eventual $a(t)>a_{\rm crit}^{\ell}(B')$ suffice; $\bar B>B_{\rm tip}$
+excludes inwardness. At equality the pointwise comparison with
+$a_{\rm crit}^{\ell}(B(t))$ remains indispensable.
 \end{corollary}
 \noindent\emph{Proof.}
 See \cref{app:curvature-proof}. This is the fixed-budget curvature
@@ -194,6 +229,10 @@ classification, with a uniform bound near the positive limiting budget;
 it is not a new assumption about preferences. ``No tipping budget''
 for $\eta<1$ means no productivity-independent finite obstruction,
 not absence of a budget threshold at a fixed productivity.
+
+For $\eta>1$, computational value saturates while residual motives persist:
+sufficiently large efficiency gains reduce the marginal value of local
+investment and eventually favour an external deviation, not permanent inwardness.
 
 \subsection{Resource acquisition and the inward basin}
 
@@ -262,6 +301,30 @@ the open sets of stopping and crossing paths, giving exactly one boundary.
 The complete proof and finite-time basin certificates are in
 \cref{app:basin-proof}.
 
+\begin{corollary}[Saturating productivity and the inward basin]
+\label{cor:capped-basin}
+Retain the one-channel model and parameter assumptions of \cref{prop:basin},
+but replace its productivity path.
+(i) If $a_t$ is positive, non-decreasing, and bounded by
+$a_{\max}<a_{\rm crit}^{\ell}(\bar B)$, every path reaches
+$B_{\rm tip}$ in finite time.
+(ii) Let
+\begin{equation}
+ a_t=a_{\max}-(a_{\max}-a_0)\exp(-g_at),\quad
+ 0<a_0\leq a_{\max},\quad a_{\max}>a_{\rm crit}^{\ell}(\bar B).
+ \label{eq:saturating-productivity}
+\end{equation}
+If some initial productivity crosses $B_{\rm tip}$, a unique
+$a_{\rm sep}\in(0,a_{\rm crit}^{\ell}(\bar B))$ separates finite-time
+capture at higher initial productivity from crossing at lower productivity.
+Its boundary path has $x_t>0$ and
+$B_t\uparrow B^*(a_{\max})$, not $B_{\rm tip}$.
+After reaching $B_{\rm tip}$, \cref{eq:runaway-bound} applies in both cases.
+\end{corollary}
+The crossing hypothesis is essential: all paths can instead be captured.
+The proof and a hard-cap counterexample to the uncaptured-boundary
+classification are in \cref{app:capped-basin-proof}.
+
 For example, let $(p,S,r,d_0)=(1,0.002,0.05,1)$,
 $g_a=0.05$, $g_X=0.5$, and $\bar B=0.6B_{\rm tip}$. New calculations
 give $B_{\rm tip}=106.001289$,
@@ -289,4 +352,5 @@ and if denser stellar neighbourhoods reduce external resource prices
 while leaving residual values fixed, both changes raise
 $\bar B/B_{\rm tip}$. The basin comparison then suggests a greater
 propensity to expand. The conjecture concerns these physical parameter
-mappings, not the proved comparative static.
+mappings, not the proved comparative static. With bounded efficiency,
+\cref{cor:capped-basin} adds the effective ceiling and crossing qualification.

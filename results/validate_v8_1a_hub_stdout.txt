@@ -1,0 +1,8 @@
+1a HUB: seed=2026101301; numpy=2.3.5; scipy=1.17.0
+derivative: PASS=360 FAIL=0
+optimizer: PASS=360 FAIL=0
+reductions: PASS=720 FAIL=0
+edges: PASS=25 FAIL=0
+optimizer regimes: inward=216 outward=144 UNRESOLVED=0
+max scaled derivative error=6.637e-16
+max scaled excess above a passing corner=1.172e-16

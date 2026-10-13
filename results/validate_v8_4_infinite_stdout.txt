@@ -1,0 +1,9 @@
+4 INFINITE HORIZON seed=2026101340
+corner: PASS=180 FAIL=0
+Bellman_limit: PASS=180 FAIL=0
+transversality: PASS=180 FAIL=0
+policy_bound: PASS=180 FAIL=0
+residual_derivative: PASS=180 FAIL=0
+ceiling: PASS=180 FAIL=0
+edges: PASS=6 FAIL=0
+max finite-horizon value error=8.293e-11

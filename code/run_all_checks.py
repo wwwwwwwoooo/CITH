@@ -1,4 +1,4 @@
-"""Run all 15 independent v8 validators and preserve literal stdout."""
+"""Run all 16 independent v8 validators and preserve literal stdout."""
 from pathlib import Path
 import json,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]

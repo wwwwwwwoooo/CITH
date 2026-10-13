@@ -1,0 +1,14 @@
+A1_definition: PASS=600 FAIL=0
+A1_monotonic_limit: PASS=240 FAIL=0
+A1_endpoints: PASS=125 FAIL=0
+A2_policy: PASS=360 FAIL=0
+A2_low_cap: PASS=500 FAIL=0
+A2_ordered_basin: PASS=24 FAIL=0
+A2_counterexamples: PASS=242 FAIL=0
+A3_subunit: PASS=72 FAIL=0
+A3_linear_endpoint: PASS=4 FAIL=0
+A4_face: PASS=60 FAIL=0
+A4_ceiling_obstruction: PASS=54 FAIL=0
+A4_boundary: PASS=4 FAIL=0
+B_coordinates: PASS=900 FAIL=0
+B_archived_examples: PASS=4 FAIL=0

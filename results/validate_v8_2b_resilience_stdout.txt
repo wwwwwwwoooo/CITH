@@ -1,0 +1,7 @@
+2b ENDOGENOUS RISK seed=2026101322
+derivative: PASS=600 FAIL=0
+necessary_condition: PASS=879 FAIL=0
+K_identity: PASS=600 FAIL=0
+asymptotics: PASS=7 FAIL=0
+edges: PASS=9 FAIL=0
+Exact seed multiplier is hazard/(1-hazard); eta=1 adds log(output).
