@@ -1,0 +1,11 @@
+6 POPULATION seed=2026101360
+mixture_equivalence: PASS=700 FAIL=0
+necessary_bound: PASS=700 FAIL=0
+binary_equilibria: PASS=700 FAIL=0
+continuous_endpoints: PASS=1400 FAIL=0
+counterexamples: PASS=4 FAIL=0
+poisson_simulation: PASS=1 FAIL=0
+N_A=100, outward fraction <= 0.0315269575 (3.1526958 percent)
+N_A=1000, outward fraction <= 0.0031526958 (0.3152696 percent)
+N_A=10000, outward fraction <= 0.0003152696 (0.0315270 percent)
+Poisson-origin simulation: 0.1775880; exact 0.1774033; n=250000

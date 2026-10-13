@@ -1,0 +1,8 @@
+5 LATENCY seed=2026101350
+clock_integral: PASS=450 FAIL=0
+corner_optimizer: PASS=450 FAIL=0
+sufficient_bound: PASS=450 FAIL=0
+bounded_threshold: PASS=450 FAIL=0
+chain: PASS=450 FAIL=0
+depletion: PASS=450 FAIL=0
+counterexamples: PASS=7 FAIL=0

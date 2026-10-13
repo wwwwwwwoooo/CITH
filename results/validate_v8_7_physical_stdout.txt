@@ -1,0 +1,9 @@
+7 PHYSICAL seed=2026101370
+radiator_root: PASS=500 FAIL=0
+dimensional_scaling: PASS=500 FAIL=0
+discount_threshold: PASS=500 FAIL=0
+edges: PASS=2 FAIL=0
+Nominal solar-year energy / 1e32 J = 120.802492800
+Mercury: T=378.161821 K; peak=7.662783 micron
+Jupiter: T=43.426902 K; peak=66.727578 micron
+Illustrative delta = 1.1512925465e-06 per subjective year

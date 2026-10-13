@@ -90,8 +90,8 @@ $U(1)\simeq3.0953$. It violates the concavity assumption, not the corner theorem
 
 Each new script in \texttt{code/validate\_v8\_*.py} is self-contained and
 prints explicit pass and fail counts. The accompanying README maps files
-to propositions, records tolerances, and distinguishes assertions from
-independent randomized cases. The new no-replication classification reads
+to propositions and distinguishes assertions from independent randomized
+cases; each script records its seed and tolerances. The new no-replication classification reads
 \texttt{archive/v7\_3/data/allocation/design.npz} without changing it.
 It solves observation on the restricted face, then evaluates the two
 replication reduced derivatives; 64 of the 1,024 cases are additionally
@@ -102,13 +102,13 @@ face criterion.
 
 The original archive scripts have been rerun in a working copy, not in the
 immutable archive. Their outputs are included under
-\texttt{results/archive\_rerun/}. The originally proposed files
-\texttt{check\_abcde.py}, \texttt{check\_more.py}, and \texttt{check\_trap.py}
-were not available in the retrieved package; the new implementations are
-replacements, not claimed reruns of those files. No figures or archived
-classification counts have been revised. Bibliographic audit decisions,
-proof coverage, assembly checks, and physical-parameter sources are in the
-review report and source ledger.
+\texttt{results/archive\_rerun/}. No figures or archived classification
+counts have been revised. Mechanical source and PDF checks are recorded in
+\texttt{results/assembly\_audit.json} and
+\texttt{results/final\_audit.json}; physical-parameter sources are documented
+in the comments of \texttt{code/validate\_v8\_7\_physical.py}.
+The finite-efficiency tests are in \texttt{code/validate\_v8\_8\_ceiling.py}
+and \texttt{results/v8\_8\_ceiling.json}.
 '''
 (S/'supplement.tex').write_text(supp)
 # Retained macros, theorem environments, and packages.
@@ -150,7 +150,7 @@ low detectability from inward allocation.
 \noindent\textbf{Keywords:} Fermi paradox; computational inward transition;
 resource allocation; replication; population ethics; technosignatures.
 '''
-order=['introduction','model_support','stage1_model','stage3_worlds','stage1_corner','phase','stage1_persistence','stage4_infinite','stage2_residual','stage5_latency','stage6_population','verification_conclusion']
+order=['introduction','model_support','stage1_model','stage3_worlds','stage1_corner','phase','stage1_shared_tech','stage1_persistence','stage4_infinite','stage2_residual','stage5_latency','stage6_population','verification_conclusion']
 main='\n'.join(stripcomments((S/(n+'.tex')).read_text()) for n in order)
 # World lemma placed after complete basic model, before hub; no forward circularity.
 (S/'main_text.tex').write_text(main)

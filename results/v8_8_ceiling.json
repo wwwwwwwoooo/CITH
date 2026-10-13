@@ -1,0 +1,164 @@
+{
+  "seed": 2026101380,
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "tolerances": {
+    "comparison": 2e-09,
+    "root_absolute": 2e-13,
+    "separator_bracket": 2e-09
+  },
+  "maximum_trajectory_steps": 5000,
+  "counts": {
+    "A1_definition": [
+      600,
+      0
+    ],
+    "A1_monotonic_limit": [
+      240,
+      0
+    ],
+    "A1_endpoints": [
+      125,
+      0
+    ],
+    "A2_policy": [
+      360,
+      0
+    ],
+    "A2_low_cap": [
+      500,
+      0
+    ],
+    "A2_ordered_basin": [
+      24,
+      0
+    ],
+    "A2_counterexamples": [
+      242,
+      0
+    ],
+    "A3_subunit": [
+      72,
+      0
+    ],
+    "A3_linear_endpoint": [
+      4,
+      0
+    ],
+    "A4_face": [
+      60,
+      0
+    ],
+    "A4_ceiling_obstruction": [
+      54,
+      0
+    ],
+    "A4_boundary": [
+      4,
+      0
+    ],
+    "B_coordinates": [
+      900,
+      0
+    ],
+    "B_archived_examples": [
+      4,
+      0
+    ]
+  },
+  "details": {
+    "basin_brackets": [
+      {
+        "ga": 0.025,
+        "lower_crossed": 1.478480669738906,
+        "upper_captured": 1.4784806711508567,
+        "B_star": 0.5101290057733401,
+        "B_tip": 0.7632228343518966,
+        "finite_capture_budget": 0.39620495894977625,
+        "finite_shadowing_distance": 0.11593666215190668,
+        "lower_crossing_time": 32,
+        "upper_capture_time": 24
+      },
+      {
+        "ga": 0.05,
+        "lower_crossed": 1.4276427380154293,
+        "upper_captured": 1.4276427394273798,
+        "B_star": 0.5101290057733401,
+        "B_tip": 0.7632228343518966,
+        "finite_capture_budget": 0.45459615680080956,
+        "finite_shadowing_distance": 0.05603903028933105,
+        "lower_crossing_time": 32,
+        "upper_capture_time": 24
+      },
+      {
+        "ga": 0.1,
+        "lower_crossed": 1.3414153237161632,
+        "upper_captured": 1.341415325128114,
+        "B_star": 0.5101290057733401,
+        "B_tip": 0.7632228343518966,
+        "finite_capture_budget": 0.49352818677472843,
+        "finite_shadowing_distance": 0.01725374237719035,
+        "lower_crossing_time": 31,
+        "upper_capture_time": 23
+      }
+    ],
+    "low_cap_crossing_times": [
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4,
+      3,
+      3,
+      3,
+      4,
+      3,
+      2,
+      4,
+      3,
+      3,
+      4,
+      2,
+      3,
+      5,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      5,
+      2,
+      3,
+      1,
+      2,
+      2,
+      4,
+      1,
+      3,
+      4,
+      2,
+      3,
+      2,
+      6,
+      2,
+      1,
+      2,
+      2,
+      2,
+      7,
+      2
+    ],
+    "scope": "Finite checks only; limit and uniqueness claims rely on proofs."
+  },
+  "failures": [],
+  "interpretation": "Assertion counts are not independent random draws."
+}

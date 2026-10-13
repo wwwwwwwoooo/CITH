@@ -1,0 +1,174 @@
+=== validate_v8_1a_hub.py; exit=0 ===
+1a HUB: seed=2026101301; numpy=2.3.5; scipy=1.17.0
+derivative: PASS=360 FAIL=0
+optimizer: PASS=360 FAIL=0
+reductions: PASS=720 FAIL=0
+edges: PASS=25 FAIL=0
+optimizer regimes: inward=216 outward=144 UNRESOLVED=0
+max scaled derivative error=6.637e-16
+max scaled excess above a passing corner=1.172e-16
+
+=== validate_v8_1b_floor.py; exit=0 ===
+1b TIGHT FLOOR: seed=2026101302
+floor: PASS=3000 FAIL=0
+witness_optimizer: PASS=120 FAIL=0
+boundary: PASS=35 FAIL=0
+equality: PASS=1200 FAIL=0
+
+=== validate_v8_1c_persistence.py; exit=0 ===
+1c PERSISTENCE: seed=2026101303
+minimum: PASS=240 FAIL=0
+unbounded_obstruction: PASS=576 FAIL=0
+sublog_scaling: PASS=56 FAIL=0
+necessary_rate: PASS=174 FAIL=0
+eta_zero: PASS=24 FAIL=0
+counterexamples: PASS=11 FAIL=0
+eta=0.5, ell(z)=z, a=0.01 B: checked through B=1e8
+counterexamples: vanishing prices; B=a^-2 at eta=2; zero residual slopes
+
+=== validate_v8_1d_exponential.py; exit=0 ===
+1d EXPONENTIAL: seed=2026101304
+endpoint_equivalence: PASS=2400 FAIL=0
+Gamma_identities: PASS=2409 FAIL=0
+edges: PASS=2 FAIL=0
+smooth_counterexamples: PASS=2 FAIL=0
+FOC passes=1073; of these not globally inward=57; UNRESOLVED=0
+linear residual, FOC-only: derivative=-0.002366253, U0=5.689772519, Uend=5.916290732
+concave residual: derivative=-0.235525518, U0=5.399314337, U7=5.468332254, Uend=5.320000000, xstar=7.066255195, Ustar=5.474844177
+concave external production: derivative=-0.551916385, U0=3.000000000, U2=3.024976237, Uend=2.944438979, xstar=2.017245201, Ustar=3.025699179
+
+=== validate_v8_1e_basin.py; exit=0 ===
+1e BASIN: seed=2026101306; bracket width <= 1e-06
+static_optimizer: PASS=200 FAIL=0
+comparative_statics: PASS=203 FAIL=0
+runaway_bound: PASS=200 FAIL=0
+basin_brackets: PASS=5 FAIL=0
+sufficient_certificates: PASS=36 FAIL=0
+stay_certificate: PASS=240 FAIL=0
+edge_dynamics: PASS=4 FAIL=0
+g_a=0.01: a_sep in [7.143175778, 7.143176655]
+g_a=0.03: a_sep in [6.880805518, 6.880806394]
+g_a=0.05: a_sep in [6.632159108, 6.632159985]
+g_a=0.10: a_sep in [6.067303188, 6.067304064]
+g_a=0.20: a_sep in [5.146423866, 5.146424742]
+a0=0.5, g_X=0.5, bar/Btip=0.6: OUT at t=2, B=133.881585754
+a0=50, g_X=0.5, bar/Btip=0.6: IN at t=0, B=63.600773657
+a0=0.5, g_X=0, bar/Btip=0.6: IN at t=54, B=63.600773657
+a0=50, g_X=0.5, bar/Btip=1.5: OUT at t=0, B=159.001934142
+
+=== validate_v8_1e_tipping.py; exit=0 ===
+1e TIPPING: seed=2026101305
+tipping_roots: PASS=200 FAIL=0
+monotonicity: PASS=200 FAIL=0
+corner_optimizer: PASS=600 FAIL=0
+curvature_cases: PASS=13 FAIL=0
+edges: PASS=606 FAIL=0
+B_tip=106.001289428083; a_crit(0.6 B_tip)=7.279611850262
+unchanged v7.3 eta=2 example roots: 1.421896643, 12.720520655
+
+=== validate_v8_2a_replication.py; exit=0 ===
+2a REPLICATION seed=2026101321
+restricted_KKT: PASS=320 FAIL=0
+full_optimizer: PASS=320 FAIL=0
+slack_identity: PASS=320 FAIL=0
+bundle: PASS=17 FAIL=0
+edges: PASS=3 FAIL=0
+regimes: {'backup_rep': 97, 'observation_rep': 98, 'backup_no_rep': 63, 'observation_no_rep': 62}
+
+=== validate_v8_2b_resilience.py; exit=0 ===
+2b ENDOGENOUS RISK seed=2026101322
+derivative: PASS=600 FAIL=0
+necessary_condition: PASS=879 FAIL=0
+K_identity: PASS=600 FAIL=0
+asymptotics: PASS=7 FAIL=0
+edges: PASS=9 FAIL=0
+Exact seed multiplier is hazard/(1-hazard); eta=1 adds log(output).
+
+=== validate_v8_2c_growing.py; exit=0 ===
+2c GROWING NO-REPLICATION seed=2026101323
+budget: PASS=400 FAIL=0
+interior_services: PASS=400 FAIL=0
+strict_replication_test: PASS=400 FAIL=0
+all_inward_fails: PASS=400 FAIL=0
+asymptotic_share: PASS=400 FAIL=0
+
+=== validate_v8_3_worlds.py; exit=0 ===
+3 WORLD NUMBER seed=2026101330
+power_optimizer: PASS=700 FAIL=0
+shifted_normalization: PASS=700 FAIL=0
+log_optimizer: PASS=700 FAIL=0
+integer_worlds: PASS=700 FAIL=0
+edges: PASS=8 FAIL=0
+theta=1, log welfare: exactly linear only for C>=e*u.
+
+=== validate_v8_4_infinite.py; exit=0 ===
+4 INFINITE HORIZON seed=2026101340
+corner: PASS=180 FAIL=0
+Bellman_limit: PASS=180 FAIL=0
+transversality: PASS=180 FAIL=0
+policy_bound: PASS=180 FAIL=0
+residual_derivative: PASS=180 FAIL=0
+ceiling: PASS=180 FAIL=0
+edges: PASS=6 FAIL=0
+max finite-horizon value error=8.293e-11
+
+=== validate_v8_5_latency.py; exit=0 ===
+5 LATENCY seed=2026101350
+clock_integral: PASS=450 FAIL=0
+corner_optimizer: PASS=450 FAIL=0
+sufficient_bound: PASS=450 FAIL=0
+bounded_threshold: PASS=450 FAIL=0
+chain: PASS=450 FAIL=0
+depletion: PASS=450 FAIL=0
+counterexamples: PASS=7 FAIL=0
+
+=== validate_v8_6_design.py; exit=0 ===
+6 DESIGN additive classifications on frozen v7.3 reference
+archived_all_inward: PASS=1025 FAIL=0
+face_optimizer: PASS=1024 FAIL=0
+full_optimizer: PASS=64 FAIL=0
+n=1024
+all_inward=219
+no_replication=421
+observation_only_no_replication=202
+replication_preferred=603
+
+=== validate_v8_6_population.py; exit=0 ===
+6 POPULATION seed=2026101360
+mixture_equivalence: PASS=700 FAIL=0
+necessary_bound: PASS=700 FAIL=0
+binary_equilibria: PASS=700 FAIL=0
+continuous_endpoints: PASS=1400 FAIL=0
+counterexamples: PASS=4 FAIL=0
+poisson_simulation: PASS=1 FAIL=0
+N_A=100, outward fraction <= 0.0315269575 (3.1526958 percent)
+N_A=1000, outward fraction <= 0.0031526958 (0.3152696 percent)
+N_A=10000, outward fraction <= 0.0003152696 (0.0315270 percent)
+Poisson-origin simulation: 0.1775880; exact 0.1774033; n=250000
+
+=== validate_v8_7_physical.py; exit=0 ===
+7 PHYSICAL seed=2026101370
+radiator_root: PASS=500 FAIL=0
+dimensional_scaling: PASS=500 FAIL=0
+discount_threshold: PASS=500 FAIL=0
+edges: PASS=2 FAIL=0
+Nominal solar-year energy / 1e32 J = 120.802492800
+Mercury: T=378.161821 K; peak=7.662783 micron
+Jupiter: T=43.426902 K; peak=66.727578 micron
+Illustrative delta = 1.1512925465e-06 per subjective year
+
+=== validate_v8_8_ceiling.py; exit=0 ===
+A1_definition: PASS=600 FAIL=0
+A1_monotonic_limit: PASS=240 FAIL=0
+A1_endpoints: PASS=125 FAIL=0
+A2_policy: PASS=360 FAIL=0
+A2_low_cap: PASS=500 FAIL=0
+A2_ordered_basin: PASS=24 FAIL=0
+A2_counterexamples: PASS=242 FAIL=0
+A3_subunit: PASS=72 FAIL=0
+A3_linear_endpoint: PASS=4 FAIL=0
+A4_face: PASS=60 FAIL=0
+A4_ceiling_obstruction: PASS=54 FAIL=0
+A4_boundary: PASS=4 FAIL=0
+B_coordinates: PASS=900 FAIL=0
+B_archived_examples: PASS=4 FAIL=0

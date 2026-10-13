@@ -1,0 +1,9 @@
+6 DESIGN additive classifications on frozen v7.3 reference
+archived_all_inward: PASS=1025 FAIL=0
+face_optimizer: PASS=1024 FAIL=0
+full_optimizer: PASS=64 FAIL=0
+n=1024
+all_inward=219
+no_replication=421
+observation_only_no_replication=202
+replication_preferred=603

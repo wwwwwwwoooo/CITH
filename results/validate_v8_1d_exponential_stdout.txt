@@ -1,0 +1,9 @@
+1d EXPONENTIAL: seed=2026101304
+endpoint_equivalence: PASS=2400 FAIL=0
+Gamma_identities: PASS=2409 FAIL=0
+edges: PASS=2 FAIL=0
+smooth_counterexamples: PASS=2 FAIL=0
+FOC passes=1073; of these not globally inward=57; UNRESOLVED=0
+linear residual, FOC-only: derivative=-0.002366253, U0=5.689772519, Uend=5.916290732
+concave residual: derivative=-0.235525518, U0=5.399314337, U7=5.468332254, Uend=5.320000000, xstar=7.066255195, Ustar=5.474844177
+concave external production: derivative=-0.551916385, U0=3.000000000, U2=3.024976237, Uend=2.944438979, xstar=2.017245201, Ustar=3.025699179
