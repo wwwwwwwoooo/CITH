@@ -1,0 +1,68 @@
+{
+  "scripts": {
+    "validate_ls_01_envelope.py": {
+      "exit_code": 0,
+      "pass": 9013,
+      "fail": 0
+    },
+    "validate_ls_02_capped_basin.py": {
+      "exit_code": 0,
+      "pass": 1231,
+      "fail": 0
+    },
+    "validate_ls_03_cosmology.py": {
+      "exit_code": 0,
+      "pass": 1210,
+      "fail": 0
+    },
+    "validate_ls_04_replication_lemma.py": {
+      "exit_code": 0,
+      "pass": 3237,
+      "fail": 0
+    },
+    "validate_ls_05_latency_radius.py": {
+      "exit_code": 0,
+      "pass": 801,
+      "fail": 0
+    },
+    "validate_ls_06_frontier.py": {
+      "exit_code": 0,
+      "pass": 3087,
+      "fail": 0
+    },
+    "validate_ls_07_stale_backup.py": {
+      "exit_code": 0,
+      "pass": 2206,
+      "fail": 0
+    },
+    "validate_ls_08_coherence.py": {
+      "exit_code": 0,
+      "pass": 1937,
+      "fail": 0
+    },
+    "validate_ls_09_clock_coupling.py": {
+      "exit_code": 0,
+      "pass": 3673,
+      "fail": 0
+    },
+    "validate_ls_10_containment.py": {
+      "exit_code": 0,
+      "pass": 3819,
+      "fail": 0
+    },
+    "validate_ls_11_lineages.py": {
+      "exit_code": 0,
+      "pass": 26,
+      "fail": 0
+    },
+    "validate_ls_12_visibility.py": {
+      "exit_code": 0,
+      "pass": 20,
+      "fail": 0
+    }
+  },
+  "script_count": 12,
+  "total_assertions_pass": 30260,
+  "total_assertions_fail": 0,
+  "interpretation": "Counts are assertions, not independent random draws."
+}

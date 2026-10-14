@@ -1,0 +1,136 @@
+{
+  "pages": 22,
+  "labels": 69,
+  "undefined_refs": [],
+  "unused_bibitems": [],
+  "missing_bibitems": [],
+  "latex_warnings": [],
+  "quoted_number_mismatches": [],
+  "missing_literals": [],
+  "claims": {
+    "uncapped separator": {
+      "computed": "6.632159",
+      "quoted": "6.632159"
+    },
+    "capped e3=1e-3": {
+      "computed": "4.950497",
+      "quoted": "4.950497"
+    },
+    "capped e3=1e-5": {
+      "computed": "4.334291",
+      "quoted": "4.334291"
+    },
+    "capped t_E 1e-5": {
+      "computed": "161.85",
+      "quoted": "161.85"
+    },
+    "event horizon Gly": {
+      "computed": "16.68",
+      "quoted": "16.68"
+    },
+    "event horizon Gpc": {
+      "computed": "5.11",
+      "quoted": "5.11"
+    },
+    "dS bound": {
+      "computed": "17.53",
+      "quoted": "17.53"
+    },
+    "particle horizon": {
+      "computed": "47.0",
+      "quoted": "47.0"
+    },
+    "particle horizon radiation": {
+      "computed": "46.1",
+      "quoted": "46.1"
+    },
+    "max ln rho": {
+      "computed": "8.539",
+      "quoted": "8.539"
+    },
+    "rep max ln rho": {
+      "computed": "7.950",
+      "quoted": "7.950"
+    },
+    "design D=0": {
+      "computed": "219/333/421",
+      "quoted": "219/333/421"
+    },
+    "first step": {
+      "computed": "7.754",
+      "quoted": "7.754"
+    },
+    "ratio 1e1": {
+      "computed": "2.12",
+      "quoted": "2.12"
+    },
+    "ratio 1e14": {
+      "computed": "1.69",
+      "quoted": "1.69"
+    },
+    "omega_sun 300": {
+      "computed": "9{,}184",
+      "quoted": "9{,}184"
+    },
+    "omega_sun 1000": {
+      "computed": "102{,}044",
+      "quoted": "102{,}044"
+    },
+    "Lambda_min 300": {
+      "computed": "3.44",
+      "quoted": "3.44"
+    },
+    "Lambda_min 1000": {
+      "computed": "0.310",
+      "quoted": "0.310"
+    },
+    "clock band low": {
+      "computed": "51.5",
+      "quoted": "51.5"
+    },
+    "clock band high": {
+      "computed": "2{,}042",
+      "quoted": "2{,}042"
+    },
+    "B0": {
+      "computed": "96.95",
+      "quoted": "96.95"
+    },
+    "Blat 300 1e-4": {
+      "computed": "1003",
+      "quoted": "1003"
+    },
+    "Blat 1000 1e-2": {
+      "computed": "4.43e+07",
+      "quoted": "4.43e+07"
+    },
+    "threshold 300": {
+      "computed": "3.3e-06",
+      "quoted": "3.3e-06"
+    },
+    "threshold 1000": {
+      "computed": "3.0e-07",
+      "quoted": "3.0e-07"
+    },
+    "lattice means": {
+      "computed": "11.8/17.1/25.7",
+      "quoted": "11.8/17.1/25.7"
+    },
+    "lattice reach": {
+      "computed": "94.5",
+      "quoted": "94.5"
+    },
+    "visible 0.9c": {
+      "computed": "1.1",
+      "quoted": "1.1"
+    },
+    "visible 0.99c": {
+      "computed": "0.092",
+      "quoted": "0.092"
+    }
+  },
+  "texcount_text+headers+captions": {
+    "main_text": "4390+94+303 (27/8/422/19) File",
+    "abstract": "241+0+0 (0/0/13/0) File"
+  }
+}

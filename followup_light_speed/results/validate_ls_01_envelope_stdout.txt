@@ -1,0 +1,7 @@
+LS1 ENVELOPE seed=2026101401
+influence_envelope: PASS=3900 FAIL=0
+import_envelope: PASS=3900 FAIL=0
+exponential_phase: PASS=400 FAIL=0
+explicit_bound: PASS=400 FAIL=0
+runaway_truncation: PASS=8 FAIL=0
+edges: PASS=405 FAIL=0

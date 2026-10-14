@@ -1,0 +1,8 @@
+LS9 CLOCK COUPLING seed=2026101409
+unimodal: PASS=500 FAIL=0
+corner_set: PASS=500 FAIL=0
+direct_optimizer: PASS=1500 FAIL=0
+slow_limit: PASS=815 FAIL=0
+adiabatic_peak: PASS=173 FAIL=0
+no_coupling: PASS=185 FAIL=0
+illustration: H=0.880821 (p=1), B/B_tip=0.9, beta=0.001, Xi=1500.0; alpha=1 fails on (51.4651, 2041.7683)

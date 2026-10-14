@@ -1,0 +1,19 @@
+LS2 CAPPED BASIN seed=2026101402
+policy: PASS=160 FAIL=0
+domination: PASS=160 FAIL=0
+monotone_time: PASS=160 FAIL=0
+monotone_a0: PASS=160 FAIL=0
+capture_inclusion: PASS=160 FAIL=0
+no_early_crossing: PASS=160 FAIL=0
+bounded_envelope: PASS=160 FAIL=0
+lock_in: PASS=108 FAIL=0
+v8_example: PASS=3 FAIL=0
+uncapped a_sep=6.632159
+e3=1e-05: t_E=161.8541 capped a_sep=4.334291 a0=0.5 -> cross
+e3=0.0001: t_E=75.1260 capped a_sep=4.404970 a0=0.5 -> cross
+e3=0.001: t_E=34.8704 capped a_sep=4.950497 a0=0.5 -> cross
+e3=0.003: t_E=24.1778 capped a_sep=5.396395 a0=0.5 -> cross
+e3=0.01: t_E=16.1854 capped a_sep=5.882275 a0=0.5 -> cross
+e3=0.03: t_E=11.2223 capped a_sep=6.237635 a0=0.5 -> cross
+e3=0.1: t_E=7.5126 capped a_sep=6.454066 a0=0.5 -> cross
+e3=1: t_E=3.4870 capped a_sep=6.612150 a0=0.5 -> cross

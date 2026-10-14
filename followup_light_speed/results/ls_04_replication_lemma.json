@@ -1,0 +1,26 @@
+{
+  "seed": 2026101404,
+  "counts": {
+    "face_kkt": [
+      1200,
+      0
+    ],
+    "multiplier_bound": [
+      1200,
+      0
+    ],
+    "certified_norep": [
+      736,
+      0
+    ],
+    "full_optimizer": [
+      100,
+      0
+    ],
+    "not_necessary_witness": [
+      1,
+      0
+    ]
+  },
+  "uncertified_no_replication_witnesses": 79
+}

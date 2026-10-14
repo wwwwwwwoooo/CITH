@@ -1,0 +1,11 @@
+LS12 VISIBILITY seed=2026101412
+means: PASS=6 FAIL=0
+independence: PASS=6 FAIL=0
+ratio: PASS=6 FAIL=0
+null_conditional: PASS=2 FAIL=0
+v/c=0.1: ratio=999, expected visible <= 2992.74 at P*=0.05
+v/c=0.3: ratio=36.037, expected visible <= 107.957 at P*=0.05
+v/c=0.5: ratio=7, expected visible <= 20.9701 at P*=0.05
+v/c=0.7: ratio=1.91545, expected visible <= 5.73818 at P*=0.05
+v/c=0.9: ratio=0.371742, expected visible <= 1.11364 at P*=0.05
+v/c=0.99: ratio=0.0306102, expected visible <= 0.0916998 at P*=0.05

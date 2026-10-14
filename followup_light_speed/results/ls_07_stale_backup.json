@@ -1,0 +1,30 @@
+{
+  "seed": 2026101407,
+  "counts": {
+    "derivative": [
+      600,
+      0
+    ],
+    "floor_equivalence": [
+      600,
+      0
+    ],
+    "hazard_ceiling": [
+      406,
+      0
+    ],
+    "staleness_model": [
+      300,
+      0
+    ],
+    "monotone_distance": [
+      300,
+      0
+    ]
+  },
+  "example": {
+    "omega": 1000000.0,
+    "r_ly": 4.24,
+    "subjective_lag_years": 4240000.0
+  }
+}

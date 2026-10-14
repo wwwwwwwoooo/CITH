@@ -21,6 +21,16 @@ This is a research manuscript, not a peer-reviewed journal publication. It does 
 
 All-inward allocation and no replication are separate classifications. On the frozen 1,024-row synthetic design, v8 retains 219 all-inward cases and finds 421 no-replication cases, including 202 observation-only cases; 603 cases prefer replication. These counts describe the specified design, not civilization prevalence. Every row receives the restricted-face criterion; 64 rows also receive full constrained-optimizer comparisons.
 
+## Follow-up draft: light speed and civilizational growth
+
+[`followup_light_speed/`](followup_light_speed/) contains a draft follow-up, **Fast Minds, Slow Light: Causal Limits on the Growth of Computational Civilizations** ([PDF](followup_light_speed/CITH_LS_draft.pdf), 22 pages). It makes the speed of light explicit in the v8 model, through three limits:
+
+- the light cone bounds resource acquisition;
+- remote returns arrive late, and so are discounted on the latency length c/(δω);
+- integration within a subjective round trip τ bounds a computation's size, and with it its power, to a ceiling falling as ω⁻².
+
+The draft also shows why none of these limits contains autonomous descendants. It is a draft for author review, not part of the v8 record. It has its own twelve validators, figures, audit and `SHA256SUMS`, and reads the frozen v7.3 design without modifying it. See its README.
+
 ## Reproduce the numerical checks
 
 ```sh

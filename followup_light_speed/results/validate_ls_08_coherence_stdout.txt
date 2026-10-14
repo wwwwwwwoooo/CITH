@@ -1,0 +1,22 @@
+LS8 COHERENCE seed=2026101408
+hull_area_bound: PASS=600 FAIL=0
+sphere_limit: PASS=3 FAIL=0
+cauchy_formula: PASS=30 FAIL=0
+planar_isodiametric: PASS=300 FAIL=0
+landauer_carnot: PASS=500 FAIL=0
+scale_identity: PASS=500 FAIL=0
+table_values: PASS=4 FAIL=0
+omega=1, tau=0.1 s: Lambda=1.499e+07 m, Pmax(300 K)=3.242e+17 W
+omega=1, tau=1 day: Lambda=1.295e+13 m, Pmax(300 K)=2.42e+29 W
+omega=1, tau=1 Julian year: Lambda=4.73e+15 m, Pmax(300 K)=3.229e+34 W
+omega=1000, tau=0.1 s: Lambda=1.499e+04 m, Pmax(300 K)=3.242e+11 W
+omega=1000, tau=1 day: Lambda=1.295e+10 m, Pmax(300 K)=2.42e+23 W
+omega=1000, tau=1 Julian year: Lambda=4.73e+12 m, Pmax(300 K)=3.229e+28 W
+omega=1e+06, tau=0.1 s: Lambda=14.99 m, Pmax(300 K)=3.242e+05 W
+omega=1e+06, tau=1 day: Lambda=1.295e+07 m, Pmax(300 K)=2.42e+17 W
+omega=1e+06, tau=1 Julian year: Lambda=4.73e+09 m, Pmax(300 K)=3.229e+22 W
+T=300 K: Lambda_min(L_sun)=3.4430 au; omega_crit(1 yr)=9184.0
+T=1000 K: Lambda_min(L_sun)=0.3099 au; omega_crit(1 yr)=102044.5
+Earth mean diameter: 0.00134683 subjective years one way at omega=1e6
+1 au: 15.8125 subjective years one way at omega=1e6
+1.30 pc: 4.24003e+06 subjective years one way at omega=1e6

@@ -1,0 +1,30 @@
+{
+  "seed": 2026101401,
+  "counts": {
+    "influence_envelope": [
+      3900,
+      0
+    ],
+    "import_envelope": [
+      3900,
+      0
+    ],
+    "exponential_phase": [
+      400,
+      0
+    ],
+    "explicit_bound": [
+      400,
+      0
+    ],
+    "runaway_truncation": [
+      8,
+      0
+    ],
+    "edges": [
+      405,
+      0
+    ]
+  },
+  "Btip": 106.00128942808259
+}

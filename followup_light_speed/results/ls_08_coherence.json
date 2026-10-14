@@ -1,0 +1,172 @@
+{
+  "seed": 2026101408,
+  "counts": {
+    "hull_area_bound": [
+      600,
+      0
+    ],
+    "sphere_limit": [
+      3,
+      0
+    ],
+    "cauchy_formula": [
+      30,
+      0
+    ],
+    "planar_isodiametric": [
+      300,
+      0
+    ],
+    "landauer_carnot": [
+      500,
+      0
+    ],
+    "scale_identity": [
+      500,
+      0
+    ],
+    "table_values": [
+      4,
+      0
+    ]
+  },
+  "coherence_table": [
+    {
+      "omega": 1.0,
+      "tau": "0.1 s",
+      "Lambda_m": 14989622.9,
+      "Lambda_au": 0.0001001994402050002,
+      "Pmax_300K_W": 3.2421122172260563e+17,
+      "Pmax_1000K_W": 4.002607675587724e+19,
+      "erasure_300K_per_s": 1.1292706588948516e+38
+    },
+    {
+      "omega": 1.0,
+      "tau": "1 day",
+      "Lambda_m": 12951034185600.0,
+      "Lambda_au": 86.57231633712017,
+      "Pmax_300K_W": 2.4202238017103823e+29,
+      "Pmax_1000K_W": 2.987930619395534e+31,
+      "erasure_300K_per_s": 8.429960297823711e+49
+    },
+    {
+      "omega": 1.0,
+      "tau": "1 Julian year",
+      "Lambda_m": 4730365236290400.0,
+      "Lambda_au": 31620.53854213314,
+      "Pmax_300K_W": 3.2287615809066544e+34,
+      "Pmax_1000K_W": 3.986125408526734e+36,
+      "erasure_300K_per_s": 1.1246204553044354e+55
+    },
+    {
+      "omega": 1000.0,
+      "tau": "0.1 s",
+      "Lambda_m": 14989.6229,
+      "Lambda_au": 1.0019944020500019e-07,
+      "Pmax_300K_W": 324211221722.6057,
+      "Pmax_1000K_W": 40026076755877.25,
+      "erasure_300K_per_s": 1.1292706588948516e+32
+    },
+    {
+      "omega": 1000.0,
+      "tau": "1 day",
+      "Lambda_m": 12951034185.6,
+      "Lambda_au": 0.08657231633712016,
+      "Pmax_300K_W": 2.4202238017103824e+23,
+      "Pmax_1000K_W": 2.987930619395534e+25,
+      "erasure_300K_per_s": 8.429960297823712e+43
+    },
+    {
+      "omega": 1000.0,
+      "tau": "1 Julian year",
+      "Lambda_m": 4730365236290.4,
+      "Lambda_au": 31.620538542133144,
+      "Pmax_300K_W": 3.228761580906655e+28,
+      "Pmax_1000K_W": 3.9861254085267343e+30,
+      "erasure_300K_per_s": 1.1246204553044355e+49
+    },
+    {
+      "omega": 1000000.0,
+      "tau": "0.1 s",
+      "Lambda_m": 14.9896229,
+      "Lambda_au": 1.001994402050002e-10,
+      "Pmax_300K_W": 324211.2217226057,
+      "Pmax_1000K_W": 40026076.75587725,
+      "erasure_300K_per_s": 1.1292706588948518e+26
+    },
+    {
+      "omega": 1000000.0,
+      "tau": "1 day",
+      "Lambda_m": 12951034.1856,
+      "Lambda_au": 8.657231633712016e-05,
+      "Pmax_300K_W": 2.420223801710382e+17,
+      "Pmax_1000K_W": 2.9879306193955336e+19,
+      "erasure_300K_per_s": 8.429960297823711e+37
+    },
+    {
+      "omega": 1000000.0,
+      "tau": "1 Julian year",
+      "Lambda_m": 4730365236.2904,
+      "Lambda_au": 0.03162053854213314,
+      "Pmax_300K_W": 3.228761580906654e+22,
+      "Pmax_1000K_W": 3.9861254085267335e+24,
+      "erasure_300K_per_s": 1.1246204553044353e+43
+    }
+  ],
+  "solar_critical_clock": [
+    {
+      "T_K": 300.0,
+      "Lambda_min_m": 515065724632.28796,
+      "Lambda_min_au": 3.4430017099988572,
+      "omega_crit_tau_1yr": 9184.003147690459
+    },
+    {
+      "T_K": 1000.0,
+      "Lambda_min_m": 46355915216.90592,
+      "Lambda_min_au": 0.3098701538998972,
+      "omega_crit_tau_1yr": 102044.47941878287
+    }
+  ],
+  "subjective_light_times": [
+    {
+      "target": "Earth mean diameter",
+      "distance_m": 12742016.8,
+      "one_way_subjective_years_at_1e6": 0.0013468322384755662
+    },
+    {
+      "target": "1 au",
+      "distance_m": 149597870700.0,
+      "one_way_subjective_years_at_1e6": 15.81250740982066
+    },
+    {
+      "target": "1.30 pc",
+      "distance_m": 4.011380855938778e+16,
+      "one_way_subjective_years_at_1e6": 4240032.910317664
+    }
+  ],
+  "subjective_scales": [
+    {
+      "omega": 1.0,
+      "subjective_light_speed_m_s": 299792458.0,
+      "au_one_way_subjective_s": 499.00478383615643,
+      "nearest_one_way_subjective_yr": 4.240032910317664,
+      "earth_diameter_one_way_subjective_s": 0.04250279304891653
+    },
+    {
+      "omega": 1000.0,
+      "subjective_light_speed_m_s": 299792.458,
+      "au_one_way_subjective_s": 499004.7838361564,
+      "nearest_one_way_subjective_yr": 4240.032910317664,
+      "earth_diameter_one_way_subjective_s": 42.50279304891653
+    },
+    {
+      "omega": 1000000.0,
+      "subjective_light_speed_m_s": 299.792458,
+      "au_one_way_subjective_s": 499004783.8361564,
+      "nearest_one_way_subjective_yr": 4240032.910317664,
+      "earth_diameter_one_way_subjective_s": 42502.79304891653
+    }
+  ],
+  "kilo_clock_reaction_diameter_m": 14989.6229,
+  "subjective_light_speed_at_1e6_m_per_s": 299.792458
+}

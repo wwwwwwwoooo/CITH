@@ -1,0 +1,7 @@
+LS7 STALE BACKUP seed=2026101407
+derivative: PASS=600 FAIL=0
+floor_equivalence: PASS=600 FAIL=0
+hazard_ceiling: PASS=406 FAIL=0
+staleness_model: PASS=300 FAIL=0
+monotone_distance: PASS=300 FAIL=0
+subjective lag of a 4.24 ly backup at omega=1e6: 4.24e+06 subjective years

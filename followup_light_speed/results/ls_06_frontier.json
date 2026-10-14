@@ -1,0 +1,693 @@
+{
+  "seed": 2026101406,
+  "counts": {
+    "general_bound": [
+      2700,
+      0
+    ],
+    "benchmark_exact": [
+      216,
+      0
+    ],
+    "asymptotic": [
+      2,
+      0
+    ],
+    "no_latency_obstruction": [
+      7,
+      0
+    ],
+    "realized_radius": [
+      162,
+      0
+    ]
+  },
+  "asymptotics": [
+    {
+      "l_s": 10.0,
+      "R_stop": 48.83847641955323,
+      "ratio": 2.1210280813574047,
+      "scaled_deviation": 1.7145256286032455
+    },
+    {
+      "l_s": 100.0,
+      "R_stop": 954.079372695145,
+      "ratio": 2.0717570342960876,
+      "scaled_deviation": 1.724118370539678
+    },
+    {
+      "l_s": 1000.0,
+      "R_stop": 13661.956839839644,
+      "ratio": 1.9777708225142487,
+      "scaled_deviation": 1.7076723225168666
+    },
+    {
+      "l_s": 10000.0,
+      "R_stop": 175938.1118842731,
+      "ratio": 1.9102237786954184,
+      "scaled_deviation": 1.701686715499248
+    },
+    {
+      "l_s": 100000.0,
+      "R_stop": 2142376.1011634925,
+      "ratio": 1.8608442377934151,
+      "scaled_deviation": 1.70019366149403
+    },
+    {
+      "l_s": 1000000.0,
+      "R_stop": 25189014.077803303,
+      "ratio": 1.823241636428884,
+      "scaled_deviation": 1.7007243476671516
+    },
+    {
+      "l_s": 10000000.0,
+      "R_stop": 289092110.15762687,
+      "ratio": 1.7935872600460623,
+      "scaled_deviation": 1.702217718100468
+    },
+    {
+      "l_s": 100000000.0,
+      "R_stop": 3259608809.4935455,
+      "ratio": 1.7695376489078434,
+      "scaled_deviation": 1.7041741238412367
+    },
+    {
+      "l_s": 1000000000.0,
+      "R_stop": 36257257409.099724,
+      "ratio": 1.7495918690797558,
+      "scaled_deviation": 1.7063411697338093
+    },
+    {
+      "l_s": 10000000000.0,
+      "R_stop": 398979542962.45355,
+      "ratio": 1.7327461390087497,
+      "scaled_deviation": 1.7085850716559983
+    },
+    {
+      "l_s": 100000000000.0,
+      "R_stop": 4352194218126.473,
+      "ratio": 1.7183035755486953,
+      "scaled_deviation": 1.7108328617588597
+    },
+    {
+      "l_s": 1000000000000.0,
+      "R_stop": 47132021652765.55,
+      "ratio": 1.7057647437283885,
+      "scaled_deviation": 1.7130443843866723
+    },
+    {
+      "l_s": 10000000000000.0,
+      "R_stop": 507303356920502.0,
+      "ratio": 1.6947619120120758,
+      "scaled_deviation": 1.7151978789704
+    },
+    {
+      "l_s": 100000000000000.0,
+      "R_stop": 5431856215863765.0,
+      "ratio": 1.6850179864582226,
+      "scaled_deviation": 1.7172821874429052
+    }
+  ],
+  "illustration": {
+    "p": 1.0,
+    "S": 0.002,
+    "r": 0.05,
+    "d0": 1.0,
+    "a": 5.0,
+    "Bc": 63.60077365684955,
+    "K_per_pc3": 4.1,
+    "k": 3.0,
+    "kappa": 2.0,
+    "r1_pc": 1.3,
+    "l_s_first_step_pc": 7.753941629626294,
+    "rows": [
+      {
+        "l_s_pc": 0.03,
+        "R_stop_pc": 0.002864131230494871,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.033660553629058905,
+        "R_stop_pc": 0.003213608107616311,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.03776776235382502,
+        "R_stop_pc": 0.0036057276198003065,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.04237612633868264,
+        "R_stop_pc": 0.004045692959384691,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.047546795773833396,
+        "R_stop_pc": 0.0045393422064861485,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.053348382301167674,
+        "R_stop_pc": 0.005093225798367337,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.05985786944906639,
+        "R_stop_pc": 0.00571469345227977,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.06716163415705019,
+        "R_stop_pc": 0.006411991695741115,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.07535659294528742,
+        "R_stop_pc": 0.0071943732992764626,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.0845514879379336,
+        "R_stop_pc": 0.008072220065095908,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.09486832980505137,
+        "R_stop_pc": 0.009057180603205886,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.10644401677007263,
+        "R_stop_pc": 0.010162324926592168,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.11943215116604919,
+        "R_stop_pc": 0.011402317922299551,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.13400507764528893,
+        "R_stop_pc": 0.012793614008887125,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.1503561700881817,
+        "R_stop_pc": 0.014354675576911937,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.1687023975571047,
+        "R_stop_pc": 0.016106218132675057,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.18928720334405796,
+        "R_stop_pc": 0.01807148543246981,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.21238373531524138,
+        "R_stop_pc": 0.020276558312611125,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.23829847041728444,
+        "R_stop_pc": 0.02275070139947953,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.2673752814401237,
+        "R_stop_pc": 0.025526752436915844,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.29999999999999993,
+        "R_stop_pc": 0.028641559613794994,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.33660553629058904,
+        "R_stop_pc": 0.032136473038345215,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.3776776235382502,
+        "R_stop_pc": 0.03605789742532131,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.42376126338682635,
+        "R_stop_pc": 0.04045791419321965,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.47546795773833417,
+        "R_stop_pc": 0.045394982595435965,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.5334838230116767,
+        "R_stop_pc": 0.05093473136034647,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.5985786944906638,
+        "R_stop_pc": 0.05715085478989996,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.6716163415705019,
+        "R_stop_pc": 0.06412613067537859,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.7535659294528742,
+        "R_stop_pc": 0.07195358222156388,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.8455148793793363,
+        "R_stop_pc": 0.08073781320098584,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 0.9486832980505137,
+        "R_stop_pc": 0.09059655602260144,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": null
+      },
+      {
+        "l_s_pc": 1.0644401677007262,
+        "R_stop_pc": 0.10166248827615887,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 0.09970983097299416
+      },
+      {
+        "l_s_pc": 1.1943215116604917,
+        "R_stop_pc": 0.11408539781499238,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 0.3181282886013963
+      },
+      {
+        "l_s_pc": 1.3400507764528895,
+        "R_stop_pc": 0.12803481482312437,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 0.588364381274932
+      },
+      {
+        "l_s_pc": 1.5035617008818172,
+        "R_stop_pc": 0.14370329030777196,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 0.919811600557974
+      },
+      {
+        "l_s_pc": 1.687023975571047,
+        "R_stop_pc": 0.16131059883393167,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 1.3233843096325797
+      },
+      {
+        "l_s_pc": 1.8928720334405797,
+        "R_stop_pc": 0.1811093046524342,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 1.8117490370773393
+      },
+      {
+        "l_s_pc": 2.123837353152414,
+        "R_stop_pc": 0.203392400330564,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 2.3995895713630384
+      },
+      {
+        "l_s_pc": 2.382984704172845,
+        "R_stop_pc": 0.22850419022106938,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 3.103910661069459
+      },
+      {
+        "l_s_pc": 2.6737528144012375,
+        "R_stop_pc": 0.25685641189585595,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 3.9443857951838788
+      },
+      {
+        "l_s_pc": 2.9999999999999996,
+        "R_stop_pc": 0.2889531039954519,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 4.943755299006492
+      },
+      {
+        "l_s_pc": 3.366055362905892,
+        "R_stop_pc": 0.3254306767382965,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 6.128281846599895
+      },
+      {
+        "l_s_pc": 3.776776235382502,
+        "R_stop_pc": 0.3671257689585508,
+        "R_stop_beyond_r1_pc": null,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 7.5282714744862345
+      },
+      {
+        "l_s_pc": 4.237612633868261,
+        "R_stop_pc": 10.03452019523556,
+        "R_stop_beyond_r1_pc": 10.03452019523556,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 9.178669299415724
+      },
+      {
+        "l_s_pc": 4.7546795773833415,
+        "R_stop_pc": 13.506548482449725,
+        "R_stop_beyond_r1_pc": 13.506548482449725,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 11.119740413642784
+      },
+      {
+        "l_s_pc": 5.334838230116768,
+        "R_stop_pc": 17.220775147688638,
+        "R_stop_beyond_r1_pc": 17.220775147688638,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 13.397847874819668
+      },
+      {
+        "l_s_pc": 5.985786944906642,
+        "R_stop_pc": 21.389592888903213,
+        "R_stop_beyond_r1_pc": 21.389592888903213,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 16.066341347666555
+      },
+      {
+        "l_s_pc": 6.71616341570502,
+        "R_stop_pc": 26.14496384844172,
+        "R_stop_beyond_r1_pc": 26.14496384844172,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 19.186571817430117
+      },
+      {
+        "l_s_pc": 7.535659294528745,
+        "R_stop_pc": 31.60643826488864,
+        "R_stop_beyond_r1_pc": 31.60643826488864,
+        "R_realized_pc": 0.0,
+        "asymptote_pc": 22.82904991075636
+      },
+      {
+        "l_s_pc": 8.455148793793363,
+        "R_stop_pc": 37.89798621510357,
+        "R_stop_beyond_r1_pc": 37.89798621510357,
+        "R_realized_pc": 37.89798621510357,
+        "asymptote_pc": 27.074767761921848
+      },
+      {
+        "l_s_pc": 9.486832980505136,
+        "R_stop_pc": 45.155111562042755,
+        "R_stop_beyond_r1_pc": 45.155111562042755,
+        "R_realized_pc": 45.155111562042755,
+        "asymptote_pc": 32.01670708986383
+      },
+      {
+        "l_s_pc": 10.644401677007268,
+        "R_stop_pc": 53.52927665508126,
+        "R_stop_beyond_r1_pc": 53.52927665508126,
+        "R_realized_pc": 53.529276655081276,
+        "asymptote_pc": 37.761559247706586
+      },
+      {
+        "l_s_pc": 11.943215116604918,
+        "R_stop_pc": 63.19152743403004,
+        "R_stop_beyond_r1_pc": 63.19152743403004,
+        "R_realized_pc": 63.191527434030064,
+        "asymptote_pc": 44.4316865208874
+      },
+      {
+        "l_s_pc": 13.400507764528903,
+        "R_stop_pc": 74.3359885986358,
+        "R_stop_beyond_r1_pc": 74.3359885986358,
+        "R_realized_pc": 74.3359885986358,
+        "asymptote_pc": 52.16735793848216
+      },
+      {
+        "l_s_pc": 15.035617008818173,
+        "R_stop_pc": 87.18352669155377,
+        "R_stop_beyond_r1_pc": 87.18352669155377,
+        "R_realized_pc": 87.18352669155377,
+        "asymptote_pc": 61.129297388288414
+      },
+      {
+        "l_s_pc": 16.87023975571047,
+        "R_stop_pc": 101.98574740587546,
+        "R_stop_beyond_r1_pc": 101.98574740587546,
+        "R_realized_pc": 101.98574740587486,
+        "asymptote_pc": 71.50158696142746
+      },
+      {
+        "l_s_pc": 18.928720334405806,
+        "R_stop_pc": 119.02944366588636,
+        "R_stop_beyond_r1_pc": 119.02944366588636,
+        "R_realized_pc": 119.02944366588636,
+        "asymptote_pc": 83.49497427795752
+      },
+      {
+        "l_s_pc": 21.23837353152414,
+        "R_stop_pc": 138.64159337023915,
+        "R_stop_beyond_r1_pc": 138.64159337023915,
+        "R_realized_pc": 138.64159337023912,
+        "asymptote_pc": 97.35063915332057
+      },
+      {
+        "l_s_pc": 23.82984704172846,
+        "R_stop_pc": 161.19500236327715,
+        "R_stop_beyond_r1_pc": 161.19500236327715,
+        "R_realized_pc": 161.19500236327693,
+        "asymptote_pc": 113.34448246061294
+      },
+      {
+        "l_s_pc": 26.737528144012373,
+        "R_stop_pc": 187.11469221659567,
+        "R_stop_beyond_r1_pc": 187.11469221659567,
+        "R_realized_pc": 187.11469221659087,
+        "asymptote_pc": 131.79200854370623
+      },
+      {
+        "l_s_pc": 29.999999999999996,
+        "R_stop_pc": 216.88514082407556,
+        "R_stop_beyond_r1_pc": 216.88514082407556,
+        "R_realized_pc": 216.88514082407553,
+        "asymptote_pc": 153.05388217479697
+      },
+      {
+        "l_s_pc": 33.66055362905892,
+        "R_stop_pc": 251.0584953851154,
+        "R_stop_beyond_r1_pc": 251.0584953851154,
+        "R_realized_pc": 251.05849538511538,
+        "asymptote_pc": 177.5422519782955
+      },
+      {
+        "l_s_pc": 37.76776235382502,
+        "R_stop_pc": 290.2638915725494,
+        "R_stop_beyond_r1_pc": 290.2638915725494,
+        "R_realized_pc": 290.26389157254937,
+        "asymptote_pc": 205.72794463235115
+      },
+      {
+        "l_s_pc": 42.37612633868266,
+        "R_stop_pc": 335.2180294252238,
+        "R_stop_beyond_r1_pc": 335.2180294252238,
+        "R_realized_pc": 335.2180294252313,
+        "asymptote_pc": 238.14864820358196
+      },
+      {
+        "l_s_pc": 47.546795773833416,
+        "R_stop_pc": 386.73717583958194,
+        "R_stop_beyond_r1_pc": 386.73717583958194,
+        "R_realized_pc": 386.7371758395819,
+        "asymptote_pc": 275.41821888911954
+      },
+      {
+        "l_s_pc": 53.348382301167675,
+        "R_stop_pc": 445.75078565304943,
+        "R_stop_beyond_r1_pc": 445.75078565304943,
+        "R_realized_pc": 445.7507856530494,
+        "asymptote_pc": 318.2372634812208
+      },
+      {
+        "l_s_pc": 59.85786944906641,
+        "R_stop_pc": 513.3169584935563,
+        "R_stop_beyond_r1_pc": 513.3169584935563,
+        "R_realized_pc": 513.3169584935564,
+        "asymptote_pc": 367.40517031437156
+      },
+      {
+        "l_s_pc": 67.16163415705019,
+        "R_stop_pc": 590.6399771623414,
+        "R_stop_beyond_r1_pc": 590.6399771623414,
+        "R_realized_pc": 590.6399771623414,
+        "asymptote_pc": 423.8337846210164
+      },
+      {
+        "l_s_pc": 75.35659294528746,
+        "R_stop_pc": 679.0902057379371,
+        "R_stop_beyond_r1_pc": 679.0902057379371,
+        "R_realized_pc": 679.090205737937,
+        "asymptote_pc": 488.5629504695225
+      },
+      {
+        "l_s_pc": 84.55148793793364,
+        "R_stop_pc": 780.2266623170322,
+        "R_stop_beyond_r1_pc": 780.2266623170322,
+        "R_realized_pc": 780.2266623170497,
+        "asymptote_pc": 562.7781711937464
+      },
+      {
+        "l_s_pc": 94.86832980505136,
+        "R_stop_pc": 895.8226228944686,
+        "R_stop_beyond_r1_pc": 895.8226228944686,
+        "R_realized_pc": 895.8226228944686,
+        "asymptote_pc": 647.8306739081693
+      },
+      {
+        "l_s_pc": 106.44401677007264,
+        "R_stop_pc": 1027.894659955347,
+        "R_stop_beyond_r1_pc": 1027.894659955347,
+        "R_realized_pc": 1027.894659955347,
+        "asymptote_pc": 745.2602018568318
+      },
+      {
+        "l_s_pc": 119.43215116604912,
+        "R_stop_pc": 1178.7355726205258,
+        "R_stop_beyond_r1_pc": 1178.7355726205258,
+        "R_realized_pc": 1178.7355726205258,
+        "asymptote_pc": 856.8209015576078
+      },
+      {
+        "l_s_pc": 134.0050776452891,
+        "R_stop_pc": 1350.9517254543478,
+        "R_stop_beyond_r1_pc": 1350.9517254543478,
+        "R_realized_pc": 1350.951725454348,
+        "asymptote_pc": 984.5107206421504
+      },
+      {
+        "l_s_pc": 150.3561700881818,
+        "R_stop_pc": 1547.505381225969,
+        "R_stop_beyond_r1_pc": 1547.505381225969,
+        "R_realized_pc": 1547.5053812259684,
+        "asymptote_pc": 1130.6047877099718
+      },
+      {
+        "l_s_pc": 168.70239755710477,
+        "R_stop_pc": 1771.7626900403359,
+        "R_stop_beyond_r1_pc": 1771.7626900403359,
+        "R_realized_pc": 1771.7626900403363,
+        "asymptote_pc": 1297.693308265292
+      },
+      {
+        "l_s_pc": 189.28720334405796,
+        "R_stop_pc": 2027.5480844884655,
+        "R_stop_beyond_r1_pc": 2027.5480844884655,
+        "R_realized_pc": 2027.5480844884657,
+        "asymptote_pc": 1488.7245818514155
+      },
+      {
+        "l_s_pc": 212.38373531524127,
+        "R_stop_pc": 2319.2059291255478,
+        "R_stop_beyond_r1_pc": 2319.2059291255478,
+        "R_realized_pc": 2319.205929125553,
+        "asymptote_pc": 1707.0538259301065
+      },
+      {
+        "l_s_pc": 238.29847041728473,
+        "R_stop_pc": 2651.6703841572476,
+        "R_stop_beyond_r1_pc": 2651.6703841572476,
+        "R_realized_pc": 2651.670384157248,
+        "asymptote_pc": 1956.4985831053136
+      },
+      {
+        "l_s_pc": 267.37528144012384,
+        "R_stop_pc": 3030.544569380516,
+        "R_stop_beyond_r1_pc": 3030.544569380516,
+        "R_realized_pc": 3030.544569380516,
+        "asymptote_pc": 2241.4015913557378
+      },
+      {
+        "l_s_pc": 300.0,
+        "R_stop_pc": 3462.190257084674,
+        "R_stop_beyond_r1_pc": 3462.190257084674,
+        "R_realized_pc": 3462.190257084674,
+        "asymptote_pc": 2566.7021135952905
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+LS4 REPLICATION LEMMA seed=2026101404
+face_kkt: PASS=1200 FAIL=0
+multiplier_bound: PASS=1200 FAIL=0
+certified_norep: PASS=736 FAIL=0
+full_optimizer: PASS=100 FAIL=0
+not_necessary_witness: PASS=1 FAIL=0
+no-replication instances that fail a replication corner test: 79

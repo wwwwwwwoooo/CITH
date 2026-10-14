@@ -1,0 +1,63 @@
+{
+  "seed": 2026101403,
+  "counts": {
+    "closed_forms": [
+      5,
+      0
+    ],
+    "upper_bound": [
+      200,
+      0
+    ],
+    "monotone_emission": [
+      200,
+      0
+    ],
+    "probes": [
+      800,
+      0
+    ],
+    "planck_numbers": [
+      3,
+      0
+    ],
+    "radiation_sensitivity": [
+      2,
+      0
+    ]
+  },
+  "H0": 67.4,
+  "Omega_m": 0.315,
+  "Hubble_distance_Gly": 14.507302992296573,
+  "event_horizon_Gly": 16.67849140091613,
+  "event_horizon_Gpc": 5.113648709761206,
+  "particle_horizon_Gly": 47.00631277776683,
+  "affectable_volume_fraction": 0.04466853797638337,
+  "radiation_sensitivity": [
+    {
+      "Omega_r": 0.0,
+      "event_Gly": 16.67849140091613,
+      "particle_Gly": 47.00631277776683,
+      "volume_fraction": 0.04466853797638337
+    },
+    {
+      "Omega_r": 5e-05,
+      "event_Gly": 16.67895827752766,
+      "particle_Gly": 46.36067465397215,
+      "volume_fraction": 0.04656477673024856
+    },
+    {
+      "Omega_r": 9.2e-05,
+      "event_Gly": 16.67935048825239,
+      "particle_Gly": 46.13327054011618,
+      "volume_fraction": 0.04726010382614639
+    },
+    {
+      "Omega_r": 0.00012,
+      "event_Gly": 16.679611979505783,
+      "particle_Gly": 46.010922149179024,
+      "volume_fraction": 0.047640358140957996
+    }
+  ],
+  "dS_bound_Gly": 17.528364504562695
+}

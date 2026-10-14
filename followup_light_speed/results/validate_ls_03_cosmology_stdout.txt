@@ -1,0 +1,12 @@
+LS3 COSMOLOGY seed=2026101403
+closed_forms: PASS=5 FAIL=0
+upper_bound: PASS=200 FAIL=0
+monotone_emission: PASS=200 FAIL=0
+probes: PASS=800 FAIL=0
+planck_numbers: PASS=3 FAIL=0
+radiation_sensitivity: PASS=2 FAIL=0
+event horizon=16.6785 Gly (5.1136 Gpc); particle horizon=47.0063 Gly; fraction=0.04467; bound=17.5284 Gly
+Omega_r=0: event=16.6785 particle=47.0063 fraction=0.04467
+Omega_r=5e-05: event=16.6790 particle=46.3607 fraction=0.04656
+Omega_r=9.2e-05: event=16.6794 particle=46.1333 fraction=0.04726
+Omega_r=0.00012: event=16.6796 particle=46.0109 fraction=0.04764

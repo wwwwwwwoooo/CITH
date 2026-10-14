@@ -1,0 +1,21 @@
+LS10 CONTAINMENT seed=2026101410
+criterion_vs_scan: PASS=400 FAIL=0
+c_cancels: PASS=800 FAIL=0
+unique_root: PASS=400 FAIL=0
+monotone: PASS=1600 FAIL=0
+no_latency_floor: PASS=400 FAIL=0
+endpoint_test: PASS=217 FAIL=0
+examples: PASS=2 FAIL=0
+no-latency budget B0=96.953018
+{'T_K': 300.0, 'delta_tau': 1e-08, 'B_lat': 97.0242232716733, 'B_lat_solar_years': 0.8031640823199413, 'Lambda_min_au': 3.0855982364816015}
+{'T_K': 300.0, 'delta_tau': 1e-06, 'B_lat': 104.0804320562257, 'B_lat_solar_years': 0.8615752013374489, 'Lambda_min_au': 3.195831208617671}
+{'T_K': 300.0, 'delta_tau': 0.0001, 'B_lat': 1002.9716588361194, 'B_lat_solar_years': 8.302574190224986, 'Lambda_min_au': 9.92072978944435}
+{'T_K': 300.0, 'delta_tau': 0.01, 'B_lat': 741149.5183714825, 'B_lat_solar_years': 6135.217090250993, 'Lambda_min_au': 269.6821523560834}
+{'T_K': 300.0, 'delta_tau': 1.0, 'B_lat': 2170055562.182365, 'B_lat_solar_years': 17963665.416864354, 'Lambda_min_au': 14592.668512898803}
+{'T_K': 300.0, 'delta_tau_for_one_solar_luminosity': 3.3347975697715003e-06}
+{'T_K': 1000.0, 'delta_tau': 1e-08, 'B_lat': 97.74425386533785, 'B_lat_solar_years': 0.8091244774821226, 'Lambda_min_au': 0.278732376483216}
+{'T_K': 1000.0, 'delta_tau': 1e-06, 'B_lat': 177.8065615527862, 'B_lat_solar_years': 1.471878248797083, 'Lambda_min_au': 0.3759375368089932}
+{'T_K': 1000.0, 'delta_tau': 0.0001, 'B_lat': 23470.293671179286, 'B_lat_solar_years': 194.28650127308705, 'Lambda_min_au': 4.319177594685167}
+{'T_K': 1000.0, 'delta_tau': 0.01, 'B_lat': 44302671.37229957, 'B_lat_solar_years': 366736.4004288128, 'Lambda_min_au': 187.6535379462484}
+{'T_K': 1000.0, 'delta_tau': 1.0, 'B_lat': 172053902808.53668, 'B_lat_solar_years': 1424257884.2589638, 'Lambda_min_au': 11694.29550697967}
+{'T_K': 1000.0, 'delta_tau_for_one_solar_luminosity': 3.0013178127947945e-07}

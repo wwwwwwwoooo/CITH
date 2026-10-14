@@ -1,0 +1,27 @@
+LS6 FRONTIER seed=2026101406
+general_bound: PASS=2700 FAIL=0
+benchmark_exact: PASS=216 FAIL=0
+asymptotic: PASS=2 FAIL=0
+no_latency_obstruction: PASS=7 FAIL=0
+realized_radius: PASS=162 FAIL=0
+l_s=1e1: R_stop=48.8385 ratio=2.12103 (limit 1.5)
+l_s=1e2: R_stop=954.079 ratio=2.07176 (limit 1.5)
+l_s=1e3: R_stop=13662 ratio=1.97777 (limit 1.5)
+l_s=1e4: R_stop=175938 ratio=1.91022 (limit 1.5)
+l_s=1e5: R_stop=2.14238e+06 ratio=1.86084 (limit 1.5)
+l_s=1e6: R_stop=2.5189e+07 ratio=1.82324 (limit 1.5)
+l_s=1e7: R_stop=2.89092e+08 ratio=1.79359 (limit 1.5)
+l_s=1e8: R_stop=3.25961e+09 ratio=1.76954 (limit 1.5)
+l_s=1e9: R_stop=3.62573e+10 ratio=1.74959 (limit 1.5)
+l_s=1e10: R_stop=3.9898e+11 ratio=1.73275 (limit 1.5)
+l_s=1e11: R_stop=4.35219e+12 ratio=1.71830 (limit 1.5)
+l_s=1e12: R_stop=4.7132e+13 ratio=1.70576 (limit 1.5)
+l_s=1e13: R_stop=5.07303e+14 ratio=1.69476 (limit 1.5)
+l_s=1e14: R_stop=5.43186e+15 ratio=1.68502 (limit 1.5)
+home expands only for l_s > 7.753942 pc
+illustration l_s=0.03 pc: R_stop=0.0028641 pc realized=0 pc
+illustration l_s=0.1893 pc: R_stop=0.018071 pc realized=0 pc
+illustration l_s=1.194 pc: R_stop=0.11409 pc realized=0 pc
+illustration l_s=7.536 pc: R_stop=31.606 pc realized=0 pc
+illustration l_s=47.55 pc: R_stop=386.74 pc realized=386.74 pc
+illustration l_s=300 pc: R_stop=3462.2 pc realized=3462.2 pc

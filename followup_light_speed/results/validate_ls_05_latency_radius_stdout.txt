@@ -1,0 +1,18 @@
+LS5 LATENCY RADIUS seed=2026101405
+nearest_binds: PASS=500 FAIL=0
+radius_formula: PASS=250 FAIL=0
+design_reproduction: PASS=2 FAIL=0
+design_nesting: PASS=48 FAIL=0
+design_monotone: PASS=1 FAIL=0
+D=0: all-inward=219 certified=333 exact no-replication=421
+D=1: all-inward=349 certified=498 exact no-replication=567
+D=2: all-inward=509 certified=683 exact no-replication=727
+D=3: all-inward=674 certified=807 exact no-replication=848
+D=4: all-inward=820 certified=917 exact no-replication=940
+D=5: all-inward=922 certified=985 exact no-replication=990
+D=6: all-inward=982 certified=1012 exact no-replication=1013
+D=7: all-inward=1009 certified=1021 exact no-replication=1021
+D=8: all-inward=1022 certified=1024 exact no-replication=1024
+D=9: all-inward=1024 certified=1024 exact no-replication=1024
+D=10: all-inward=1024 certified=1024 exact no-replication=1024
+max ln rho=8.53937557; replication-only max=7.95043445
